@@ -49,6 +49,7 @@
 
     <link rel="stylesheet" href="main/css/typeskit.css">
     <link rel="stylesheet" type="text/css" href="main/css/app-id=b59affd817f095c5db73.css">
+    <link rel="stylesheet" href="main/css/main.css">
 
     <script>
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
