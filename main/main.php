@@ -18,7 +18,7 @@
     <meta property="og:title" content="Yolk - State of the art framework">
     <meta property="og:description"
         content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built sql queries and has custom UI">
-    <meta property="og:image" content="https://laravel.com/img/og-image.jpg">
+    <meta property="og:image" content="yolkassets/img/shot.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -47,7 +47,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
+    <link rel="stylesheet" href="main/css/typeskit.css">
     <link rel="stylesheet" type="text/css" href="main/css/app-id=b59affd817f095c5db73.css">
 
     <script>
@@ -105,9 +105,9 @@
                 class="relative max-w-screen-2xl mx-auto w-full py-4 bg-white transition duration-200 lg:bg-transparent lg:py-6">
                 <div class="max-w-screen-xl mx-auto px-5 flex items-center justify-between">
                     <div class="flex-1">
-                        <a href="index.html" class="inline-flex items-center">
-                            <img class="w-12" src="img/logomark.min.svg" alt="Laravel" width="50" height="52">
-                            <img class="ml-5 sm:block" src="img/logotype.min.svg" alt="Laravel" width="114" height="29">
+                        <a href="/" class="inline-flex items-center">
+                            <img class="w-12" src="yolkassets/img/logo.png" alt="Yolk" width="50" height="52">
+                            <img class="ml-5 sm:block" src="main/img/logo.png" alt="Yolk" width="114" height="29">
                         </a>
                     </div>
                     <ul class="relative hidden lg:flex lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
@@ -140,7 +140,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-breeze flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/breeze.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/breeze.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="47" height="32">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -156,7 +156,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-cashier flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/cashier.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/cashier.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="47" height="32">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -172,7 +172,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-dusk flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/dusk.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/dusk.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="45" height="44">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -188,7 +188,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-echo flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/echo.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/echo.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="48" height="48">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -204,7 +204,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-envoyer flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/envoyer.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/envoyer.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="41" height="50">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -220,7 +220,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-forge flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/forge.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/forge.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="41" height="32">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -236,7 +236,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-horizon flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/horizon.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/horizon.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="48" height="48">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -252,7 +252,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-jetstream flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/jetstream.min.svg" alt="Icon"
+                                                    <img src="main/img/ecosystem/jetstream.min.svg" alt="Icon"
                                                         class="w-7 h-7" width="150" height="150">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -268,7 +268,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-mix flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/mix.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/mix.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="48" height="44">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -284,7 +284,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-nova flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/nova.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/nova.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="39" height="40">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -300,7 +300,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-octane flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/octane.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/octane.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="32" height="33">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -316,7 +316,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-sail flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/sail.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/sail.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="48" height="48">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -332,7 +332,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-sanctum flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/sanctum.min.svg"
+                                                    <img src="main/img/ecosystem/sanctum.min.svg"
                                                         alt="Laravel Sanctum logomark" class="w-7 h-7" width="48"
                                                         height="48">
                                                 </div>
@@ -349,7 +349,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-scout flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/scout.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/scout.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="36" height="36">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -365,7 +365,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-socialite flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/socialite.min.svg" alt="Icon"
+                                                    <img src="main/img/ecosystem/socialite.min.svg" alt="Icon"
                                                         class="w-7 h-7" width="32" height="33">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -381,7 +381,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-spark flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/spark.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/spark.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="48" height="48">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -397,7 +397,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-telescope flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/telescope.min.svg" alt="Icon"
+                                                    <img src="main/img/ecosystem/telescope.min.svg" alt="Icon"
                                                         class="w-7 h-7" width="42" height="43">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -413,7 +413,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-valet flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/valet.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/valet.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="40" height="26">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -429,7 +429,7 @@
                                                     class="relative shrink-0 w-12 h-12 bg-vapor flex items-center justify-center rounded-lg overflow-hidden">
                                                     <span
                                                         class="absolute inset-0 w-full h-full bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                                                    <img src="img/ecosystem/vapor.min.svg" alt="Icon" class="w-7 h-7"
+                                                    <img src="main/img/ecosystem/vapor.min.svg" alt="Icon" class="w-7 h-7"
                                                         width="150" height="150">
                                                 </div>
                                                 <div class="ml-4 leading-5">
@@ -608,14 +608,14 @@
 
     <div class="hidden md:block md:overflow-hidden md:mt-24">
         <div class="flex items-center justify-center gap-x-10">
-            <img src="images/companies/st-jude.png" alt="St. Jude" style="height: 61px">
-            <img src="images/companies/disney.png" alt="Disney" style="height: 39px">
-            <img src="images/companies/wwe.png" alt="WWE" style="height: 42px">
-            <img src="images/companies/warner-bros.png" alt="Warner Bros" style="height: 37px">
-            <img src="images/companies/bankrate.png" alt="Bankrate" style="height: 24px">
-            <img src="images/companies/twitch.png" alt="twitch" style="height: 32px">
-            <img src="images/companies/the-new-york-times.png" alt="The New York Times" style="height: 31px">
-            <img src="images/companies/about-you.png" alt="About You" style="height: 28px">
+            <img src="main/images/companies/st-jude.png" alt="St. Jude" style="height: 61px">
+            <img src="main/images/companies/disney.png" alt="Disney" style="height: 39px">
+            <img src="main/images/companies/wwe.png" alt="WWE" style="height: 42px">
+            <img src="main/images/companies/warner-bros.png" alt="Warner Bros" style="height: 37px">
+            <img src="main/images/companies/bankrate.png" alt="Bankrate" style="height: 24px">
+            <img src="main/images/companies/twitch.png" alt="twitch" style="height: 32px">
+            <img src="main/images/companies/the-new-york-times.png" alt="The New York Times" style="height: 31px">
+            <img src="main/images/companies/about-you.png" alt="About You" style="height: 28px">
         </div>
     </div>
 
@@ -1035,7 +1035,7 @@
                         class="relative shrink-0 bg-forge flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/forge.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/forge.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Forge</div>
@@ -1052,7 +1052,7 @@
                         class="relative shrink-0 bg-vapor flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/vapor.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/vapor.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Vapor</div>
@@ -1072,7 +1072,7 @@
                         class="relative shrink-0 bg-breeze flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/breeze.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/breeze.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Breeze</div>
@@ -1087,7 +1087,7 @@
                         class="relative shrink-0 bg-cashier flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/cashier.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/cashier.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Cashier</div>
@@ -1102,7 +1102,7 @@
                         class="relative shrink-0 bg-dusk flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/dusk.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/dusk.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Dusk</div>
@@ -1117,7 +1117,7 @@
                         class="relative shrink-0 bg-echo flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/echo.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/echo.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Echo</div>
@@ -1132,7 +1132,7 @@
                         class="relative shrink-0 bg-envoyer flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/envoyer.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/envoyer.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Envoyer</div>
@@ -1147,7 +1147,7 @@
                         class="relative shrink-0 bg-horizon flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/horizon.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/horizon.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Horizon</div>
@@ -1162,7 +1162,7 @@
                         class="relative shrink-0 bg-jetstream flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/jetstream.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/jetstream.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Jetstream</div>
@@ -1177,7 +1177,7 @@
                         class="relative shrink-0 bg-mix flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/mix.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/mix.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Mix</div>
@@ -1192,7 +1192,7 @@
                         class="relative shrink-0 bg-nova flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/nova.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/nova.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Nova</div>
@@ -1207,7 +1207,7 @@
                         class="relative shrink-0 bg-octane flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/octane.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/octane.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Octane</div>
@@ -1222,7 +1222,7 @@
                         class="relative shrink-0 bg-sail flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/sail.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/sail.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Sail</div>
@@ -1237,7 +1237,7 @@
                         class="relative shrink-0 bg-sanctum flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/sanctum.min.svg" alt="Laravel Sanctum logomark"
+                        <img src="main/img/ecosystem/sanctum.min.svg" alt="Laravel Sanctum logomark"
                             class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
@@ -1253,7 +1253,7 @@
                         class="relative shrink-0 bg-scout flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/scout.min.svg" alt="Laravel Scout logomark" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/scout.min.svg" alt="Laravel Scout logomark" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Scout</div>
@@ -1268,7 +1268,7 @@
                         class="relative shrink-0 bg-socialite flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/socialite.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/socialite.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Socialite</div>
@@ -1283,7 +1283,7 @@
                         class="relative shrink-0 bg-spark flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/spark.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/spark.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Spark</div>
@@ -1298,7 +1298,7 @@
                         class="relative shrink-0 bg-telescope flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/telescope.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/telescope.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Telescope</div>
@@ -1313,7 +1313,7 @@
                         class="relative shrink-0 bg-valet flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden">
                         <span
                             class="absolute w-full h-full inset-0 bg-gradient-to-b from-[rgba(255,255,255,.2)] to-[rgba(255,255,255,0)]"></span>
-                        <img src="img/ecosystem/valet.min.svg" alt="Icon" class="relative w-7 h-7">
+                        <img src="main/img/ecosystem/valet.min.svg" alt="Icon" class="relative w-7 h-7">
                     </div>
                     <div class="ml-4 leading-5">
                         <div>Valet</div>
@@ -1400,7 +1400,7 @@
                 <h2 class="text-sm">“I’ve been using Laravel for nearly a decade and never been tempted to switch to
                     anything else.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/adam-wathan.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/adam-wathan.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Adam Wathan">
                     <div class="text-xs">
                         <cite class="not-italic">Adam Wathan</cite>
@@ -1412,7 +1412,7 @@
             <blockquote class="relative w-full bg-white p-5 border border-gray-200 break-inside-avoid-column">
                 <h2 class="text-sm">“Laravel takes the pain out of building modern, scalable web apps.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/aaron-francis.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/aaron-francis.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Aaron Francis">
                     <div class="text-xs">
                         <cite class="not-italic">Aaron Francis</cite>
@@ -1427,7 +1427,7 @@
                 <h2 class="text-sm">“Laravel grew out to be an amazing innovative and active community. Laravel is so
                     much more than just a PHP framework.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/bobby-bouwmann.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/bobby-bouwmann.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Bobby Bouwmann">
                     <div class="text-xs">
                         <cite class="not-italic">Bobby Bouwmann</cite>
@@ -1441,7 +1441,7 @@
                     development speed and enjoyment of use that I found with Laravel. It is a breath of fresh air in the
                     PHP ecosystem, with a brilliant community around it.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/erika-heidi.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/erika-heidi.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Erika Heidi">
                     <div class="text-xs">
                         <cite class="not-italic">Erika Heidi</cite>
@@ -1454,7 +1454,7 @@
                 <h2 class="text-sm">“Laravel is nothing short of a delight. It allows me to build any web-y thing I want
                     in record speed with joy.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/caleb-porzio.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/caleb-porzio.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Caleb Porzio">
                     <div class="text-xs">
                         <cite class="not-italic">Caleb Porzio</cite>
@@ -1468,7 +1468,7 @@
                 <h2 class="text-sm">“Laravel and its community inspire me to be a better developer and allow me to focus
                     on the unique parts of my apps.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/jess-archer.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/jess-archer.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Jess Archer">
                     <div class="text-xs">
                         <cite class="not-italic">Jess Archer</cite>
@@ -1480,7 +1480,7 @@
                 <h2 class="text-sm">“Laravel’s best-in-class testing tools give me the peace of mind to ship robust apps
                     quickly.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/michael-dyrynda.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/michael-dyrynda.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Michael Dyrynda">
                     <div class="text-xs">
                         <cite class="not-italic">Michael Dyrynda</cite>
@@ -1491,7 +1491,7 @@
             <blockquote class="relative w-full bg-white p-5 border border-gray-200 break-inside-avoid-column">
                 <h2 class="text-sm">“Laravel has been like rocket fuel for my career and business.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/chris-arter.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/chris-arter.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Chris Arter">
                     <div class="text-xs">
                         <cite class="not-italic">Chris Arter</cite>
@@ -1504,7 +1504,7 @@
                 <h2 class="text-sm">“I&#039;ve been using Laravel for over 10 years and I can&#039;t imagine using PHP
                     without it.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/eric-l-barnes.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/eric-l-barnes.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Eric L. Barnes">
                     <div class="text-xs">
                         <cite class="not-italic">Eric L. Barnes</cite>
@@ -1519,7 +1519,7 @@
                     with, and have stellar documentation. The surrounding friendly and helpful community is a joy to be
                     a part of.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/freek-van-der-herten.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/freek-van-der-herten.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Freek Van der Herten">
                     <div class="text-xs">
                         <cite class="not-italic">Freek Van der Herten</cite>
@@ -1532,7 +1532,7 @@
                 <h2 class="text-sm">“Laravel and its ecosystem of tools help me build client projects faster, more
                     secure, and higher quality than any other tools out there.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/jason-beggs.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/jason-beggs.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Jason Beggs">
                     <div class="text-xs">
                         <cite class="not-italic">Jason Beggs</cite>
@@ -1545,7 +1545,7 @@
                 <h2 class="text-sm">“I didn&#039;t fully appreciate Laravel&#039;s one-stop-shop, all-encompassing
                     solution, until I tried (many) different ecosystems. Laravel is in a class of its own!“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/joseph-silber.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/joseph-silber.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Joseph Silber">
                     <div class="text-xs">
                         <cite class="not-italic">Joseph Silber</cite>
@@ -1558,7 +1558,7 @@
                 <h2 class="text-sm">“Laravel has helped me launch products quicker than any other solution, allowing me
                     to get to market faster and faster as the community has evolved.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/steve-mcdougall.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/steve-mcdougall.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Steve McDougall">
                     <div class="text-xs">
                         <cite class="not-italic">Steve McDougall</cite>
@@ -1572,7 +1572,7 @@
                 <h2 class="text-sm">“I&#039;ve been using Laravel for every project over the past ten years in a time
                     where a new framework launches every day. To this date, there&#039;s just nothing like it.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/philo-hermans.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/philo-hermans.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Philo Hermans">
                     <div class="text-xs">
                         <cite class="not-italic">Philo Hermans</cite>
@@ -1584,7 +1584,7 @@
                 <h2 class="text-sm">“Laravel is for developers who write code because they can rather than because they
                     have to.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/luke-downing.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/luke-downing.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Luke Downing">
                     <div class="text-xs">
                         <cite class="not-italic">Luke Downing</cite>
@@ -1596,7 +1596,7 @@
                 <h2 class="text-sm">“Laravel makes building web apps exciting! It has also helped me to become a better
                     developer 🤙“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/tony-lea.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/tony-lea.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Tony Lea">
                     <div class="text-xs">
                         <cite class="not-italic">Tony Lea</cite>
@@ -1610,7 +1610,7 @@
                     framework allows us to move fast and ship regularly, and Laravel Vapor has allowed us to operate at
                     an incredible scale with ease.“</h2>
                 <div class="mt-5 flex items-start gap-4">
-                    <img src="images/testimonials/jack-ellis.jpg" class="w-10 h-10 object-cover object-center"
+                    <img src="main/images/testimonials/jack-ellis.jpg" class="w-10 h-10 object-cover object-center"
                         alt="Jack Ellis">
                     <div class="text-xs">
                         <cite class="not-italic">Jack Ellis</cite>
@@ -1692,7 +1692,7 @@
             <div class="flex justify-center lg:justify-end">
                 <div
                     class="max-w-sm w-full pt-8 pb-12 px-6 border border-gray-200 -rotate-1 lg:px-12 lg:border-red-600">
-                    <img src="images/laracon.png" class="max-w-[218px] w-full mx-auto" />
+                    <img src="main/images/laracon.png" class="max-w-[218px] w-full mx-auto" />
                     <h3 class="mt-8 font-bold text-red-700 uppercase text-xs">Watch us on YouTube</h3>
                     <h2 class="mt-3 font-bold text-4xl">Tune In</h2>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">The official Laravel YouTube channel includes
@@ -1757,7 +1757,7 @@
                             stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.491H0z" />
                     </svg>
                 </div>
-                <img class="relative max-w-[480px] w-full lg:rotate-1" src="images/partners.png" />
+                <img class="relative max-w-[480px] w-full lg:rotate-1" src="main/images/partners.png" />
             </div>
             <div class="relative flex justify-center lg:justify-end">
                 <div class="sm:max-w-md">
@@ -1781,7 +1781,7 @@
         <div class="max-w-screen-2xl mx-auto w-full px-5">
             <div>
                 <a href="index.html" class="inline-flex">
-                    <img class="w-16 h-16" src="img/logomark.min.svg" alt="Laravel" loading="lazy">
+                    <img class="w-16 h-16" src="main/img/logomark.min.svg" alt="Laravel" loading="lazy">
                 </a>
             </div>
 
@@ -1795,36 +1795,36 @@
                         <li>
                             <a href="https://twitter.com/laravelphp">
                                 <img id="footer__twitter_dark" class="hidden w-6 h-6"
-                                    src="img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20"
+                                    src="main/img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20"
                                     loading="lazy">
-                                <img id="footer__twitter" class="inline-block w-6 h-6" src="img/social/twitter.min.svg"
+                                <img id="footer__twitter" class="inline-block w-6 h-6" src="main/img/social/twitter.min.svg"
                                     alt="Twitter" width="24" height="20" loading="lazy">
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/laravel">
                                 <img id="footer__github_dark" class="hidden w-6 h-6"
-                                    src="img/social/github.dark.min.svg" alt="GitHub" width="24" height="24"
+                                    src="main/img/social/github.dark.min.svg" alt="GitHub" width="24" height="24"
                                     loading="lazy">
-                                <img id="footer__github" class="inline-block w-6 h-6" src="img/social/github.min.svg"
+                                <img id="footer__github" class="inline-block w-6 h-6" src="main/img/social/github.min.svg"
                                     alt="GitHub" width="24" height="24" loading="lazy">
                             </a>
                         </li>
                         <li>
                             <a href="https://discord.gg/mPZNm7A">
                                 <img id="footer__discord_dark" class="hidden w-6 h-6"
-                                    src="img/social/discord.dark.min.svg" alt="Discord" width="21" height="24"
+                                    src="main/img/social/discord.dark.min.svg" alt="Discord" width="21" height="24"
                                     loading="lazy">
-                                <img id="footer__discord" class="inline-block w-6 h-6" src="img/social/discord.min.svg"
+                                <img id="footer__discord" class="inline-block w-6 h-6" src="main/img/social/discord.min.svg"
                                     alt="Discord" width="21" height="24" loading="lazy">
                             </a>
                         </li>
                         <li>
                             <a href="https://www.youtube.com/laravelphp">
                                 <img id="footer__youtube_dark" class="hidden w-6 h-6"
-                                    src="img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150"
+                                    src="main/img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150"
                                     loading="lazy">
-                                <img id="footer__youtube" class="inline-block w-6 h-6" src="img/social/youtube.min.svg"
+                                <img id="footer__youtube" class="inline-block w-6 h-6" src="main/img/social/youtube.min.svg"
                                     alt="YouTube" width="169" height="150" loading="lazy">
                             </a>
                         </li>
@@ -2137,7 +2137,7 @@
                 <div class="absolute bottom-0 inset-x-0 border-t border-dark-800 text-gray-400 flex justify-end">
                     <a class="px-4 py-2 inline-block" target="_blank"
                         href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
-                        <img width="105" src="img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark"
+                        <img width="105" src="main/img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark"
                             alt="Algolia">
                     </a>
                 </div>
