@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Database: Pagination - Laravel - The PHP Framework For Web Artisans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <link rel="canonical" href="pagination.html">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta name="description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laravel.com/">
+    <meta property="og:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="og:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="og:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laravel.com/">
+    <meta property="twitter:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="twitter:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="twitter:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../img/favicon/safari-pinned-tab.svg" color="#ff2d20">
+    <link rel="shortcut icon" href="../../img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2d20">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/app-id=b59affd817f095c5db73.css">
+
+    <script>
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.theme === 'system') {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    });
+
+    function updateTheme() {
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'system';
+        }
+
+        switch (localStorage.theme) {
+            case 'system':
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                document.documentElement.setAttribute('color-theme', 'system');
+                break;
+
+            case 'dark':
+                document.documentElement.classList.add('dark');
+                document.documentElement.setAttribute('color-theme', 'dark');
+                break;
+
+            case 'light':
+                document.documentElement.classList.remove('dark');
+                document.documentElement.setAttribute('color-theme', 'light');
+                break;
+        }
+    }
+
+    updateTheme();
+</script>
+</head>
+<body
+    x-data="{
+        navIsOpen: false,
+        searchIsOpen: false,
+        search: '',
+    }"
+    class="language-php h-full w-full font-sans text-gray-900 antialiased"
+>
+
+    <a
+    id="skip-to-content-link"
+    href="pagination.html#main-content"
+    class="absolute bg-gray-100 px-4 py-2 top-3 left-3 text-gray-700 shadow-xl"
+>
+    Skip to content
+</a>
+    <div class="relative overflow-auto dark:bg-dark-700" id="docsScreen">
+        <div class="relative lg:flex lg:items-start">
+            <aside
+                x-data="{
+                    navIsOpen: false,
+                    init() {
+                        this.$watch('navIsOpen', (val) => {
+                            if (val) {
+                                document.body.classList.add('overflow-hidden');
+                            } else {
+                                document.body.classList.remove('overflow-hidden');
+                            }
+                        });
+                    }
+                }"
+                class="hidden fixed top-0 bottom-0 left-0 z-20 h-full w-16 bg-gradient-to-b from-gray-100 to-white transition-all duration-300 overflow-hidden lg:sticky lg:w-80 lg:shrink-0 lg:flex lg:flex-col lg:justify-end lg:items-end 2xl:max-w-lg 2xl:w-full dark:from-dark-800 dark:to-dark-700"
+                :class="{ 'w-64': navIsOpen }"
+                @click.away="navIsOpen = false"
+                @keydown.window.escape="navIsOpen = false"
+            >
+                <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
+                    <a href="../../index.html" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+                        <img
+                            class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
+                            :class="{ 'w-12 h-12': navIsOpen }"
+                            src="../../img/logomark.min.svg"
+                            alt="Laravel"
+                            width="50"
+                            height="52"
+                        >
+                        <img
+                            x-show="navIsOpen"
+                            x-cloak
+                            class="ml-4 transition-all duration-300 lg:hidden"
+                            x-transition:enter="duration-250 ease-out"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="duration-250 ease-in"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            width="114"
+                            height="29"
+                        >
+                        <img
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            class="hidden ml-4 lg:block"
+                            width="114"
+                            height="29"
+                        >
+                    </a>
+                    <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
+                        <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+                        <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+
+                        
+                        
+                                                    <div :class="{ 'hidden': !navIsOpen }" x-cloak class="mt-4 px-3 py-2 border-dashed border-gray-200 border rounded-lg text-xs leading-loose text-gray-700 lg:block dark:border-gray-400 dark:text-gray-200">
+                                <span class="font-medium">Laravel Vapor:</span> experience extreme scale on a dedicated serverless platform for Laravel. <a class="underline text-red-600" href="https://vapor.laravel.com">Sign up now!</a>.
+                            </div>
+                        
+                                            </div>
+                    <div class="sticky bottom-0 flex-1 flex flex-col justify-end lg:hidden">
+                        <div class="py-4 px-4 bg-white">
+                            <button class="relative ml-1 w-6 h-6 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <header
+                class="lg:hidden"
+                @keydown.window.escape="navIsOpen = false"
+                @click.away="navIsOpen = false"
+            >
+                <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
+                    <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
+                        <a href="../../index.html" class="flex items-center">
+                            <img class="" src="../../img/logomark.min.svg" alt="Laravel">
+                            <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
+                        </a>
+                        <div class="flex-1 flex items-center justify-end">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                            <button class="ml-2 relative w-10 h-10 p-2 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <span :class="{ 'shadow-sm': navIsOpen }" class="absolute inset-0 z-20 pointer-events-none"></span>
+                </div>
+                <div
+                    x-show="navIsOpen"
+                    x-transition:enter="duration-150"
+                    x-transition:leave="duration-100 ease-in"
+                    x-cloak
+                >
+                    <nav
+                        x-show="navIsOpen"
+                        x-cloak
+                        class="absolute w-full transform origin-top shadow-sm z-10"
+                        x-transition:enter="duration-150 ease-out"
+                        x-transition:enter-start="opacity-0 -translate-y-8 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="duration-100 ease-in"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 -translate-y-8 scale-75"
+                    >
+                        <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
+                            <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="flex-1 dark:bg-dark-700">
+                <div class="max-w-screen-lg px-8 sm:px-16 lg:px-24">
+                    <div class="flex flex-col items-end border-b border-gray-200 py-1 transition-colors dark:border-gray-700 lg:mt-8 lg:flex-row-reverse">
+                        <div class="hidden lg:flex items-center justify-center ml-8">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="w-full lg:w-40 lg:pl-12">
+                            <div>
+                                <label class="text-gray-600 text-xs tracking-widest uppercase dark:text-gray-500" for="version-switcher">Version</label>
+                                <div x-data class="relative w-full bg-white transition-all duration-500 focus-within:border-gray-600 dark:bg-gray-800">
+                                    <select
+                                        id="version-switcher"
+                                        aria-label="Laravel version"
+                                        class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
+                                        @change="window.location = $event.target.value"
+                                    >
+                                                                                    <option  value="https://laravel.com/docs/master/pagination">Master</option>
+                                                                                    <option selected value="https://laravel.com/docs/9.x/pagination">9.x</option>
+                                                                                    <option  value="https://laravel.com/docs/8.x/pagination">8.x</option>
+                                                                                    <option  value="https://laravel.com/docs/7.x/pagination">7.x</option>
+                                                                                    <option  value="https://laravel.com/docs/6.x/pagination">6.x</option>
+                                                                                    <option  value="https://laravel.com/docs/5.8/pagination">5.8</option>
+                                                                                    <option  value="https://laravel.com/docs/5.7/pagination">5.7</option>
+                                                                                    <option  value="https://laravel.com/docs/5.6/pagination">5.6</option>
+                                                                                    <option  value="https://laravel.com/docs/5.5/pagination">5.5</option>
+                                                                                    <option  value="https://laravel.com/docs/5.4/pagination">5.4</option>
+                                                                                    <option  value="https://laravel.com/docs/5.3/pagination">5.3</option>
+                                                                                    <option  value="https://laravel.com/docs/5.2/pagination">5.2</option>
+                                                                                    <option  value="https://laravel.com/docs/5.1/pagination">5.1</option>
+                                                                                    <option  value="https://laravel.com/docs/5.0/pagination">5.0</option>
+                                                                                    <option  value="https://laravel.com/docs/4.2/pagination">4.2</option>
+                                                                            </select>
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="../../img/icons/drop_arrow.min.svg" alt="">
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="../../img/icons/drop_arrow.dark.min.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 flex items-center justify-end w-full h-10 lg:mt-0">
+                            <div class="flex-1 flex items-center">
+                                <button
+                                    class="relative inline-flex items-center text-gray-800 transition-colors dark:text-gray-400 w-full"
+                                    @click.prevent="$dispatch('toggle-search-modal')"
+                                >
+                                    <svg class="w-5 h-5 text-gray-700 pointer-events-none transition-colors dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                    <span class="ml-3">Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="mt-8 md:mt-16">
+                        <section class="docs_main max-w-prose">
+                            
+                                                        <div id="main-content">
+    <h1>Database: Pagination</h1>
+<ul>
+<li>
+<a href="pagination.html#introduction">Introduction</a>
+</li>
+<li>
+<a href="pagination.html#basic-usage">Basic Usage</a>
+<ul>
+<li>
+<a href="pagination.html#paginating-query-builder-results">Paginating Query Builder Results</a>
+</li>
+<li>
+<a href="pagination.html#paginating-eloquent-results">Paginating Eloquent Results</a>
+</li>
+<li>
+<a href="pagination.html#cursor-pagination">Cursor Pagination</a>
+</li>
+<li>
+<a href="pagination.html#manually-creating-a-paginator">Manually Creating A Paginator</a>
+</li>
+<li>
+<a href="pagination.html#customizing-pagination-urls">Customizing Pagination URLs</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pagination.html#displaying-pagination-results">Displaying Pagination Results</a>
+<ul>
+<li>
+<a href="pagination.html#adjusting-the-pagination-link-window">Adjusting The Pagination Link Window</a>
+</li>
+<li>
+<a href="pagination.html#converting-results-to-json">Converting Results To JSON</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pagination.html#customizing-the-pagination-view">Customizing The Pagination View</a>
+<ul>
+<li>
+<a href="pagination.html#using-bootstrap">Using Bootstrap</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="pagination.html#paginator-instance-methods">Paginator and LengthAwarePaginator Instance Methods</a>
+</li>
+<li>
+<a href="pagination.html#cursor-paginator-instance-methods">Cursor Paginator Instance Methods</a>
+</li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>In other frameworks, pagination can be very painful. We hope Laravel's approach to pagination will be a breath of fresh air. Laravel's paginator is integrated with the <a href="queries.html">query builder</a> and <a href="eloquent.html">Eloquent ORM</a> and provides convenient, easy-to-use pagination of database records with zero configuration.</p>
+<p>By default, the HTML generated by the paginator is compatible with the <a href="https://tailwindcss.com/">Tailwind CSS framework</a>; however, Bootstrap pagination support is also available.</p>
+<p><a name="tailwind-jit"></a></p>
+<h4>Tailwind JIT</h4>
+<p>If you are using Laravel's default Tailwind pagination views and the Tailwind JIT engine, you should ensure your application's <code>tailwind.config.js</code> file's <code>content</code> key references Laravel's pagination views so that their Tailwind classes are not purged:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">content: [</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.blade.php</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.vue</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">],</span></div></code></pre>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p><a name="paginating-query-builder-results"></a></p>
+<h3>Paginating Query Builder Results</h3>
+<p>There are several ways to paginate items. The simplest is by using the <code>paginate</code> method on the <a href="queries.html">query builder</a> or an <a href="eloquent.html">Eloquent query</a>. The <code>paginate</code> method automatically takes care of setting the query's &quot;limit&quot; and &quot;offset&quot; based on the current page being viewed by the user. By default, the current page is detected by the value of the <code>page</code> query string argument on the HTTP request. This value is automatically detected by Laravel, and is also automatically inserted into links generated by the paginator.</p>
+<p>In this example, the only argument passed to the <code>paginate</code> method is the number of items you would like displayed &quot;per page&quot;. In this case, let's specify that we would like to display <code>15</code> items per page:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">&lt;</span><span style="color: #89DDFF;">?</span><span style="color: #82AAFF;">php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">namespace</span><span style="color: #BFC7D5;"> App\Http\Controllers;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Http\Controllers\</span><span style="color: #FFCB8B;">Controller</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Support\Facades\</span><span style="color: #FFCB8B;">DB</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">UserController</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">extends</span><span style="color: #BFC7D5;"> </span><span style="color: #A9C77D;">Controller</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">/**</span></div><div class='line'><span style="color: #697098;">     * Show all application users.</span></div><div class='line'><span style="color: #697098;">     *</span></div><div class='line'><span style="color: #697098;">     * </span><span style="color: #C792EA;">@return</span><span style="color: #697098;"> </span><span style="color: #697098;">\</span><span style="color: #697098;">Illuminate</span><span style="color: #697098;">\</span><span style="color: #697098;">Http</span><span style="color: #697098;">\</span><span style="color: #FFCB8B;">Response</span></div><div class='line'><span style="color: #697098;">     </span><span style="color: #697098;">*/</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">index</span><span style="color: #D9F5DD;">()</span></div><div class='line'><span style="color: #BFC7D5;">    {</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">view</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">user.index</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> </span><span style="color: #BFC7D5;">[</span></div><div class='line'><span style="color: #82AAFF;">            </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #82AAFF;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #82AAFF;"> </span><span style="color: #FFCB8B;">DB</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">table</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #82AAFF;">        </span><span style="color: #BFC7D5;">]);</span></div><div class='line'><span style="color: #BFC7D5;">    }</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="simple-pagination"></a></p>
+<h4>Simple Pagination</h4>
+<p>The <code>paginate</code> method counts the total number of records matched by the query before retrieving the records from the database. This is done so that the paginator knows how many pages of records there are in total. However, if you do not plan to show the total number of pages in your application's UI then the record count query is unnecessary.</p>
+<p>Therefore, if you only need to display simple &quot;Next&quot; and &quot;Previous&quot; links in your application's UI, you may use the <code>simplePaginate</code> method to perform a single, efficient query:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">DB</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">table</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">simplePaginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="paginating-eloquent-results"></a></p>
+<h3>Paginating Eloquent Results</h3>
+<p>You may also paginate <a href="eloquent.html">Eloquent</a> queries. In this example, we will paginate the <code>App\Models\User</code> model and indicate that we plan to display 15 records per page. As you can see, the syntax is nearly identical to paginating query builder results:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>Of course, you may call the <code>paginate</code> method after setting other constraints on the query, such as <code>where</code> clauses:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">where</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">votes</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">&gt;</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #F78C6C;">100</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>You may also use the <code>simplePaginate</code> method when paginating Eloquent models:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">where</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">votes</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">&gt;</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #F78C6C;">100</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">simplePaginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>Similarly, you may use the <code>cursorPaginate</code> method to cursor paginate Eloquent models:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">where</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">votes</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">&gt;</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #F78C6C;">100</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">cursorPaginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="multiple-paginator-instances-per-page"></a></p>
+<h4>Multiple Paginator Instances Per Page</h4>
+<p>Sometimes you may need to render two separate paginators on a single screen that is rendered by your application. However, if both paginator instances use the <code>page</code> query string parameter to store the current page, the two paginator's will conflict. To resolve this conflict, you may pass the name of the query string parameter you wish to use to store the paginator's current page via the third argument provided to the <code>paginate</code>, <code>simplePaginate</code>, and <code>cursorPaginate</code> methods:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">where</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">votes</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">&gt;</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #F78C6C;">100</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$perPage</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">, </span><span style="color: #BEC5D4;">$columns</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> [</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">*</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">], </span><span style="color: #BEC5D4;">$pageName</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span></div><div class='line'><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="cursor-pagination"></a></p>
+<h3>Cursor Pagination</h3>
+<p>While <code>paginate</code> and <code>simplePaginate</code> create queries using the SQL &quot;offset&quot; clause, cursor pagination works by constructing &quot;where&quot; clauses that compare the values of the ordered columns contained in the query, providing the most efficient database performance available amongst all of Laravel's pagination methods. This method of pagination is particularly well-suited for large data-sets and &quot;infinite&quot; scrolling user interfaces.</p>
+<p>Unlike offset based pagination, which includes a page number in the query string of the URLs generated by the paginator, cursor based pagination places a &quot;cursor&quot; string in the query string. The cursor is an encoded string containing the location that the next paginated query should start paginating and the direction that it should paginate:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="nothing" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">http://localhost/users?cursor=eyJpZCI6MTUsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0</span></div></code></pre>
+<p>You may create a cursor based paginator instance via the <code>cursorPaginate</code> method offered by the query builder. This method returns an instance of <code>Illuminate\Pagination\CursorPaginator</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">DB</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">table</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">orderBy</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">id</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">cursorPaginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>Once you have retrieved a cursor paginator instance, you may <a href="pagination.html#displaying-pagination-results">display the pagination results</a> as you typically would when using the <code>paginate</code> and <code>simplePaginate</code> methods. For more information on the instance methods offered by the cursor paginator, please consult the <a href="pagination.html#cursor-paginator-instance-methods">cursor paginator instance method documentation</a>.</p>
+<blockquote>
+<p>{note} Your query must contain an &quot;order by&quot; clause in order to take advantage of cursor pagination.</p>
+</blockquote>
+<p><a name="cursor-vs-offset-pagination"></a></p>
+<h4>Cursor vs. Offset Pagination</h4>
+<p>To illustrate the differences between offset pagination and cursor pagination, let's examine some example SQL queries. Both of the following queries will both display the &quot;second page&quot; of results for a <code>users</code> table ordered by <code>id</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="sql" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;"># Offset Pagination...</span></div><div class='line'><span style="color: #C792EA;">select</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">*</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> users </span><span style="color: #C792EA;">order by</span><span style="color: #BFC7D5;"> id </span><span style="color: #C792EA;">asc</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">limit</span><span style="color: #BFC7D5;"> </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;"> offset </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;"># </span><span style="color: #C792EA;">Cursor</span><span style="color: #BFC7D5;"> Pagination...</span></div><div class='line'><span style="color: #C792EA;">select</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">*</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">from</span><span style="color: #BFC7D5;"> users </span><span style="color: #C792EA;">where</span><span style="color: #BFC7D5;"> id </span><span style="color: #C792EA;">&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">order by</span><span style="color: #BFC7D5;"> id </span><span style="color: #C792EA;">asc</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">limit</span><span style="color: #BFC7D5;"> </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">;</span></div></code></pre>
+<p>The cursor pagination query offers the following advantages over offset pagination:</p>
+<ul>
+<li>For large data-sets, cursor pagination will offer better performance if the &quot;order by&quot; columns are indexed. This is because the &quot;offset&quot; clause scans through all previously matched data.</li>
+<li>For data-sets with frequent writes, offset pagination may skip records or show duplicates if results have been recently added to or deleted from the page a user is currently viewing.</li>
+</ul>
+<p>However, cursor pagination has the following limitations:</p>
+<ul>
+<li>Like <code>simplePaginate</code>, cursor pagination can only be used to display &quot;Next&quot; and &quot;Previous&quot; links and does not support generating links with page numbers.</li>
+<li>It requires that the ordering is based on at least one unique column or a combination of columns that are unique. Columns with <code>null</code> values are not supported.</li>
+<li>Query expressions in &quot;order by&quot; clauses are supported only if they are aliased and added to the &quot;select&quot; clause as well.</li>
+</ul>
+<p><a name="manually-creating-a-paginator"></a></p>
+<h3>Manually Creating A Paginator</h3>
+<p>Sometimes you may wish to create a pagination instance manually, passing it an array of items that you already have in memory. You may do so by creating either an <code>Illuminate\Pagination\Paginator</code>, <code>Illuminate\Pagination\LengthAwarePaginator</code> or <code>Illuminate\Pagination\CursorPaginator</code> instance, depending on your needs.</p>
+<p>The <code>Paginator</code> and <code>CursorPaginator</code> classes do not need to know the total number of items in the result set; however, because of this, these classes do not have methods for retrieving the index of the last page. The <code>LengthAwarePaginator</code> accepts almost the same arguments as the <code>Paginator</code>; however, it requires a count of the total number of items in the result set.</p>
+<p>In other words, the <code>Paginator</code> corresponds to the <code>simplePaginate</code> method on the query builder, the <code>CursorPaginator</code> corresponds to the <code>cursorPaginate</code> method, and the <code>LengthAwarePaginator</code> corresponds to the <code>paginate</code> method.</p>
+<blockquote>
+<p>{note} When manually creating a paginator instance, you should manually &quot;slice&quot; the array of results you pass to the paginator. If you're unsure how to do this, check out the <a href="https://secure.php.net/manual/en/function.array-slice.php">array_slice</a> PHP function.</p>
+</blockquote>
+<p><a name="customizing-pagination-urls"></a></p>
+<h3>Customizing Pagination URLs</h3>
+<p>By default, links generated by the paginator will match the current request's URI. However, the paginator's <code>withPath</code> method allows you to customize the URI used by the paginator when generating links. For example, if you want the paginator to generate links like <code>http://example.com/admin/users?page=N</code>, you should pass <code>/admin/users</code> to the <code>withPath</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$users</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">withPath</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/admin/users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">//</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p><a name="appending-query-string-values"></a></p>
+<h4>Appending Query String Values</h4>
+<p>You may append to the query string of pagination links using the <code>appends</code> method. For example, to append <code>sort=votes</code> to each pagination link, you should make the following call to <code>appends</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$users</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">appends</span><span style="color: #BFC7D5;">([</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">sort</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">votes</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">]);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">//</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p>You may use the <code>withQueryString</code> method if you would like to append all of the current request's query string values to the pagination links:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">withQueryString</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p><a name="appending-hash-fragments"></a></p>
+<h4>Appending Hash Fragments</h4>
+<p>If you need to append a &quot;hash fragment&quot; to URLs generated by the paginator, you may use the <code>fragment</code> method. For example, to append <code>#users</code> to the end of each pagination link, you should invoke the <code>fragment</code> method like so:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fragment</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="displaying-pagination-results"></a></p>
+<h2>Displaying Pagination Results</h2>
+<p>When calling the <code>paginate</code> method, you will receive an instance of <code>Illuminate\Pagination\LengthAwarePaginator</code>, while calling the <code>simplePaginate</code> method returns an instance of <code>Illuminate\Pagination\Paginator</code>. And, finally, calling the <code>cursorPaginate</code> method returns an instance of <code>Illuminate\Pagination\CursorPaginator</code>.</p>
+<p>These objects provide several methods that describe the result set. In addition to these helpers methods, the paginator instances are iterators and may be looped as an array. So, once you have retrieved the results, you may display the results and render the page links using <a href="blade.html">Blade</a>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">div</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">class</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">container</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">@foreach </span><span style="color: #BFC7D5;">(</span><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">as</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$user</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$user</span><span style="color: #89DDFF;">-&gt;name</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">}}</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">@endforeach</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">div</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$users</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">links</span><span style="color: #BFC7D5;">() </span><span style="color: #89DDFF;">}}</span></div></code></pre>
+<p>The <code>links</code> method will render the links to the rest of the pages in the result set. Each of these links will already contain the proper <code>page</code> query string variable. Remember, the HTML generated by the <code>links</code> method is compatible with the <a href="https://tailwindcss.com">Tailwind CSS framework</a>.</p>
+<p><a name="adjusting-the-pagination-link-window"></a></p>
+<h3>Adjusting The Pagination Link Window</h3>
+<p>When the paginator displays pagination links, the current page number is displayed as well as links for the three pages before and after the current page. Using the <code>onEachSide</code> method, you may control how many additional links are displayed on each side of the current page within the middle, sliding window of links generated by the paginator:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$users</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">onEachSide</span><span style="color: #BFC7D5;">(</span><span style="color: #F78C6C;">5</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">links</span><span style="color: #BFC7D5;">() </span><span style="color: #89DDFF;">}}</span></div></code></pre>
+<p><a name="converting-results-to-json"></a></p>
+<h3>Converting Results To JSON</h3>
+<p>The Laravel paginator classes implement the <code>Illuminate\Contracts\Support\Jsonable</code> Interface contract and expose the <code>toJson</code> method, so it's very easy to convert your pagination results to JSON. You may also convert a paginator instance to JSON by returning it from a route or controller action:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">User</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">paginate</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p>The JSON from the paginator will include meta information such as <code>total</code>, <code>current_page</code>, <code>last_page</code>, and more. The result records are available via the <code>data</code> key in the JSON array. Here is an example of the JSON created by returning a paginator instance from a route:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">total</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">50</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">per_page</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">current_page</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">1</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">last_page</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">4</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">first_page_url</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">http://laravel.app?page=1</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">last_page_url</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">http://laravel.app?page=4</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">next_page_url</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">http://laravel.app?page=2</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">prev_page_url</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #82AAFF;">null</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">path</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">http://laravel.app</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">from</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">1</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">to</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">: </span><span style="color: #F78C6C;">15</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">data</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">:[</span></div><div class='line'><span style="color: #BFC7D5;">        {</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #697098;">//</span><span style="color: #697098;"> Record...</span></div><div class='line'><span style="color: #BFC7D5;">        },</span></div><div class='line'><span style="color: #BFC7D5;">        {</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #697098;">//</span><span style="color: #697098;"> Record...</span></div><div class='line'><span style="color: #BFC7D5;">        }</span></div><div class='line'><span style="color: #BFC7D5;">   ]</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="customizing-the-pagination-view"></a></p>
+<h2>Customizing The Pagination View</h2>
+<p>By default, the views rendered to display the pagination links are compatible with the <a href="https://tailwindcss.com">Tailwind CSS</a> framework. However, if you are not using Tailwind, you are free to define your own views to render these links. When calling the <code>links</code> method on a paginator instance, you may pass the view name as the first argument to the method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$paginator</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">links</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">view.name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">) </span><span style="color: #89DDFF;">}}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">&lt;!--</span><span style="color: #697098;"> Passing additional data to the view... </span><span style="color: #697098;">--&gt;</span></div><div class='line'><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$paginator</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">links</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">view.name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, [</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">foo</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">bar</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">]) </span><span style="color: #89DDFF;">}}</span></div></code></pre>
+<p>However, the easiest way to customize the pagination views is by exporting them to your <code>resources/views/vendor</code> directory using the <code>vendor:publish</code> command:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">vendor:publish</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--tag=laravel-pagination</span></div></code></pre>
+<p>This command will place the views in your application's <code>resources/views/vendor/pagination</code> directory. The <code>tailwind.blade.php</code> file within this directory corresponds to the default pagination view. You may edit this file to modify the pagination HTML.</p>
+<p>If you would like to designate a different file as the default pagination view, you may invoke the paginator's <code>defaultView</code> and <code>defaultSimpleView</code> methods within the <code>boot</code> method of your <code>App\Providers\AppServiceProvider</code> class:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">&lt;</span><span style="color: #89DDFF;">?</span><span style="color: #82AAFF;">php</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">namespace</span><span style="color: #BFC7D5;"> App\Providers;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Pagination\</span><span style="color: #FFCB8B;">Paginator</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Support\</span><span style="color: #FFCB8B;">ServiceProvider</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">AppServiceProvider</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">extends</span><span style="color: #BFC7D5;"> </span><span style="color: #A9C77D;">ServiceProvider</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">/**</span></div><div class='line'><span style="color: #697098;">     * Bootstrap any application services.</span></div><div class='line'><span style="color: #697098;">     *</span></div><div class='line'><span style="color: #697098;">     * </span><span style="color: #C792EA;">@return</span><span style="color: #697098;"> </span><span style="color: #C792EA;">void</span></div><div class='line'><span style="color: #697098;">     </span><span style="color: #697098;">*/</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #D9F5DD;">()</span></div><div class='line'><span style="color: #BFC7D5;">    {</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #FFCB8B;">Paginator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">defaultView</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">view-name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #FFCB8B;">Paginator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">defaultSimpleView</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">view-name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">    }</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="using-bootstrap"></a></p>
+<h3>Using Bootstrap</h3>
+<p>Laravel includes pagination views built using <a href="https://getbootstrap.com/">Bootstrap CSS</a>. To use these views instead of the default Tailwind views, you may call the paginator's <code>useBootstrapFour</code> or <code>useBootstrapFive</code> methods within the <code>boot</code> method of your <code>App\Providers\AppServiceProvider</code> class:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Pagination\</span><span style="color: #FFCB8B;">Paginator</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">/**</span></div><div class='line'><span style="color: #697098;"> * Bootstrap any application services.</span></div><div class='line'><span style="color: #697098;"> *</span></div><div class='line'><span style="color: #697098;"> * </span><span style="color: #C792EA;">@return</span><span style="color: #697098;"> </span><span style="color: #C792EA;">void</span></div><div class='line'><span style="color: #697098;"> </span><span style="color: #697098;">*/</span></div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #D9F5DD;">()</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Paginator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">useBootstrapFive</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Paginator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">useBootstrapFour</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="paginator-instance-methods"></a></p>
+<h2>Paginator / LengthAwarePaginator Instance Methods</h2>
+<p>Each paginator instance provides additional pagination information via the following methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$paginator-&gt;count()</code></td>
+<td>Get the number of items for the current page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;currentPage()</code></td>
+<td>Get the current page number.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;firstItem()</code></td>
+<td>Get the result number of the first item in the results.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;getOptions()</code></td>
+<td>Get the paginator options.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;getUrlRange($start, $end)</code></td>
+<td>Create a range of pagination URLs.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;hasPages()</code></td>
+<td>Determine if there are enough items to split into multiple pages.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;hasMorePages()</code></td>
+<td>Determine if there are more items in the data store.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;items()</code></td>
+<td>Get the items for the current page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;lastItem()</code></td>
+<td>Get the result number of the last item in the results.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;lastPage()</code></td>
+<td>Get the page number of the last available page. (Not available when using <code>simplePaginate</code>).</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;nextPageUrl()</code></td>
+<td>Get the URL for the next page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;onFirstPage()</code></td>
+<td>Determine if the paginator is on the first page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;perPage()</code></td>
+<td>The number of items to be shown per page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;previousPageUrl()</code></td>
+<td>Get the URL for the previous page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;total()</code></td>
+<td>Determine the total number of matching items in the data store. (Not available when using <code>simplePaginate</code>).</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;url($page)</code></td>
+<td>Get the URL for a given page number.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;getPageName()</code></td>
+<td>Get the query string variable used to store the page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;setPageName($name)</code></td>
+<td>Set the query string variable used to store the page.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="cursor-paginator-instance-methods"></a></p>
+<h2>Cursor Paginator Instance Methods</h2>
+<p>Each cursor paginator instance provides additional pagination information via the following methods:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$paginator-&gt;count()</code></td>
+<td>Get the number of items for the current page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;cursor()</code></td>
+<td>Get the current cursor instance.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;getOptions()</code></td>
+<td>Get the paginator options.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;hasPages()</code></td>
+<td>Determine if there are enough items to split into multiple pages.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;hasMorePages()</code></td>
+<td>Determine if there are more items in the data store.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;getCursorName()</code></td>
+<td>Get the query string variable used to store the cursor.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;items()</code></td>
+<td>Get the items for the current page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;nextCursor()</code></td>
+<td>Get the cursor instance for the next set of items.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;nextPageUrl()</code></td>
+<td>Get the URL for the next page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;onFirstPage()</code></td>
+<td>Determine if the paginator is on the first page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;onLastPage()</code></td>
+<td>Determine if the paginator is on the last page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;perPage()</code></td>
+<td>The number of items to be shown per page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;previousCursor()</code></td>
+<td>Get the cursor instance for the previous set of items.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;previousPageUrl()</code></td>
+<td>Get the URL for the previous page.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;setCursorName()</code></td>
+<td>Set the query string variable used to store the cursor.</td>
+</tr>
+<tr>
+<td><code>$paginator-&gt;url($cursor)</code></td>
+<td>Get the URL for a given cursor instance.</td>
+</tr>
+</tbody>
+</table>
+
+                                <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CKYILK3E&placement=laravelcom" id="_carbonads_js"></script>
+</div>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<footer class="relative pt-12 dark:bg-dark-700">
+    <div class="max-w-screen-2xl mx-auto w-full px-8">
+        <div>
+            <a href="../../index.html" class="inline-flex">
+                <img class="w-16 h-16" src="../../img/logomark.min.svg" alt="Laravel" loading="lazy">
+            </a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
+            <div class="col-span-12 lg:col-span-4">
+                <p class="max-w-sm text-xs text-gray-700 sm:text-sm dark:text-gray-500">Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in most web projects.</p>
+                <ul class="mt-6 flex items-center space-x-3">
+                    <li>
+                        <a href="https://twitter.com/laravelphp">
+                            <img id="footer__twitter_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                            <img id="footer__twitter" class="inline-block dark:hidden w-6 h-6" src="../../img/social/twitter.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/laravel">
+                            <img id="footer__github_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/github.dark.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                            <img id="footer__github" class="inline-block dark:hidden w-6 h-6" src="../../img/social/github.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/mPZNm7A">
+                            <img id="footer__discord_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/discord.dark.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                            <img id="footer__discord" class="inline-block dark:hidden w-6 h-6" src="../../img/social/discord.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/laravelphp">
+                            <img id="footer__youtube_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                            <img id="footer__youtube" class="inline-block dark:hidden w-6 h-6" src="../../img/social/youtube.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Highlights</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="../../team.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Our Team</a>
+                                </li>
+                                                            <li>
+                                    <a href="releases.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Release Notes</a>
+                                </li>
+                                                            <li>
+                                    <a href="installation.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Getting Started</a>
+                                </li>
+                                                            <li>
+                                    <a href="routing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Routing</a>
+                                </li>
+                                                            <li>
+                                    <a href="blade.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Blade Templates</a>
+                                </li>
+                                                            <li>
+                                    <a href="authentication.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authentication</a>
+                                </li>
+                                                            <li>
+                                    <a href="authorization.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authorization</a>
+                                </li>
+                                                            <li>
+                                    <a href="artisan.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Artisan Console</a>
+                                </li>
+                                                            <li>
+                                    <a href="database.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Database</a>
+                                </li>
+                                                            <li>
+                                    <a href="eloquent.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Eloquent ORM</a>
+                                </li>
+                                                            <li>
+                                    <a href="testing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Testing</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Resources</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://laracasts.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracasts</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laravel-news.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laravel News</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.us" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.eu/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon EU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://larajobs.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jobs</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://certification.laravel.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Certification</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracasts.com/discuss" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forums</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Partners</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://vehikl.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vehikl</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://tighten.co" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Tighten</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://64robots.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">64 Robots</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://kirschbaumdevelopment.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Kirschbaum</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.curotec.com/services/technologies/laravel/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Curotec</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://jump24.co.uk/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jump24</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.a2design.biz/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">A2 Design</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://corporate.aboutyou.de/app/uploads/2019/08/INTRO-Pitch-I-AY-Tech.pdf?utm_source=laravelpartnersfindoutmore&utm_medium=socialgroups&utm_campaign=tech" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">ABOUT YOU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.byte5.net/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Byte 5</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://cubettech.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cubet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cyber-Duck</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://devsquad.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">DevSquad</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.ideil.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Ideil</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://romegadigital.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Romega Software</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.worksome.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Worksome</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=patreon-sponsors" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">WebReinvent</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Ecosystem</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="billing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cashier</a>
+                                </li>
+                                                            <li>
+                                    <a href="dusk.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Dusk</a>
+                                </li>
+                                                            <li>
+                                    <a href="broadcasting.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Echo</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://envoyer.io" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Envoyer</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://forge.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forge</a>
+                                </li>
+                                                            <li>
+                                    <a href="homestead.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Homestead</a>
+                                </li>
+                                                            <li>
+                                    <a href="horizon.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Horizon</a>
+                                </li>
+                                                            <li>
+                                    <a href="mix.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Mix</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://nova.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Nova</a>
+                                </li>
+                                                            <li>
+                                    <a href="passport.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Passport</a>
+                                </li>
+                                                            <li>
+                                    <a href="scout.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Scout</a>
+                                </li>
+                                                            <li>
+                                    <a href="socialite.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Socialite</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://spark.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Spark</a>
+                                </li>
+                                                            <li>
+                                    <a href="telescope.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Telescope</a>
+                                </li>
+                                                            <li>
+                                    <a href="valet.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Valet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://vapor.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vapor</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                    </div>
+        <div class="mt-10 border-t pt-6 pb-16 border-gray-200 dark:border-dark-500">
+            <p class="text-xs text-gray-700 dark:text-gray-400">
+                Laravel is a Trademark of Taylor Otwell. Copyright &copy; 2011-2022 Laravel LLC.
+            </p>
+            <p class="mt-6 text-xs text-gray-700 dark:text-gray-400">
+                Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<div
+    x-data="searchComponent()"
+    @toggle-search-modal.window="open = !open"
+    @keydown.window.escape="close"
+    @keydown.window="handleKeydown"
+    @keydown.escape.prevent.stop="close"
+    x-show="open"
+    x-cloak
+    x-trap.noscroll.inert="open"
+    role="dialog"
+    aria-modal="true"
+    x-id="['search-modal']"
+    :aria-labelledby="$id('search-modal')"
+    class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
+>
+    <div x-show="open" x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
+
+    <div
+        x-show="open"
+        x-transition
+        @click="close()"
+        class="relative min-h-screen flex items-start justify-center p-4 lg:py-20"
+    >
+        <div
+            @click.stop
+            class="relative max-w-2xl w-full bg-dark-700 pt-8 px-8 pb-16"
+        >
+            <div
+                class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600"
+            >
+                <svg class="absolute inset-y-0 left-0 mt-1 w-5 h-5 text-gray-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <input
+                    x-model.debouce.200ms="search"
+                    x-ref="searchInput"
+                    class="flex-1 w-full pl-8 pr-4 py-1 tracking-wide text-gray-400 placeholder-gray-500 bg-transparent focus:outline-none"
+                    placeholder="Search Docs (Press '/')"
+                    aria-label="Search in the documentation"
+                    @keydown.arrow-up.prevent="focusPreviousResult()"
+                    @keydown.arrow-down.prevent="focusNextResult()"
+                >
+            </div>
+
+            <div x-show="search">
+                <div x-show="hits.length" x-cloak class="mt-5 divide-y divide-gray-700 z-30">
+                    <template x-for="(hit, index) in hits" :key="index" hidden>
+                        <div>
+                            <a
+                                :id="'search-result-' + index"
+                                :href="hit.url"
+                                class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200"
+                                @keydown.arrow-up.prevent="focusPreviousResult(index)"
+                                @keydown.arrow-down.prevent="focusNextResult(index)"
+                            >
+                                <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
+                                <div class="mt-2">
+                                    <div x-show="hit._highlightResult.hierarchy.lvl1" class="text-sm">
+                                        <span class="text-red-600 opacity-75">#</span> <span x-html="hit._highlightResult.hierarchy.lvl1 ? hit._highlightResult.hierarchy.lvl1.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl2" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl2 ? hit._highlightResult.hierarchy.lvl2.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl3" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl3 ? hit._highlightResult.hierarchy.lvl3.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl4" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl4 ? hit._highlightResult.hierarchy.lvl4.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl5" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl5 ? hit._highlightResult.hierarchy.lvl5.value : ''"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+
+                <div x-show="! hits.length" x-cloak class="mt-8 pb-32">
+                    <div x-text="`We didn't find any result for '${search}'. Sorry!`"></div>
+                </div>
+            </div>
+
+            <div x-show="! search" class="mt-8 pb-32">
+                <p>Enter a search term to find results in the documentation.</p>
+            </div>
+
+            <div class="absolute bottom-0 inset-x-0 border-t border-dark-800 text-gray-400 flex justify-end">
+                <a class="px-4 py-2 inline-block" target="_blank" href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
+                    <img width="105" src="../../img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark" alt="Algolia">
+                </a>
+            </div>
+        </div>
+
+        <button x-show="open" x-transition.opacity class="absolute top-8 right-8 text-gray-400" @click.prevent="close">
+            <span class="sr-only">Close search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    var algolia_app_id = 'E3MIRNPJH5';
+    var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
+    var version = '9.x';
+</script>
+
+<script src="../../js/app-id=100f797fd909ecd1c2f2.js"></script>
+
+<script>
+    var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+    (function(d,t){
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)
+    }(document,'script'));
+</script>
+</body>
+</html>

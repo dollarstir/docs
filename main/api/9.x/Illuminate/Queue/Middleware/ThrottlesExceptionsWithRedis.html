@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Queue\Middleware\ThrottlesExceptionsWithRedis | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Queue_Middleware_ThrottlesExceptionsWithRedis" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ThrottlesExceptionsWithRedis.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Queue.html">Queue</a></li><li class="backslash">\</li><li><a href="../Middleware.html">Middleware</a></li><li class="backslash">\</li><li>ThrottlesExceptionsWithRedis</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ThrottlesExceptionsWithRedis    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ThrottlesExceptionsWithRedis</strong>        extends <a href="ThrottlesExceptions.html"><abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptionsWithRedis.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Support/InteractsWithTime.html"><abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_key">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$key</td>
+                <td class="last"><p>The developer specified key that the rate limiter should use.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_key">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_byJob">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$byJob</td>
+                <td class="last"><p>Indicates whether the throttle key should use the job's UUID.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_byJob">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxAttempts">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$maxAttempts</td>
+                <td class="last"><p>The maximum number of attempts allowed before rate limiting applies.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_maxAttempts">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_decayMinutes">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$decayMinutes</td>
+                <td class="last"><p>The number of minutes until the maximum attempts are reset.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_decayMinutes">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_retryAfterMinutes">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$retryAfterMinutes</td>
+                <td class="last"><p>The number of minutes to wait before retrying the job after an exception.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_retryAfterMinutes">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_whenCallback">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$whenCallback</td>
+                <td class="last"><p>The callback that determines if rate limiting should apply.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_whenCallback">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_prefix">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$prefix</td>
+                <td class="last"><p>The prefix of the rate limiter key.</p></td>
+                <td><small>from&nbsp;<a href="ThrottlesExceptions.html#property_prefix">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limiter">
+                                        protected                                        <a href="../../Redis/Limiters/DurationLimiter.html"><abbr title="Illuminate\Redis\Limiters\DurationLimiter">DurationLimiter</abbr></a>
+                                                                                
+                                    </td>
+                <td>$limiter</td>
+                <td class="last"><p>The rate limiter instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_redis">
+                                        protected                                        <a href="../../Contracts/Redis/Factory.html"><abbr title="Illuminate\Contracts\Redis\Factory">Factory</abbr></a>
+                                                                                
+                                    </td>
+                <td>$redis</td>
+                <td class="last"><p>The Redis factory implementation.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method___construct">__construct</a>(int $maxAttempts = 10, int $decayMinutes = 10)
+        
+                                            <p><p>Create a new middleware instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method___construct">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_handle">handle</a>(mixed $job, callable $next)
+        
+                                            <p><p>Process the job.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_when">when</a>(callable $callback)
+        
+                                            <p><p>Specify a callback that should determine if rate limiting behavior should apply.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_when">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_withPrefix">withPrefix</a>(string $prefix)
+        
+                                            <p><p>Set the prefix of the rate limiter key.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_withPrefix">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_backoff">backoff</a>(int $backoff)
+        
+                                            <p><p>Specify the number of minutes a job should be delayed when it is released (before it has reached its max exceptions).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_backoff">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_getKey">getKey</a>(mixed $job)
+        
+                                            <p><p>Get the cache key associated for the rate limiter.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_getKey">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_by">by</a>(string $key)
+        
+                                            <p><p>Set the value that the rate limiter should be keyed by.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_by">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_byJob">byJob</a>()
+        
+                                            <p><p>Indicate that the throttle key should use the job's UUID.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_byJob">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_getTimeUntilNextRetry">getTimeUntilNextRetry</a>(string $key)
+        
+                                            <p><p>Get the number of seconds that should elapse before the job is retried.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="ThrottlesExceptions.html#method_getTimeUntilNextRetry">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_secondsUntil">secondsUntil</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        
+                                            <p><p>Get the number of seconds until the given DateTime.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/InteractsWithTime.html#method_secondsUntil">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_availableAt">availableAt</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay = 0)
+        
+                                            <p><p>Get the &quot;available at&quot; UNIX timestamp.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/InteractsWithTime.html#method_availableAt">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_parseDateInterval">parseDateInterval</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        
+                                            <p><p>If the given value is an interval, convert it to a DateTime instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/InteractsWithTime.html#method_parseDateInterval">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ThrottlesExceptionsWithRedis.html#method_currentTime">currentTime</a>()
+        
+                                            <p><p>Get the current system time as a UNIX timestamp.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/InteractsWithTime.html#method_currentTime">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="ThrottlesExceptions.html#method___construct">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L74">at line 74</a></div>
+        <code>                    void
+    <strong>__construct</strong>(int $maxAttempts = 10, int $decayMinutes = 10)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new middleware instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maxAttempts</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$decayMinutes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handle">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptionsWithRedis.php#L36">at line 36</a></div>
+        <code>                    mixed
+    <strong>handle</strong>(mixed $job, callable $next)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Process the job.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$next</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_when">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L116">at line 116</a></div>
+        <code>                    $this
+    <strong>when</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify a callback that should determine if rate limiting behavior should apply.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPrefix">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_withPrefix">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L129">at line 129</a></div>
+        <code>                    $this
+    <strong>withPrefix</strong>(string $prefix)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the prefix of the rate limiter key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_backoff">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_backoff">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L142">at line 142</a></div>
+        <code>                    $this
+    <strong>backoff</strong>(int $backoff)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the number of minutes a job should be delayed when it is released (before it has reached its max exceptions).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$backoff</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKey">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_getKey">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L155">at line 155</a></div>
+        <code>            protected        string
+    <strong>getKey</strong>(mixed $job)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the cache key associated for the rate limiter.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$job</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_by">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_by">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L172">at line 172</a></div>
+        <code>                    $this
+    <strong>by</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the value that the rate limiter should be keyed by.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_byJob">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_byJob">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L184">at line 184</a></div>
+        <code>                    $this
+    <strong>byJob</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the throttle key should use the job's UUID.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTimeUntilNextRetry">
+        <div class="location">in <a href="ThrottlesExceptions.html#method_getTimeUntilNextRetry">
+<abbr title="Illuminate\Queue\Middleware\ThrottlesExceptions">ThrottlesExceptions</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/Middleware/ThrottlesExceptions.php#L197">at line 197</a></div>
+        <code>            protected        int
+    <strong>getTimeUntilNextRetry</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the number of seconds that should elapse before the job is retried.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_secondsUntil">
+        <div class="location">in <a href="../../Support/InteractsWithTime.html#method_secondsUntil">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L16">at line 16</a></div>
+        <code>            protected        int
+    <strong>secondsUntil</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the number of seconds until the given DateTime.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_availableAt">
+        <div class="location">in <a href="../../Support/InteractsWithTime.html#method_availableAt">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L31">at line 31</a></div>
+        <code>            protected        int
+    <strong>availableAt</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay = 0)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the &quot;available at&quot; UNIX timestamp.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDateInterval">
+        <div class="location">in <a href="../../Support/InteractsWithTime.html#method_parseDateInterval">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L46">at line 46</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int
+    <strong>parseDateInterval</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>If the given value is an interval, convert it to a DateTime instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentTime">
+        <div class="location">in <a href="../../Support/InteractsWithTime.html#method_currentTime">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L60">at line 60</a></div>
+        <code>            protected        int
+    <strong>currentTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current system time as a UNIX timestamp.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Foundation_Testing_Concerns_InteractsWithDatabase" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="InteractsWithDatabase.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Foundation.html">Foundation</a></li><li class="backslash">\</li><li><a href="../../Testing.html">Testing</a></li><li class="backslash">\</li><li><a href="../Concerns.html">Concerns</a></li><li class="backslash">\</li><li>InteractsWithDatabase</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>InteractsWithDatabase    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>InteractsWithDatabase</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertDatabaseHas">assertDatabaseHas</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data, string|null $connection = null)
+        
+                                            <p><p>Assert that a given where condition exists in the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertDatabaseMissing">assertDatabaseMissing</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data, string|null $connection = null)
+        
+                                            <p><p>Assert that a given where condition does not exist in the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertDatabaseCount">assertDatabaseCount</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, int $count, string|null $connection = null)
+        
+                                            <p><p>Assert the count of table entries.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertSoftDeleted">assertSoftDeleted</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data = [], string|null $connection = null, string|null $deletedAtColumn = &#039;deleted_at&#039;)
+        
+                                            <p><p>Assert the given record has been &quot;soft deleted&quot;.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertNotSoftDeleted">assertNotSoftDeleted</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data = [], string|null $connection = null, string|null $deletedAtColumn = &#039;deleted_at&#039;)
+        
+                                            <p><p>Assert the given record has not been &quot;soft deleted&quot;.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertModelExists">assertModelExists</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p><p>Assert the given model exists in the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_assertModelMissing">assertModelMissing</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p><p>Assert the given model does not exist in the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_isSoftDeletableModel">isSoftDeletableModel</a>(mixed $model)
+        
+                                            <p><p>Determine if the argument is a soft deletable model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_castAsJson">castAsJson</a>(array|string $value)
+        
+                                            <p><p>Cast a JSON string to a database compatible type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_getConnection">getConnection</a>(string|null $connection = null, string|null $table = null)
+        
+                                            <p><p>Get the database connection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_getTable">getTable</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        
+                                            <p><p>Get the table name from the given model or string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_getTableConnection">getTableConnection</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        
+                                            <p><p>Get the table connection specified in the given model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_newModelFor">newModelFor</a>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        
+                                            <p><p>Get the model entity from the given model or string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="InteractsWithDatabase.html#method_seed">seed</a>(array|string $class = &#039;Database\\Seeders\\DatabaseSeeder&#039;)
+        
+                                            <p><p>Seed a given database connection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_assertDatabaseHas">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L26">at line 26</a></div>
+        <code>            protected        $this
+    <strong>assertDatabaseHas</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data, string|null $connection = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that a given where condition exists in the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDatabaseMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L43">at line 43</a></div>
+        <code>            protected        $this
+    <strong>assertDatabaseMissing</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data, string|null $connection = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that a given where condition does not exist in the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDatabaseCount">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L62">at line 62</a></div>
+        <code>            protected        $this
+    <strong>assertDatabaseCount</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, int $count, string|null $connection = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the count of table entries.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSoftDeleted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L80">at line 80</a></div>
+        <code>            protected        $this
+    <strong>assertSoftDeleted</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data = [], string|null $connection = null, string|null $deletedAtColumn = &#039;deleted_at&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the given record has been &quot;soft deleted&quot;.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$deletedAtColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNotSoftDeleted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L107">at line 107</a></div>
+        <code>            protected        $this
+    <strong>assertNotSoftDeleted</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table, array $data = [], string|null $connection = null, string|null $deletedAtColumn = &#039;deleted_at&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the given record has not been &quot;soft deleted&quot;.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$deletedAtColumn</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertModelExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L131">at line 131</a></div>
+        <code>            protected        $this
+    <strong>assertModelExists</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the given model exists in the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertModelMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L146">at line 146</a></div>
+        <code>            protected        $this
+    <strong>assertModelMissing</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the given model does not exist in the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSoftDeletableModel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L161">at line 161</a></div>
+        <code>            protected        bool
+    <strong>isSoftDeletableModel</strong>(mixed $model)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the argument is a soft deletable model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_castAsJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L173">at line 173</a></div>
+        <code>                    <a href="../../../Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a>
+    <strong>castAsJson</strong>(array|string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cast a JSON string to a database compatible type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Database/Query/Expression.html"><abbr title="Illuminate\Database\Query\Expression">Expression</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConnection">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L193">at line 193</a></div>
+        <code>            protected        <a href="../../../Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+    <strong>getConnection</strong>(string|null $connection = null, string|null $table = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the database connection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Database/Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L208">at line 208</a></div>
+        <code>            protected        string
+    <strong>getTable</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table name from the given model or string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTableConnection">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L219">at line 219</a></div>
+        <code>            protected        string|null
+    <strong>getTableConnection</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table connection specified in the given model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newModelFor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L230">at line 230</a></div>
+        <code>            protected        <a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|null
+    <strong>newModelFor</strong>(<a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the model entity from the given model or string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php#L241">at line 241</a></div>
+        <code>                    $this
+    <strong>seed</strong>(array|string $class = &#039;Database\\Seeders\\DatabaseSeeder&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Seed a given database connection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

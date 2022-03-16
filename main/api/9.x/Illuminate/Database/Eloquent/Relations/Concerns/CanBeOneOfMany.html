@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Relations\Concerns\CanBeOneOfMany | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../doctum.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Relations_Concerns_CanBeOneOfMany" data-root-path="../../../../../" data-search-index-url="../../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="CanBeOneOfMany.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../../Relations.html">Relations</a></li><li class="backslash">\</li><li><a href="../Concerns.html">Concerns</a></li><li class="backslash">\</li><li>CanBeOneOfMany</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CanBeOneOfMany    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>CanBeOneOfMany</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_isOneOfMany">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$isOneOfMany</td>
+                <td class="last"><p>Determines whether the relationship is one-of-many.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_relationName">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$relationName</td>
+                <td class="last"><p>The name of the relationship.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oneOfManySubQuery">
+                                        protected                                        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|null
+                                                                                
+                                    </td>
+                <td>$oneOfManySubQuery</td>
+                <td class="last"><p>The one of many inner join subselect query builder instance.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_addOneOfManySubQueryConstraints">addOneOfManySubQueryConstraints</a>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, string|null $column = null, string|null $aggregate = null)
+        
+                                            <p><p>Add constraints for inner join subselect for one of many relationships.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_getOneOfManySubQuerySelectColumns">getOneOfManySubQuerySelectColumns</a>()
+        
+                                            <p><p>Get the columns the determine the relationship groups.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_addOneOfManyJoinSubQueryConstraints">addOneOfManyJoinSubQueryConstraints</a>(<a href="../../../Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a> $join)
+        
+                                            <p><p>Add join query constraints for one of many relationships.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_ofMany">ofMany</a>(string|array|null $column = &#039;id&#039;, string|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $aggregate = &#039;MAX&#039;, string|null $relation = null)
+        
+                                            <p><p>Indicate that the relation is a single result of a larger one-to-many relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_latestOfMany">latestOfMany</a>(string|array|null $column = &#039;id&#039;, string|null $relation = null)
+        
+                                            <p><p>Indicate that the relation is the latest single result of a larger one-to-many relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_oldestOfMany">oldestOfMany</a>(string|array|null $column = &#039;id&#039;, string|null $relation = null)
+        
+                                            <p><p>Indicate that the relation is the oldest single result of a larger one-to-many relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_getDefaultOneOfManyJoinAlias">getDefaultOneOfManyJoinAlias</a>(string $relation)
+        
+                                            <p><p>Get the default alias for the one of many inner join clause.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_newOneOfManySubQuery">newOneOfManySubQuery</a>(string|array $groupBy, string|null $column = null, string|null $aggregate = null)
+        
+                                            <p><p>Get a new query for the related model, grouping the query by the given column, often the foreign key of the relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_addOneOfManyJoinSubQuery">addOneOfManyJoinSubQuery</a>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent, <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $subQuery, string $on)
+        
+                                            <p><p>Add the join subquery to the given query on the given column and the relationship's foreign key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_mergeOneOfManyJoinsTo">mergeOneOfManyJoinsTo</a>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        
+                                            <p><p>Merge the relationship query joins to the given query builder.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_getRelationQuery">getRelationQuery</a>()
+        
+                                            <p><p>Get the query builder that will contain the relationship constraints.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|void
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_getOneOfManySubQuery">getOneOfManySubQuery</a>()
+        
+                                            <p><p>Get the one of many inner join subselect builder instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_qualifySubSelectColumn">qualifySubSelectColumn</a>(string $column)
+        
+                                            <p><p>Get the qualified column name for the one-of-many relationship using the subselect join query's alias.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_qualifyRelatedColumn">qualifyRelatedColumn</a>(string $column)
+        
+                                            <p><p>Qualify related column using the related table name if it is not already qualified.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_guessRelationship">guessRelationship</a>()
+        
+                                            <p><p>Guess the &quot;hasOne&quot; relationship's name via backtrace.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_isOneOfMany">isOneOfMany</a>()
+        
+                                            <p><p>Determine whether the relationship is a one-of-many relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="CanBeOneOfMany.html#method_getRelationName">getRelationName</a>()
+        
+                                            <p><p>Get the name of the relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addOneOfManySubQueryConstraints">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L42">at line 42</a></div>
+        <code>    abstract                void
+    <strong>addOneOfManySubQueryConstraints</strong>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query, string|null $column = null, string|null $aggregate = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add constraints for inner join subselect for one of many relationships.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$aggregate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOneOfManySubQuerySelectColumns">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L49">at line 49</a></div>
+        <code>    abstract                array|string
+    <strong>getOneOfManySubQuerySelectColumns</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the columns the determine the relationship groups.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addOneOfManyJoinSubQueryConstraints">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L57">at line 57</a></div>
+        <code>    abstract                void
+    <strong>addOneOfManyJoinSubQueryConstraints</strong>(<a href="../../../Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a> $join)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add join query constraints for one of many relationships.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Query/JoinClause.html"><abbr title="Illuminate\Database\Query\JoinClause">JoinClause</abbr></a></td>
+                <td>$join</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ofMany">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L69">at line 69</a></div>
+        <code>                    $this
+    <strong>ofMany</strong>(string|array|null $column = &#039;id&#039;, string|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $aggregate = &#039;MAX&#039;, string|null $relation = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the relation is a single result of a larger one-to-many relationship.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$aggregate</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_latestOfMany">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L142">at line 142</a></div>
+        <code>                    $this
+    <strong>latestOfMany</strong>(string|array|null $column = &#039;id&#039;, string|null $relation = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the relation is the latest single result of a larger one-to-many relationship.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_oldestOfMany">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L156">at line 156</a></div>
+        <code>                    $this
+    <strong>oldestOfMany</strong>(string|array|null $column = &#039;id&#039;, string|null $relation = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the relation is the oldest single result of a larger one-to-many relationship.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDefaultOneOfManyJoinAlias">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L169">at line 169</a></div>
+        <code>            protected        string
+    <strong>getDefaultOneOfManyJoinAlias</strong>(string $relation)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the default alias for the one of many inner join clause.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newOneOfManySubQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L184">at line 184</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>newOneOfManySubQuery</strong>(string|array $groupBy, string|null $column = null, string|null $aggregate = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new query for the related model, grouping the query by the given column, often the foreign key of the relationship.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$groupBy</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$aggregate</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addOneOfManyJoinSubQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L211">at line 211</a></div>
+        <code>            protected        void
+    <strong>addOneOfManyJoinSubQuery</strong>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $parent, <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $subQuery, string $on)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the join subquery to the given query on the given column and the relationship's foreign key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$subQuery</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$on</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeOneOfManyJoinsTo">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L230">at line 230</a></div>
+        <code>            protected        void
+    <strong>mergeOneOfManyJoinsTo</strong>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge the relationship query joins to the given query builder.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L242">at line 242</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getRelationQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the query builder that will contain the relationship constraints.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOneOfManySubQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L254">at line 254</a></div>
+        <code>                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|void
+    <strong>getOneOfManySubQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the one of many inner join subselect builder instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>|void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_qualifySubSelectColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L265">at line 265</a></div>
+        <code>                    string
+    <strong>qualifySubSelectColumn</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the qualified column name for the one-of-many relationship using the subselect join query's alias.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_qualifyRelatedColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L276">at line 276</a></div>
+        <code>            protected        string
+    <strong>qualifyRelatedColumn</strong>(string $column)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Qualify related column using the related table name if it is not already qualified.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessRelationship">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L286">at line 286</a></div>
+        <code>            protected        string
+    <strong>guessRelationship</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Guess the &quot;hasOne&quot; relationship's name via backtrace.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isOneOfMany">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L296">at line 296</a></div>
+        <code>                    bool
+    <strong>isOneOfMany</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine whether the relationship is a one-of-many relationship.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelationName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.php#L306">at line 306</a></div>
+        <code>                    string
+    <strong>getRelationName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the relationship.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

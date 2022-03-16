@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\View\Compilers\ComponentTagCompiler | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_View_Compilers_ComponentTagCompiler" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ComponentTagCompiler.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../View.html">View</a></li><li class="backslash">\</li><li><a href="../Compilers.html">Compilers</a></li><li class="backslash">\</li><li>ComponentTagCompiler</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ComponentTagCompiler    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ComponentTagCompiler</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_blade">
+                                        protected                                        <a href="BladeCompiler.html"><abbr title="Illuminate\View\Compilers\BladeCompiler">BladeCompiler</abbr></a>
+                                                                                
+                                    </td>
+                <td>$blade</td>
+                <td class="last"><p>The Blade compiler instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_aliases">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$aliases</td>
+                <td class="last"><p>The component class aliases.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_namespaces">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$namespaces</td>
+                <td class="last"><p>The component class namespaces.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_boundAttributes">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$boundAttributes</td>
+                <td class="last"><p>The &quot;bind:&quot; attributes that have been compiled for the current component.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method___construct">__construct</a>(array $aliases = [], array $namespaces = [], <abbr title="Illuminate\View\Compilers\Illuminate\View\Compilers\BladeCompiler">BladeCompiler</abbr>|null $blade = null)
+        
+                                            <p><p>Create a new component tag compiler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compile">compile</a>(string $value)
+        
+                                            <p><p>Compile the component and slot tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileTags">compileTags</a>(string $value)
+        
+                                            <p><p>Compile the tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileOpeningTags">compileOpeningTags</a>(string $value)
+        
+                                            <p><p>Compile the opening tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileSelfClosingTags">compileSelfClosingTags</a>(string $value)
+        
+                                            <p><p>Compile the self-closing tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_componentString">componentString</a>(string $component, array $attributes)
+        
+                                            <p><p>Compile the Blade component string for the given component and attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_componentClass">componentClass</a>(string $component)
+        
+                                            <p><p>Get the component class for a given component alias.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_findClassByComponent">findClassByComponent</a>(string $component)
+        
+                                            <p><p>Find the class for the given component using the registered namespaces.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_guessClassName">guessClassName</a>(string $component)
+        
+                                            <p><p>Guess the class name for the given component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_formatClassName">formatClassName</a>(string $component)
+        
+                                            <p><p>Format the class name for the given component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_guessViewName">guessViewName</a>(string $name)
+        
+                                            <p><p>Guess the view name for the given component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_partitionDataAndAttributes">partitionDataAndAttributes</a>(string $class, array $attributes)
+        
+                                            <p><p>Partition the data and extra attributes from the given array of attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileClosingTags">compileClosingTags</a>(string $value)
+        
+                                            <p><p>Compile the closing tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileSlots">compileSlots</a>(string $value)
+        
+                                            <p><p>Compile the slot tags within the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_getAttributesFromAttributeString">getAttributesFromAttributeString</a>(string $attributeString)
+        
+                                            <p><p>Get an array of attributes from the given attribute string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_parseAttributeBag">parseAttributeBag</a>(string $attributeString)
+        
+                                            <p><p>Parse the attribute bag in a given attribute string into its fully-qualified syntax.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_parseBindAttributes">parseBindAttributes</a>(string $attributeString)
+        
+                                            <p><p>Parse the &quot;bind&quot; attributes in a given attribute string into their fully-qualified syntax.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_compileAttributeEchos">compileAttributeEchos</a>(string $attributeString)
+        
+                                            <p><p>Compile any Blade echo statements that are present in the attribute string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_escapeSingleQuotesOutsideOfPhpBlocks">escapeSingleQuotesOutsideOfPhpBlocks</a>(string $value)
+        
+                                            <p><p>Escape the single quotes in the given string that are outside of PHP blocks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_attributesToString">attributesToString</a>(array $attributes, bool $escapeBound = true)
+        
+                                            <p><p>Convert an array of attributes to a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ComponentTagCompiler.html#method_stripQuotes">stripQuotes</a>(string $value)
+        
+                                            <p><p>Strip any quotes from the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L58">at line 58</a></div>
+        <code>                    void
+    <strong>__construct</strong>(array $aliases = [], array $namespaces = [], <abbr title="Illuminate\View\Compilers\Illuminate\View\Compilers\BladeCompiler">BladeCompiler</abbr>|null $blade = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new component tag compiler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$aliases</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$namespaces</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\View\Compilers\Illuminate\View\Compilers\BladeCompiler">BladeCompiler</abbr>|null</td>
+                <td>$blade</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compile">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L72">at line 72</a></div>
+        <code>                    string
+    <strong>compile</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the component and slot tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileTags">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L87">at line 87</a></div>
+        <code>                    string
+    <strong>compileTags</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileOpeningTags">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L104">at line 104</a></div>
+        <code>            protected        string
+    <strong>compileOpeningTags</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the opening tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSelfClosingTags">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L156">at line 156</a></div>
+        <code>            protected        string
+    <strong>compileSelfClosingTags</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the self-closing tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_componentString">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L209">at line 209</a></div>
+        <code>            protected        string
+    <strong>componentString</strong>(string $component, array $attributes)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the Blade component string for the given component and attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$component</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_componentClass">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L248">at line 248</a></div>
+        <code>                    string
+    <strong>componentClass</strong>(string $component)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the component class for a given component alias.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$component</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findClassByComponent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L293">at line 293</a></div>
+        <code>                    string|null
+    <strong>findClassByComponent</strong>(string $component)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find the class for the given component using the registered namespaces.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$component</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessClassName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L314">at line 314</a></div>
+        <code>                    string
+    <strong>guessClassName</strong>(string $component)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Guess the class name for the given component.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$component</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatClassName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L331">at line 331</a></div>
+        <code>                    string
+    <strong>formatClassName</strong>(string $component)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format the class name for the given component.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$component</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessViewName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L346">at line 346</a></div>
+        <code>                    string
+    <strong>guessViewName</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Guess the view name for the given component.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partitionDataAndAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L366">at line 366</a></div>
+        <code>                    array
+    <strong>partitionDataAndAttributes</strong>(string $class, array $attributes)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Partition the data and extra attributes from the given array of attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileClosingTags">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L392">at line 392</a></div>
+        <code>            protected        string
+    <strong>compileClosingTags</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the closing tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileSlots">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L403">at line 403</a></div>
+        <code>                    string
+    <strong>compileSlots</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile the slot tags within the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributesFromAttributeString">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L463">at line 463</a></div>
+        <code>            protected        array
+    <strong>getAttributesFromAttributeString</strong>(string $attributeString)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array of attributes from the given attribute string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAttributeBag">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L523">at line 523</a></div>
+        <code>            protected        string
+    <strong>parseAttributeBag</strong>(string $attributeString)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse the attribute bag in a given attribute string into its fully-qualified syntax.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseBindAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L539">at line 539</a></div>
+        <code>            protected        string
+    <strong>parseBindAttributes</strong>(string $attributeString)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse the &quot;bind&quot; attributes in a given attribute string into their fully-qualified syntax.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_compileAttributeEchos">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L559">at line 559</a></div>
+        <code>            protected        string
+    <strong>compileAttributeEchos</strong>(string $attributeString)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compile any Blade echo statements that are present in the attribute string.</p></p>                <p><p>These echo statements need to be converted to string concatenation statements.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attributeString</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeSingleQuotesOutsideOfPhpBlocks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L577">at line 577</a></div>
+        <code>            protected        string
+    <strong>escapeSingleQuotesOutsideOfPhpBlocks</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Escape the single quotes in the given string that are outside of PHP blocks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attributesToString">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L597">at line 597</a></div>
+        <code>            protected        string
+    <strong>attributesToString</strong>(array $attributes, bool $escapeBound = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert an array of attributes to a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escapeBound</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stripQuotes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/View/Compilers/ComponentTagCompiler.php#L614">at line 614</a></div>
+        <code>                    string
+    <strong>stripQuotes</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Strip any quotes from the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

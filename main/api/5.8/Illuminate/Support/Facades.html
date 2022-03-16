@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Facades | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../9.x/opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="namespace" data-name="namespace:Illuminate_Support_Facades" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" selected>Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" >Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Facades.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li class="active"><a href="../../index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li ><a href="../../../9.x/index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Support.html">Support</a></li><li class="backslash">\</li><li><a href="Facades.html">Facades</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>Illuminate\Support\Facades</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/App.html"><abbr title="Illuminate\Support\Facades\App">App</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Artisan.html"><abbr title="Illuminate\Support\Facades\Artisan">Artisan</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Auth.html"><abbr title="Illuminate\Support\Facades\Auth">Auth</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Blade.html"><abbr title="Illuminate\Support\Facades\Blade">Blade</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Broadcast.html"><abbr title="Illuminate\Support\Facades\Broadcast">Broadcast</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Bus.html"><abbr title="Illuminate\Support\Facades\Bus">Bus</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Cache.html"><abbr title="Illuminate\Support\Facades\Cache">Cache</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Config.html"><abbr title="Illuminate\Support\Facades\Config">Config</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Cookie.html"><abbr title="Illuminate\Support\Facades\Cookie">Cookie</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Crypt.html"><abbr title="Illuminate\Support\Facades\Crypt">Crypt</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/DB.html"><abbr title="Illuminate\Support\Facades\DB">DB</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Date.html"><abbr title="Illuminate\Support\Facades\Date">Date</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Event.html"><abbr title="Illuminate\Support\Facades\Event">Event</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Facade.html"><abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/File.html"><abbr title="Illuminate\Support\Facades\File">File</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Gate.html"><abbr title="Illuminate\Support\Facades\Gate">Gate</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Hash.html"><abbr title="Illuminate\Support\Facades\Hash">Hash</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Input.html"><abbr title="Illuminate\Support\Facades\Input">Input</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Lang.html"><abbr title="Illuminate\Support\Facades\Lang">Lang</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Log.html"><abbr title="Illuminate\Support\Facades\Log">Log</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Mail.html"><abbr title="Illuminate\Support\Facades\Mail">Mail</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Notification.html"><abbr title="Illuminate\Support\Facades\Notification">Notification</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Password.html"><abbr title="Illuminate\Support\Facades\Password">Password</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Queue.html"><abbr title="Illuminate\Support\Facades\Queue">Queue</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Redirect.html"><abbr title="Illuminate\Support\Facades\Redirect">Redirect</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Redis.html"><abbr title="Illuminate\Support\Facades\Redis">Redis</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Request.html"><abbr title="Illuminate\Support\Facades\Request">Request</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Response.html"><abbr title="Illuminate\Support\Facades\Response">Response</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Route.html"><abbr title="Illuminate\Support\Facades\Route">Route</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Schema.html"><abbr title="Illuminate\Support\Facades\Schema">Schema</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Session.html"><abbr title="Illuminate\Support\Facades\Session">Session</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Storage.html"><abbr title="Illuminate\Support\Facades\Storage">Storage</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/URL.html"><abbr title="Illuminate\Support\Facades\URL">URL</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/Validator.html"><abbr title="Illuminate\Support\Facades\Validator">Validator</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="https://laravel.com/api/5.8/Illuminate/Support/Facades/View.html"><abbr title="Illuminate\Support\Facades\View">View</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

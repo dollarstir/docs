@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Compiling Assets (Mix) - Laravel - The PHP Framework For Web Artisans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <link rel="canonical" href="mix.html">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta name="description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laravel.com/">
+    <meta property="og:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="og:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="og:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laravel.com/">
+    <meta property="twitter:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="twitter:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="twitter:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../img/favicon/safari-pinned-tab.svg" color="#ff2d20">
+    <link rel="shortcut icon" href="../../img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2d20">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/app-id=b59affd817f095c5db73.css">
+
+    <script>
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.theme === 'system') {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    });
+
+    function updateTheme() {
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'system';
+        }
+
+        switch (localStorage.theme) {
+            case 'system':
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                document.documentElement.setAttribute('color-theme', 'system');
+                break;
+
+            case 'dark':
+                document.documentElement.classList.add('dark');
+                document.documentElement.setAttribute('color-theme', 'dark');
+                break;
+
+            case 'light':
+                document.documentElement.classList.remove('dark');
+                document.documentElement.setAttribute('color-theme', 'light');
+                break;
+        }
+    }
+
+    updateTheme();
+</script>
+</head>
+<body
+    x-data="{
+        navIsOpen: false,
+        searchIsOpen: false,
+        search: '',
+    }"
+    class="language-php h-full w-full font-sans text-gray-900 antialiased"
+>
+
+    <a
+    id="skip-to-content-link"
+    href="mix.html#main-content"
+    class="absolute bg-gray-100 px-4 py-2 top-3 left-3 text-gray-700 shadow-xl"
+>
+    Skip to content
+</a>
+    <div class="relative overflow-auto dark:bg-dark-700" id="docsScreen">
+        <div class="relative lg:flex lg:items-start">
+            <aside
+                x-data="{
+                    navIsOpen: false,
+                    init() {
+                        this.$watch('navIsOpen', (val) => {
+                            if (val) {
+                                document.body.classList.add('overflow-hidden');
+                            } else {
+                                document.body.classList.remove('overflow-hidden');
+                            }
+                        });
+                    }
+                }"
+                class="hidden fixed top-0 bottom-0 left-0 z-20 h-full w-16 bg-gradient-to-b from-gray-100 to-white transition-all duration-300 overflow-hidden lg:sticky lg:w-80 lg:shrink-0 lg:flex lg:flex-col lg:justify-end lg:items-end 2xl:max-w-lg 2xl:w-full dark:from-dark-800 dark:to-dark-700"
+                :class="{ 'w-64': navIsOpen }"
+                @click.away="navIsOpen = false"
+                @keydown.window.escape="navIsOpen = false"
+            >
+                <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
+                    <a href="../../index.html" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+                        <img
+                            class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
+                            :class="{ 'w-12 h-12': navIsOpen }"
+                            src="../../img/logomark.min.svg"
+                            alt="Laravel"
+                            width="50"
+                            height="52"
+                        >
+                        <img
+                            x-show="navIsOpen"
+                            x-cloak
+                            class="ml-4 transition-all duration-300 lg:hidden"
+                            x-transition:enter="duration-250 ease-out"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="duration-250 ease-in"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            width="114"
+                            height="29"
+                        >
+                        <img
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            class="hidden ml-4 lg:block"
+                            width="114"
+                            height="29"
+                        >
+                    </a>
+                    <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
+                        <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+                        <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+
+                        
+                        
+                                                    <div :class="{ 'hidden': !navIsOpen }" x-cloak class="mt-4 px-3 py-2 border-dashed border-gray-200 border rounded-lg text-xs leading-loose text-gray-700 lg:block dark:border-gray-400 dark:text-gray-200">
+                                <span class="font-medium">Laravel Vapor:</span> experience extreme scale on a dedicated serverless platform for Laravel. <a class="underline text-red-600" href="https://vapor.laravel.com">Sign up now!</a>.
+                            </div>
+                        
+                                            </div>
+                    <div class="sticky bottom-0 flex-1 flex flex-col justify-end lg:hidden">
+                        <div class="py-4 px-4 bg-white">
+                            <button class="relative ml-1 w-6 h-6 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <header
+                class="lg:hidden"
+                @keydown.window.escape="navIsOpen = false"
+                @click.away="navIsOpen = false"
+            >
+                <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
+                    <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
+                        <a href="../../index.html" class="flex items-center">
+                            <img class="" src="../../img/logomark.min.svg" alt="Laravel">
+                            <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
+                        </a>
+                        <div class="flex-1 flex items-center justify-end">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                            <button class="ml-2 relative w-10 h-10 p-2 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <span :class="{ 'shadow-sm': navIsOpen }" class="absolute inset-0 z-20 pointer-events-none"></span>
+                </div>
+                <div
+                    x-show="navIsOpen"
+                    x-transition:enter="duration-150"
+                    x-transition:leave="duration-100 ease-in"
+                    x-cloak
+                >
+                    <nav
+                        x-show="navIsOpen"
+                        x-cloak
+                        class="absolute w-full transform origin-top shadow-sm z-10"
+                        x-transition:enter="duration-150 ease-out"
+                        x-transition:enter-start="opacity-0 -translate-y-8 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="duration-100 ease-in"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 -translate-y-8 scale-75"
+                    >
+                        <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
+                            <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="flex-1 dark:bg-dark-700">
+                <div class="max-w-screen-lg px-8 sm:px-16 lg:px-24">
+                    <div class="flex flex-col items-end border-b border-gray-200 py-1 transition-colors dark:border-gray-700 lg:mt-8 lg:flex-row-reverse">
+                        <div class="hidden lg:flex items-center justify-center ml-8">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="w-full lg:w-40 lg:pl-12">
+                            <div>
+                                <label class="text-gray-600 text-xs tracking-widest uppercase dark:text-gray-500" for="version-switcher">Version</label>
+                                <div x-data class="relative w-full bg-white transition-all duration-500 focus-within:border-gray-600 dark:bg-gray-800">
+                                    <select
+                                        id="version-switcher"
+                                        aria-label="Laravel version"
+                                        class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
+                                        @change="window.location = $event.target.value"
+                                    >
+                                                                                    <option  value="https://laravel.com/docs/master/mix">Master</option>
+                                                                                    <option selected value="https://laravel.com/docs/9.x/mix">9.x</option>
+                                                                                    <option  value="https://laravel.com/docs/8.x/mix">8.x</option>
+                                                                                    <option  value="https://laravel.com/docs/7.x/mix">7.x</option>
+                                                                                    <option  value="https://laravel.com/docs/6.x/mix">6.x</option>
+                                                                                    <option  value="https://laravel.com/docs/5.8/mix">5.8</option>
+                                                                                    <option  value="https://laravel.com/docs/5.7/mix">5.7</option>
+                                                                                    <option  value="https://laravel.com/docs/5.6/mix">5.6</option>
+                                                                                    <option  value="https://laravel.com/docs/5.5/mix">5.5</option>
+                                                                                    <option  value="https://laravel.com/docs/5.4/mix">5.4</option>
+                                                                                    <option  value="https://laravel.com/docs/5.3/mix">5.3</option>
+                                                                                    <option  value="https://laravel.com/docs/5.2/mix">5.2</option>
+                                                                                    <option  value="https://laravel.com/docs/5.1/mix">5.1</option>
+                                                                                    <option  value="https://laravel.com/docs/5.0/mix">5.0</option>
+                                                                                    <option  value="https://laravel.com/docs/4.2/mix">4.2</option>
+                                                                            </select>
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="../../img/icons/drop_arrow.min.svg" alt="">
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="../../img/icons/drop_arrow.dark.min.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 flex items-center justify-end w-full h-10 lg:mt-0">
+                            <div class="flex-1 flex items-center">
+                                <button
+                                    class="relative inline-flex items-center text-gray-800 transition-colors dark:text-gray-400 w-full"
+                                    @click.prevent="$dispatch('toggle-search-modal')"
+                                >
+                                    <svg class="w-5 h-5 text-gray-700 pointer-events-none transition-colors dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                    <span class="ml-3">Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="mt-8 md:mt-16">
+                        <section class="docs_main max-w-prose">
+                            
+                                                        <div id="main-content">
+    <h1>Compiling Assets (Mix)</h1>
+<ul>
+<li>
+<a href="mix.html#introduction">Introduction</a>
+</li>
+<li>
+<a href="mix.html#installation">Installation &amp; Setup</a>
+</li>
+<li>
+<a href="mix.html#running-mix">Running Mix</a>
+</li>
+<li>
+<a href="mix.html#working-with-stylesheets">Working With Stylesheets</a>
+<ul>
+<li>
+<a href="mix.html#tailwindcss">Tailwind CSS</a>
+</li>
+<li>
+<a href="mix.html#postcss">PostCSS</a>
+</li>
+<li>
+<a href="mix.html#sass">Sass</a>
+</li>
+<li>
+<a href="mix.html#url-processing">URL Processing</a>
+</li>
+<li>
+<a href="mix.html#css-source-maps">Source Maps</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="mix.html#working-with-scripts">Working With JavaScript</a>
+<ul>
+<li>
+<a href="mix.html#vue">Vue</a>
+</li>
+<li>
+<a href="mix.html#react">React</a>
+</li>
+<li>
+<a href="mix.html#vendor-extraction">Vendor Extraction</a>
+</li>
+<li>
+<a href="mix.html#custom-webpack-configuration">Custom Webpack Configuration</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="mix.html#versioning-and-cache-busting">Versioning / Cache Busting</a>
+</li>
+<li>
+<a href="mix.html#browsersync-reloading">Browsersync Reloading</a>
+</li>
+<li>
+<a href="mix.html#environment-variables">Environment Variables</a>
+</li>
+<li>
+<a href="mix.html#notifications">Notifications</a>
+</li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p><a href="https://github.com/laravel-mix/laravel-mix">Laravel Mix</a>, a package developed by <a href="https://laracasts.com">Laracasts</a> creator Jeffrey Way, provides a fluent API for defining <a href="https://webpack.js.org">webpack</a> build steps for your Laravel application using several common CSS and JavaScript pre-processors.</p>
+<p>In other words, Mix makes it a cinch to compile and minify your application's CSS and JavaScript files. Through simple method chaining, you can fluently define your asset pipeline. For example:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">postCss</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/css/app.css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>If you've ever been confused and overwhelmed about getting started with webpack and asset compilation, you will love Laravel Mix. However, you are not required to use it while developing your application; you are free to use any asset pipeline tool you wish, or even none at all.</p>
+<blockquote>
+<p>{tip} If you need a head start building your application with Laravel and <a href="https://tailwindcss.com">Tailwind CSS</a>, check out one of our <a href="starter-kits.html">application starter kits</a>.</p>
+</blockquote>
+<p><a name="installation"></a></p>
+<h2>Installation &amp; Setup</h2>
+<p><a name="installing-node"></a></p>
+<h4>Installing Node</h4>
+<p>Before running Mix, you must first ensure that Node.js and NPM are installed on your machine:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">node </span><span style="color: #82AAFF;">-v</span></div><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #82AAFF;">-v</span></div></code></pre>
+<p>You can easily install the latest version of Node and NPM using simple graphical installers from <a href="https://nodejs.org/en/download/">the official Node website</a>. Or, if you are using <a href="sail.html">Laravel Sail</a>, you may invoke Node and NPM through Sail:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">./sail </span><span style="color: #BFC7D5;">node</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">-v</span></div><div class='line'><span style="color: #BFC7D5;">./sail </span><span style="color: #BFC7D5;">npm</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">-v</span></div></code></pre>
+<p><a name="installing-laravel-mix"></a></p>
+<h4>Installing Laravel Mix</h4>
+<p>The only remaining step is to install Laravel Mix. Within a fresh installation of Laravel, you'll find a <code>package.json</code> file in the root of your directory structure. The default <code>package.json</code> file already includes everything you need to get started using Laravel Mix. Think of this file like your <code>composer.json</code> file, except it defines Node dependencies instead of PHP dependencies. You may install the dependencies it references by running:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">install</span></div></code></pre>
+<p><a name="running-mix"></a></p>
+<h2>Running Mix</h2>
+<p>Mix is a configuration layer on top of <a href="https://webpack.js.org">webpack</a>, so to run your Mix tasks you only need to execute one of the NPM scripts that are included in the default Laravel <code>package.json</code> file. When you run the <code>dev</code> or <code>production</code> scripts, all of your application's CSS and JavaScript assets will be compiled and placed in your application's <code>public</code> directory:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">// </span><span style="color: #BFC7D5;">Run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">all</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">Mix</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">tasks...</span></div><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">dev</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">// </span><span style="color: #BFC7D5;">Run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">all</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">Mix</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">tasks</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">and</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">minify</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">output...</span></div><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">prod</span></div></code></pre>
+<p><a name="watching-assets-for-changes"></a></p>
+<h4>Watching Assets For Changes</h4>
+<p>The <code>npm run watch</code> command will continue running in your terminal and watch all relevant CSS and JavaScript files for changes. Webpack will automatically recompile your assets when it detects a change to one of these files:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">watch</span></div></code></pre>
+<p>Webpack may not be able to detect your file changes in certain local development environments. If this is the case on your system, consider using the <code>watch-poll</code> command:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">run</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">watch-poll</span></div></code></pre>
+<p><a name="working-with-stylesheets"></a></p>
+<h2>Working With Stylesheets</h2>
+<p>Your application's <code>webpack.mix.js</code> file is your entry point for all asset compilation. Think of it as a light configuration wrapper around <a href="https://webpack.js.org">webpack</a>. Mix tasks can be chained together to define exactly how your assets should be compiled.</p>
+<p><a name="tailwindcss"></a></p>
+<h3>Tailwind CSS</h3>
+<p><a href="https://tailwindcss.com">Tailwind CSS</a> is a modern, utility-first framework for building amazing sites without ever leaving your HTML. Let's dig into how to start using it in a Laravel project with Laravel Mix. First, we should install Tailwind using NPM and generate our Tailwind configuration file:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">install</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">npm </span><span style="color: #BFC7D5;">install</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">-D</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">tailwindcss</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">npx </span><span style="color: #BFC7D5;">tailwindcss</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">init</span></div></code></pre>
+<p>The <code>init</code> command will generate a <code>tailwind.config.js</code> file. The <code>content</code> section of this file allows you to configure the paths to all of your HTML templates, JavaScript components, and any other source files that contain Tailwind class names so that any CSS classes that are not used within these files will be purged from your production CSS build:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">content: [</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./storage/framework/views/*.php</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.blade.php</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">./resources/**/*.vue</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">],</span></div></code></pre>
+<p>Next, you should add each of Tailwind's &quot;layers&quot; to your application's <code>resources/css/app.css</code> file:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="css" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">@tailwind</span><span style="color: #BFC7D5;"> base;</span></div><div class='line'><span style="color: #C792EA;">@tailwind</span><span style="color: #BFC7D5;"> components;</span></div><div class='line'><span style="color: #C792EA;">@tailwind</span><span style="color: #BFC7D5;"> utilities;</span></div></code></pre>
+<p>Once you have configured Tailwind's layers, you are ready to update your application's <code>webpack.mix.js</code> file to compile your Tailwind powered CSS:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">postCss</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/css/app.css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, [</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #89DDFF;">require</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">tailwindcss</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">),</span></div><div class='line'><span style="color: #BFC7D5;">    ]);</span></div></code></pre>
+<p>Finally, you should reference your stylesheet in your application's primary layout template. Many applications choose to store this template at <code>resources/views/layouts/app.blade.php</code>. In addition, ensure you add the responsive viewport <code>meta</code> tag if it's not already present:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">meta</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">charset</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">UTF-8</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">meta</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">name</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">viewport</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">content</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">width=device-width, initial-scale=1.0</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;"> /&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">link</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">href</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/css/app.css</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">rel</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">stylesheet</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="postcss"></a></p>
+<h3>PostCSS</h3>
+<p><a href="https://postcss.org/">PostCSS</a>, a powerful tool for transforming your CSS, is included with Laravel Mix out of the box. By default, Mix leverages the popular <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> plugin to automatically apply all necessary CSS3 vendor prefixes. However, you're free to add any additional plugins that are appropriate for your application.</p>
+<p>First, install the desired plugin through NPM and include it in your array of plugins when calling Mix's <code>postCss</code> method. The <code>postCss</code> method accepts the path to your CSS file as its first argument and the directory where the compiled file should be placed as its second argument:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">postCss</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/css/app.css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, [</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">require</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">postcss-custom-properties</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">]);</span></div></code></pre>
+<p>Or, you may execute <code>postCss</code> with no additional plugins in order to achieve simple CSS compilation and minification:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">postCss</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/css/app.css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="sass"></a></p>
+<h3>Sass</h3>
+<p>The <code>sass</code> method allows you to compile <a href="https://sass-lang.com/">Sass</a> into CSS that can be understood by web browsers. The <code>sass</code> method accepts the path to your Sass file as its first argument and the directory where the compiled file should be placed as its second argument:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sass</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/sass/app.scss</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>You may compile multiple Sass files into their own respective CSS files and even customize the output directory of the resulting CSS by calling the <code>sass</code> method multiple times:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sass</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/sass/app.sass</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sass</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/sass/admin.sass</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css/admin</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="url-processing"></a></p>
+<h3>URL Processing</h3>
+<p>Because Laravel Mix is built on top of webpack, it's important to understand a few webpack concepts. For CSS compilation, webpack will rewrite and optimize any <code>url()</code> calls within your stylesheets. While this might initially sound strange, it's an incredibly powerful piece of functionality. Imagine that we want to compile Sass that includes a relative URL to an image:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="css" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">.example</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #80CBC4;">background</span><span style="color: #BFC7D5;">: </span><span style="color: #89DDFF;">url</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">../images/example.png</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<blockquote>
+<p>{note} Absolute paths for any given <code>url()</code> will be excluded from URL-rewriting. For example, <code>url('/images/thing.png')</code> or <code>url('http://example.com/images/thing.png')</code> won't be modified.</p>
+</blockquote>
+<p>By default, Laravel Mix and webpack will find <code>example.png</code>, copy it to your <code>public/images</code> folder, and then rewrite the <code>url()</code> within your generated stylesheet. As such, your compiled CSS will be:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="css" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">.example</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #80CBC4;">background</span><span style="color: #BFC7D5;">: </span><span style="color: #89DDFF;">url</span><span style="color: #BFC7D5;">(</span><span style="color: #7986E7;">/images/example.png?d41d8cd98f00b204e9800998ecf8427e</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p>As useful as this feature may be, your existing folder structure may already be configured in a way you like. If this is the case, you may disable <code>url()</code> rewriting like so:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sass</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/sass/app.scss</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/css</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">options</span><span style="color: #BFC7D5;">({</span></div><div class='line'><span style="color: #BFC7D5;">    processCssUrls: </span><span style="color: #FF5874;">false</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p>With this addition to your <code>webpack.mix.js</code> file, Mix will no longer match any <code>url()</code> or copy assets to your public directory. In other words, the compiled CSS will look just like how you originally typed it:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="css" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB6B;">.example</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #80CBC4;">background</span><span style="color: #BFC7D5;">: </span><span style="color: #89DDFF;">url</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">../images/thing.png</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="css-source-maps"></a></p>
+<h3>Source Maps</h3>
+<p>Though disabled by default, source maps may be activated by calling the <code>mix.sourceMaps()</code> method in your <code>webpack.mix.js</code> file. Though it comes with a compile/performance cost, this will provide extra debugging information to your browser's developer tools when using compiled assets:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sourceMaps</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p><a name="style-of-source-mapping"></a></p>
+<h4>Style Of Source Mapping</h4>
+<p>Webpack offers a variety of <a href="https://webpack.js.org/configuration/devtool/#devtool">source mapping styles</a>. By default, Mix's source mapping style is set to <code>eval-source-map</code>, which provides a fast rebuild time. If you want to change the mapping style, you may do so using the <code>sourceMaps</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">let</span><span style="color: #BFC7D5;"> productionSourceMaps </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FF5874;">false</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">sourceMaps</span><span style="color: #BFC7D5;">(productionSourceMaps, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">source-map</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a name="working-with-scripts"></a></p>
+<h2>Working With JavaScript</h2>
+<p>Mix provides several features to help you work with your JavaScript files, such as compiling modern ECMAScript, module bundling, minification, and concatenating plain JavaScript files. Even better, this all works seamlessly, without requiring an ounce of custom configuration:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p>With this single line of code, you may now take advantage of:</p>
+<div class="content-list" markdown="1">
+<ul>
+<li>The latest EcmaScript syntax.</li>
+<li>Modules</li>
+<li>Minification for production environments.</li>
+</ul>
+</div>
+<p><a name="vue"></a></p>
+<h3>Vue</h3>
+<p>Mix will automatically install the Babel plugins necessary for Vue single-file component compilation support when using the <code>vue</code> method. No further configuration is required:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">vue</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p>Once your JavaScript has been compiled, you can reference it in your application:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">&lt;!--</span><span style="color: #697098;"> ... </span><span style="color: #697098;">--&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/js/app.js</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="react"></a></p>
+<h3>React</h3>
+<p>Mix can automatically install the Babel plugins necessary for React support. To get started, add a call to the <code>react</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.jsx</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">   </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">react</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p>Behind the scenes, Mix will download and include the appropriate <code>babel-preset-react</code> Babel plugin. Once your JavaScript has been compiled, you can reference it in your application:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #697098;">&lt;!--</span><span style="color: #697098;"> ... </span><span style="color: #697098;">--&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/js/app.js</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">head</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="vendor-extraction"></a></p>
+<h3>Vendor Extraction</h3>
+<p>One potential downside to bundling all of your application-specific JavaScript with your vendor libraries such as React and Vue is that it makes long-term caching more difficult. For example, a single update to your application code will force the browser to re-download all of your vendor libraries even if they haven't changed.</p>
+<p>If you intend to make frequent updates to your application's JavaScript, you should consider extracting all of your vendor libraries into their own file. This way, a change to your application code will not affect the caching of your large <code>vendor.js</code> file. Mix's <code>extract</code> method makes this a breeze:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">extract</span><span style="color: #BFC7D5;">([</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">vue</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">])</span></div></code></pre>
+<p>The <code>extract</code> method accepts an array of all libraries or modules that you wish to extract into a <code>vendor.js</code> file. Using the snippet above as an example, Mix will generate the following files:</p>
+<div class="content-list" markdown="1">
+<ul>
+<li>
+<code>public/js/manifest.js</code>: <em>The Webpack manifest runtime</em>
+</li>
+<li>
+<code>public/js/vendor.js</code>: <em>Your vendor libraries</em>
+</li>
+<li>
+<code>public/js/app.js</code>: <em>Your application code</em>
+</li>
+</ul>
+</div>
+<p>To avoid JavaScript errors, be sure to load these files in the proper order:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="html" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/js/manifest.js</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/js/vendor.js</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">/js/app.js</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="custom-webpack-configuration"></a></p>
+<h3>Custom Webpack Configuration</h3>
+<p>Occasionally, you may need to manually modify the underlying Webpack configuration. For example, you might have a special loader or plugin that needs to be referenced.</p>
+<p>Mix provides a useful <code>webpackConfig</code> method that allows you to merge any short Webpack configuration overrides. This is particularly appealing, as it doesn't require you to copy and maintain your own copy of the <code>webpack.config.js</code> file. The <code>webpackConfig</code> method accepts an object, which should contain any <a href="https://webpack.js.org/configuration/">Webpack-specific configuration</a> that you wish to apply.</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">webpackConfig</span><span style="color: #BFC7D5;">({</span></div><div class='line'><span style="color: #BFC7D5;">    resolve: {</span></div><div class='line'><span style="color: #BFC7D5;">        modules: [</span></div><div class='line'><span style="color: #BFC7D5;">            path</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">resolve</span><span style="color: #BFC7D5;">(__dirname, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">vendor/laravel/spark/resources/assets/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">        ]</span></div><div class='line'><span style="color: #BFC7D5;">    }</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p><a name="versioning-and-cache-busting"></a></p>
+<h2>Versioning / Cache Busting</h2>
+<p>Many developers suffix their compiled assets with a timestamp or unique token to force browsers to load the fresh assets instead of serving stale copies of the code. Mix can automatically handle this for you using the <code>version</code> method.</p>
+<p>The <code>version</code> method will append a unique hash to the filenames of all compiled files, allowing for more convenient cache busting:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">version</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p>After generating the versioned file, you won't know the exact filename. So, you should use Laravel's global <code>mix</code> function within your <a href="views.html">views</a> to load the appropriately hashed asset. The <code>mix</code> function will automatically determine the current name of the hashed file:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">src</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #82AAFF;">mix</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">}}</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;&lt;/</span><span style="color: #FF5572;">script</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p>Because versioned files are usually unnecessary in development, you may instruct the versioning process to only run during <code>npm run prod</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">js</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">resources/js/app.js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">public/js</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">if</span><span style="color: #BFC7D5;"> (mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">inProduction</span><span style="color: #BFC7D5;">()) {</span></div><div class='line'><span style="color: #BFC7D5;">    mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">version</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="custom-mix-base-urls"></a></p>
+<h4>Custom Mix Base URLs</h4>
+<p>If your Mix compiled assets are deployed to a CDN separate from your application, you will need to change the base URL generated by the <code>mix</code> function. You may do so by adding a <code>mix_url</code> configuration option to your application's <code>config/app.php</code> configuration file:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">mix_url</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">env</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">MIX_ASSET_URL</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> null</span><span style="color: #BFC7D5;">)</span></div></code></pre>
+<p>After configuring the Mix URL, The <code>mix</code> function will prefix the configured URL when generating URLs to assets:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">https://cdn.example.com/js/app.js</span><span style="color: #89DDFF;">?</span><span style="color: #BFC7D5;">id=1964becbdd96414518cd</span></div></code></pre>
+<p><a name="browsersync-reloading"></a></p>
+<h2>Browsersync Reloading</h2>
+<p><a href="https://browsersync.io/">BrowserSync</a> can automatically monitor your files for changes, and inject your changes into the browser without requiring a manual refresh. You may enable support for this by calling the <code>mix.browserSync()</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">browserSync</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">laravel.test</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div></code></pre>
+<p><a href="https://browsersync.io/docs/options">BrowserSync options</a> may be specified by passing a JavaScript object to the <code>browserSync</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">browserSync</span><span style="color: #BFC7D5;">({</span></div><div class='line'><span style="color: #BFC7D5;">    proxy: </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">laravel.test</span><span style="color: #D9F5DD;">&#39;</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p>Next, start webpack's development server using the <code>npm run watch</code> command. Now, when you modify a script or PHP file you can watch as the browser instantly refreshes the page to reflect your changes.</p>
+<p><a name="environment-variables"></a></p>
+<h2>Environment Variables</h2>
+<p>You may inject environment variables into your <code>webpack.mix.js</code> script by prefixing one of the environment variables in your <code>.env</code> file with <code>MIX_</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="ini" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">MIX_SENTRY_DSN_PUBLIC</span><span style="color: #BFC7D5;">=http://example.com</span></div></code></pre>
+<p>After the variable has been defined in your <code>.env</code> file, you may access it via the <code>process.env</code> object. However, you will need to restart the task if the environment variable's value changes while the task is running:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">process</span><span style="color: #C792EA;">.</span><span style="color: #89DDFF;">env</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">MIX_SENTRY_DSN_PUBLIC</span></div></code></pre>
+<p><a name="notifications"></a></p>
+<h2>Notifications</h2>
+<p>When available, Mix will automatically display OS notifications when compiling, giving you instant feedback as to whether the compilation was successful or not. However, there may be instances when you would prefer to disable these notifications. One such example might be triggering Mix on your production server. Notifications may be deactivated using the <code>disableNotifications</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="js" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">mix</span><span style="color: #C792EA;">.</span><span style="color: #82AAFF;">disableNotifications</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+
+                                <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CKYILK3E&placement=laravelcom" id="_carbonads_js"></script>
+</div>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<footer class="relative pt-12 dark:bg-dark-700">
+    <div class="max-w-screen-2xl mx-auto w-full px-8">
+        <div>
+            <a href="../../index.html" class="inline-flex">
+                <img class="w-16 h-16" src="../../img/logomark.min.svg" alt="Laravel" loading="lazy">
+            </a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
+            <div class="col-span-12 lg:col-span-4">
+                <p class="max-w-sm text-xs text-gray-700 sm:text-sm dark:text-gray-500">Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in most web projects.</p>
+                <ul class="mt-6 flex items-center space-x-3">
+                    <li>
+                        <a href="https://twitter.com/laravelphp">
+                            <img id="footer__twitter_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                            <img id="footer__twitter" class="inline-block dark:hidden w-6 h-6" src="../../img/social/twitter.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/laravel">
+                            <img id="footer__github_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/github.dark.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                            <img id="footer__github" class="inline-block dark:hidden w-6 h-6" src="../../img/social/github.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/mPZNm7A">
+                            <img id="footer__discord_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/discord.dark.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                            <img id="footer__discord" class="inline-block dark:hidden w-6 h-6" src="../../img/social/discord.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/laravelphp">
+                            <img id="footer__youtube_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                            <img id="footer__youtube" class="inline-block dark:hidden w-6 h-6" src="../../img/social/youtube.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Highlights</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="../../team.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Our Team</a>
+                                </li>
+                                                            <li>
+                                    <a href="releases.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Release Notes</a>
+                                </li>
+                                                            <li>
+                                    <a href="installation.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Getting Started</a>
+                                </li>
+                                                            <li>
+                                    <a href="routing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Routing</a>
+                                </li>
+                                                            <li>
+                                    <a href="blade.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Blade Templates</a>
+                                </li>
+                                                            <li>
+                                    <a href="authentication.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authentication</a>
+                                </li>
+                                                            <li>
+                                    <a href="authorization.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authorization</a>
+                                </li>
+                                                            <li>
+                                    <a href="artisan.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Artisan Console</a>
+                                </li>
+                                                            <li>
+                                    <a href="database.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Database</a>
+                                </li>
+                                                            <li>
+                                    <a href="eloquent.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Eloquent ORM</a>
+                                </li>
+                                                            <li>
+                                    <a href="testing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Testing</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Resources</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://laracasts.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracasts</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laravel-news.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laravel News</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.us" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.eu/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon EU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://larajobs.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jobs</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://certification.laravel.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Certification</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracasts.com/discuss" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forums</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Partners</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://vehikl.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vehikl</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://tighten.co" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Tighten</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://64robots.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">64 Robots</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://kirschbaumdevelopment.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Kirschbaum</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.curotec.com/services/technologies/laravel/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Curotec</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://jump24.co.uk/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jump24</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.a2design.biz/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">A2 Design</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://corporate.aboutyou.de/app/uploads/2019/08/INTRO-Pitch-I-AY-Tech.pdf?utm_source=laravelpartnersfindoutmore&utm_medium=socialgroups&utm_campaign=tech" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">ABOUT YOU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.byte5.net/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Byte 5</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://cubettech.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cubet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cyber-Duck</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://devsquad.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">DevSquad</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.ideil.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Ideil</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://romegadigital.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Romega Software</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.worksome.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Worksome</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=patreon-sponsors" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">WebReinvent</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Ecosystem</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="billing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cashier</a>
+                                </li>
+                                                            <li>
+                                    <a href="dusk.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Dusk</a>
+                                </li>
+                                                            <li>
+                                    <a href="broadcasting.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Echo</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://envoyer.io" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Envoyer</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://forge.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forge</a>
+                                </li>
+                                                            <li>
+                                    <a href="homestead.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Homestead</a>
+                                </li>
+                                                            <li>
+                                    <a href="horizon.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Horizon</a>
+                                </li>
+                                                            <li>
+                                    <a href="mix.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Mix</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://nova.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Nova</a>
+                                </li>
+                                                            <li>
+                                    <a href="passport.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Passport</a>
+                                </li>
+                                                            <li>
+                                    <a href="scout.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Scout</a>
+                                </li>
+                                                            <li>
+                                    <a href="socialite.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Socialite</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://spark.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Spark</a>
+                                </li>
+                                                            <li>
+                                    <a href="telescope.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Telescope</a>
+                                </li>
+                                                            <li>
+                                    <a href="valet.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Valet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://vapor.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vapor</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                    </div>
+        <div class="mt-10 border-t pt-6 pb-16 border-gray-200 dark:border-dark-500">
+            <p class="text-xs text-gray-700 dark:text-gray-400">
+                Laravel is a Trademark of Taylor Otwell. Copyright &copy; 2011-2022 Laravel LLC.
+            </p>
+            <p class="mt-6 text-xs text-gray-700 dark:text-gray-400">
+                Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<div
+    x-data="searchComponent()"
+    @toggle-search-modal.window="open = !open"
+    @keydown.window.escape="close"
+    @keydown.window="handleKeydown"
+    @keydown.escape.prevent.stop="close"
+    x-show="open"
+    x-cloak
+    x-trap.noscroll.inert="open"
+    role="dialog"
+    aria-modal="true"
+    x-id="['search-modal']"
+    :aria-labelledby="$id('search-modal')"
+    class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
+>
+    <div x-show="open" x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
+
+    <div
+        x-show="open"
+        x-transition
+        @click="close()"
+        class="relative min-h-screen flex items-start justify-center p-4 lg:py-20"
+    >
+        <div
+            @click.stop
+            class="relative max-w-2xl w-full bg-dark-700 pt-8 px-8 pb-16"
+        >
+            <div
+                class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600"
+            >
+                <svg class="absolute inset-y-0 left-0 mt-1 w-5 h-5 text-gray-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <input
+                    x-model.debouce.200ms="search"
+                    x-ref="searchInput"
+                    class="flex-1 w-full pl-8 pr-4 py-1 tracking-wide text-gray-400 placeholder-gray-500 bg-transparent focus:outline-none"
+                    placeholder="Search Docs (Press '/')"
+                    aria-label="Search in the documentation"
+                    @keydown.arrow-up.prevent="focusPreviousResult()"
+                    @keydown.arrow-down.prevent="focusNextResult()"
+                >
+            </div>
+
+            <div x-show="search">
+                <div x-show="hits.length" x-cloak class="mt-5 divide-y divide-gray-700 z-30">
+                    <template x-for="(hit, index) in hits" :key="index" hidden>
+                        <div>
+                            <a
+                                :id="'search-result-' + index"
+                                :href="hit.url"
+                                class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200"
+                                @keydown.arrow-up.prevent="focusPreviousResult(index)"
+                                @keydown.arrow-down.prevent="focusNextResult(index)"
+                            >
+                                <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
+                                <div class="mt-2">
+                                    <div x-show="hit._highlightResult.hierarchy.lvl1" class="text-sm">
+                                        <span class="text-red-600 opacity-75">#</span> <span x-html="hit._highlightResult.hierarchy.lvl1 ? hit._highlightResult.hierarchy.lvl1.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl2" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl2 ? hit._highlightResult.hierarchy.lvl2.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl3" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl3 ? hit._highlightResult.hierarchy.lvl3.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl4" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl4 ? hit._highlightResult.hierarchy.lvl4.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl5" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl5 ? hit._highlightResult.hierarchy.lvl5.value : ''"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+
+                <div x-show="! hits.length" x-cloak class="mt-8 pb-32">
+                    <div x-text="`We didn't find any result for '${search}'. Sorry!`"></div>
+                </div>
+            </div>
+
+            <div x-show="! search" class="mt-8 pb-32">
+                <p>Enter a search term to find results in the documentation.</p>
+            </div>
+
+            <div class="absolute bottom-0 inset-x-0 border-t border-dark-800 text-gray-400 flex justify-end">
+                <a class="px-4 py-2 inline-block" target="_blank" href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
+                    <img width="105" src="../../img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark" alt="Algolia">
+                </a>
+            </div>
+        </div>
+
+        <button x-show="open" x-transition.opacity class="absolute top-8 right-8 text-gray-400" @click.prevent="close">
+            <span class="sr-only">Close search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    var algolia_app_id = 'E3MIRNPJH5';
+    var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
+    var version = '9.x';
+</script>
+
+<script src="../../js/app-id=100f797fd909ecd1c2f2.js"></script>
+
+<script>
+    var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+    (function(d,t){
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)
+    }(document,'script'));
+</script>
+</body>
+</html>

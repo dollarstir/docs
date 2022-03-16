@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Log\Logger | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Log_Logger" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Logger.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Log.html">Log</a></li><li class="backslash">\</li><li>Logger</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Logger    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Logger</strong>        implements        <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_logger">
+                                        protected                                        <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$logger</td>
+                <td class="last"><p>The underlying logger implementation.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dispatcher">
+                                        protected                                        <a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>|null
+                                                                                
+                                    </td>
+                <td>$dispatcher</td>
+                <td class="last"><p>The event dispatcher instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_context">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$context</td>
+                <td class="last"><p>Any context to be added to logs.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method___construct">__construct</a>(<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher = null)
+        
+                                            <p><p>Create a new log writer instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_emergency">emergency</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log an emergency message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_alert">alert</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log an alert message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_critical">critical</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log a critical message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_error">error</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log an error message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_warning">warning</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log a warning message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_notice">notice</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log a notice to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_info">info</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log an informational message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_debug">debug</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log a debug message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_log">log</a>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Log a message to the logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_write">write</a>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        
+                                            <p><p>Dynamically pass log calls into the writer.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_writeLog">writeLog</a>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context)
+        
+                                            <p><p>Write a message to the log.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_withContext">withContext</a>(array $context = [])
+        
+                                            <p><p>Add context to all future logs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_withoutContext">withoutContext</a>()
+        
+                                            <p><p>Flush the existing context array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_listen">listen</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Register a new callback handler for when a log event is triggered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_fireLogEvent">fireLogEvent</a>(string $level, string $message, array $context = [])
+        
+                                            <p><p>Fires a log event.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_formatMessage">formatMessage</a>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message)
+        
+                                            <p><p>Format the parameters for the logger.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_getLogger">getLogger</a>()
+        
+                                            <p><p>Get the underlying logger implementation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_getEventDispatcher">getEventDispatcher</a>()
+        
+                                            <p><p>Get the event dispatcher instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method_setEventDispatcher">setEventDispatcher</a>(<a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher)
+        
+                                            <p><p>Set the event dispatcher instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Logger.html#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically proxy method calls to the underlying logger.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L43">at line 43</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger, <a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new log writer instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emergency">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L56">at line 56</a></div>
+        <code>                    void
+    <strong>emergency</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an emergency message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alert">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L68">at line 68</a></div>
+        <code>                    void
+    <strong>alert</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an alert message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_critical">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L80">at line 80</a></div>
+        <code>                    void
+    <strong>critical</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a critical message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_error">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L92">at line 92</a></div>
+        <code>                    void
+    <strong>error</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an error message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_warning">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L104">at line 104</a></div>
+        <code>                    void
+    <strong>warning</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a warning message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notice">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L116">at line 116</a></div>
+        <code>                    void
+    <strong>notice</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a notice to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_info">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L128">at line 128</a></div>
+        <code>                    void
+    <strong>info</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log an informational message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_debug">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L140">at line 140</a></div>
+        <code>                    void
+    <strong>debug</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a debug message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_log">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L153">at line 153</a></div>
+        <code>                    void
+    <strong>log</strong>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Log a message to the logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_write">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L166">at line 166</a></div>
+        <code>                    void
+    <strong>write</strong>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically pass log calls into the writer.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_writeLog">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L179">at line 179</a></div>
+        <code>            protected        void
+    <strong>writeLog</strong>(string $level, <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message, array $context)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Write a message to the log.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withContext">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L195">at line 195</a></div>
+        <code>                    $this
+    <strong>withContext</strong>(array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add context to all future logs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutContext">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L207">at line 207</a></div>
+        <code>                    $this
+    <strong>withoutContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the existing context array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listen">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L222">at line 222</a></div>
+        <code>                    void
+    <strong>listen</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new callback handler for when a log event is triggered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireLogEvent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L239">at line 239</a></div>
+        <code>            protected        void
+    <strong>fireLogEvent</strong>(string $level, string $message, array $context = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fires a log event.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$context</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatMessage">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L255">at line 255</a></div>
+        <code>            protected        string
+    <strong>formatMessage</strong>(<a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string $message)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format the parameters for the logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a href="../Contracts/Support/Jsonable.html"><abbr title="Illuminate\Contracts\Support\Jsonable">Jsonable</abbr></a>|<a href="../Support/Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>|array|string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogger">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L273">at line 273</a></div>
+        <code>                    <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+    <strong>getLogger</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the underlying logger implementation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventDispatcher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L283">at line 283</a></div>
+        <code>                    <a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+    <strong>getEventDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the event dispatcher instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventDispatcher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L294">at line 294</a></div>
+        <code>                    void
+    <strong>setEventDispatcher</strong>(<a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the event dispatcher instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Log/Logger.php#L306">at line 306</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically proxy method calls to the underlying logger.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

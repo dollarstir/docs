@@ -1,0 +1,4172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Str | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Support_Str" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Str.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Support.html">Support</a></li><li class="backslash">\</li><li>Str</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Str    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Str</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$macros</td>
+                <td class="last"><p>The registered string macros.</p></td>
+                <td><small>from&nbsp;<a href="Traits/Macroable.html#property_macros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_snakeCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$snakeCache</td>
+                <td class="last"><p>The cache of snake-cased words.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_camelCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$camelCache</td>
+                <td class="last"><p>The cache of camel-cased words.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_studlyCache">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$studlyCache</td>
+                <td class="last"><p>The cache of studly-cased words.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_uuidFactory">
+                    static                    protected                                        callable
+                                                                                
+                                    </td>
+                <td>$uuidFactory</td>
+                <td class="last"><p>The callback that should be used to generate UUIDs.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_macro">macro</a>(string $name, object|callable $macro)
+        
+                                            <p><p>Register a custom macro.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_mixin">mixin</a>(object $mixin, bool $replace = true)
+        
+                                            <p><p>Mix another object into the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p><p>Checks if macro is registered.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_flushMacros">flushMacros</a>()
+        
+                                            <p><p>Flush the existing macros.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically handle calls to the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically handle calls to the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Traits/Macroable.html#method___call">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_of">of</a>(string $string)
+        
+                                            <p><p>Get a new stringable object from the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_after">after</a>(string $subject, string $search)
+        
+                                            <p><p>Return the remainder of a string after the first occurrence of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_afterLast">afterLast</a>(string $subject, string $search)
+        
+                                            <p><p>Return the remainder of a string after the last occurrence of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_ascii">ascii</a>(string $value, string $language = &#039;en&#039;)
+        
+                                            <p><p>Transliterate a UTF-8 value to ASCII.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_transliterate">transliterate</a>(string $string, string|null $unknown = &#039;?&#039;, bool|null $strict = false)
+        
+                                            <p><p>Transliterate a string to its closest ASCII representation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_before">before</a>(string $subject, string $search)
+        
+                                            <p><p>Get the portion of a string before the first occurrence of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_beforeLast">beforeLast</a>(string $subject, string $search)
+        
+                                            <p><p>Get the portion of a string before the last occurrence of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_between">between</a>(string $subject, string $from, string $to)
+        
+                                            <p><p>Get the portion of a string between two given values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_betweenFirst">betweenFirst</a>(string $subject, string $from, string $to)
+        
+                                            <p><p>Get the smallest possible portion of a string between two given values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_camel">camel</a>(string $value)
+        
+                                            <p><p>Convert a value to camel case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_contains">contains</a>(string $haystack, string|string[] $needles, bool $ignoreCase = false)
+        
+                                            <p><p>Determine if a given string contains a given substring.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_containsAll">containsAll</a>(string $haystack, array $needles, bool $ignoreCase = false)
+        
+                                            <p><p>Determine if a given string contains all array values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_endsWith">endsWith</a>(string $haystack, string|string[] $needles)
+        
+                                            <p><p>Determine if a given string ends with a given substring.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_excerpt">excerpt</a>(string $text, string $phrase = &#039;&#039;, array $options = [])
+        
+                                            <p><p>Extracts an excerpt from text that matches the first instance of a phrase.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_finish">finish</a>(string $value, string $cap)
+        
+                                            <p><p>Cap a string with a single instance of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_is">is</a>(string|array $pattern, string $value)
+        
+                                            <p><p>Determine if a given string matches a given pattern.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_isAscii">isAscii</a>(string $value)
+        
+                                            <p><p>Determine if a given string is 7 bit ASCII.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_isUuid">isUuid</a>(string $value)
+        
+                                            <p><p>Determine if a given string is a valid UUID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_kebab">kebab</a>(string $value)
+        
+                                            <p><p>Convert a string to kebab case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_length">length</a>(string $value, string|null $encoding = null)
+        
+                                            <p><p>Return the length of the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_limit">limit</a>(string $value, int $limit = 100, string $end = &#039;...&#039;)
+        
+                                            <p><p>Limit the number of characters in a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_lower">lower</a>(string $value)
+        
+                                            <p><p>Convert the given string to lower-case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_words">words</a>(string $value, int $words = 100, string $end = &#039;...&#039;)
+        
+                                            <p><p>Limit the number of words in a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_markdown">markdown</a>(string $string, array $options = [])
+        
+                                            <p><p>Converts GitHub flavored Markdown into HTML.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_mask">mask</a>(string $string, string $character, int $index, int|null $length = null, string $encoding = &#039;UTF-8&#039;)
+        
+                                            <p><p>Masks a portion of a string with a repeated character.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_match">match</a>(string $pattern, string $subject)
+        
+                                            <p><p>Get the string matching the given pattern.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_matchAll">matchAll</a>(string $pattern, string $subject)
+        
+                                            <p><p>Get the string matching the given pattern.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_padBoth">padBoth</a>(string $value, int $length, string $pad = &#039; &#039;)
+        
+                                            <p><p>Pad both sides of a string with another.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_padLeft">padLeft</a>(string $value, int $length, string $pad = &#039; &#039;)
+        
+                                            <p><p>Pad the left side of a string with another.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_padRight">padRight</a>(string $value, int $length, string $pad = &#039; &#039;)
+        
+                                            <p><p>Pad the right side of a string with another.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Support\array&lt;int,string">array&lt;int,string</abbr>|<abbr title="Illuminate\Support\null&gt;">null&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_parseCallback">parseCallback</a>(string $callback, string|null $default = null)
+        
+                                            <p><p>Parse a Class[@]method style callback into class and method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_plural">plural</a>(string $value, int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a> $count = 2)
+        
+                                            <p><p>Get the plural form of an English word.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_pluralStudly">pluralStudly</a>(string $value, int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a> $count = 2)
+        
+                                            <p><p>Pluralize the last word of an English, studly caps case string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_random">random</a>(int $length = 16)
+        
+                                            <p><p>Generate a more truly &quot;random&quot; alpha-numeric string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_repeat">repeat</a>(string $string, int $times)
+        
+                                            <p><p>Repeat the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_replaceArray">replaceArray</a>(string $search, array $replace, string $subject)
+        
+                                            <p><p>Replace a given value in the string sequentially with an array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_replace">replace</a>(string|string[] $search, string|string[] $replace, string|string[] $subject)
+        
+                                            <p><p>Replace the given value in the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_replaceFirst">replaceFirst</a>(string $search, string $replace, string $subject)
+        
+                                            <p><p>Replace the first occurrence of a given value in the string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_replaceLast">replaceLast</a>(string $search, string $replace, string $subject)
+        
+                                            <p><p>Replace the last occurrence of a given value in the string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_remove">remove</a>(string|string[] $search, string $subject, bool $caseSensitive = true)
+        
+                                            <p><p>Remove any occurrence of the given string in the subject.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_reverse">reverse</a>(string $value)
+        
+                                            <p><p>Reverse the given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_start">start</a>(string $value, string $prefix)
+        
+                                            <p><p>Begin a string with a single instance of a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_upper">upper</a>(string $value)
+        
+                                            <p><p>Convert the given string to upper-case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_title">title</a>(string $value)
+        
+                                            <p><p>Convert the given string to title case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_headline">headline</a>(string $value)
+        
+                                            <p><p>Convert the given string to title case for each word.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_singular">singular</a>(string $value)
+        
+                                            <p><p>Get the singular form of an English word.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_slug">slug</a>(string $title, string $separator = &#039;-&#039;, string|null $language = &#039;en&#039;)
+        
+                                            <p><p>Generate a URL friendly &quot;slug&quot; from a given string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_snake">snake</a>(string $value, string $delimiter = &#039;_&#039;)
+        
+                                            <p><p>Convert a string to snake case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_startsWith">startsWith</a>(string $haystack, string|string[] $needles)
+        
+                                            <p><p>Determine if a given string starts with a given substring.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_studly">studly</a>(string $value)
+        
+                                            <p><p>Convert a value to studly caps case.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_substr">substr</a>(string $string, int $start, int|null $length = null)
+        
+                                            <p><p>Returns the portion of the string specified by the start and length parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_substrCount">substrCount</a>(string $haystack, string $needle, int $offset = 0, int|null $length = null)
+        
+                                            <p><p>Returns the number of substring occurrences.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|array
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_substrReplace">substrReplace</a>(string|array $string, string|array $replace, array|int $offset = 0, array|int|null $length = null)
+        
+                                            <p><p>Replace text within a portion of a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_swap">swap</a>(array $map, string $subject)
+        
+                                            <p><p>Swap multiple keywords in a string with other keywords.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_lcfirst">lcfirst</a>(string $string)
+        
+                                            <p><p>Make a string's first character lowercase.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_ucfirst">ucfirst</a>(string $string)
+        
+                                            <p><p>Make a string's first character uppercase.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_ucsplit">ucsplit</a>(string $string)
+        
+                                            <p><p>Split a string into pieces by uppercase characters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_wordCount">wordCount</a>(string $string)
+        
+                                            <p><p>Get the number of words a string contains.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_uuid">uuid</a>()
+        
+                                            <p><p>Generate a UUID (version 4).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_orderedUuid">orderedUuid</a>()
+        
+                                            <p><p>Generate a time-ordered UUID (version 4).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_createUuidsUsing">createUuidsUsing</a>(callable $factory = null)
+        
+                                            <p><p>Set the callable that will be used to generate UUIDs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_createUuidsNormally">createUuidsNormally</a>()
+        
+                                            <p><p>Indicate that UUIDs should be created normally and not using a custom factory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Str.html#method_flushCache">flushCache</a>()
+        
+                                            <p><p>Remove all strings from the casing caches.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L26">at line 26</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, object|callable $macro)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a custom macro.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>object|callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L40">at line 40</a></div>
+        <code>        static            void
+    <strong>mixin</strong>(object $mixin, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mix another object into the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$mixin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L60">at line 60</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks if macro is registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushMacros">
+        <div class="location">in <a href="Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L70">at line 70</a></div>
+        <code>        static            void
+    <strong>flushMacros</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the existing macros.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L84">at line 84</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically handle calls to the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="Traits/Macroable.html#method___call">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L110">at line 110</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically handle calls to the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_of">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L51">at line 51</a></div>
+        <code>        static            <a href="Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a>
+    <strong>of</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new stringable object from the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Stringable.html"><abbr title="Illuminate\Support\Stringable">Stringable</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_after">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L63">at line 63</a></div>
+        <code>        static            string
+    <strong>after</strong>(string $subject, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the remainder of a string after the first occurrence of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_afterLast">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L75">at line 75</a></div>
+        <code>        static            string
+    <strong>afterLast</strong>(string $subject, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the remainder of a string after the last occurrence of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ascii">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L97">at line 97</a></div>
+        <code>        static            string
+    <strong>ascii</strong>(string $value, string $language = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Transliterate a UTF-8 value to ASCII.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transliterate">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L110">at line 110</a></div>
+        <code>        static            string
+    <strong>transliterate</strong>(string $string, string|null $unknown = &#039;?&#039;, bool|null $strict = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Transliterate a string to its closest ASCII representation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$unknown</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_before">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L122">at line 122</a></div>
+        <code>        static            string
+    <strong>before</strong>(string $subject, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the portion of a string before the first occurrence of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beforeLast">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L140">at line 140</a></div>
+        <code>        static            string
+    <strong>beforeLast</strong>(string $subject, string $search)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the portion of a string before the last occurrence of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_between">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L163">at line 163</a></div>
+        <code>        static            string
+    <strong>between</strong>(string $subject, string $from, string $to)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the portion of a string between two given values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_betweenFirst">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L180">at line 180</a></div>
+        <code>        static            string
+    <strong>betweenFirst</strong>(string $subject, string $from, string $to)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the smallest possible portion of a string between two given values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_camel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L195">at line 195</a></div>
+        <code>        static            string
+    <strong>camel</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a value to camel case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_contains">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L212">at line 212</a></div>
+        <code>        static            bool
+    <strong>contains</strong>(string $haystack, string|string[] $needles, bool $ignoreCase = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string contains a given substring.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$needles</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ignoreCase</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_containsAll">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L236">at line 236</a></div>
+        <code>        static            bool
+    <strong>containsAll</strong>(string $haystack, array $needles, bool $ignoreCase = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string contains all array values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$needles</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$ignoreCase</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_endsWith">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L259">at line 259</a></div>
+        <code>        static            bool
+    <strong>endsWith</strong>(string $haystack, string|string[] $needles)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string ends with a given substring.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$needles</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_excerpt">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L281">at line 281</a></div>
+        <code>        static            string|null
+    <strong>excerpt</strong>(string $text, string $phrase = &#039;&#039;, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extracts an excerpt from text that matches the first instance of a phrase.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$phrase</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_finish">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L316">at line 316</a></div>
+        <code>        static            string
+    <strong>finish</strong>(string $value, string $cap)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cap a string with a single instance of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$cap</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_is">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L330">at line 330</a></div>
+        <code>        static            bool
+    <strong>is</strong>(string|array $pattern, string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string matches a given pattern.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$pattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAscii">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L371">at line 371</a></div>
+        <code>        static            bool
+    <strong>isAscii</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string is 7 bit ASCII.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isUuid">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L382">at line 382</a></div>
+        <code>        static            bool
+    <strong>isUuid</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string is a valid UUID.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_kebab">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L397">at line 397</a></div>
+        <code>        static            string
+    <strong>kebab</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a string to kebab case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_length">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L409">at line 409</a></div>
+        <code>        static            int
+    <strong>length</strong>(string $value, string|null $encoding = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the length of the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_limit">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L426">at line 426</a></div>
+        <code>        static            string
+    <strong>limit</strong>(string $value, int $limit = 100, string $end = &#039;...&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Limit the number of characters in a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lower">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L441">at line 441</a></div>
+        <code>        static            string
+    <strong>lower</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the given string to lower-case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_words">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L454">at line 454</a></div>
+        <code>        static            string
+    <strong>words</strong>(string $value, int $words = 100, string $end = &#039;...&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Limit the number of words in a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$words</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markdown">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L472">at line 472</a></div>
+        <code>        static            string
+    <strong>markdown</strong>(string $string, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Converts GitHub flavored Markdown into HTML.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L489">at line 489</a></div>
+        <code>        static            string
+    <strong>mask</strong>(string $string, string $character, int $index, int|null $length = null, string $encoding = &#039;UTF-8&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Masks a portion of a string with a repeated character.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$character</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$encoding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_match">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L518">at line 518</a></div>
+        <code>        static            string
+    <strong>match</strong>(string $pattern, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the string matching the given pattern.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_matchAll">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L536">at line 536</a></div>
+        <code>        static            <a href="Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>matchAll</strong>(string $pattern, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the string matching the given pattern.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_padBoth">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L555">at line 555</a></div>
+        <code>        static            string
+    <strong>padBoth</strong>(string $value, int $length, string $pad = &#039; &#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pad both sides of a string with another.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pad</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_padLeft">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L568">at line 568</a></div>
+        <code>        static            string
+    <strong>padLeft</strong>(string $value, int $length, string $pad = &#039; &#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pad the left side of a string with another.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pad</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_padRight">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L581">at line 581</a></div>
+        <code>        static            string
+    <strong>padRight</strong>(string $value, int $length, string $pad = &#039; &#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pad the right side of a string with another.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pad</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseCallback">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L593">at line 593</a></div>
+        <code>        static            <abbr title="Illuminate\Support\array&lt;int,string">array&lt;int,string</abbr>|<abbr title="Illuminate\Support\null&gt;">null&gt;</abbr>
+    <strong>parseCallback</strong>(string $callback, string|null $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse a Class[@]method style callback into class and method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\array&lt;int,string">array&lt;int,string</abbr>|<abbr title="Illuminate\Support\null&gt;">null&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_plural">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L605">at line 605</a></div>
+        <code>        static            string
+    <strong>plural</strong>(string $value, int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a> $count = 2)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the plural form of an English word.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a></td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pluralStudly">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L617">at line 617</a></div>
+        <code>        static            string
+    <strong>pluralStudly</strong>(string $value, int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a> $count = 2)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pluralize the last word of an English, studly caps case string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a></td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_random">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L632">at line 632</a></div>
+        <code>        static            string
+    <strong>random</strong>(int $length = 16)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a more truly &quot;random&quot; alpha-numeric string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_repeat">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L654">at line 654</a></div>
+        <code>        static            string
+    <strong>repeat</strong>(string $string, int $times)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Repeat the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$times</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L667">at line 667</a></div>
+        <code>        static            string
+    <strong>replaceArray</strong>(string $search, array $replace, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace a given value in the string sequentially with an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L688">at line 688</a></div>
+        <code>        static            string
+    <strong>replace</strong>(string|string[] $search, string|string[] $replace, string|string[] $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the given value in the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|string[]</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceFirst">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L701">at line 701</a></div>
+        <code>        static            string
+    <strong>replaceFirst</strong>(string $search, string $replace, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the first occurrence of a given value in the string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replaceLast">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L726">at line 726</a></div>
+        <code>        static            string
+    <strong>replaceLast</strong>(string $search, string $replace, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the last occurrence of a given value in the string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_remove">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L749">at line 749</a></div>
+        <code>        static            string
+    <strong>remove</strong>(string|string[] $search, string $subject, bool $caseSensitive = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove any occurrence of the given string in the subject.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|string[]</td>
+                <td>$search</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$caseSensitive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reverse">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L764">at line 764</a></div>
+        <code>        static            string
+    <strong>reverse</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reverse the given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_start">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L776">at line 776</a></div>
+        <code>        static            string
+    <strong>start</strong>(string $value, string $prefix)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Begin a string with a single instance of a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_upper">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L789">at line 789</a></div>
+        <code>        static            string
+    <strong>upper</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the given string to upper-case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_title">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L800">at line 800</a></div>
+        <code>        static            string
+    <strong>title</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the given string to title case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_headline">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L811">at line 811</a></div>
+        <code>        static            string
+    <strong>headline</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the given string to title case for each word.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singular">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L830">at line 830</a></div>
+        <code>        static            string
+    <strong>singular</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the singular form of an English word.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_slug">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L843">at line 843</a></div>
+        <code>        static            string
+    <strong>slug</strong>(string $title, string $separator = &#039;-&#039;, string|null $language = &#039;en&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a URL friendly &quot;slug&quot; from a given string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$title</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$language</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_snake">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L871">at line 871</a></div>
+        <code>        static            string
+    <strong>snake</strong>(string $value, string $delimiter = &#039;_&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a string to snake case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_startsWith">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L895">at line 895</a></div>
+        <code>        static            bool
+    <strong>startsWith</strong>(string $haystack, string|string[] $needles)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string starts with a given substring.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|string[]</td>
+                <td>$needles</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_studly">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L912">at line 912</a></div>
+        <code>        static            string
+    <strong>studly</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert a value to studly caps case.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_substr">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L937">at line 937</a></div>
+        <code>        static            string
+    <strong>substr</strong>(string $string, int $start, int|null $length = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the portion of the string specified by the start and length parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_substrCount">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L951">at line 951</a></div>
+        <code>        static            int
+    <strong>substrCount</strong>(string $haystack, string $needle, int $offset = 0, int|null $length = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the number of substring occurrences.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$haystack</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$needle</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_substrReplace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L969">at line 969</a></div>
+        <code>        static            string|array
+    <strong>substrReplace</strong>(string|array $string, string|array $replace, array|int $offset = 0, array|int|null $length = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace text within a portion of a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|int</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|int|null</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_swap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L985">at line 985</a></div>
+        <code>        static            string
+    <strong>swap</strong>(array $map, string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Swap multiple keywords in a string with other keywords.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$map</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lcfirst">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L996">at line 996</a></div>
+        <code>        static            string
+    <strong>lcfirst</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a string's first character lowercase.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ucfirst">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1007">at line 1007</a></div>
+        <code>        static            string
+    <strong>ucfirst</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a string's first character uppercase.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ucsplit">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1018">at line 1018</a></div>
+        <code>        static            array
+    <strong>ucsplit</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Split a string into pieces by uppercase characters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wordCount">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1029">at line 1029</a></div>
+        <code>        static            int
+    <strong>wordCount</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the number of words a string contains.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uuid">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1039">at line 1039</a></div>
+        <code>        static            <abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr>
+    <strong>uuid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a UUID (version 4).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_orderedUuid">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1051">at line 1051</a></div>
+        <code>        static            <abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr>
+    <strong>orderedUuid</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generate a time-ordered UUID (version 4).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Ramsey\Uuid\UuidInterface">UuidInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createUuidsUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1077">at line 1077</a></div>
+        <code>        static            void
+    <strong>createUuidsUsing</strong>(callable $factory = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the callable that will be used to generate UUIDs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$factory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createUuidsNormally">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1087">at line 1087</a></div>
+        <code>        static            void
+    <strong>createUuidsNormally</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that UUIDs should be created normally and not using a custom factory.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushCache">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Str.php#L1097">at line 1097</a></div>
+        <code>        static            void
+    <strong>flushCache</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove all strings from the casing caches.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

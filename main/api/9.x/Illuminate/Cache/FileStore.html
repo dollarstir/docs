@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Cache\FileStore | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Cache_FileStore" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="FileStore.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Cache.html">Cache</a></li><li class="backslash">\</li><li>FileStore</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>FileStore    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>FileStore</strong>        implements        <a href="../Contracts/Cache/Store.html"><abbr title="Illuminate\Contracts\Cache\Store">Store</abbr></a>, <a href="../Contracts/Cache/LockProvider.html"><abbr title="Illuminate\Contracts\Cache\LockProvider">LockProvider</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Support/InteractsWithTime.html"><abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="HasCacheLock.html"><abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="RetrievesMultipleKeys.html"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_files">
+                                        protected                                        <a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a>
+                                                                                
+                                    </td>
+                <td>$files</td>
+                <td class="last"><p>The Illuminate Filesystem instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_directory">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$directory</td>
+                <td class="last"><p>The file cache directory.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filePermission">
+                                        protected                                        int|null
+                                                                                
+                                    </td>
+                <td>$filePermission</td>
+                <td class="last"><p>Octal representation of the cache file permissions.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_secondsUntil">secondsUntil</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        
+                                            <p><p>Get the number of seconds until the given DateTime.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/InteractsWithTime.html#method_secondsUntil">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_availableAt">availableAt</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay = 0)
+        
+                                            <p><p>Get the &quot;available at&quot; UNIX timestamp.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/InteractsWithTime.html#method_availableAt">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_parseDateInterval">parseDateInterval</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        
+                                            <p><p>If the given value is an interval, convert it to a DateTime instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/InteractsWithTime.html#method_parseDateInterval">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_currentTime">currentTime</a>()
+        
+                                            <p><p>Get the current system time as a UNIX timestamp.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/InteractsWithTime.html#method_currentTime">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_lock">lock</a>(string $name, int $seconds = 0, string|null $owner = null)
+        
+                                            <p><p>Get a lock instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="HasCacheLock.html#method_lock">
+<abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_restoreLock">restoreLock</a>(string $name, string $owner)
+        
+                                            <p><p>Restore a lock instance using the owner identifier.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="HasCacheLock.html#method_restoreLock">
+<abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_many">many</a>(array $keys)
+        
+                                            <p><p>Retrieve multiple items from the cache by key.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="RetrievesMultipleKeys.html#method_many">
+<abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_putMany">putMany</a>(array $values, int $seconds)
+        
+                                            <p><p>Store multiple items in the cache for a given number of seconds.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="RetrievesMultipleKeys.html#method_putMany">
+<abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method___construct">__construct</a>(<a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files, string $directory, int|null $filePermission = null)
+        
+                                            <p><p>Create a new file cache store instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_get">get</a>(string|array $key)
+        
+                                            <p><p>Retrieve an item from the cache by key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_put">put</a>(string $key, mixed $value, int $seconds)
+        
+                                            <p><p>Store an item in the cache for a given number of seconds.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_add">add</a>(string $key, mixed $value, int $seconds)
+        
+                                            <p><p>Store an item in the cache if the key doesn't exist.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_ensureCacheDirectoryExists">ensureCacheDirectoryExists</a>(string $path)
+        
+                                            <p><p>Create the file cache directory if necessary.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_ensurePermissionsAreCorrect">ensurePermissionsAreCorrect</a>(string $path)
+        
+                                            <p><p>Ensure the created node has the correct permissions.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_increment">increment</a>(string $key, mixed $value = 1)
+        
+                                            <p><p>Increment the value of an item in the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_decrement">decrement</a>(string $key, mixed $value = 1)
+        
+                                            <p><p>Decrement the value of an item in the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_forever">forever</a>(string $key, mixed $value)
+        
+                                            <p><p>Store an item in the cache indefinitely.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_forget">forget</a>(string $key)
+        
+                                            <p><p>Remove an item from the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_flush">flush</a>()
+        
+                                            <p><p>Remove all items from the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_getPayload">getPayload</a>(string $key)
+        
+                                            <p><p>Retrieve an item and expiry time from the cache by key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_emptyPayload">emptyPayload</a>()
+        
+                                            <p><p>Get a default empty payload for the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_path">path</a>(string $key)
+        
+                                            <p><p>Get the full path for the given cache key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_expiration">expiration</a>(int $seconds)
+        
+                                            <p><p>Get the expiration time based on the given seconds.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_getFilesystem">getFilesystem</a>()
+        
+                                            <p><p>Get the Filesystem instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_getDirectory">getDirectory</a>()
+        
+                                            <p><p>Get the working directory of the cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="FileStore.html#method_getPrefix">getPrefix</a>()
+        
+                                            <p><p>Get the cache key prefix.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_secondsUntil">
+        <div class="location">in <a href="../Support/InteractsWithTime.html#method_secondsUntil">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L16">at line 16</a></div>
+        <code>            protected        int
+    <strong>secondsUntil</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the number of seconds until the given DateTime.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_availableAt">
+        <div class="location">in <a href="../Support/InteractsWithTime.html#method_availableAt">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L31">at line 31</a></div>
+        <code>            protected        int
+    <strong>availableAt</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay = 0)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the &quot;available at&quot; UNIX timestamp.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseDateInterval">
+        <div class="location">in <a href="../Support/InteractsWithTime.html#method_parseDateInterval">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L46">at line 46</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int
+    <strong>parseDateInterval</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int $delay)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>If the given value is an interval, convert it to a DateTime instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|<a target="_blank" rel="noopener" href="https://www.php.net/DateInterval">DateInterval</a>|int</td>
+                <td>$delay</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentTime">
+        <div class="location">in <a href="../Support/InteractsWithTime.html#method_currentTime">
+<abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/InteractsWithTime.php#L60">at line 60</a></div>
+        <code>            protected        int
+    <strong>currentTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current system time as a UNIX timestamp.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lock">
+        <div class="location">in <a href="HasCacheLock.html#method_lock">
+<abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/HasCacheLock.php#L15">at line 15</a></div>
+        <code>                    <a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a>
+    <strong>lock</strong>(string $name, int $seconds = 0, string|null $owner = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a lock instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$owner</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreLock">
+        <div class="location">in <a href="HasCacheLock.html#method_restoreLock">
+<abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/HasCacheLock.php#L27">at line 27</a></div>
+        <code>                    <a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a>
+    <strong>restoreLock</strong>(string $name, string $owner)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore a lock instance using the owner identifier.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Contracts/Cache/Lock.html"><abbr title="Illuminate\Contracts\Cache\Lock">Lock</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_many">
+        <div class="location">in <a href="RetrievesMultipleKeys.html#method_many">
+<abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/RetrievesMultipleKeys.php#L15">at line 15</a></div>
+        <code>                    array
+    <strong>many</strong>(array $keys)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve multiple items from the cache by key.</p></p>                <p><p>Items not found in the cache will have a null value.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putMany">
+        <div class="location">in <a href="RetrievesMultipleKeys.html#method_putMany">
+<abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/RetrievesMultipleKeys.php#L37">at line 37</a></div>
+        <code>                    bool
+    <strong>putMany</strong>(array $values, int $seconds)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store multiple items in the cache for a given number of seconds.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L46">at line 46</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files, string $directory, int|null $filePermission = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new file cache store instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a></td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$filePermission</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L59">at line 59</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve an item from the cache by key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L72">at line 72</a></div>
+        <code>                    bool
+    <strong>put</strong>(string $key, mixed $value, int $seconds)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store an item in the cache for a given number of seconds.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L97">at line 97</a></div>
+        <code>                    bool
+    <strong>add</strong>(string $key, mixed $value, int $seconds)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store an item in the cache if the key doesn't exist.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureCacheDirectoryExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L134">at line 134</a></div>
+        <code>            protected        void
+    <strong>ensureCacheDirectoryExists</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the file cache directory if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensurePermissionsAreCorrect">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L153">at line 153</a></div>
+        <code>            protected        void
+    <strong>ensurePermissionsAreCorrect</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ensure the created node has the correct permissions.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_increment">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L170">at line 170</a></div>
+        <code>                    int|bool
+    <strong>increment</strong>(string $key, mixed $value = 1)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Increment the value of an item in the cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrement">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L186">at line 186</a></div>
+        <code>                    int|bool
+    <strong>decrement</strong>(string $key, mixed $value = 1)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrement the value of an item in the cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forever">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L198">at line 198</a></div>
+        <code>                    bool
+    <strong>forever</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Store an item in the cache indefinitely.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forget">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L209">at line 209</a></div>
+        <code>                    bool
+    <strong>forget</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove an item from the cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L223">at line 223</a></div>
+        <code>                    bool
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove all items from the cache.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayload">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L246">at line 246</a></div>
+        <code>            protected        array
+    <strong>getPayload</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve an item and expiry time from the cache by key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emptyPayload">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L291">at line 291</a></div>
+        <code>            protected        array
+    <strong>emptyPayload</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a default empty payload for the cache.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_path">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L302">at line 302</a></div>
+        <code>            protected        string
+    <strong>path</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the full path for the given cache key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expiration">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L315">at line 315</a></div>
+        <code>            protected        int
+    <strong>expiration</strong>(int $seconds)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the expiration time based on the given seconds.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$seconds</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilesystem">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L327">at line 327</a></div>
+        <code>                    <a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a>
+    <strong>getFilesystem</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Filesystem instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L337">at line 337</a></div>
+        <code>                    string
+    <strong>getDirectory</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the working directory of the cache.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrefix">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Cache/FileStore.php#L347">at line 347</a></div>
+        <code>                    string
+    <strong>getPrefix</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the cache key prefix.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

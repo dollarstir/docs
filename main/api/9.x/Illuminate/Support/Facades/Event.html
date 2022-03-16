@@ -1,0 +1,2352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Facades\Event | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Support_Facades_Event" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Event.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Support.html">Support</a></li><li class="backslash">\</li><li><a href="../Facades.html">Facades</a></li><li class="backslash">\</li><li>Event</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Event    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Event</strong>        extends <a href="Facade.html"><abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                    static                    protected                                        <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                                                                                
+                                    </td>
+                <td>$app</td>
+                <td class="last"><p>The application instance being facaded.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_app">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolvedInstance">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$resolvedInstance</td>
+                <td class="last"><p>The resolved object instances.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_resolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cached">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$cached</td>
+                <td class="last"><p>Indicates if the resolved instance should be cached.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_cached">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_resolved">resolved</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Run a Closure when the facade has been resolved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_spy">spy</a>()
+        
+                                            <p><p>Convert the facade into a Mockery spy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_partialMock">partialMock</a>()
+        
+                                            <p><p>Initiate a partial mock on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_shouldReceive">shouldReceive</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_expects">expects</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_createFreshMockInstance">createFreshMockInstance</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_createMock">createMock</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_isMock">isMock</a>()
+        
+                                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_getMockableClass">getMockableClass</a>()
+        
+                                            <p><p>Get the mockable class for the bound instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_swap">swap</a>(mixed $instance)
+        
+                                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_getFacadeRoot">getFacadeRoot</a>()
+        
+                                            <p><p>Get the root object behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_getFacadeAccessor">getFacadeAccessor</a>()
+        
+                                            <p><p>Get the registered name of the component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_resolveFacadeInstance">resolveFacadeInstance</a>(string $name)
+        
+                                            <p><p>Resolve the facade root instance from the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_clearResolvedInstance">clearResolvedInstance</a>(string $name)
+        
+                                            <p><p>Clear a resolved facade instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_clearResolvedInstances">clearResolvedInstances</a>()
+        
+                                            <p><p>Clear all of the resolved instances.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_defaultAliases">defaultAliases</a>()
+        
+                                            <p><p>Get the application default aliases.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_getFacadeApplication">getFacadeApplication</a>()
+        
+                                            <p><p>Get the application instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_setFacadeApplication">setFacadeApplication</a>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p><p>Set the application instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method___callStatic">__callStatic</a>(string $method, array $args)
+        
+                                            <p><p>Handle dynamic, static calls to the object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_fake">fake</a>(array|string $eventsToFake = [])
+        
+                                            <p><p>Replace the bound instance with a fake.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_fakeExcept">fakeExcept</a>(string[]|string $eventsToAllow)
+        
+                                            <p><p>Replace the bound instance with a fake that fakes all events except the given events.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_fakeFor">fakeFor</a>(callable $callable, array $eventsToFake = [])
+        
+                                            <p><p>Replace the bound instance with a fake during the given callable's execution.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_fakeExceptFor">fakeExceptFor</a>(callable $callable, array $eventsToAllow = [])
+        
+                                            <p><p>Replace the bound instance with a fake during the given callable's execution.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_createClassListener">createClassListener</a>(string $listener, bool $wildcard = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_makeListener">makeListener</a>(Closure|string $listener, bool $wildcard = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Events/Dispatcher.html"><abbr title="Illuminate\Events\Dispatcher">Dispatcher</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_setQueueResolver">setQueueResolver</a>(callable $resolver)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_getListeners">getListeners</a>(string $eventName)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_dispatch">dispatch</a>(string|object $event, mixed $payload = [], bool $halt = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_until">until</a>(string|object $event, mixed $payload = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_hasListeners">hasListeners</a>(string $eventName)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_assertDispatched">assertDispatched</a>(<abbr title="string|\Closure">Closure</abbr> $event, callable|int $callback = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_assertDispatchedTimes">assertDispatchedTimes</a>(string $event, int $times = 1)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_assertNotDispatched">assertNotDispatched</a>(<abbr title="string|\Closure">Closure</abbr> $event, callable|int $callback = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_assertNothingDispatched">assertNothingDispatched</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_assertListening">assertListening</a>(string $expectedEvent, string $expectedListener)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_flush">flush</a>(string $event)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_forget">forget</a>(string $event)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_forgetPushed">forgetPushed</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_listen">listen</a>(Closure|string|array $events, Closure|string|array $listener = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_push">push</a>(string $event, array $payload = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Event.html#method_subscribe">subscribe</a>(object|string $subscriber)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resolved">
+        <div class="location">in <a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L43">at line 43</a></div>
+        <code>        static            void
+    <strong>resolved</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run a Closure when the facade has been resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spy">
+        <div class="location">in <a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L61">at line 61</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>spy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the facade into a Mockery spy.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partialMock">
+        <div class="location">in <a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L77">at line 77</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>partialMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a partial mock on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReceive">
+        <div class="location">in <a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L93">at line 93</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>shouldReceive</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expects">
+        <div class="location">in <a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L109">at line 109</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>expects</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFreshMockInstance">
+        <div class="location">in <a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L125">at line 125</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createFreshMockInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMock">
+        <div class="location">in <a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L139">at line 139</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMock">
+        <div class="location">in <a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L151">at line 151</a></div>
+        <code>        static    protected        bool
+    <strong>isMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockableClass">
+        <div class="location">in <a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L164">at line 164</a></div>
+        <code>        static    protected        string|null
+    <strong>getMockableClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the mockable class for the bound instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_swap">
+        <div class="location">in <a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L177">at line 177</a></div>
+        <code>        static            void
+    <strong>swap</strong>(mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeRoot">
+        <div class="location">in <a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L191">at line 191</a></div>
+        <code>        static            mixed
+    <strong>getFacadeRoot</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the root object behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeAccessor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L110">at line 110</a></div>
+        <code>        static    protected        string
+    <strong>getFacadeAccessor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the registered name of the component.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFacadeInstance">
+        <div class="location">in <a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L214">at line 214</a></div>
+        <code>        static    protected        mixed
+    <strong>resolveFacadeInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the facade root instance from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstance">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L235">at line 235</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear a resolved facade instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstances">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L245">at line 245</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstances</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear all of the resolved instances.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultAliases">
+        <div class="location">in <a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L255">at line 255</a></div>
+        <code>        static            <a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>defaultAliases</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application default aliases.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L304">at line 304</a></div>
+        <code>        static            <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+    <strong>getFacadeApplication</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L315">at line 315</a></div>
+        <code>        static            void
+    <strong>setFacadeApplication</strong>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the application instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L329">at line 329</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle dynamic, static calls to the object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fake">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L38">at line 38</a></div>
+        <code>        static            <a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a>
+    <strong>fake</strong>(array|string $eventsToFake = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the bound instance with a fake.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$eventsToFake</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fakeExcept">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L54">at line 54</a></div>
+        <code>        static            <a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a>
+    <strong>fakeExcept</strong>(string[]|string $eventsToAllow)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the bound instance with a fake that fakes all events except the given events.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string[]|string</td>
+                <td>$eventsToAllow</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Testing/Fakes/EventFake.html"><abbr title="Illuminate\Support\Testing\Fakes\EventFake">EventFake</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fakeFor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L70">at line 70</a></div>
+        <code>        static            mixed
+    <strong>fakeFor</strong>(callable $callable, array $eventsToFake = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the bound instance with a fake during the given callable's execution.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$eventsToFake</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fakeExceptFor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L91">at line 91</a></div>
+        <code>        static            mixed
+    <strong>fakeExceptFor</strong>(callable $callable, array $eventsToAllow = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Replace the bound instance with a fake during the given callable's execution.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callable</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$eventsToAllow</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createClassListener">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>createClassListener</strong>(string $listener, bool $wildcard = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$listener</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$wildcard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeListener">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>makeListener</strong>(Closure|string $listener, bool $wildcard = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Closure|string</td>
+                <td>$listener</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$wildcard</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setQueueResolver">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            <a href="../../Events/Dispatcher.html"><abbr title="Illuminate\Events\Dispatcher">Dispatcher</abbr></a>
+    <strong>setQueueResolver</strong>(callable $resolver)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Events/Dispatcher.html"><abbr title="Illuminate\Events\Dispatcher">Dispatcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getListeners">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            array
+    <strong>getListeners</strong>(string $eventName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$eventName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dispatch">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            array|null
+    <strong>dispatch</strong>(string|object $event, mixed $payload = [], bool $halt = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$halt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_until">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            array|null
+    <strong>until</strong>(string|object $event, mixed $payload = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|object</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasListeners">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            bool
+    <strong>hasListeners</strong>(string $eventName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$eventName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDispatched">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>assertDispatched</strong>(<abbr title="string|\Closure">Closure</abbr> $event, callable|int $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="string|\Closure">Closure</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|int</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDispatchedTimes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>assertDispatchedTimes</strong>(string $event, int $times = 1)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$times</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNotDispatched">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>assertNotDispatched</strong>(<abbr title="string|\Closure">Closure</abbr> $event, callable|int $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="string|\Closure">Closure</abbr></td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|int</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNothingDispatched">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>assertNothingDispatched</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertListening">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>assertListening</strong>(string $expectedEvent, string $expectedListener)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$expectedEvent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expectedListener</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>flush</strong>(string $event)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forget">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>forget</strong>(string $event)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgetPushed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>forgetPushed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listen">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>listen</strong>(Closure|string|array $events, Closure|string|array $listener = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>Closure|string|array</td>
+                <td>$events</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>Closure|string|array</td>
+                <td>$listener</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_push">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>push</strong>(string $event, array $payload = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_subscribe">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Event.php#L30">at line 30</a></div>
+        <code>        static            void
+    <strong>subscribe</strong>(object|string $subscriber)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$subscriber</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>[Global Namespace] | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../9.x/opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="namespace" data-name="namespace:[Global_Namespace]" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../5.8/index.html"
+                            data-version="5.8" selected>Laravel 5.8</option>
+                                            <option
+                            value="../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../9.x/index.html"
+                            data-version="9.x" >Laravel 9.x</option>
+                                            <option
+                            value="../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="[Global_Namespace].html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li class="active"><a href="index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li ><a href="../9.x/index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="[Global_Namespace].html"></a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>[Global Namespace]</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="[Global_Namespace].html">[Global Namespace]</a><a href="Illuminate.html">Illuminate</a>        </div>
+    
+    
+    
+            <h2>Functions</h2>
+
+        <div class="container-fluid underlined">
+                            <div class="row" id="function___">
+                    <div class="col-md-2 type">
+                                                                                                string|array|null
+                    </div>
+                    <div class="col-md-8">
+                        __(string $key, array $replace = [], string|null $locale = null)<br>
+                                                                                                                            <p><p>Translate the given message.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L907">at line 907</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_abort">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        abort(<abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Support/Responsable.html"><abbr title="Illuminate\Contracts\Support\Responsable">Responsable</abbr></a>|int $code, string $message = &#039;&#039;, array $headers = [])<br>
+                                                                                                                            <p><p>Throw an HttpException with the given data.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L38">at line 38</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_abort_if">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        abort_if(bool $boolean, int $code, string $message = &#039;&#039;, array $headers = [])<br>
+                                                                                                                            <p><p>Throw an HttpException with the given data if the given condition is true.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L63">at line 63</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_abort_unless">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        abort_unless(bool $boolean, int $code, string $message = &#039;&#039;, array $headers = [])<br>
+                                                                                                                            <p><p>Throw an HttpException with the given data unless the given condition is true.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L84">at line 84</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_action">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        action(string|array $name, mixed $parameters = [], bool $absolute = true)<br>
+                                                                                                                            <p><p>Generate the URL to a controller action.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L101">at line 101</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_app">
+                    <div class="col-md-2 type">
+                                                                                                mixed|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        app(string|null $abstract = null, array $parameters = [])<br>
+                                                                                                                            <p><p>Get the available container instance.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L115">at line 115</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_app_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        app_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to the application folder.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L132">at line 132</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_append_config">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        append_config(array $array)<br>
+                                                                                                                            <p><p>Assign high numeric IDs to a config item to force appending.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L22">at line 22</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_add">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_add(array $array, string $key, mixed $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Add an element to an array using &quot;dot&quot; notation if it doesn't exist.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L49">at line 49</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_collapse">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_collapse(array $array)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Collapse an array of arrays into a single array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L64">at line 64</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_divide">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_divide(array $array)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Divide an array into two arrays. One with keys and the other with values.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L79">at line 79</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_dot">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_dot(array $array, string $prepend = &#039;&#039;)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Flatten a multi-dimensional associative array with dots.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L95">at line 95</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_except">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_except(array $array, array|string $keys)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get all of the given array except for a specified array of keys.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L111">at line 111</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_first">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        array_first(array $array, callable $callback = null, mixed $default = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Return the first element in an array passing a given truth test.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L128">at line 128</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_flatten">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_flatten(array $array, int $depth = INF)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Flatten a multi-dimensional array into a single level.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L144">at line 144</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_forget">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        array_forget(array $array, array|string $keys)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Remove one or many array items from a given array using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L160">at line 160</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_get">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        array_get(<a target="_blank" rel="noopener" href="https://www.php.net/ArrayAccess">ArrayAccess</a>|array $array, string $key, mixed $default = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get an item from an array using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L177">at line 177</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_has">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        array_has(<a target="_blank" rel="noopener" href="https://www.php.net/ArrayAccess">ArrayAccess</a>|array $array, string|array $keys)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Check if an item or items exist in an array using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L193">at line 193</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_last">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        array_last(array $array, callable $callback = null, mixed $default = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Return the last element in an array passing a given truth test.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L210">at line 210</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_only">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_only(array $array, array|string $keys)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get a subset of the items from the given array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L226">at line 226</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_pluck">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_pluck(array $array, string|array $value, string|array|null $key = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Pluck an array of values from an array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L243">at line 243</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_prepend">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_prepend(array $array, mixed $value, mixed $key = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Push an item onto the beginning of an array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L260">at line 260</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_pull">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        array_pull(array $array, string $key, mixed $default = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get a value from the array, and remove it.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L277">at line 277</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_random">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        array_random(array $array, int|null $num = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get a random value from an array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L293">at line 293</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_set">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_set(array $array, string $key, mixed $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Set an array item to a given value using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L312">at line 312</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_sort">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_sort(array $array, callable|string|null $callback = null)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Sort the array by the given callback or attribute name.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L328">at line 328</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_sort_recursive">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_sort_recursive(array $array)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Recursively sort an array by keys and values.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L343">at line 343</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_where">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_where(array $array, callable $callback)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Filter the array using the given callback.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L359">at line 359</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_array_wrap">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        array_wrap(mixed $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>If the given value is not an array, wrap it in one.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L374">at line 374</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_asset">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        asset(string $path, bool|null $secure = null)<br>
+                                                                                                                            <p><p>Generate an asset path for the application.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L146">at line 146</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_auth">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Contracts/Auth/Factory.html"><abbr title="Illuminate\Contracts\Auth\Factory">Factory</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Auth/Guard.html"><abbr title="Illuminate\Contracts\Auth\Guard">Guard</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Auth/StatefulGuard.html"><abbr title="Illuminate\Contracts\Auth\StatefulGuard">StatefulGuard</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        auth(string|null $guard = null)<br>
+                                                                                                                            <p><p>Get the available auth instance.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L159">at line 159</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_back">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        back(int $status = 302, array $headers = [], mixed $fallback = false)<br>
+                                                                                                                            <p><p>Create a new redirect response to the previous location.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L178">at line 178</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_base_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        base_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to the base of the install.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L191">at line 191</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_bcrypt">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        bcrypt(string $value, array $options = [])<br>
+                                                                                                                            <p><p>Hash the given value against the bcrypt algorithm.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L205">at line 205</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_blank">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        blank(mixed $value)<br>
+                                                                                                                            <p><p>Determine if the given value is &quot;blank&quot;.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L387">at line 387</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_broadcast">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Broadcasting/PendingBroadcast.html"><abbr title="Illuminate\Broadcasting\PendingBroadcast">PendingBroadcast</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        broadcast(mixed|null $event = null)<br>
+                                                                                                                            <p><p>Begin broadcasting an event.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L218">at line 218</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_cache">
+                    <div class="col-md-2 type">
+                                                                                                mixed|<a href="https://laravel.com/api/5.8/Illuminate/Cache/CacheManager.html"><abbr title="Illuminate\Cache\CacheManager">CacheManager</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        cache()<br>
+                                                                                                                            <p><p>Get / set the specified cache value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L235">at line 235</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_camel_case">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        camel_case(string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Convert a value to camel case.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L418">at line 418</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_class_basename">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        class_basename(string|object $class)<br>
+                                                                                                                            <p><p>Get the class &quot;basename&quot; of the given object / class.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L431">at line 431</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_class_uses_recursive">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        class_uses_recursive(object|string $class)<br>
+                                                                                                                            <p><p>Returns all traits used by a class, its parent classes and trait of their traits.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L446">at line 446</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_collect">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        collect(mixed $value = null)<br>
+                                                                                                                            <p><p>Create a collection from the given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L469">at line 469</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_config">
+                    <div class="col-md-2 type">
+                                                                                                mixed|<a href="https://laravel.com/api/5.8/Illuminate/Config/Repository.html"><abbr title="Illuminate\Config\Repository">Repository</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        config(array|string|null $key = null, mixed $default = null)<br>
+                                                                                                                            <p><p>Get / set the specified configuration value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L273">at line 273</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_config_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        config_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the configuration path.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L294">at line 294</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_cookie">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Cookie/CookieJar.html"><abbr title="Illuminate\Cookie\CookieJar">CookieJar</abbr></a>|<abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>
+                    </div>
+                    <div class="col-md-8">
+                        cookie(string|null $name = null, string|null $value = null, int $minutes = 0, string|null $path = null, string|null $domain = null, bool $secure = false, bool $httpOnly = true, bool $raw = false, string|null $sameSite = null)<br>
+                                                                                                                            <p><p>Create a new cookie instance.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L315">at line 315</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_csrf_field">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/HtmlString.html"><abbr title="Illuminate\Support\HtmlString">HtmlString</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        csrf_field()<br>
+                                                                                                                            <p><p>Generate a CSRF token form field.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L333">at line 333</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_csrf_token">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        csrf_token()<br>
+                                                                                                                            <p><p>Get the CSRF token value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L347">at line 347</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_data_fill">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        data_fill(mixed $target, string|array $key, mixed $value)<br>
+                                                                                                                            <p><p>Fill in data where it's missing.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L484">at line 484</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_data_get">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        data_get(mixed $target, string|array|int $key, mixed $default = null)<br>
+                                                                                                                            <p><p>Get an item from an array or object using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L499">at line 499</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_data_set">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        data_set(mixed $target, string|array $key, mixed $value, bool $overwrite = true)<br>
+                                                                                                                            <p><p>Set an item on an array or object using dot notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L547">at line 547</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_database_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        database_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the database path.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L366">at line 366</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_dd">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        dd(mixed ...$args)<br>
+                                                                                                                            <p><p>Dump the passed variables and end the script.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L554">at line 554</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_decrypt">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        decrypt(string $value, bool $unserialize = true)<br>
+                                                                                                                            <p><p>Decrypt the given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L380">at line 380</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_dispatch">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Foundation/Bus/PendingDispatch.html"><abbr title="Illuminate\Foundation\Bus\PendingDispatch">PendingDispatch</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        dispatch(mixed $job)<br>
+                                                                                                                            <p><p>Dispatch a job to its appropriate handler.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L393">at line 393</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_dispatch_now">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        dispatch_now(mixed $job, mixed $handler = null)<br>
+                                                                                                                            <p><p>Dispatch a command to its appropriate handler in the current process.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L411">at line 411</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_e">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        e(<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string $value, bool $doubleEncode = true)<br>
+                                                                                                                            <p><p>Encode HTML special characters in a string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L607">at line 607</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_elixir">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        elixir(string $file, string $buildDirectory = &#039;build&#039;)<br>
+                                                                                                                            <p><p>Get the path to a versioned Elixir file.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L427">at line 427</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_encrypt">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        encrypt(mixed $value, bool $serialize = true)<br>
+                                                                                                                            <p><p>Encrypt the given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L465">at line 465</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_ends_with">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        ends_with(string $haystack, string|array $needles)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Determine if a given string ends with a given substring.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L627">at line 627</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_env">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        env(string $key, mixed $default = null)<br>
+                                                                                                                            <p><p>Gets the value of an environment variable.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L641">at line 641</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_event">
+                    <div class="col-md-2 type">
+                                                                                                array|null
+                    </div>
+                    <div class="col-md-8">
+                        event(...$args)<br>
+                                                                                                                            <p><p>Dispatch an event and call the listeners.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L480">at line 480</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_factory">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Database/Eloquent/FactoryBuilder.html"><abbr title="Illuminate\Database\Eloquent\FactoryBuilder">FactoryBuilder</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        factory()<br>
+                                                                                                                            <p><p>Create a model factory builder for a given class, name, and amount.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L493">at line 493</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_filled">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        filled(mixed $value)<br>
+                                                                                                                            <p><p>Determine if a value is &quot;filled&quot;.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L685">at line 685</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_head">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        head(array $array)<br>
+                                                                                                                            <p><p>Get the first element of an array. Useful for method chaining.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L698">at line 698</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_info">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        info(string $message, array $context = [])<br>
+                                                                                                                            <p><p>Write some information to the log.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L517">at line 517</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_kebab_case">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        kebab_case(string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Convert a string to kebab case.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L713">at line 713</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_last">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        last(array $array)<br>
+                                                                                                                            <p><p>Get the last element from an array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L726">at line 726</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_logger">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Log/LogManager.html"><abbr title="Illuminate\Log\LogManager">LogManager</abbr></a>|null
+                    </div>
+                    <div class="col-md-8">
+                        logger(string|null $message = null, array $context = [])<br>
+                                                                                                                            <p><p>Log a debug message to the logs.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L531">at line 531</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_logs">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Log/LogManager.html"><abbr title="Illuminate\Log\LogManager">LogManager</abbr></a>|<abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr>
+                    </div>
+                    <div class="col-md-8">
+                        logs(string|null $driver = null)<br>
+                                                                                                                            <p><p>Get a log driver instance.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L548">at line 548</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_method_field">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/HtmlString.html"><abbr title="Illuminate\Support\HtmlString">HtmlString</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        method_field(string $method)<br>
+                                                                                                                            <p><p>Generate a form field to spoof the HTTP verb used by forms.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L561">at line 561</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_mix">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/HtmlString.html"><abbr title="Illuminate\Support\HtmlString">HtmlString</abbr></a>|string
+                    </div>
+                    <div class="col-md-8">
+                        mix(string $path, string $manifestDirectory = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to a versioned Mix file.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L577">at line 577</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_now">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        now(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeZone">DateTimeZone</a>|string|null $tz = null)<br>
+                                                                                                                            <p><p>Create a new Carbon instance for the current time.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L590">at line 590</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_object_get">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        object_get(object $object, string $key, mixed $default = null)<br>
+                                                                                                                            <p><p>Get an item from an object using &quot;dot&quot; notation.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L741">at line 741</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_old">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        old(string|null $key = null, mixed $default = null)<br>
+                                                                                                                            <p><p>Retrieve an old input item.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L604">at line 604</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_optional">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        optional(mixed $value = null, callable $callback = null)<br>
+                                                                                                                            <p><p>Provide access to optional objects.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L767">at line 767</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_policy">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        policy(object|string $class)<br>
+                                                                                                                            <p><p>Get a policy instance for a given class.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L619">at line 619</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_preg_replace_array">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        preg_replace_array(string $pattern, array $replacements, string $subject)<br>
+                                                                                                                            <p><p>Replace a given pattern with each value in the array in sequentially.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L786">at line 786</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_public_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        public_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to the public folder.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L632">at line 632</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_redirect">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Routing/Redirector.html"><abbr title="Illuminate\Routing\Redirector">Redirector</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        redirect(string|null $to = null, int $status = 302, array $headers = [], bool|null $secure = null)<br>
+                                                                                                                            <p><p>Get an instance of the redirector.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L648">at line 648</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_report">
+                    <div class="col-md-2 type">
+                                                                                                void
+                    </div>
+                    <div class="col-md-8">
+                        report(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)<br>
+                                                                                                                            <p><p>Report an exception.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L665">at line 665</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_request">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Http/Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|string|array
+                    </div>
+                    <div class="col-md-8">
+                        request(array|string|null $key = null, mixed $default = null)<br>
+                                                                                                                            <p><p>Get an instance of the current request or an input item from the request.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L684">at line 684</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_rescue">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        rescue(callable $callback, mixed $rescue = null, bool $report = true)<br>
+                                                                                                                            <p><p>Catch a potential exception and return a default value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L709">at line 709</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_resolve">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        resolve(string $name, array $parameters = [])<br>
+                                                                                                                            <p><p>Resolve a service from the container.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L731">at line 731</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_resource_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        resource_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to the resources folder.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L744">at line 744</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_response">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Routing/ResponseFactory.html"><abbr title="Illuminate\Contracts\Routing\ResponseFactory">ResponseFactory</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        response(<a href="https://laravel.com/api/5.8/Illuminate/View/View.html"><abbr title="Illuminate\View\View">View</abbr></a>|string|array|null $content = &#039;&#039;, int $status = 200, array $headers = [])<br>
+                                                                                                                            <p><p>Return a new response from the application.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L759">at line 759</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_retry">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        retry(int $times, callable $callback, int $sleep = 0, callable $when = null)<br>
+                                                                                                                            <p><p>Retry an operation a given number of times.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L808">at line 808</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_route">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        route(array|string $name, mixed $parameters = [], bool $absolute = true)<br>
+                                                                                                                            <p><p>Generate the URL to a named route.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L780">at line 780</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_secure_asset">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        secure_asset(string $path)<br>
+                                                                                                                            <p><p>Generate an asset path for the application.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L793">at line 793</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_secure_url">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        secure_url(string $path, mixed $parameters = [])<br>
+                                                                                                                            <p><p>Generate a HTTPS url for the application.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L807">at line 807</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_session">
+                    <div class="col-md-2 type">
+                                                                                                mixed|<a href="https://laravel.com/api/5.8/Illuminate/Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Session/SessionManager.html"><abbr title="Illuminate\Session\SessionManager">SessionManager</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        session(array|string|null $key = null, mixed $default = null)<br>
+                                                                                                                            <p><p>Get / set the specified session value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L823">at line 823</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_snake_case">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        snake_case(string $value, string $delimiter = &#039;_&#039;)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Convert a string to snake case.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L844">at line 844</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_starts_with">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        starts_with(string $haystack, string|array $needles)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Determine if a given string starts with a given substring.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L860">at line 860</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_storage_path">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        storage_path(string $path = &#039;&#039;)<br>
+                                                                                                                            <p><p>Get the path to the storage folder.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L844">at line 844</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_after">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_after(string $subject, string $search)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Return the remainder of a string after a given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L876">at line 876</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_before">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_before(string $subject, string $search)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get the portion of a string before a given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L892">at line 892</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_contains">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        str_contains(string $haystack, string|array $needles)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Determine if a given string contains a given substring.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L908">at line 908</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_finish">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_finish(string $value, string $cap)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Cap a string with a single instance of a given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L924">at line 924</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_is">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        str_is(string|array $pattern, string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Determine if a given string matches a given pattern.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L940">at line 940</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_limit">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_limit(string $value, int $limit = 100, string $end = &#039;...&#039;)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Limit the number of characters in a string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L957">at line 957</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_plural">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_plural(string $value, int $count = 2)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get the plural form of an English word.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L973">at line 973</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_random">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_random(int $length = 16)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Generate a more truly &quot;random&quot; alpha-numeric string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L990">at line 990</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_replace_array">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_replace_array(string $search, array $replace, string $subject)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Replace a given value in the string sequentially with an array.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1007">at line 1007</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_replace_first">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_replace_first(string $search, string $replace, string $subject)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Replace the first occurrence of a given value in the string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1024">at line 1024</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_replace_last">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_replace_last(string $search, string $replace, string $subject)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Replace the last occurrence of a given value in the string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1041">at line 1041</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_singular">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_singular(string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Get the singular form of an English word.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1056">at line 1056</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_slug">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_slug(string $title, string $separator = &#039;-&#039;, string $language = &#039;en&#039;)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Generate a URL friendly &quot;slug&quot; from a given string.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1073">at line 1073</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_str_start">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        str_start(string $value, string $prefix)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Begin a string with a single instance of a given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1089">at line 1089</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_studly_case">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        studly_case(string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Convert a value to studly caps case.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1104">at line 1104</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_tap">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        tap(mixed $value, callable|null $callback = null)<br>
+                                                                                                                            <p><p>Call the given Closure with the given value then return the value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1118">at line 1118</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_throw_if">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        throw_if(mixed $condition, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a>|string $exception, array ...$parameters)<br>
+                                                                                                                            <p><p>Throw the given exception if the given condition is true.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1141">at line 1141</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_throw_unless">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        throw_unless(mixed $condition, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a>|string $exception, array ...$parameters)<br>
+                                                                                                                            <p><p>Throw the given exception unless the given condition is true.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1161">at line 1161</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_title_case">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        title_case(string $value)<br>
+                                                <span class="label label-danger">deprecated</span>                                                                            <p><p>Convert a value to title case.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1180">at line 1180</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_today">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Support/Carbon.html"><abbr title="Illuminate\Support\Carbon">Carbon</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        today(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeZone">DateTimeZone</a>|string|null $tz = null)<br>
+                                                                                                                            <p><p>Create a new Carbon instance for the current date.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L857">at line 857</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_trait_uses_recursive">
+                    <div class="col-md-2 type">
+                                                                                                array
+                    </div>
+                    <div class="col-md-8">
+                        trait_uses_recursive(string $trait)<br>
+                                                                                                                            <p><p>Returns all traits used by a trait and its traits.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1193">at line 1193</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_trans">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Contracts/Translation/Translator.html"><abbr title="Illuminate\Contracts\Translation\Translator">Translator</abbr></a>|string|array|null
+                    </div>
+                    <div class="col-md-8">
+                        trans(string|null $key = null, array $replace = [], string|null $locale = null)<br>
+                                                                                                                            <p><p>Translate the given message.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L872">at line 872</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_trans_choice">
+                    <div class="col-md-2 type">
+                                                                                                string
+                    </div>
+                    <div class="col-md-8">
+                        trans_choice(string $key, int|array|<a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a> $number, array $replace = [], string|null $locale = null)<br>
+                                                                                                                            <p><p>Translates the given message based on a count.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L892">at line 892</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_transform">
+                    <div class="col-md-2 type">
+                                                                                                mixed|null
+                    </div>
+                    <div class="col-md-8">
+                        transform(mixed $value, callable $callback, mixed $default = null)<br>
+                                                                                                                            <p><p>Transform the given value if it is present.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1214">at line 1214</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_url">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Contracts/Routing/UrlGenerator.html"><abbr title="Illuminate\Contracts\Routing\UrlGenerator">UrlGenerator</abbr></a>|string
+                    </div>
+                    <div class="col-md-8">
+                        url(string $path = null, mixed $parameters = [], bool|null $secure = null)<br>
+                                                                                                                            <p><p>Generate a url for the application.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L922">at line 922</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_validator">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/Contracts/Validation/Validator.html"><abbr title="Illuminate\Contracts\Validation\Validator">Validator</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/Validation/Factory.html"><abbr title="Illuminate\Contracts\Validation\Factory">Factory</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        validator(array $data = [], array $rules = [], array $messages = [], array $customAttributes = [])<br>
+                                                                                                                            <p><p>Create a new Validator instance.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L942">at line 942</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_value">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        value(mixed $value)<br>
+                                                                                                                            <p><p>Return the default value of the given value.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1235">at line 1235</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_view">
+                    <div class="col-md-2 type">
+                                                                                                <a href="https://laravel.com/api/5.8/Illuminate/View/View.html"><abbr title="Illuminate\View\View">View</abbr></a>|<a href="https://laravel.com/api/5.8/Illuminate/Contracts/View/Factory.html"><abbr title="Illuminate\Contracts\View\Factory">Factory</abbr></a>
+                    </div>
+                    <div class="col-md-8">
+                        view(string|null $view = null, <a href="https://laravel.com/api/5.8/Illuminate/Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|array $data = [], array $mergeData = [])<br>
+                                                                                                                            <p><p>Get the evaluated view contents for the given view.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Foundation/helpers.php#L963">at line 963</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_windows_os">
+                    <div class="col-md-2 type">
+                                                                                                bool
+                    </div>
+                    <div class="col-md-8">
+                        windows_os()<br>
+                                                                                                                            <p><p>Determine whether the current environment is Windows based.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1247">at line 1247</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="row" id="function_with">
+                    <div class="col-md-2 type">
+                                                                                                mixed
+                    </div>
+                    <div class="col-md-8">
+                        with(mixed $value, callable $callback = null)<br>
+                                                                                                                            <p><p>Return the given value, optionally passed through the given callback.</p></p>                    </div>
+                    <div class="col-md-2">
+                        <div class="location"><a href="https://github.com/laravel/framework/blob/5.8/src/Illuminate/Support/helpers.php#L1261">at line 1261</a>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

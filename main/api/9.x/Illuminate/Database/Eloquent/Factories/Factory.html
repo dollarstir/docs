@@ -1,0 +1,3353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Factories\Factory | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Factories_Factory" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Factory.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../Factories.html">Factories</a></li><li class="backslash">\</li><li>Factory</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Factory    
+            </h1>
+    </div>
+
+    
+    <p>    abstract     class
+    <strong>Factory</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Support/Traits/Conditionable.html"><abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Support/Traits/ForwardsCalls.html"><abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$macros</td>
+                <td class="last"><p>The registered string macros.</p></td>
+                <td><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#property_macros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_model">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$model</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_count">
+                                        protected                                        int|null
+                                                                                
+                                    </td>
+                <td>$count</td>
+                <td class="last"><p>The number of models that should be generated.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_states">
+                                        protected                                        <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$states</td>
+                <td class="last"><p>The state transformations that will be applied to the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_has">
+                                        protected                                        <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$has</td>
+                <td class="last"><p>The parent relationships that will be applied to the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_for">
+                                        protected                                        <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$for</td>
+                <td class="last"><p>The child relationships that will be applied to the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterMaking">
+                                        protected                                        <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$afterMaking</td>
+                <td class="last"><p>The &quot;after making&quot; callbacks that will be applied to the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterCreating">
+                                        protected                                        <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$afterCreating</td>
+                <td class="last"><p>The &quot;after creating&quot; callbacks that will be applied to the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_connection">
+                                        protected                                        string|null
+                                                                                
+                                    </td>
+                <td>$connection</td>
+                <td class="last"><p>The name of the database connection that will be used to create the models.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_faker">
+                                        protected                                        <abbr title="Faker\Generator">Generator</abbr>
+                                                                                
+                                    </td>
+                <td>$faker</td>
+                <td class="last"><p>The current Faker instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_namespace">
+                    static                    protected                                        string
+                                                                                
+                                    </td>
+                <td>$namespace</td>
+                <td class="last"><p>The default namespace where factories reside.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modelNameResolver">
+                    static                    protected                                        callable
+                                                                                
+                                    </td>
+                <td>$modelNameResolver</td>
+                <td class="last"><p>The default model name resolver.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_factoryNameResolver">
+                    static                    protected                                        callable
+                                                                                
+                                    </td>
+                <td>$factoryNameResolver</td>
+                <td class="last"><p>The factory name resolver.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_when">when</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_unless">unless</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_forwardCallTo">forwardCallTo</a>(mixed $object, string $method, array $parameters)
+        
+                                            <p><p>Forward a method call to the given object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_forwardCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_forwardDecoratedCallTo">forwardDecoratedCallTo</a>(mixed $object, string $method, array $parameters)
+        
+                                            <p><p>Forward a method call to the given object, returning $this if the forwarded call returned itself.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_forwardDecoratedCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_throwBadMethodCallException">throwBadMethodCallException</a>(string $method)
+        
+                                            <p><p>Throw a bad method call exception for the given method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_throwBadMethodCallException">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_macro">macro</a>(string $name, object|callable $macro)
+        
+                                            <p><p>Register a custom macro.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_mixin">mixin</a>(object $mixin, bool $replace = true)
+        
+                                            <p><p>Mix another object into the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p><p>Checks if macro is registered.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_flushMacros">flushMacros</a>()
+        
+                                            <p><p>Flush the existing macros.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically handle calls to the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p><p>Proxy dynamic factory methods onto their proper methods.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method___construct">__construct</a>(int|null $count = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $states = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $has = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $for = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $afterMaking = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $afterCreating = null, string|null $connection = null)
+        
+                                            <p><p>Create a new factory instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_definition">definition</a>()
+        
+                                            <p><p>Define the model's default state.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_new">new</a>($attributes = [])
+        
+                                            <p><p>Get a new factory instance for the given attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_times">times</a>(int $count)
+        
+                                            <p><p>Get a new factory instance for the given number of models.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_configure">configure</a>()
+        
+                                            <p><p>Configure the factory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Factories\array&lt;int">array&lt;int</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\string,mixed&gt;">string,mixed&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_raw">raw</a>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p><p>Get the raw attributes generated by the factory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createOne">createOne</a>($attributes = [])
+        
+                                            <p><p>Create a single model and persist it to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createOneQuietly">createOneQuietly</a>($attributes = [])
+        
+                                            <p><p>Create a single model and persist it to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createMany">createMany</a>(<abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr> $records)
+        
+                                            <p><p>Create a collection of models and persist them to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createManyQuietly">createManyQuietly</a>(<abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr> $records)
+        
+                                            <p><p>Create a collection of models and persist them to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_create">create</a>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p><p>Create a collection of models and persist them to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createQuietly">createQuietly</a>(<abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr> $attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p><p>Create a collection of models and persist them to the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_lazy">lazy</a>(array $attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_store">store</a>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $results)
+        
+                                            <p><p>Set the connection name on the results and store them.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_createChildren">createChildren</a>(<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        
+                                            <p><p>Create the children for the given model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_makeOne">makeOne</a>($attributes = [])
+        
+                                            <p><p>Make a single instance of the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_make">make</a>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p><p>Create a collection of models.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_makeInstance">makeInstance</a>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        
+                                            <p><p>Make an instance of the model with the given attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_getExpandedAttributes">getExpandedAttributes</a>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        
+                                            <p><p>Get a raw attributes array for the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_getRawAttributes">getRawAttributes</a>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        
+                                            <p><p>Get the raw attributes for the model as an array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_parentResolvers">parentResolvers</a>()
+        
+                                            <p><p>Create the parent relationship resolvers (as deferred Closures).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_expandAttributes">expandAttributes</a>(array $definition)
+        
+                                            <p><p>Expand all attributes to their underlying values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_state">state</a>($state)
+        
+                                            <p><p>Add a new state transformation to the model definition.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_sequence">sequence</a>(array ...$sequence)
+        
+                                            <p><p>Add a new sequenced state transformation to the model definition.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_crossJoinSequence">crossJoinSequence</a>(array ...$sequence)
+        
+                                            <p><p>Add a new cross joined sequenced state transformation to the model definition.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_has">has</a>(<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a> $factory, string|null $relationship = null)
+        
+                                            <p><p>Define a child relationship for the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_guessRelationship">guessRelationship</a>(string $related)
+        
+                                            <p><p>Attempt to guess the relationship name for a &quot;has&quot; relationship.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_hasAttached">hasAttached</a>($factory, $pivot = [], $relationship = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_for">for</a>(<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $factory, string|null $relationship = null)
+        
+                                            <p><p>Define a parent relationship for the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_afterMaking">afterMaking</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Add a new &quot;after making&quot; callback to the model definition.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_afterCreating">afterCreating</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Add a new &quot;after creating&quot; callback to the model definition.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_callAfterMaking">callAfterMaking</a>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $instances)
+        
+                                            <p><p>Call the &quot;after making&quot; callbacks for the given model instances.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_callAfterCreating">callAfterCreating</a>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $instances, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        
+                                            <p><p>Call the &quot;after creating&quot; callbacks for the given model instances.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_count">count</a>(int|null $count)
+        
+                                            <p><p>Specify how many models should be generated.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_connection">connection</a>(string $connection)
+        
+                                            <p><p>Specify the database connection that should be used to generate models.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_newInstance">newInstance</a>(array $arguments = [])
+        
+                                            <p><p>Create a new instance of the factory builder with the given mutated properties.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_newModel">newModel</a>(array $attributes = [])
+        
+                                            <p><p>Get a new model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_modelName">modelName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_guessModelNamesUsing">guessModelNamesUsing</a>(callable $callback)
+        
+                                            <p><p>Specify the callback that should be invoked to guess model names based on factory names.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_useNamespace">useNamespace</a>(string $namespace)
+        
+                                            <p><p>Specify the default namespace that contains the application's model factories.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_factoryForModel">factoryForModel</a>(string $modelName)
+        
+                                            <p><p>Get a new factory instance for the given model name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_guessFactoryNamesUsing">guessFactoryNamesUsing</a>(callable $callback)
+        
+                                            <p><p>Specify the callback that should be invoked to guess factory names based on dynamic relationship names.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Faker\Generator">Generator</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_withFaker">withFaker</a>()
+        
+                                            <p><p>Get a new Faker instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Factories\class-string&lt;\Illuminate\Database\Eloquent\Factories\Factory&gt;">Factory&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_resolveFactoryName">resolveFactoryName</a>(string $modelName)
+        
+                                            <p><p>Get the factory name for the given model name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Factory.html#method_appNamespace">appNamespace</a>()
+        
+                                            <p><p>Get the application namespace for the application.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../../../Support/Traits/Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L21">at line 21</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+    <strong>when</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unless">
+        <div class="location">in <a href="../../../Support/Traits/Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L49">at line 49</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+    <strong>unless</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forwardCallTo">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_forwardCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L20">at line 20</a></div>
+        <code>            protected        mixed
+    <strong>forwardCallTo</strong>(mixed $object, string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Forward a method call to the given object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forwardDecoratedCallTo">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_forwardDecoratedCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L50">at line 50</a></div>
+        <code>            protected        mixed
+    <strong>forwardDecoratedCallTo</strong>(mixed $object, string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Forward a method call to the given object, returning $this if the forwarded call returned itself.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwBadMethodCallException">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_throwBadMethodCallException">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L69">at line 69</a></div>
+        <code>        static    protected        void
+    <strong>throwBadMethodCallException</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Throw a bad method call exception for the given method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../../../Support/Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L26">at line 26</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, object|callable $macro)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a custom macro.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>object|callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="../../../Support/Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L40">at line 40</a></div>
+        <code>        static            void
+    <strong>mixin</strong>(object $mixin, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mix another object into the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$mixin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="../../../Support/Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L60">at line 60</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks if macro is registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushMacros">
+        <div class="location">in <a href="../../../Support/Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L70">at line 70</a></div>
+        <code>        static            void
+    <strong>flushMacros</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the existing macros.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../../../Support/Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L84">at line 84</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically handle calls to the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L808">at line 808</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Proxy dynamic factory methods onto their proper methods.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L123">at line 123</a></div>
+        <code>                    void
+    <strong>__construct</strong>(int|null $count = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $states = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $has = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $for = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $afterMaking = null, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null $afterCreating = null, string|null $connection = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new factory instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null</td>
+                <td>$states</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null</td>
+                <td>$has</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null</td>
+                <td>$for</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null</td>
+                <td>$afterMaking</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Support\Collection">Collection</abbr>|null</td>
+                <td>$afterCreating</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_definition">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L146">at line 146</a></div>
+        <code>    abstract                <abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+    <strong>definition</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Define the model's default state.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_new">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L154">at line 154</a></div>
+        <code>        static            <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>new</strong>($attributes = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new factory instance for the given attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_times">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L165">at line 165</a></div>
+        <code>        static            <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>times</strong>(int $count)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new factory instance for the given number of models.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configure">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L175">at line 175</a></div>
+        <code>                    $this
+    <strong>configure</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure the factory.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_raw">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L187">at line 187</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Factories\array&lt;int">array&lt;int</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\string,mixed&gt;">string,mixed&gt;</abbr>
+    <strong>raw</strong>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the raw attributes generated by the factory.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Factories\array&lt;int">array&lt;int</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\string,mixed&gt;">string,mixed&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createOne">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L204">at line 204</a></div>
+        <code>                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>createOne</strong>($attributes = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a single model and persist it to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createOneQuietly">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L215">at line 215</a></div>
+        <code>                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>createOneQuietly</strong>($attributes = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a single model and persist it to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMany">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L226">at line 226</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>
+    <strong>createMany</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr> $records)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of models and persist them to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr></td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createManyQuietly">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L241">at line 241</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>
+    <strong>createManyQuietly</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr> $records)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of models and persist them to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\iterable">iterable</abbr></td>
+                <td>$records</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L255">at line 255</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>create</strong>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of models and persist them to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createQuietly">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L283">at line 283</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>createQuietly</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr> $attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of models and persist them to the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lazy">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L297">at line 297</a></div>
+        <code>                    
+    <strong>lazy</strong>(array $attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_store">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L310">at line 310</a></div>
+        <code>            protected        void
+    <strong>store</strong>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $results)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the connection name on the results and store them.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+                <td>$results</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createChildren">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L329">at line 329</a></div>
+        <code>            protected        void
+    <strong>createChildren</strong>(<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the children for the given model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeOne">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L344">at line 344</a></div>
+        <code>                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>makeOne</strong>($attributes = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a single instance of the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L356">at line 356</a></div>
+        <code>                    <abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>make</strong>($attributes = [], <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of models.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Collection&lt;int,\Illuminate\Database\Eloquent\Model">Model</abbr>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel&gt;">TModel&gt;</abbr>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeInstance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L387">at line 387</a></div>
+        <code>            protected        <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>makeInstance</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make an instance of the model with the given attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExpandedAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L404">at line 404</a></div>
+        <code>            protected        mixed
+    <strong>getExpandedAttributes</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a raw attributes array for the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRawAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L415">at line 415</a></div>
+        <code>            protected        array
+    <strong>getRawAttributes</strong>(<abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the raw attributes for the model as an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parentResolvers">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L435">at line 435</a></div>
+        <code>            protected        array
+    <strong>parentResolvers</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create the parent relationship resolvers (as deferred Closures).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expandAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L450">at line 450</a></div>
+        <code>            protected        array
+    <strong>expandAttributes</strong>(array $definition)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Expand all attributes to their underlying values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$definition</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_state">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L475">at line 475</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>state</strong>($state)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new state transformation to the model definition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sequence">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L492">at line 492</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>sequence</strong>(array ...$sequence)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new sequenced state transformation to the model definition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>...$sequence</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_crossJoinSequence">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L503">at line 503</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>crossJoinSequence</strong>(array ...$sequence)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new cross joined sequenced state transformation to the model definition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>...$sequence</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L515">at line 515</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>has</strong>(<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a> $factory, string|null $relationship = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Define a child relationship for the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+                <td>$factory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$relationship</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessRelationship">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L530">at line 530</a></div>
+        <code>            protected        string
+    <strong>guessRelationship</strong>(string $related)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attempt to guess the relationship name for a &quot;has&quot; relationship.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$related</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasAttached">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L545">at line 545</a></div>
+        <code>                    
+    <strong>hasAttached</strong>($factory, $pivot = [], $relationship = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$factory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pivot</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$relationship</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_for">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L567">at line 567</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>for</strong>(<a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $factory, string|null $relationship = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Define a parent relationship for the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>|<a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$factory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$relationship</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_afterMaking">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L583">at line 583</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>afterMaking</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new &quot;after making&quot; callback to the model definition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_afterCreating">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L594">at line 594</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>afterCreating</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new &quot;after creating&quot; callback to the model definition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAfterMaking">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L605">at line 605</a></div>
+        <code>            protected        void
+    <strong>callAfterMaking</strong>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $instances)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the &quot;after making&quot; callbacks for the given model instances.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+                <td>$instances</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAfterCreating">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L621">at line 621</a></div>
+        <code>            protected        void
+    <strong>callAfterCreating</strong>(<a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $instances, <abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null $parent = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the &quot;after creating&quot; callbacks for the given model instances.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+                <td>$instances</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Database\Eloquent\Factories\Illuminate\Database\Eloquent\Model">Model</abbr>|null</td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L636">at line 636</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>count</strong>(int|null $count)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify how many models should be generated.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connection">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L647">at line 647</a></div>
+        <code>                    <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>connection</strong>(string $connection)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the database connection that should be used to generate models.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newInstance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L658">at line 658</a></div>
+        <code>            protected        <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>newInstance</strong>(array $arguments = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new instance of the factory builder with the given mutated properties.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newModel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L677">at line 677</a></div>
+        <code>                    <a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr>
+    <strong>newModel</strong>(array $attributes = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new model instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>|<abbr title="Illuminate\Database\Eloquent\Factories\TModel">TModel</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modelName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L689">at line 689</a></div>
+        <code>                    
+    <strong>modelName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessModelNamesUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L714">at line 714</a></div>
+        <code>        static            void
+    <strong>guessModelNamesUsing</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the callback that should be invoked to guess model names based on factory names.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useNamespace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L725">at line 725</a></div>
+        <code>        static            void
+    <strong>useNamespace</strong>(string $namespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the default namespace that contains the application's model factories.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factoryForModel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L736">at line 736</a></div>
+        <code>        static            <a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a>
+    <strong>factoryForModel</strong>(string $modelName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new factory instance for the given model name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$modelName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Factory.html"><abbr title="Illuminate\Database\Eloquent\Factories\Factory">Factory</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessFactoryNamesUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L749">at line 749</a></div>
+        <code>        static            void
+    <strong>guessFactoryNamesUsing</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the callback that should be invoked to guess factory names based on dynamic relationship names.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withFaker">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L759">at line 759</a></div>
+        <code>            protected        <abbr title="Faker\Generator">Generator</abbr>
+    <strong>withFaker</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new Faker instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Faker\Generator">Generator</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFactoryName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L770">at line 770</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Factories\class-string&lt;\Illuminate\Database\Eloquent\Factories\Factory&gt;">Factory&gt;</abbr>
+    <strong>resolveFactoryName</strong>(string $modelName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the factory name for the given model name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$modelName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Factories\class-string&lt;\Illuminate\Database\Eloquent\Factories\Factory&gt;">Factory&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appNamespace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Factories/Factory.php#L790">at line 790</a></div>
+        <code>        static    protected        string
+    <strong>appNamespace</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application namespace for the application.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

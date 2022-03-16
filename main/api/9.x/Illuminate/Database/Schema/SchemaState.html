@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Schema\SchemaState | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Schema_SchemaState" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="SchemaState.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../Schema.html">Schema</a></li><li class="backslash">\</li><li>SchemaState</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SchemaState    
+            </h1>
+    </div>
+
+    
+    <p>    abstract     class
+    <strong>SchemaState</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_connection">
+                                        protected                                        <a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$connection</td>
+                <td class="last"><p>The connection instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_files">
+                                        protected                                        <a href="../../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a>
+                                                                                
+                                    </td>
+                <td>$files</td>
+                <td class="last"><p>The filesystem instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_migrationTable">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$migrationTable</td>
+                <td class="last"><p>The name of the application's migration table.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_processFactory">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$processFactory</td>
+                <td class="last"><p>The process factory callback.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_output">
+                                        protected                                        callable
+                                                                                
+                                    </td>
+                <td>$output</td>
+                <td class="last"><p>The output callable instance.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method___construct">__construct</a>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files = null, callable $processFactory = null)
+        
+                                            <p><p>Create a new dumper instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method_dump">dump</a>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, string $path)
+        
+                                            <p><p>Dump the database's schema into a file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method_load">load</a>(string $path)
+        
+                                            <p><p>Load the given schema file into the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\Process\Process">Process</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method_makeProcess">makeProcess</a>(array ...$arguments)
+        
+                                            <p><p>Create a new process instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method_withMigrationTable">withMigrationTable</a>(string $table)
+        
+                                            <p><p>Specify the name of the application's migration table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="SchemaState.html#method_handleOutputUsing">handleOutputUsing</a>(callable $output)
+        
+                                            <p><p>Specify the callback that should be used to handle process output.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L54">at line 54</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, <a href="../../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a> $files = null, callable $processFactory = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new dumper instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Filesystem/Filesystem.html"><abbr title="Illuminate\Filesystem\Filesystem">Filesystem</abbr></a></td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$processFactory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dump">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L76">at line 76</a></div>
+        <code>    abstract                void
+    <strong>dump</strong>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection, string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the database's schema into a file.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L84">at line 84</a></div>
+        <code>    abstract                void
+    <strong>load</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the given schema file into the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeProcess">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L92">at line 92</a></div>
+        <code>                    <abbr title="Symfony\Component\Process\Process">Process</abbr>
+    <strong>makeProcess</strong>(array ...$arguments)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new process instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>...$arguments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\Process\Process">Process</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withMigrationTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L103">at line 103</a></div>
+        <code>                    $this
+    <strong>withMigrationTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the name of the application's migration table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleOutputUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/SchemaState.php#L116">at line 116</a></div>
+        <code>                    $this
+    <strong>handleOutputUsing</strong>(callable $output)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the callback that should be used to handle process output.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$output</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

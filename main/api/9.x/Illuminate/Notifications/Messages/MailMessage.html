@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Notifications\Messages\MailMessage | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Notifications_Messages_MailMessage" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="MailMessage.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Notifications.html">Notifications</a></li><li class="backslash">\</li><li><a href="../Messages.html">Messages</a></li><li class="backslash">\</li><li>MailMessage</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>MailMessage    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>MailMessage</strong>        extends <a href="SimpleMessage.html"><abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a>        implements        <a href="../../Contracts/Support/Renderable.html"><abbr title="Illuminate\Contracts\Support\Renderable">Renderable</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Support/Traits/Conditionable.html"><abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_level">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$level</td>
+                <td class="last"><p>The &quot;level&quot; of the notification (info, success, error).</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_level">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_subject">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$subject</td>
+                <td class="last"><p>The subject of the notification.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_subject">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_greeting">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$greeting</td>
+                <td class="last"><p>The notification's greeting.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_greeting">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_salutation">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$salutation</td>
+                <td class="last"><p>The notification's salutation.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_salutation">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_introLines">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$introLines</td>
+                <td class="last"><p>The &quot;intro&quot; lines of the notification.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_introLines">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_outroLines">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$outroLines</td>
+                <td class="last"><p>The &quot;outro&quot; lines of the notification.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_outroLines">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actionText">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$actionText</td>
+                <td class="last"><p>The text / label for the action.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_actionText">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_actionUrl">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$actionUrl</td>
+                <td class="last"><p>The action URL.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_actionUrl">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mailer">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$mailer</td>
+                <td class="last"><p>The name of the mailer that should send the notification.</p></td>
+                <td><small>from&nbsp;<a href="SimpleMessage.html#property_mailer">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_view">
+                                                                                array|string
+                                                                                
+                                    </td>
+                <td>$view</td>
+                <td class="last"><p>The view to be rendered.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_viewData">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$viewData</td>
+                <td class="last"><p>The view data for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_markdown">
+                                                                                string|null
+                                                                                
+                                    </td>
+                <td>$markdown</td>
+                <td class="last"><p>The Markdown template to render (if applicable).</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_theme">
+                                                                                string|null
+                                                                                
+                                    </td>
+                <td>$theme</td>
+                <td class="last"><p>The current theme being used when generating emails.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_from">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$from</td>
+                <td class="last"><p>The &quot;from&quot; information for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_replyTo">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$replyTo</td>
+                <td class="last"><p>The &quot;reply to&quot; information for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cc">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$cc</td>
+                <td class="last"><p>The &quot;cc&quot; information for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bcc">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$bcc</td>
+                <td class="last"><p>The &quot;bcc&quot; information for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attachments">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$attachments</td>
+                <td class="last"><p>The attachments for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rawAttachments">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$rawAttachments</td>
+                <td class="last"><p>The raw attachments for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tags">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$tags</td>
+                <td class="last"><p>The tags for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_metadata">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$metadata</td>
+                <td class="last"><p>The metadata for the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_priority">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$priority</td>
+                <td class="last"><p>Priority level of the message.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_callbacks">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$callbacks</td>
+                <td class="last"><p>The callbacks for the message.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_success">success</a>()
+        
+                                            <p><p>Indicate that the notification gives information about a successful operation.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_success">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_error">error</a>()
+        
+                                            <p><p>Indicate that the notification gives information about an error.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_error">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_level">level</a>(string $level)
+        
+                                            <p><p>Set the &quot;level&quot; of the notification (success, error, etc.).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_level">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_subject">subject</a>(string $subject)
+        
+                                            <p><p>Set the subject of the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_subject">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_greeting">greeting</a>(string $greeting)
+        
+                                            <p><p>Set the greeting of the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_greeting">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_salutation">salutation</a>(string $salutation)
+        
+                                            <p><p>Set the salutation of the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_salutation">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_line">line</a>(mixed $line)
+        
+                                            <p><p>Add a line of text to the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_line">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_lines">lines</a>(<abbr title="Illuminate\Notifications\Messages\iterable">iterable</abbr> $lines)
+        
+                                            <p><p>Add lines of text to the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_lines">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_with">with</a>(mixed $line)
+        
+                                            <p><p>Add a line of text to the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_with">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_formatLine">formatLine</a>(<a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string|array $line)
+        
+                                            <p><p>Format the given line of text.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_formatLine">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_action">action</a>(string $text, string $url)
+        
+                                            <p><p>Configure the &quot;call to action&quot; button.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_action">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_mailer">mailer</a>(string $mailer)
+        
+                                            <p><p>Set the name of the mailer that should send the notification.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_mailer">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_toArray">toArray</a>()
+        
+                                            <p><p>Get an array representation of the message.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SimpleMessage.html#method_toArray">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_when">when</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/Traits/Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_unless">unless</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Support/Traits/Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_view">view</a>(array|string $view, array $data = [])
+        
+                                            <p><p>Set the view for the mail message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_markdown">markdown</a>(string $view, array $data = [])
+        
+                                            <p><p>Set the Markdown template for the notification.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_template">template</a>(string $template)
+        
+                                            <p><p>Set the default markdown template.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_theme">theme</a>(string $theme)
+        
+                                            <p><p>Set the theme to use with the Markdown template.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_from">from</a>(string $address, string|null $name = null)
+        
+                                            <p><p>Set the from address for the mail message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_replyTo">replyTo</a>(array|string $address, string|null $name = null)
+        
+                                            <p><p>Set the &quot;reply to&quot; address of the message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_cc">cc</a>(array|string $address, string|null $name = null)
+        
+                                            <p><p>Set the cc address for the mail message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_bcc">bcc</a>(array|string $address, string|null $name = null)
+        
+                                            <p><p>Set the bcc address for the mail message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_attach">attach</a>(string $file, array $options = [])
+        
+                                            <p><p>Attach a file to the message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_attachData">attachData</a>(string $data, string $name, array $options = [])
+        
+                                            <p><p>Attach in-memory data as an attachment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_tag">tag</a>(string $value)
+        
+                                            <p><p>Add a tag header to the message when supported by the underlying transport.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_metadata">metadata</a>(string $key, string $value)
+        
+                                            <p><p>Add a metadata header to the message when supported by the underlying transport.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_priority">priority</a>(int $level)
+        
+                                            <p><p>Set the priority of this message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_data">data</a>()
+        
+                                            <p><p>Get the data array for the mail message.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_parseAddresses">parseAddresses</a>(array $value)
+        
+                                            <p><p>Parse the multi-address array into the necessary format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_arrayOfAddresses">arrayOfAddresses</a>(mixed $address)
+        
+                                            <p><p>Determine if the given &quot;address&quot; is actually an array of addresses.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_render">render</a>()
+        
+                                            <p><p>Render the mail notification message into an HTML string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="MailMessage.html#method_withSymfonyMessage">withSymfonyMessage</a>(callable $callback)
+        
+                                            <p><p>Register a callback to be called with the Symfony message instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_success">
+        <div class="location">in <a href="SimpleMessage.html#method_success">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L78">at line 78</a></div>
+        <code>                    $this
+    <strong>success</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the notification gives information about a successful operation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_error">
+        <div class="location">in <a href="SimpleMessage.html#method_error">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L90">at line 90</a></div>
+        <code>                    $this
+    <strong>error</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the notification gives information about an error.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_level">
+        <div class="location">in <a href="SimpleMessage.html#method_level">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L103">at line 103</a></div>
+        <code>                    $this
+    <strong>level</strong>(string $level)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the &quot;level&quot; of the notification (success, error, etc.).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_subject">
+        <div class="location">in <a href="SimpleMessage.html#method_subject">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L116">at line 116</a></div>
+        <code>                    $this
+    <strong>subject</strong>(string $subject)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the subject of the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_greeting">
+        <div class="location">in <a href="SimpleMessage.html#method_greeting">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L129">at line 129</a></div>
+        <code>                    $this
+    <strong>greeting</strong>(string $greeting)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the greeting of the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$greeting</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_salutation">
+        <div class="location">in <a href="SimpleMessage.html#method_salutation">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L142">at line 142</a></div>
+        <code>                    $this
+    <strong>salutation</strong>(string $salutation)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the salutation of the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$salutation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_line">
+        <div class="location">in <a href="SimpleMessage.html#method_line">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L155">at line 155</a></div>
+        <code>                    $this
+    <strong>line</strong>(mixed $line)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a line of text to the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$line</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lines">
+        <div class="location">in <a href="SimpleMessage.html#method_lines">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L166">at line 166</a></div>
+        <code>                    $this
+    <strong>lines</strong>(<abbr title="Illuminate\Notifications\Messages\iterable">iterable</abbr> $lines)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add lines of text to the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Notifications\Messages\iterable">iterable</abbr></td>
+                <td>$lines</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">in <a href="SimpleMessage.html#method_with">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L181">at line 181</a></div>
+        <code>                    $this
+    <strong>with</strong>(mixed $line)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a line of text to the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$line</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_formatLine">
+        <div class="location">in <a href="SimpleMessage.html#method_formatLine">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L200">at line 200</a></div>
+        <code>            protected        <a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string
+    <strong>formatLine</strong>(<a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string|array $line)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format the given line of text.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string|array</td>
+                <td>$line</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Contracts/Support/Htmlable.html"><abbr title="Illuminate\Contracts\Support\Htmlable">Htmlable</abbr></a>|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_action">
+        <div class="location">in <a href="SimpleMessage.html#method_action">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L220">at line 220</a></div>
+        <code>                    $this
+    <strong>action</strong>(string $text, string $url)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure the &quot;call to action&quot; button.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mailer">
+        <div class="location">in <a href="SimpleMessage.html#method_mailer">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L234">at line 234</a></div>
+        <code>                    $this
+    <strong>mailer</strong>(string $mailer)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the name of the mailer that should send the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mailer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location">in <a href="SimpleMessage.html#method_toArray">
+<abbr title="Illuminate\Notifications\Messages\SimpleMessage">SimpleMessage</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/SimpleMessage.php#L246">at line 246</a></div>
+        <code>                    array
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an array representation of the message.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../../Support/Traits/Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L21">at line 21</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+    <strong>when</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unless">
+        <div class="location">in <a href="../../Support/Traits/Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L49">at line 49</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+    <strong>unless</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L120">at line 120</a></div>
+        <code>                    $this
+    <strong>view</strong>(array|string $view, array $data = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the view for the mail message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_markdown">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L137">at line 137</a></div>
+        <code>                    $this
+    <strong>markdown</strong>(string $view, array $data = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the Markdown template for the notification.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$view</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_template">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L153">at line 153</a></div>
+        <code>                    $this
+    <strong>template</strong>(string $template)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the default markdown template.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$template</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_theme">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L166">at line 166</a></div>
+        <code>                    $this
+    <strong>theme</strong>(string $theme)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the theme to use with the Markdown template.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$theme</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_from">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L180">at line 180</a></div>
+        <code>                    $this
+    <strong>from</strong>(string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the from address for the mail message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replyTo">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L194">at line 194</a></div>
+        <code>                    $this
+    <strong>replyTo</strong>(array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the &quot;reply to&quot; address of the message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cc">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L212">at line 212</a></div>
+        <code>                    $this
+    <strong>cc</strong>(array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the cc address for the mail message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bcc">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L230">at line 230</a></div>
+        <code>                    $this
+    <strong>bcc</strong>(array|string $address, string|null $name = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the bcc address for the mail message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attach">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L248">at line 248</a></div>
+        <code>                    $this
+    <strong>attach</strong>(string $file, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach a file to the message.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attachData">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L263">at line 263</a></div>
+        <code>                    $this
+    <strong>attachData</strong>(string $data, string $name, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attach in-memory data as an attachment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tag">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L276">at line 276</a></div>
+        <code>                    $this
+    <strong>tag</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a tag header to the message when supported by the underlying transport.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_metadata">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L290">at line 290</a></div>
+        <code>                    $this
+    <strong>metadata</strong>(string $key, string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a metadata header to the message when supported by the underlying transport.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_priority">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L305">at line 305</a></div>
+        <code>                    $this
+    <strong>priority</strong>(int $level)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the priority of this message.</p></p>                <p><p>The value is an integer where 1 is the highest priority and 5 is the lowest.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_data">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L317">at line 317</a></div>
+        <code>                    array
+    <strong>data</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the data array for the mail message.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseAddresses">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L328">at line 328</a></div>
+        <code>            protected        array
+    <strong>parseAddresses</strong>(array $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse the multi-address array into the necessary format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrayOfAddresses">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L341">at line 341</a></div>
+        <code>            protected        bool
+    <strong>arrayOfAddresses</strong>(mixed $address)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given &quot;address&quot; is actually an array of addresses.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$address</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_render">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L351">at line 351</a></div>
+        <code>                    string
+    <strong>render</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Render the mail notification message into an HTML string.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withSymfonyMessage">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Notifications/Messages/MailMessage.php#L371">at line 371</a></div>
+        <code>                    $this
+    <strong>withSymfonyMessage</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a callback to be called with the Symfony message instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

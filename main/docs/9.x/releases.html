@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Release Notes - Laravel - The PHP Framework For Web Artisans</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <link rel="canonical" href="releases.html">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta name="description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laravel.com/">
+    <meta property="og:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="og:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="og:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://laravel.com/">
+    <meta property="twitter:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="twitter:description" content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
+    <meta property="twitter:image" content="https://laravel.com/img/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../img/favicon/safari-pinned-tab.svg" color="#ff2d20">
+    <link rel="shortcut icon" href="../../img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff2d20">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
+    <link rel="stylesheet" type="text/css" href="../../css/app-id=b59affd817f095c5db73.css">
+
+    <script>
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.theme === 'system') {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    });
+
+    function updateTheme() {
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'system';
+        }
+
+        switch (localStorage.theme) {
+            case 'system':
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
+                document.documentElement.setAttribute('color-theme', 'system');
+                break;
+
+            case 'dark':
+                document.documentElement.classList.add('dark');
+                document.documentElement.setAttribute('color-theme', 'dark');
+                break;
+
+            case 'light':
+                document.documentElement.classList.remove('dark');
+                document.documentElement.setAttribute('color-theme', 'light');
+                break;
+        }
+    }
+
+    updateTheme();
+</script>
+</head>
+<body
+    x-data="{
+        navIsOpen: false,
+        searchIsOpen: false,
+        search: '',
+    }"
+    class="language-php h-full w-full font-sans text-gray-900 antialiased"
+>
+
+    <a
+    id="skip-to-content-link"
+    href="releases.html#main-content"
+    class="absolute bg-gray-100 px-4 py-2 top-3 left-3 text-gray-700 shadow-xl"
+>
+    Skip to content
+</a>
+    <div class="relative overflow-auto dark:bg-dark-700" id="docsScreen">
+        <div class="relative lg:flex lg:items-start">
+            <aside
+                x-data="{
+                    navIsOpen: false,
+                    init() {
+                        this.$watch('navIsOpen', (val) => {
+                            if (val) {
+                                document.body.classList.add('overflow-hidden');
+                            } else {
+                                document.body.classList.remove('overflow-hidden');
+                            }
+                        });
+                    }
+                }"
+                class="hidden fixed top-0 bottom-0 left-0 z-20 h-full w-16 bg-gradient-to-b from-gray-100 to-white transition-all duration-300 overflow-hidden lg:sticky lg:w-80 lg:shrink-0 lg:flex lg:flex-col lg:justify-end lg:items-end 2xl:max-w-lg 2xl:w-full dark:from-dark-800 dark:to-dark-700"
+                :class="{ 'w-64': navIsOpen }"
+                @click.away="navIsOpen = false"
+                @keydown.window.escape="navIsOpen = false"
+            >
+                <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
+                    <a href="../../index.html" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+                        <img
+                            class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
+                            :class="{ 'w-12 h-12': navIsOpen }"
+                            src="../../img/logomark.min.svg"
+                            alt="Laravel"
+                            width="50"
+                            height="52"
+                        >
+                        <img
+                            x-show="navIsOpen"
+                            x-cloak
+                            class="ml-4 transition-all duration-300 lg:hidden"
+                            x-transition:enter="duration-250 ease-out"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="duration-250 ease-in"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0"
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            width="114"
+                            height="29"
+                        >
+                        <img
+                            src="../../img/logotype.min.svg"
+                            alt="Laravel"
+                            class="hidden ml-4 lg:block"
+                            width="114"
+                            height="29"
+                        >
+                    </a>
+                    <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
+                        <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+                        <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
+                            <div class="docs_sidebar">
+                                <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                            </div>
+                        </nav>
+
+                        
+                                                    <div :class="{ 'hidden': !navIsOpen }" x-cloak class="mt-4 px-3 py-2 border-dashed border-gray-200 border rounded-lg text-xs leading-loose text-gray-700 lg:block dark:border-gray-400 dark:text-gray-200">
+                                <span class="font-medium">Laravel Forge:</span> create and manage PHP 8 servers. Deploy your Laravel applications in seconds. <a class="underline text-red-600" href="https://forge.laravel.com">Sign up now!</a>.
+                            </div>
+                        
+                        
+                                            </div>
+                    <div class="sticky bottom-0 flex-1 flex flex-col justify-end lg:hidden">
+                        <div class="py-4 px-4 bg-white">
+                            <button class="relative ml-1 w-6 h-6 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <header
+                class="lg:hidden"
+                @keydown.window.escape="navIsOpen = false"
+                @click.away="navIsOpen = false"
+            >
+                <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
+                    <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
+                        <a href="../../index.html" class="flex items-center">
+                            <img class="" src="../../img/logomark.min.svg" alt="Laravel">
+                            <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
+                        </a>
+                        <div class="flex-1 flex items-center justify-end">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                            <button class="ml-2 relative w-10 h-10 p-2 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
+                                <svg x-show="! navIsOpen" x-transition.opacity class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                                <svg x-show="navIsOpen" x-transition.opacity x-cloak class="absolute inset-0 mt-2 ml-2 w-6 h-6" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <span :class="{ 'shadow-sm': navIsOpen }" class="absolute inset-0 z-20 pointer-events-none"></span>
+                </div>
+                <div
+                    x-show="navIsOpen"
+                    x-transition:enter="duration-150"
+                    x-transition:leave="duration-100 ease-in"
+                    x-cloak
+                >
+                    <nav
+                        x-show="navIsOpen"
+                        x-cloak
+                        class="absolute w-full transform origin-top shadow-sm z-10"
+                        x-transition:enter="duration-150 ease-out"
+                        x-transition:enter-start="opacity-0 -translate-y-8 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="duration-100 ease-in"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 -translate-y-8 scale-75"
+                    >
+                        <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
+                            <ul>
+<li>
+<h2>Prologue</h2>
+<ul>
+<li>
+<a href="releases.html">Release Notes</a>
+</li>
+<li>
+<a href="upgrade.html">Upgrade Guide</a>
+</li>
+<li>
+<a href="contributions.html">Contribution Guide</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Getting Started</h2>
+<ul>
+<li>
+<a href="installation.html">Installation</a>
+</li>
+<li>
+<a href="configuration.html">Configuration</a>
+</li>
+<li>
+<a href="structure.html">Directory Structure</a>
+</li>
+<li>
+<a href="starter-kits.html">Starter Kits</a>
+</li>
+<li>
+<a href="deployment.html">Deployment</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Architecture Concepts</h2>
+<ul>
+<li>
+<a href="lifecycle.html">Request Lifecycle</a>
+</li>
+<li>
+<a href="container.html">Service Container</a>
+</li>
+<li>
+<a href="providers.html">Service Providers</a>
+</li>
+<li>
+<a href="facades.html">Facades</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>The Basics</h2>
+<ul>
+<li>
+<a href="routing.html">Routing</a>
+</li>
+<li>
+<a href="middleware.html">Middleware</a>
+</li>
+<li>
+<a href="csrf.html">CSRF Protection</a>
+</li>
+<li>
+<a href="controllers.html">Controllers</a>
+</li>
+<li>
+<a href="requests.html">Requests</a>
+</li>
+<li>
+<a href="responses.html">Responses</a>
+</li>
+<li>
+<a href="views.html">Views</a>
+</li>
+<li>
+<a href="blade.html">Blade Templates</a>
+</li>
+<li>
+<a href="urls.html">URL Generation</a>
+</li>
+<li>
+<a href="session.html">Session</a>
+</li>
+<li>
+<a href="validation.html">Validation</a>
+</li>
+<li>
+<a href="errors.html">Error Handling</a>
+</li>
+<li>
+<a href="logging.html">Logging</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Digging Deeper</h2>
+<ul>
+<li>
+<a href="artisan.html">Artisan Console</a>
+</li>
+<li>
+<a href="broadcasting.html">Broadcasting</a>
+</li>
+<li>
+<a href="cache.html">Cache</a>
+</li>
+<li>
+<a href="collections.html">Collections</a>
+</li>
+<li>
+<a href="mix.html">Compiling Assets</a>
+</li>
+<li>
+<a href="contracts.html">Contracts</a>
+</li>
+<li>
+<a href="events.html">Events</a>
+</li>
+<li>
+<a href="filesystem.html">File Storage</a>
+</li>
+<li>
+<a href="helpers.html">Helpers</a>
+</li>
+<li>
+<a href="http-client.html">HTTP Client</a>
+</li>
+<li>
+<a href="localization.html">Localization</a>
+</li>
+<li>
+<a href="mail.html">Mail</a>
+</li>
+<li>
+<a href="notifications.html">Notifications</a>
+</li>
+<li>
+<a href="packages.html">Package Development</a>
+</li>
+<li>
+<a href="queues.html">Queues</a>
+</li>
+<li>
+<a href="rate-limiting.html">Rate Limiting</a>
+</li>
+<li>
+<a href="scheduling.html">Task Scheduling</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Security</h2>
+<ul>
+<li>
+<a href="authentication.html">Authentication</a>
+</li>
+<li>
+<a href="authorization.html">Authorization</a>
+</li>
+<li>
+<a href="verification.html">Email Verification</a>
+</li>
+<li>
+<a href="encryption.html">Encryption</a>
+</li>
+<li>
+<a href="hashing.html">Hashing</a>
+</li>
+<li>
+<a href="passwords.html">Password Reset</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Database</h2>
+<ul>
+<li>
+<a href="database.html">Getting Started</a>
+</li>
+<li>
+<a href="queries.html">Query Builder</a>
+</li>
+<li>
+<a href="pagination.html">Pagination</a>
+</li>
+<li>
+<a href="migrations.html">Migrations</a>
+</li>
+<li>
+<a href="seeding.html">Seeding</a>
+</li>
+<li>
+<a href="redis.html">Redis</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Eloquent ORM</h2>
+<ul>
+<li>
+<a href="eloquent.html">Getting Started</a>
+</li>
+<li>
+<a href="eloquent-relationships.html">Relationships</a>
+</li>
+<li>
+<a href="eloquent-collections.html">Collections</a>
+</li>
+<li>
+<a href="eloquent-mutators.html">Mutators / Casts</a>
+</li>
+<li>
+<a href="eloquent-resources.html">API Resources</a>
+</li>
+<li>
+<a href="eloquent-serialization.html">Serialization</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Testing</h2>
+<ul>
+<li>
+<a href="testing.html">Getting Started</a>
+</li>
+<li>
+<a href="http-tests.html">HTTP Tests</a>
+</li>
+<li>
+<a href="console-tests.html">Console Tests</a>
+</li>
+<li>
+<a href="dusk.html">Browser Tests</a>
+</li>
+<li>
+<a href="database-testing.html">Database</a>
+</li>
+<li>
+<a href="mocking.html">Mocking</a>
+</li>
+</ul>
+</li>
+<li>
+<h2>Packages</h2>
+<ul>
+<li>
+<a href="starter-kits.html#laravel-breeze">Breeze</a>
+</li>
+<li>
+<a href="billing.html">Cashier (Stripe)</a>
+</li>
+<li>
+<a href="cashier-paddle.html">Cashier (Paddle)</a>
+</li>
+<li>
+<a href="dusk.html">Dusk</a>
+</li>
+<li>
+<a href="envoy.html">Envoy</a>
+</li>
+<li>
+<a href="fortify.html">Fortify</a>
+</li>
+<li>
+<a href="homestead.html">Homestead</a>
+</li>
+<li>
+<a href="horizon.html">Horizon</a>
+</li>
+<li>
+<a href="https://jetstream.laravel.com">Jetstream</a>
+</li>
+<li>
+<a href="octane.html">Octane</a>
+</li>
+<li>
+<a href="passport.html">Passport</a>
+</li>
+<li>
+<a href="sail.html">Sail</a>
+</li>
+<li>
+<a href="sanctum.html">Sanctum</a>
+</li>
+<li>
+<a href="scout.html">Scout</a>
+</li>
+<li>
+<a href="socialite.html">Socialite</a>
+</li>
+<li>
+<a href="telescope.html">Telescope</a>
+</li>
+<li>
+<a href="valet.html">Valet</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="../../api/9.x/index.html">API Documentation</a>
+</li>
+</ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="flex-1 dark:bg-dark-700">
+                <div class="max-w-screen-lg px-8 sm:px-16 lg:px-24">
+                    <div class="flex flex-col items-end border-b border-gray-200 py-1 transition-colors dark:border-gray-700 lg:mt-8 lg:flex-row-reverse">
+                        <div class="hidden lg:flex items-center justify-center ml-8">
+                            <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+                                 </svg>
+                            </button>
+                            <button id="header__moon" onclick="toLightMode()" title="Switch to light mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                                </svg>
+                            </button>
+                            <button id="header__indeterminate" onclick="toDarkMode()" title="Switch to dark mode" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="w-full lg:w-40 lg:pl-12">
+                            <div>
+                                <label class="text-gray-600 text-xs tracking-widest uppercase dark:text-gray-500" for="version-switcher">Version</label>
+                                <div x-data class="relative w-full bg-white transition-all duration-500 focus-within:border-gray-600 dark:bg-gray-800">
+                                    <select
+                                        id="version-switcher"
+                                        aria-label="Laravel version"
+                                        class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
+                                        @change="window.location = $event.target.value"
+                                    >
+                                                                                    <option  value="https://laravel.com/docs/master/releases">Master</option>
+                                                                                    <option selected value="https://laravel.com/docs/9.x/releases">9.x</option>
+                                                                                    <option  value="https://laravel.com/docs/8.x/releases">8.x</option>
+                                                                                    <option  value="https://laravel.com/docs/7.x/releases">7.x</option>
+                                                                                    <option  value="https://laravel.com/docs/6.x/releases">6.x</option>
+                                                                                    <option  value="https://laravel.com/docs/5.8/releases">5.8</option>
+                                                                                    <option  value="https://laravel.com/docs/5.7/releases">5.7</option>
+                                                                                    <option  value="https://laravel.com/docs/5.6/releases">5.6</option>
+                                                                                    <option  value="https://laravel.com/docs/5.5/releases">5.5</option>
+                                                                                    <option  value="https://laravel.com/docs/5.4/releases">5.4</option>
+                                                                                    <option  value="https://laravel.com/docs/5.3/releases">5.3</option>
+                                                                                    <option  value="https://laravel.com/docs/5.2/releases">5.2</option>
+                                                                                    <option  value="https://laravel.com/docs/5.1/releases">5.1</option>
+                                                                                    <option  value="https://laravel.com/docs/5.0/releases">5.0</option>
+                                                                                    <option  value="https://laravel.com/docs/4.2/releases">4.2</option>
+                                                                            </select>
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="../../img/icons/drop_arrow.min.svg" alt="">
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="../../img/icons/drop_arrow.dark.min.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative mt-8 flex items-center justify-end w-full h-10 lg:mt-0">
+                            <div class="flex-1 flex items-center">
+                                <button
+                                    class="relative inline-flex items-center text-gray-800 transition-colors dark:text-gray-400 w-full"
+                                    @click.prevent="$dispatch('toggle-search-modal')"
+                                >
+                                    <svg class="w-5 h-5 text-gray-700 pointer-events-none transition-colors dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                    <span class="ml-3">Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="mt-8 md:mt-16">
+                        <section class="docs_main max-w-prose">
+                            
+                                                        <div id="main-content">
+    <h1>Release Notes</h1>
+<ul>
+<li>
+<a href="releases.html#versioning-scheme">Versioning Scheme</a>
+</li>
+<li>
+<a href="releases.html#support-policy">Support Policy</a>
+</li>
+<li>
+<a href="releases.html#laravel-9">Laravel 9</a>
+</li>
+</ul>
+<p><a name="versioning-scheme"></a></p>
+<h2>Versioning Scheme</h2>
+<p>Laravel and its other first-party packages follow <a href="https://semver.org">Semantic Versioning</a>. Major framework releases are released every year (~February), while minor and patch releases may be released as often as every week. Minor and patch releases should <strong>never</strong> contain breaking changes.</p>
+<p>When referencing the Laravel framework or its components from your application or package, you should always use a version constraint such as <code>^9.0</code>, since major releases of Laravel do include breaking changes. However, we strive to always ensure you may update to a new major release in one day or less.</p>
+<p><a name="named-arguments"></a></p>
+<h4>Named Arguments</h4>
+<p><a href="https://www.php.net/manual/en/functions.arguments.php#functions.named-arguments">Named arguments</a> are not covered by Laravel's backwards compatibility guidelines. We may choose to rename function arguments when necessary in order to improve the Laravel codebase. Therefore, using named arguments when calling Laravel methods should be done cautiously and with the understanding that the parameter names may change in the future.</p>
+<p><a name="support-policy"></a></p>
+<h2>Support Policy</h2>
+<p>For all Laravel releases, bug fixes are provided for 18 months and security fixes are provided for 2 years. For all additional libraries, including Lumen, only the latest release receives bug fixes. In addition, please review the database versions <a href="database.html#introduction">supported by Laravel</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>PHP (*)</th>
+<th>Release</th>
+<th>Bug Fixes Until</th>
+<th>Security Fixes Until</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6 (LTS)</td>
+<td>7.2 - 8.0</td>
+<td>September 3rd, 2019</td>
+<td>January 25th, 2022</td>
+<td>September 6th, 2022</td>
+</tr>
+<tr>
+<td>7</td>
+<td>7.2 - 8.0</td>
+<td>March 3rd, 2020</td>
+<td>October 6th, 2020</td>
+<td>March 3rd, 2021</td>
+</tr>
+<tr>
+<td>8</td>
+<td>7.3 - 8.1</td>
+<td>September 8th, 2020</td>
+<td>July 26th, 2022</td>
+<td>January 24th, 2023</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8.0 - 8.1</td>
+<td>February 8th, 2022</td>
+<td>August 8th, 2023</td>
+<td>February 8th, 2024</td>
+</tr>
+<tr>
+<td>10</td>
+<td>8.1</td>
+<td>February 7th, 2023</td>
+<td>August 7th, 2024</td>
+<td>February 7th, 2025</td>
+</tr>
+</tbody>
+</table>
+<div class="version-colors">
+    <div class="end-of-life">
+        <div class="color-box"></div>
+        <div>End of life</div>
+    </div>
+    <div class="security-fixes">
+        <div class="color-box"></div>
+        <div>Security fixes only</div>
+    </div>
+</div>
+<p>(*) Supported PHP versions</p>
+<p><a name="laravel-9"></a></p>
+<h2>Laravel 9</h2>
+<p>As you may know, Laravel transitioned to yearly releases with the release of Laravel 8. Previously, major versions were released every 6 months. This transition is intended to ease the maintenance burden on the community and challenge our development team to ship amazing, powerful new features without introducing breaking changes. Therefore, we have shipped a variety of robust features to Laravel 8 without breaking backwards compatibility, such as parallel testing support, improved Breeze starter kits, HTTP client improvements, and even new Eloquent relationship types such as &quot;has one of many&quot;.</p>
+<p>Therefore, this commitment to ship great new features during the current release will likely lead to future &quot;major&quot; releases being primarily used for &quot;maintenance&quot; tasks such as upgrading upstream dependencies, which can be seen in these release notes.</p>
+<p>Laravel 9 continues the improvements made in Laravel 8.x by introducing support for Symfony 6.0 components, Symfony Mailer, Flysystem 3.0, improved <code>route:list</code> output, a Laravel Scout database driver, new Eloquent accessor / mutator syntax, implicit route bindings via Enums, and a variety of other bug fixes and usability improvements.</p>
+<p><a name="php-8"></a></p>
+<h3>PHP 8.0</h3>
+<p>Laravel 9.x requires a minimum PHP version of 8.0.</p>
+<p><a name="symfony-mailer"></a></p>
+<h3>Symfony Mailer</h3>
+<p><em>Symfony Mailer support was contributed by <a href="https://github.com/driesvints">Dries Vints</a></em>, <a href="https://github.com/jbrooksuk">James Brooks</a>, and <a href="https://github.com/Jubeki">Julius Kiekbusch</a>.</p>
+<p>Previous releases of Laravel utilized the <a href="https://swiftmailer.symfony.com/docs/introduction.html">Swift Mailer</a> library to send outgoing email. However, that library is no longer maintained and has been succeeded by Symfony Mailer.</p>
+<p>Please review the <a href="upgrade.html#symfony-mailer">upgrade guide</a> to learn more about ensuring your application is compatible with Symfony Mailer.</p>
+<p><a name="flysystem-3"></a></p>
+<h3>Flysystem 3.x</h3>
+<p><em>Flysystem 3.x support was contributed by <a href="https://github.com/driesvints">Dries Vints</a></em>.</p>
+<p>Laravel 9.x upgrades our upstream Flysystem dependency to Flysystem 3.x. Flysystem powers all of filesystem interactions offered by the <code>Storage</code> facade.</p>
+<p>Please review the <a href="upgrade.html#flysystem-3">upgrade guide</a> to learn more about ensuring your application is compatible with Flysystem 3.x.</p>
+<p><a name="eloquent-accessors-and-mutators"></a></p>
+<h3>Improved Eloquent Accessors / Mutators</h3>
+<p><em>Improved Eloquent accessors / mutators was contributed by <a href="https://github.com/taylorotwell">Taylor Otwell</a></em>.</p>
+<p>Laravel 9.x offers a new way to define Eloquent <a href="eloquent-mutators.html#accessors-and-mutators">accessors and mutators</a>. In previous releases of Laravel, the only way to define accessors and mutators was by defining prefixed methods on your model like so:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">getNameAttribute</span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #D9F5DD;">)</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">strtoupper</span><span style="color: #BFC7D5;">($</span><span style="color: #BEC5D4;">value</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">setNameAttribute</span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #D9F5DD;">)</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FF5572;">$this</span><span style="color: #89DDFF;">-&gt;attributes</span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">] </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$value</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p>However, in Laravel 9.x you may define an accessor and mutator using a single, non-prefixed method by type-hinting a return type of <code>Illuminate\Database\Eloquent\Casts\Attribute</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Database\Eloquent\Casts\</span><span style="color: #FFCB8B;">Attribute</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">name</span><span style="color: #D9F5DD;">()</span><span style="color: #89DDFF;">:</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">Attribute</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">Attribute</span><span style="color: #BFC7D5;">(</span></div><div class='line'><span style="color: #BFC7D5;">        get: </span><span style="color: #C792EA;">fn</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> =&gt; </span><span style="color: #89DDFF;">strtoupper</span><span style="color: #BFC7D5;">($</span><span style="color: #BEC5D4;">value</span><span style="color: #BFC7D5;">),</span></div><div class='line'><span style="color: #BFC7D5;">        set: </span><span style="color: #C792EA;">fn</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> =&gt; </span><span style="color: #BEC5D4;">$value</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">    );</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p>In addition, this new approach to defining accessors will cache object values that are returned by the attribute, just like <a href="eloquent-mutators.html#custom-casts">custom cast classes</a>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Support\</span><span style="color: #FFCB8B;">Address</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Database\Eloquent\Casts\</span><span style="color: #FFCB8B;">Attribute</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">address</span><span style="color: #D9F5DD;">()</span><span style="color: #89DDFF;">:</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">Attribute</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB6B;">Attribute</span><span style="color: #BFC7D5;">(</span></div><div class='line'><span style="color: #BFC7D5;">        get: </span><span style="color: #C792EA;">fn</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #BFC7D5;">, </span><span style="color: #BEC5D4;">$attributes</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> =&gt; </span><span style="color: #89DDFF;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">Address</span><span style="color: #BFC7D5;">(</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #BEC5D4;">$attributes</span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">address_line_one</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">],</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #BEC5D4;">$attributes</span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">address_line_two</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">],</span></div><div class='line'><span style="color: #BFC7D5;">        ),</span></div><div class='line'><span style="color: #BFC7D5;">        set: </span><span style="color: #C792EA;">fn</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">Address</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$value</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> =&gt; [</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">address_line_one</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$value</span><span style="color: #89DDFF;">-&gt;lineOne</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">address_line_two</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$value</span><span style="color: #89DDFF;">-&gt;lineTwo</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">        ],</span></div><div class='line'><span style="color: #BFC7D5;">    );</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="enum-casting"></a></p>
+<h3>Enum Eloquent Attribute Casting</h3>
+<blockquote>
+<p>{note} Enum casting is only available for PHP 8.1+.</p>
+</blockquote>
+<p><em>Enum casting was contributed by <a href="https://github.com/themsaid">Mohamed Said</a></em>.</p>
+<p>Eloquent now allows you to cast your attribute values to PHP <a href="https://www.php.net/manual/en/language.enumerations.backed.php">&quot;backed&quot; Enums</a>. To accomplish this, you may specify the attribute and enum you wish to cast in your model's <code>$casts</code> property array:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Enums\</span><span style="color: #FFCB8B;">ServerStatus</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">/**</span></div><div class='line'><span style="color: #697098;"> * The attributes that should be cast.</span></div><div class='line'><span style="color: #697098;"> *</span></div><div class='line'><span style="color: #697098;"> * </span><span style="color: #C792EA;">@var</span><span style="color: #697098;"> </span><span style="color: #C792EA;">array</span></div><div class='line'><span style="color: #697098;"> </span><span style="color: #697098;">*/</span></div><div class='line'><span style="color: #C792EA;">protected</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$casts</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> [</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">status</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">ServerStatus</span><span style="color: #89DDFF;">::</span><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;">,</span></div><div class='line'><span style="color: #BFC7D5;">];</span></div></code></pre>
+<p>Once you have defined the cast on your model, the specified attribute will be automatically cast to and from an enum when you interact with the attribute:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">if</span><span style="color: #BFC7D5;"> (</span><span style="color: #BEC5D4;">$server</span><span style="color: #89DDFF;">-&gt;status</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">==</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">ServerStatus</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">provisioned</span><span style="color: #BFC7D5;">) {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$server</span><span style="color: #89DDFF;">-&gt;status</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">ServerStatus</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">ready</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #BEC5D4;">$server</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">save</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="implicit-route-bindings-with-enums"></a></p>
+<h3>Implicit Route Bindings With Enums</h3>
+<p><em>Implicit Enum bindings was contributed by <a href="https://github.com/nunomaduro">Nuno Maduro</a></em>.</p>
+<p>PHP 8.1 introduces support for <a href="https://www.php.net/manual/en/language.enumerations.backed.php">Enums</a>. Laravel 9.x introduces the ability to type-hint an Enum on your route definition and Laravel will only invoke the route if that route segment is a valid Enum value in the URI. Otherwise, an HTTP 404 response will be returned automatically. For example, given the following Enum:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #82AAFF;">enum</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">Category</span><span style="color: #BFC7D5;">: </span><span style="color: #C792EA;">string</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">case</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">Fruits</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">fruits</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">case</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">People</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">people</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p>You may define a route that will only be invoked if the <code>{category}</code> route segment is <code>fruits</code> or <code>people</code>. Otherwise, an HTTP 404 response will be returned:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/categories/{category}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">Category</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$category</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$category</span><span style="color: #89DDFF;">-&gt;value</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p><a name="forced-scoping-of-route-bindings"></a></p>
+<h3>Forced Scoping Of Route Bindings</h3>
+<p><em>Forced scoped bindings was contributed by <a href="https://github.com/claudiodekker">Claudio Dekker</a></em>.</p>
+<p>In previous releases of Laravel, you may wish to scope the second Eloquent model in a route definition such that it must be a child of the previous Eloquent model. For example, consider this route definition that retrieves a blog post by slug for a specific user:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">Post</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users/{user}/posts/{post:slug}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$user</span><span style="color: #BFC7D5;">, </span><span style="color: #FFCB8B;">Post</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p>When using a custom keyed implicit binding as a nested route parameter, Laravel will automatically scope the query to retrieve the nested model by its parent using conventions to guess the relationship name on the parent. However, this behavior was only previously supported by Laravel when a custom key was used for the child route binding.</p>
+<p>However, in Laravel 9.x, you may now instruct Laravel to scope &quot;child&quot; bindings even when a custom key is not provided. To do so, you may invoke the <code>scopeBindings</code> method when defining your route:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">Post</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Models\</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users/{user}/posts/{post}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$user</span><span style="color: #BFC7D5;">, </span><span style="color: #FFCB8B;">Post</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">})</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">scopeBindings</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p>Or, you may instruct an entire group of route definitions to use scoped bindings:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">scopeBindings</span><span style="color: #BFC7D5;">()</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">group</span><span style="color: #BFC7D5;">(</span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/users/{user}/posts/{post}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #FFCB8B;">User</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$user</span><span style="color: #BFC7D5;">, </span><span style="color: #FFCB8B;">Post</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$post</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #BFC7D5;">    });</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p><a name="controller-route-groups"></a></p>
+<h3>Controller Route Groups</h3>
+<p><em>Route group improvements were contributed by <a href="https://github.com/lukeraymonddowning">Luke Downing</a></em>.</p>
+<p>You may now use the <code>controller</code> method to define the common controller for all of the routes within the group. Then, when defining the routes, you only need to provide the controller method that they invoke:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Http\Controllers\</span><span style="color: #FFCB8B;">OrderController</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">controller</span><span style="color: #BFC7D5;">(</span><span style="color: #FFCB8B;">OrderController</span><span style="color: #89DDFF;">::</span><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">group</span><span style="color: #BFC7D5;">(</span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/orders/{id}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">show</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Route</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">post</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">/orders</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">store</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'><span style="color: #BFC7D5;">});</span></div></code></pre>
+<p><a name="full-text"></a></p>
+<h3>Full Text Indexes / Where Clauses</h3>
+<p><em>Full text indexes and &quot;where&quot; clauses were contributed by <a href="https://github.com/taylorotwell">Taylor Otwell</a> and <a href="https://github.com/driesvints">Dries Vints</a></em>.</p>
+<p>When using MySQL or PostgreSQL, the <code>fullText</code> method may now be added to column definitions to generate full text indexes:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$table</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">text</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">bio</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">fullText</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p>In addition, the <code>whereFullText</code> and <code>orWhereFullText</code> methods may be used to add full text &quot;where&quot; clauses to a query for columns that have <a href="migrations.html#available-index-types">full text indexes</a>. These methods will be transformed into the appropriate SQL for the underlying database system by Laravel. For example, a <code>MATCH AGAINST</code> clause will be generated for applications utilizing MySQL:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$users</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">DB</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">table</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">           </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">whereFullText</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">bio</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">web developer</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">           </span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">get</span><span style="color: #BFC7D5;">();</span></div></code></pre>
+<p><a name="laravel-scout-database-engine"></a></p>
+<h3>Laravel Scout Database Engine</h3>
+<p><em>The Laravel Scout database engine was contributed by <a href="https://github.com/taylorotwell">Taylor Otwell</a> and <a href="https://github.com/driesvints">Dries Vints</a></em>.</p>
+<p>If your application interacts with small to medium sized databases or has a light workload, you may now use Scout's &quot;database&quot; engine instead of a dedicated search service such as Algolia or MeiliSearch. The database engine will use &quot;where like&quot; clauses and full text indexes when filtering results from your existing database to determine the applicable search results for your query.</p>
+<p>To learn more about the Scout database engine, consult the <a href="scout.html">Scout documentation</a>.</p>
+<p><a name="rendering-inline-blade-templates"></a></p>
+<h3>Rendering Inline Blade Templates</h3>
+<p><em>Rendering inline Blade templates was contributed by <a href="https://github.com/jasonlbeggs">Jason Beggs</a>. Rendering inline Blade components was contributed by <a href="https://github.com/tobyzerner">Toby Zerner</a></em>.</p>
+<p>Sometimes you may need to transform a raw Blade template string into valid HTML. You may accomplish this using the <code>render</code> method provided by the <code>Blade</code> facade. The <code>render</code> method accepts the Blade template string and an optional array of data to provide to the template:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Support\Facades\</span><span style="color: #FFCB8B;">Blade</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">Blade</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">render</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">Hello, {{ $name }}</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, [</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">name</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">Julian Bashir</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">]);</span></div></code></pre>
+<p>Similarly, the <code>renderComponent</code> method may be used to render a given class component by passing the component instance to the method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\View\Components\</span><span style="color: #FFCB8B;">HelloComponent</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">Blade</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">renderComponent</span><span style="color: #BFC7D5;">(</span><span style="color: #89DDFF;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">HelloComponent</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">Julian Bashir</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">));</span></div></code></pre>
+<p><a name="slot-name-shortcut"></a></p>
+<h3>Slot Name Shortcut</h3>
+<p><em>Slot name shortcuts were contributed by <a href="https://github.com/calebporzio">Caleb Porzio</a>.</em></p>
+<p>In previous releases of Laravel, slot names were provided using a <code>name</code> attribute on the <code>x-slot</code> tag:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">x-alert</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">x-slot</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">name</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">title</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">        Server Error</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">x-slot</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">strong</span><span style="color: #89DDFF;">&gt;</span><span style="color: #BFC7D5;">Whoops!</span><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">strong</span><span style="color: #89DDFF;">&gt;</span><span style="color: #BFC7D5;"> Something went wrong!</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">x-alert</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p>However, beginning in Laravel 9.x, you may specify the slot's name using a convenient, shorter syntax:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="xml" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">x-slot:title</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    Server Error</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">x-slot</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="checked-selected-blade-directives"></a></p>
+<h3>Checked / Selected Blade Directives</h3>
+<p><em>Checked and selected Blade directives were contributed by <a href="https://github.com/ash-jc-allen">Ash Allen</a> and <a href="https://github.com/taylorotwell">Taylor Otwell</a></em>.</p>
+<p>For convenience, you may now use the <code>@checked</code> directive to easily indicate if a given HTML checkbox input is &quot;checked&quot;. This directive will echo <code>checked</code> if the provided condition evaluates to <code>true</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">input</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">type</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">checkbox</span><span style="color: #D9F5DD;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #FFCB6B;">name</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">active</span><span style="color: #D9F5DD;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #FFCB6B;">value</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">active</span><span style="color: #D9F5DD;">&quot;</span></div><div class='line'><span style="color: #89DDFF;">        </span><span style="color: #82AAFF;">@checked</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">old</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">active</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> </span><span style="color: #BFC7D5;">$</span><span style="color: #BEC5D4;">user</span><span style="color: #89DDFF;">-&gt;active</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">) /&gt;</span></div></code></pre>
+<p>Likewise, the <code>@selected</code> directive may be used to indicate if a given select option should be &quot;selected&quot;:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="blade" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">select</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">name</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">version</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">@foreach </span><span style="color: #BFC7D5;">(</span><span style="color: #BEC5D4;">$product</span><span style="color: #89DDFF;">-&gt;versions</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">as</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$version</span><span style="color: #BFC7D5;">)</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #89DDFF;">&lt;</span><span style="color: #FF5572;">option</span><span style="color: #89DDFF;"> </span><span style="color: #FFCB6B;">value</span><span style="color: #89DDFF;">=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;">{{</span><span style="color: #C3E88D;"> </span><span style="color: #BEC5D4;">$version</span><span style="color: #C3E88D;"> </span><span style="color: #89DDFF;">}}</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #89DDFF;"> </span><span style="color: #82AAFF;">@selected</span><span style="color: #89DDFF;">(</span><span style="color: #82AAFF;">old</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">version</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;"> </span><span style="color: #C792EA;">==</span><span style="color: #89DDFF;"> </span><span style="color: #BEC5D4;">$version</span><span style="color: #89DDFF;">)&gt;</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #89DDFF;">{{</span><span style="color: #BFC7D5;"> </span><span style="color: #BEC5D4;">$version</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">}}</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">option</span><span style="color: #89DDFF;">&gt;</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">@endforeach</span></div><div class='line'><span style="color: #89DDFF;">&lt;/</span><span style="color: #FF5572;">select</span><span style="color: #89DDFF;">&gt;</span></div></code></pre>
+<p><a name="bootstrap-5-pagination-views"></a></p>
+<h3>Bootstrap 5 Pagination Views</h3>
+<p><em>Bootstrap 5 pagination views were contributed by <a href="https://github.com/jrd-lewis">Jared Lewis</a></em>.</p>
+<p>Laravel now includes pagination views built using <a href="https://getbootstrap.com/">Bootstrap 5</a>. To use these views instead of the default Tailwind views, you may call the paginator's <code>useBootstrapFive</code> method within the <code>boot</code> method of your <code>App\Providers\AppServiceProvider</code> class:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Pagination\</span><span style="color: #FFCB8B;">Paginator</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">/**</span></div><div class='line'><span style="color: #697098;"> * Bootstrap any application services.</span></div><div class='line'><span style="color: #697098;"> *</span></div><div class='line'><span style="color: #697098;"> * </span><span style="color: #C792EA;">@return</span><span style="color: #697098;"> </span><span style="color: #C792EA;">void</span></div><div class='line'><span style="color: #697098;"> </span><span style="color: #697098;">*/</span></div><div class='line'><span style="color: #C792EA;">public</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">boot</span><span style="color: #D9F5DD;">()</span></div><div class='line'><span style="color: #BFC7D5;">{</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #FFCB8B;">Paginator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">useBootstrapFive</span><span style="color: #BFC7D5;">();</span></div><div class='line'><span style="color: #BFC7D5;">}</span></div></code></pre>
+<p><a name="improved-validation-of-nested-array-data"></a></p>
+<h3>Improved Validation Of Nested Array Data</h3>
+<p><em>Improved validation of nested array inputs was contributed by <a href="https://github.com/stevebauman">Steve Bauman</a></em>.</p>
+<p>Sometimes you may need to access the value for a given nested array element when assigning validation rules to the attribute. You may now accomplish this using the <code>Rule::forEach</code> method. The <code>forEach</code> method accepts a closure that will be invoked for each iteration of the array attribute under validation and will receive the attribute's value and explicit, fully-expanded attribute name. The closure should return an array of rules to assign to the array element:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> App\Rules\</span><span style="color: #FFCB8B;">HasPermission</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Support\Facades\</span><span style="color: #FFCB8B;">Validator</span><span style="color: #BFC7D5;">;</span></div><div class='line'><span style="color: #C792EA;">use</span><span style="color: #BFC7D5;"> Illuminate\Validation\</span><span style="color: #FFCB8B;">Rule</span><span style="color: #BFC7D5;">;</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BEC5D4;">$validator</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">Validator</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">make</span><span style="color: #BFC7D5;">(</span><span style="color: #BEC5D4;">$request</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">all</span><span style="color: #BFC7D5;">(), [</span></div><div class='line'><span style="color: #BFC7D5;">    </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">companies.*.id</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">Rule</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">forEach</span><span style="color: #BFC7D5;">(</span><span style="color: #C792EA;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">(</span><span style="color: #BEC5D4;">$value</span><span style="color: #BFC7D5;">, </span><span style="color: #BEC5D4;">$attribute</span><span style="color: #D9F5DD;">)</span><span style="color: #BFC7D5;"> {</span></div><div class='line'><span style="color: #BFC7D5;">        </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> [</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #FFCB8B;">Rule</span><span style="color: #89DDFF;">::</span><span style="color: #82AAFF;">exists</span><span style="color: #BFC7D5;">(</span><span style="color: #FFCB8B;">Company</span><span style="color: #89DDFF;">::</span><span style="color: #C792EA;">class</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">id</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">),</span></div><div class='line'><span style="color: #BFC7D5;">            </span><span style="color: #89DDFF;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #FFCB8B;">HasPermission</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">manage-company</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">, </span><span style="color: #BEC5D4;">$value</span><span style="color: #BFC7D5;">),</span></div><div class='line'><span style="color: #BFC7D5;">        ];</span></div><div class='line'><span style="color: #BFC7D5;">    }),</span></div><div class='line'><span style="color: #BFC7D5;">]);</span></div></code></pre>
+<p><a name="laravel-breeze-api"></a></p>
+<h3>Laravel Breeze API &amp; Next.js</h3>
+<p><em>The Laravel Breeze API scaffolding and Next.js starter kit was contributed by <a href="https://github.com/taylorotwell">Taylor Otwell</a> and <a href="https://twitter.com/m1guelpf">Miguel Piedrafita</a></em>.</p>
+<p>The <a href="starter-kits.html#breeze-and-next">Laravel Breeze</a> starter kit has received an &quot;API&quot; scaffolding mode and complimentary <a href="https://nextjs.org">Next.js</a> <a href="https://github.com/laravel/breeze-next">frontend implementation</a>. This starter kit scaffolding may be used to jump start your Laravel applications that are serving as a backend, Laravel Sanctum authenticated API for a JavaScript frontend.</p>
+<p><a name="exception-page"></a></p>
+<h3>Improved Ignition Exception Page</h3>
+<p><em>Ignition is developed by <a href="https://spatie.be/">Spatie</a>.</em></p>
+<p>Ignition, the open source exception debug page created by Spatie, has been redesigned from the ground up. The new, improved Ignition ships with Laravel 9.x and includes light / dark themes, customizable &quot;open in editor&quot; functionality, and more.</p>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/483853/149235404-f7caba56-ebdf-499e-9883-cac5d5610369.png"/>
+</p>
+<p><a name="improved-route-list"></a></p>
+<h3>Improved <code>route:list</code> CLI Output</h3>
+<p><em>Improved <code>route:list</code> CLI output was contributed by <a href="https://github.com/nunomaduro">Nuno Maduro</a></em>.</p>
+<p>The <code>route:list</code> CLI output has been significantly improved for the Laravel 9.x release, offering a beautiful new experience when exploring your route definitions.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/5457236/148321982-38c8b869-f188-4f42-a3cc-a03451d5216c.png"/>
+</p>
+<p><a name="test-coverage-support-on-artisan-test-Command"></a></p>
+<h3>Test Coverage Using Artisan <code>test</code> Command</h3>
+<p><em>Test coverage when using the Artisan <code>test</code> command was contributed by <a href="https://github.com/nunomaduro">Nuno Maduro</a></em>.</p>
+<p>The Artisan <code>test</code> command has received a new <code>--coverage</code> option that you may use to explore the amount of code coverage your tests are providing to your application:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">test</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--coverage</span></div></code></pre>
+<p>The test coverage results will be displayed directly within the CLI output.</p>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/5457236/150133237-440290c2-3538-4d8e-8eac-4fdd5ec7bd9e.png"/>
+</p>
+<p>In addition, if you would like to specify a minimum threshold that your test coverage percentage must meet, you may use the <code>--min</code> option. The test suite will fail if the given minimum threshold is not met:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">test</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--coverage</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--min=80.3</span></div></code></pre>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/5457236/149989853-a29a7629-2bfa-4bf3-bbf7-cdba339ec157.png"/>
+</p>
+<p><a name="soketi-echo-server"></a></p>
+<h3>Soketi Echo Server</h3>
+<p><em>The Soketi Echo server was developed by <a href="https://github.com/rennokki">Alex Renoki</a></em>.</p>
+<p>Although not exclusive to Laravel 9.x, Laravel has recently assisted with the documentation of Soketi, a <a href="broadcasting.html">Laravel Echo</a> compatible Web Socket server written for Node.js. Soketi provides a great, open source alternative to Pusher and Ably for those applications that prefer to manage their own Web Socket server.</p>
+<p>For more information on using Soketi, please consult the <a href="broadcasting.html">broadcasting documentation</a> and <a href="https://docs.soketi.app/">Soketi documentation</a>.</p>
+<p><a name="improved-collections-ide-support"></a></p>
+<h3>Improved Collections IDE Support</h3>
+<p><em>Improved collections IDE support was contributed by <a href="https://github.com/nunomaduro">Nuno Maduro</a></em>.</p>
+<p>Laravel 9.x adds improved, &quot;generic&quot; style type definitions to the collections component, improving IDE and static analysis support. IDEs such as <a href="https://blog.jetbrains.com/phpstorm/2021/12/phpstorm-2021-3-release/#support_for_future_laravel_collections">PHPStorm</a> or static analysis tools such as <a href="https://phpstan.org">PHPStan</a> will now better understand Laravel collections natively.</p>
+<p align="center">
+<img width="100%" src="https://user-images.githubusercontent.com/5457236/151783350-ed301660-1e09-44c1-b549-85c6db3f078d.gif"/>
+</p>
+<p><a name="new-helpers"></a></p>
+<h3>New Helpers</h3>
+<p>Laravel 9.x introduces two new, convenient helper functions that you may use in your own application.</p>
+<p><a name="new-helpers-str"></a></p>
+<h4><code>str</code></h4>
+<p>The <code>str</code> function returns a new <code>Illuminate\Support\Stringable</code> instance for the given string. This function is equivalent to the <code>Str::of</code> method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$string</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">str</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">Taylor</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">)</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">append</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;"> Otwell</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">//</span><span style="color: #697098;"> &#39;Taylor Otwell&#39;</span></div></code></pre>
+<p>If no argument is provided to the <code>str</code> function, the function returns an instance of <code>Illuminate\Support\Str</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BEC5D4;">$snake</span><span style="color: #BFC7D5;"> </span><span style="color: #C792EA;">=</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">str</span><span style="color: #BFC7D5;">()</span><span style="color: #89DDFF;">-&gt;</span><span style="color: #82AAFF;">snake</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">LaravelFramework</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">);</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #697098;">//</span><span style="color: #697098;"> &#39;laravel_framework&#39;</span></div></code></pre>
+<p><a name="new-helpers-to-route"></a></p>
+<h4><code>to_route</code></h4>
+<p>The <code>to_route</code> function generates a redirect HTTP response for a given named route, providing an expressive way to redirect to named routes from your routes and controllers:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">to_route</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users.show</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> </span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">user</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #82AAFF;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #82AAFF;"> </span><span style="color: #F78C6C;">1</span><span style="color: #BFC7D5;">]);</span></div></code></pre>
+<p>If necessary, you may pass the HTTP status code that should be assigned to the redirect and any additional response headers as the third and fourth arguments to the to_route method:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="php" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">to_route</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">users.show</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> </span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">user</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #82AAFF;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #82AAFF;"> </span><span style="color: #F78C6C;">1</span><span style="color: #BFC7D5;">],</span><span style="color: #82AAFF;"> </span><span style="color: #F78C6C;">302</span><span style="color: #BFC7D5;">,</span><span style="color: #82AAFF;"> </span><span style="color: #BFC7D5;">[</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">X-Framework</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #82AAFF;"> </span><span style="color: #89DDFF;">=&gt;</span><span style="color: #82AAFF;"> </span><span style="color: #D9F5DD;">&#39;</span><span style="color: #C3E88D;">Laravel</span><span style="color: #D9F5DD;">&#39;</span><span style="color: #BFC7D5;">]);</span></div></code></pre>
+
+                                <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CKYILK3E&placement=laravelcom" id="_carbonads_js"></script>
+</div>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+
+<footer class="relative pt-12 dark:bg-dark-700">
+    <div class="max-w-screen-2xl mx-auto w-full px-8">
+        <div>
+            <a href="../../index.html" class="inline-flex">
+                <img class="w-16 h-16" src="../../img/logomark.min.svg" alt="Laravel" loading="lazy">
+            </a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
+            <div class="col-span-12 lg:col-span-4">
+                <p class="max-w-sm text-xs text-gray-700 sm:text-sm dark:text-gray-500">Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in most web projects.</p>
+                <ul class="mt-6 flex items-center space-x-3">
+                    <li>
+                        <a href="https://twitter.com/laravelphp">
+                            <img id="footer__twitter_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                            <img id="footer__twitter" class="inline-block dark:hidden w-6 h-6" src="../../img/social/twitter.min.svg" alt="Twitter" width="24" height="20" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/laravel">
+                            <img id="footer__github_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/github.dark.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                            <img id="footer__github" class="inline-block dark:hidden w-6 h-6" src="../../img/social/github.min.svg" alt="GitHub" width="24" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/mPZNm7A">
+                            <img id="footer__discord_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/discord.dark.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                            <img id="footer__discord" class="inline-block dark:hidden w-6 h-6" src="../../img/social/discord.min.svg" alt="Discord" width="21" height="24" loading="lazy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/laravelphp">
+                            <img id="footer__youtube_dark" class="hidden dark:inline-block w-6 h-6" src="../../img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                            <img id="footer__youtube" class="inline-block dark:hidden w-6 h-6" src="../../img/social/youtube.min.svg" alt="YouTube" width="169" height="150" loading="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Highlights</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="../../team.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Our Team</a>
+                                </li>
+                                                            <li>
+                                    <a href="releases.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Release Notes</a>
+                                </li>
+                                                            <li>
+                                    <a href="installation.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Getting Started</a>
+                                </li>
+                                                            <li>
+                                    <a href="routing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Routing</a>
+                                </li>
+                                                            <li>
+                                    <a href="blade.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Blade Templates</a>
+                                </li>
+                                                            <li>
+                                    <a href="authentication.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authentication</a>
+                                </li>
+                                                            <li>
+                                    <a href="authorization.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Authorization</a>
+                                </li>
+                                                            <li>
+                                    <a href="artisan.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Artisan Console</a>
+                                </li>
+                                                            <li>
+                                    <a href="database.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Database</a>
+                                </li>
+                                                            <li>
+                                    <a href="eloquent.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Eloquent ORM</a>
+                                </li>
+                                                            <li>
+                                    <a href="testing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Testing</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Resources</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://laracasts.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracasts</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laravel-news.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laravel News</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.us" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracon.eu/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Laracon EU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://larajobs.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jobs</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://certification.laravel.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Certification</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://laracasts.com/discuss" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forums</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Partners</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="https://vehikl.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vehikl</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://tighten.co" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Tighten</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://64robots.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">64 Robots</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://kirschbaumdevelopment.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Kirschbaum</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.curotec.com/services/technologies/laravel/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Curotec</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://jump24.co.uk/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Jump24</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.a2design.biz/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">A2 Design</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://corporate.aboutyou.de/app/uploads/2019/08/INTRO-Pitch-I-AY-Tech.pdf?utm_source=laravelpartnersfindoutmore&utm_medium=socialgroups&utm_campaign=tech" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">ABOUT YOU</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.byte5.net/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Byte 5</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://cubettech.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cubet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cyber-Duck</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://devsquad.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">DevSquad</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.ideil.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Ideil</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://romegadigital.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Romega Software</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://www.worksome.com/" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Worksome</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=patreon-sponsors" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">WebReinvent</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase dark:text-gray-200">Ecosystem</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-500">
+                                                            <li>
+                                    <a href="billing.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Cashier</a>
+                                </li>
+                                                            <li>
+                                    <a href="dusk.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Dusk</a>
+                                </li>
+                                                            <li>
+                                    <a href="broadcasting.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Echo</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://envoyer.io" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Envoyer</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://forge.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Forge</a>
+                                </li>
+                                                            <li>
+                                    <a href="homestead.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Homestead</a>
+                                </li>
+                                                            <li>
+                                    <a href="horizon.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Horizon</a>
+                                </li>
+                                                            <li>
+                                    <a href="mix.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Mix</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://nova.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Nova</a>
+                                </li>
+                                                            <li>
+                                    <a href="passport.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Passport</a>
+                                </li>
+                                                            <li>
+                                    <a href="scout.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Scout</a>
+                                </li>
+                                                            <li>
+                                    <a href="socialite.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Socialite</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://spark.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Spark</a>
+                                </li>
+                                                            <li>
+                                    <a href="telescope.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Telescope</a>
+                                </li>
+                                                            <li>
+                                    <a href="valet.html" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Valet</a>
+                                </li>
+                                                            <li>
+                                    <a href="https://vapor.laravel.com" class="transition-colors hover:text-gray-600 dark:hover:text-gray-400">Vapor</a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                    </div>
+        <div class="mt-10 border-t pt-6 pb-16 border-gray-200 dark:border-dark-500">
+            <p class="text-xs text-gray-700 dark:text-gray-400">
+                Laravel is a Trademark of Taylor Otwell. Copyright &copy; 2011-2022 Laravel LLC.
+            </p>
+            <p class="mt-6 text-xs text-gray-700 dark:text-gray-400">
+                Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<div
+    x-data="searchComponent()"
+    @toggle-search-modal.window="open = !open"
+    @keydown.window.escape="close"
+    @keydown.window="handleKeydown"
+    @keydown.escape.prevent.stop="close"
+    x-show="open"
+    x-cloak
+    x-trap.noscroll.inert="open"
+    role="dialog"
+    aria-modal="true"
+    x-id="['search-modal']"
+    :aria-labelledby="$id('search-modal')"
+    class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
+>
+    <div x-show="open" x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
+
+    <div
+        x-show="open"
+        x-transition
+        @click="close()"
+        class="relative min-h-screen flex items-start justify-center p-4 lg:py-20"
+    >
+        <div
+            @click.stop
+            class="relative max-w-2xl w-full bg-dark-700 pt-8 px-8 pb-16"
+        >
+            <div
+                class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600"
+            >
+                <svg class="absolute inset-y-0 left-0 mt-1 w-5 h-5 text-gray-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <input
+                    x-model.debouce.200ms="search"
+                    x-ref="searchInput"
+                    class="flex-1 w-full pl-8 pr-4 py-1 tracking-wide text-gray-400 placeholder-gray-500 bg-transparent focus:outline-none"
+                    placeholder="Search Docs (Press '/')"
+                    aria-label="Search in the documentation"
+                    @keydown.arrow-up.prevent="focusPreviousResult()"
+                    @keydown.arrow-down.prevent="focusNextResult()"
+                >
+            </div>
+
+            <div x-show="search">
+                <div x-show="hits.length" x-cloak class="mt-5 divide-y divide-gray-700 z-30">
+                    <template x-for="(hit, index) in hits" :key="index" hidden>
+                        <div>
+                            <a
+                                :id="'search-result-' + index"
+                                :href="hit.url"
+                                class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200"
+                                @keydown.arrow-up.prevent="focusPreviousResult(index)"
+                                @keydown.arrow-down.prevent="focusNextResult(index)"
+                            >
+                                <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
+                                <div class="mt-2">
+                                    <div x-show="hit._highlightResult.hierarchy.lvl1" class="text-sm">
+                                        <span class="text-red-600 opacity-75">#</span> <span x-html="hit._highlightResult.hierarchy.lvl1 ? hit._highlightResult.hierarchy.lvl1.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl2" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl2 ? hit._highlightResult.hierarchy.lvl2.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl3" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl3 ? hit._highlightResult.hierarchy.lvl3.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl4" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl4 ? hit._highlightResult.hierarchy.lvl4.value : ''"></span>
+                                    </div>
+
+                                    <div x-show="hit._highlightResult.hierarchy.lvl5" class="text-sm">
+                                        > <span x-html="hit._highlightResult.hierarchy.lvl5 ? hit._highlightResult.hierarchy.lvl5.value : ''"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </template>
+                </div>
+
+                <div x-show="! hits.length" x-cloak class="mt-8 pb-32">
+                    <div x-text="`We didn't find any result for '${search}'. Sorry!`"></div>
+                </div>
+            </div>
+
+            <div x-show="! search" class="mt-8 pb-32">
+                <p>Enter a search term to find results in the documentation.</p>
+            </div>
+
+            <div class="absolute bottom-0 inset-x-0 border-t border-dark-800 text-gray-400 flex justify-end">
+                <a class="px-4 py-2 inline-block" target="_blank" href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
+                    <img width="105" src="../../img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark" alt="Algolia">
+                </a>
+            </div>
+        </div>
+
+        <button x-show="open" x-transition.opacity class="absolute top-8 right-8 text-gray-400" @click.prevent="close">
+            <span class="sr-only">Close search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    var algolia_app_id = 'E3MIRNPJH5';
+    var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
+    var version = '9.x';
+</script>
+
+<script src="../../js/app-id=100f797fd909ecd1c2f2.js"></script>
+
+<script>
+    var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+    (function(d,t){
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)
+    }(document,'script'));
+</script>
+</body>
+</html>

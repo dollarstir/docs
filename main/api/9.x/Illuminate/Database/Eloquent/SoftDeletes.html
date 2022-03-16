@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\SoftDeletes | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_SoftDeletes" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="SoftDeletes.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li>SoftDeletes</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SoftDeletes    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>SoftDeletes</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_forceDeleting">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$forceDeleting</td>
+                <td class="last"><p>Indicates if the model is currently force deleting.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_bootSoftDeletes">bootSoftDeletes</a>()
+        
+                                            <p><p>Boot the soft deleting trait for a model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_initializeSoftDeletes">initializeSoftDeletes</a>()
+        
+                                            <p><p>Initialize the soft deleting trait for an instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|null
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_forceDelete">forceDelete</a>()
+        
+                                            <p><p>Force a hard delete on a soft deleted model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_performDeleteOnModel">performDeleteOnModel</a>()
+        
+                                            <p><p>Perform the actual delete query on this model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_runSoftDelete">runSoftDelete</a>()
+        
+                                            <p><p>Perform the actual delete query on this model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|null
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_restore">restore</a>()
+        
+                                            <p><p>Restore a soft-deleted model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_trashed">trashed</a>()
+        
+                                            <p><p>Determine if the model instance has been soft-deleted.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_softDeleted">softDeleted</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a &quot;softDeleted&quot; model event callback with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_restoring">restoring</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a &quot;restoring&quot; model event callback with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_restored">restored</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a &quot;restored&quot; model event callback with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_forceDeleted">forceDeleted</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a &quot;forceDeleted&quot; model event callback with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_isForceDeleting">isForceDeleting</a>()
+        
+                                            <p><p>Determine if the model is currently force deleting.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_getDeletedAtColumn">getDeletedAtColumn</a>()
+        
+                                            <p><p>Get the name of the &quot;deleted at&quot; column.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_getQualifiedDeletedAtColumn">getQualifiedDeletedAtColumn</a>()
+        
+                                            <p><p>Get the fully qualified &quot;deleted at&quot; column.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_withTrashed">withTrashed</a>(bool $withTrashed = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_onlyTrashed">onlyTrashed</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="SoftDeletes.html#method_withoutTrashed">withoutTrashed</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_bootSoftDeletes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L24">at line 24</a></div>
+        <code>        static            void
+    <strong>bootSoftDeletes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Boot the soft deleting trait for a model.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initializeSoftDeletes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L34">at line 34</a></div>
+        <code>                    void
+    <strong>initializeSoftDeletes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initialize the soft deleting trait for an instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forceDelete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L46">at line 46</a></div>
+        <code>                    bool|null
+    <strong>forceDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Force a hard delete on a soft deleted model.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_performDeleteOnModel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L64">at line 64</a></div>
+        <code>            protected        mixed
+    <strong>performDeleteOnModel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform the actual delete query on this model instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runSoftDelete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L80">at line 80</a></div>
+        <code>            protected        void
+    <strong>runSoftDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Perform the actual delete query on this model instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restore">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L108">at line 108</a></div>
+        <code>                    bool|null
+    <strong>restore</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore a soft-deleted model instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_trashed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L136">at line 136</a></div>
+        <code>                    bool
+    <strong>trashed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the model instance has been soft-deleted.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_softDeleted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L147">at line 147</a></div>
+        <code>        static            void
+    <strong>softDeleted</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;softDeleted&quot; model event callback with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoring">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L158">at line 158</a></div>
+        <code>        static            void
+    <strong>restoring</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;restoring&quot; model event callback with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restored">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L169">at line 169</a></div>
+        <code>        static            void
+    <strong>restored</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;restored&quot; model event callback with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forceDeleted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L180">at line 180</a></div>
+        <code>        static            void
+    <strong>forceDeleted</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;forceDeleted&quot; model event callback with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isForceDeleting">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L190">at line 190</a></div>
+        <code>                    bool
+    <strong>isForceDeleting</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the model is currently force deleting.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeletedAtColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L200">at line 200</a></div>
+        <code>                    string
+    <strong>getDeletedAtColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the &quot;deleted at&quot; column.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQualifiedDeletedAtColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L210">at line 210</a></div>
+        <code>                    string
+    <strong>getQualifiedDeletedAtColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the fully qualified &quot;deleted at&quot; column.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withTrashed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L10">at line 10</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+    <strong>withTrashed</strong>(bool $withTrashed = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$withTrashed</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onlyTrashed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L10">at line 10</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+    <strong>onlyTrashed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutTrashed">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/SoftDeletes.php#L10">at line 10</a></div>
+        <code>        static            <abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr>
+    <strong>withoutTrashed</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder">Builder</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

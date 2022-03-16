@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Queue\QueueServiceProvider | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Queue_QueueServiceProvider" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="QueueServiceProvider.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Queue.html">Queue</a></li><li class="backslash">\</li><li>QueueServiceProvider</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>QueueServiceProvider    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>QueueServiceProvider</strong>        extends <a href="../Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>        implements        <a href="../Contracts/Support/DeferrableProvider.html"><abbr title="Illuminate\Contracts\Support\DeferrableProvider">DeferrableProvider</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="SerializesAndRestoresModelIdentifiers.html"><abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                                        protected                                        <a href="../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                                                                                
+                                    </td>
+                <td>$app</td>
+                <td class="last"><p>The application instance.</p></td>
+                <td><small>from&nbsp;<a href="../Support/ServiceProvider.html#property_app">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bootingCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$bootingCallbacks</td>
+                <td class="last"><p>All of the registered booting callbacks.</p></td>
+                <td><small>from&nbsp;<a href="../Support/ServiceProvider.html#property_bootingCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bootedCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$bootedCallbacks</td>
+                <td class="last"><p>All of the registered booted callbacks.</p></td>
+                <td><small>from&nbsp;<a href="../Support/ServiceProvider.html#property_bootedCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publishes">
+                    static                                                            array
+                                                                                
+                                    </td>
+                <td>$publishes</td>
+                <td class="last"><p>The paths that should be published.</p></td>
+                <td><small>from&nbsp;<a href="../Support/ServiceProvider.html#property_publishes">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publishGroups">
+                    static                                                            array
+                                                                                
+                                    </td>
+                <td>$publishGroups</td>
+                <td class="last"><p>The paths that should be published by group.</p></td>
+                <td><small>from&nbsp;<a href="../Support/ServiceProvider.html#property_publishGroups">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method___construct">__construct</a>(<a href="../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p><p>Create a new service provider instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method___construct">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_register">register</a>()
+        
+                                            <p><p>Register the service provider.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_booting">booting</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Register a booting callback to be run before the &quot;boot&quot; method is called.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_booting">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_booted">booted</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Register a booted callback to be run after the &quot;boot&quot; method is called.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_booted">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_callBootingCallbacks">callBootingCallbacks</a>()
+        
+                                            <p><p>Call the registered booting callbacks.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_callBootingCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_callBootedCallbacks">callBootedCallbacks</a>()
+        
+                                            <p><p>Call the registered booted callbacks.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_callBootedCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_mergeConfigFrom">mergeConfigFrom</a>(string $path, string $key)
+        
+                                            <p><p>Merge the given configuration with the existing configuration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_mergeConfigFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadRoutesFrom">loadRoutesFrom</a>(string $path)
+        
+                                            <p><p>Load the given routes file if routes are not already cached.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadRoutesFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadViewsFrom">loadViewsFrom</a>(string|array $path, string $namespace)
+        
+                                            <p><p>Register a view file namespace.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadViewsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadViewComponentsAs">loadViewComponentsAs</a>(string $prefix, array $components)
+        
+                                            <p><p>Register the given view components with a custom prefix.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadViewComponentsAs">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadTranslationsFrom">loadTranslationsFrom</a>(string $path, string $namespace)
+        
+                                            <p><p>Register a translation file namespace.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadTranslationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadJsonTranslationsFrom">loadJsonTranslationsFrom</a>(string $path)
+        
+                                            <p><p>Register a JSON translation file path.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadJsonTranslationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadMigrationsFrom">loadMigrationsFrom</a>(array|string $paths)
+        
+                                            <p><p>Register database migration paths.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadMigrationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_loadFactoriesFrom">loadFactoriesFrom</a>(array|string $paths)
+        <small><span class="label label-danger">deprecated</span></small>
+                                            <p><p>Register Eloquent model factory paths.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_loadFactoriesFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_callAfterResolving">callAfterResolving</a>(string $name, callable $callback)
+        
+                                            <p><p>Setup an after resolving listener, or fire immediately if already resolved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_callAfterResolving">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_publishes">publishes</a>(array $paths, mixed $groups = null)
+        
+                                            <p><p>Register paths to be published by the publish command.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_publishes">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_ensurePublishArrayInitialized">ensurePublishArrayInitialized</a>(string $class)
+        
+                                            <p><p>Ensure the publish array for the service provider is initialized.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_ensurePublishArrayInitialized">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_addPublishGroup">addPublishGroup</a>(string $group, array $paths)
+        
+                                            <p><p>Add a publish group / tag to the service provider.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_addPublishGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_pathsToPublish">pathsToPublish</a>(string|null $provider = null, string|null $group = null)
+        
+                                            <p><p>Get the paths to publish.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_pathsToPublish">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_pathsForProviderOrGroup">pathsForProviderOrGroup</a>(string|null $provider, string|null $group)
+        
+                                            <p><p>Get the paths for the provider or group (or both).</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_pathsForProviderOrGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_pathsForProviderAndGroup">pathsForProviderAndGroup</a>(string $provider, string $group)
+        
+                                            <p><p>Get the paths for the provider and group.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_pathsForProviderAndGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_publishableProviders">publishableProviders</a>()
+        
+                                            <p><p>Get the service providers available for publishing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_publishableProviders">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_publishableGroups">publishableGroups</a>()
+        
+                                            <p><p>Get the groups available for publishing.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_publishableGroups">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_commands">commands</a>(array|mixed $commands)
+        
+                                            <p><p>Register the package's custom Artisan commands.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_commands">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_provides">provides</a>()
+        
+                                            <p><p>Get the services provided by the provider.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_when">when</a>()
+        
+                                            <p><p>Get the events that trigger this service provider to register.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_when">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_isDeferred">isDeferred</a>()
+        
+                                            <p><p>Determine if the provider is deferred.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/ServiceProvider.html#method_isDeferred">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_getSerializedPropertyValue">getSerializedPropertyValue</a>(mixed $value)
+        
+                                            <p><p>Get the property value prepared for serialization.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SerializesAndRestoresModelIdentifiers.html#method_getSerializedPropertyValue">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_getRestoredPropertyValue">getRestoredPropertyValue</a>(mixed $value)
+        
+                                            <p><p>Get the restored property value after deserialization.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SerializesAndRestoresModelIdentifiers.html#method_getRestoredPropertyValue">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_restoreCollection">restoreCollection</a>(<a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a> $value)
+        
+                                            <p><p>Restore a queueable collection instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SerializesAndRestoresModelIdentifiers.html#method_restoreCollection">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_restoreModel">restoreModel</a>(<a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a> $value)
+        
+                                            <p><p>Restore the model from the model identifier instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SerializesAndRestoresModelIdentifiers.html#method_restoreModel">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_getQueryForModelRestoration">getQueryForModelRestoration</a>(<a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model, array|int $ids)
+        
+                                            <p><p>Get the query for model restoration.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="SerializesAndRestoresModelIdentifiers.html#method_getQueryForModelRestoration">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_configureSerializableClosureUses">configureSerializableClosureUses</a>()
+        
+                                            <p><p>Configure serializable closures uses.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerManager">registerManager</a>()
+        
+                                            <p><p>Register the queue manager.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerConnection">registerConnection</a>()
+        
+                                            <p><p>Register the default queue connection binding.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerConnectors">registerConnectors</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the connectors on the queue manager.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerNullConnector">registerNullConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the Null queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerSyncConnector">registerSyncConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the Sync queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerDatabaseConnector">registerDatabaseConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the database queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerRedisConnector">registerRedisConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the Redis queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerBeanstalkdConnector">registerBeanstalkdConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the Beanstalkd queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerSqsConnector">registerSqsConnector</a>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        
+                                            <p><p>Register the Amazon SQS queue connector.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerWorker">registerWorker</a>()
+        
+                                            <p><p>Register the queue worker.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerListener">registerListener</a>()
+        
+                                            <p><p>Register the queue listener.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_registerFailedJobServices">registerFailedJobServices</a>()
+        
+                                            <p><p>Register the failed job services.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Failed/DatabaseFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseFailedJobProvider">DatabaseFailedJobProvider</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_databaseFailedJobProvider">databaseFailedJobProvider</a>(array $config)
+        
+                                            <p><p>Create a new database failed job provider.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Failed/DatabaseUuidFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseUuidFailedJobProvider">DatabaseUuidFailedJobProvider</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_databaseUuidFailedJobProvider">databaseUuidFailedJobProvider</a>(array $config)
+        
+                                            <p><p>Create a new database failed job provider that uses UUIDs as IDs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Failed/DynamoDbFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DynamoDbFailedJobProvider">DynamoDbFailedJobProvider</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="QueueServiceProvider.html#method_dynamoFailedJobProvider">dynamoFailedJobProvider</a>(array $config)
+        
+                                            <p><p>Create a new DynamoDb failed job provider.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method___construct">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L56">at line 56</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new service provider instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L31">at line 31</a></div>
+        <code>                    void
+    <strong>register</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the service provider.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_booting">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_booting">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L77">at line 77</a></div>
+        <code>                    void
+    <strong>booting</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a booting callback to be run before the &quot;boot&quot; method is called.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_booted">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_booted">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L88">at line 88</a></div>
+        <code>                    void
+    <strong>booted</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a booted callback to be run after the &quot;boot&quot; method is called.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callBootingCallbacks">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_callBootingCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L98">at line 98</a></div>
+        <code>                    void
+    <strong>callBootingCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the registered booting callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callBootedCallbacks">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_callBootedCallbacks">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L114">at line 114</a></div>
+        <code>                    void
+    <strong>callBootedCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the registered booted callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeConfigFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_mergeConfigFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L132">at line 132</a></div>
+        <code>            protected        void
+    <strong>mergeConfigFrom</strong>(string $path, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge the given configuration with the existing configuration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadRoutesFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadRoutesFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L149">at line 149</a></div>
+        <code>            protected        void
+    <strong>loadRoutesFrom</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load the given routes file if routes are not already cached.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadViewsFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadViewsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L163">at line 163</a></div>
+        <code>            protected        void
+    <strong>loadViewsFrom</strong>(string|array $path, string $namespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a view file namespace.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadViewComponentsAs">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadViewComponentsAs">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L186">at line 186</a></div>
+        <code>            protected        void
+    <strong>loadViewComponentsAs</strong>(string $prefix, array $components)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the given view components with a custom prefix.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$components</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadTranslationsFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadTranslationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L202">at line 202</a></div>
+        <code>            protected        void
+    <strong>loadTranslationsFrom</strong>(string $path, string $namespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a translation file namespace.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$namespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadJsonTranslationsFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadJsonTranslationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L215">at line 215</a></div>
+        <code>            protected        void
+    <strong>loadJsonTranslationsFrom</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a JSON translation file path.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadMigrationsFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadMigrationsFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L228">at line 228</a></div>
+        <code>            protected        void
+    <strong>loadMigrationsFrom</strong>(array|string $paths)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register database migration paths.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadFactoriesFrom">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_loadFactoriesFrom">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L245">at line 245</a></div>
+        <code>            protected        void
+    <strong>loadFactoriesFrom</strong>(array|string $paths)
+        <small><span class="label label-danger">deprecated</span></small></code>
+    </h3>
+    <div class="details">    
+            <p>
+                <small><span class="label label-danger">deprecated</span></small>
+                            <tr>
+                    <td>Will</td>
+                    <td>be removed in a future Laravel version.</td>
+                </tr>
+                    </p>
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register Eloquent model factory paths.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callAfterResolving">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_callAfterResolving">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L261">at line 261</a></div>
+        <code>            protected        void
+    <strong>callAfterResolving</strong>(string $name, callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Setup an after resolving listener, or fire immediately if already resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_publishes">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_publishes">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L277">at line 277</a></div>
+        <code>            protected        void
+    <strong>publishes</strong>(array $paths, mixed $groups = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register paths to be published by the publish command.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$groups</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensurePublishArrayInitialized">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_ensurePublishArrayInitialized">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L294">at line 294</a></div>
+        <code>            protected        void
+    <strong>ensurePublishArrayInitialized</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ensure the publish array for the service provider is initialized.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addPublishGroup">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_addPublishGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L308">at line 308</a></div>
+        <code>            protected        void
+    <strong>addPublishGroup</strong>(string $group, array $paths)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a publish group / tag to the service provider.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsToPublish">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_pathsToPublish">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L326">at line 326</a></div>
+        <code>        static            array
+    <strong>pathsToPublish</strong>(string|null $provider = null, string|null $group = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the paths to publish.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsForProviderOrGroup">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_pathsForProviderOrGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L344">at line 344</a></div>
+        <code>        static    protected        array
+    <strong>pathsForProviderOrGroup</strong>(string|null $provider, string|null $group)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the paths for the provider or group (or both).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pathsForProviderAndGroup">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_pathsForProviderAndGroup">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L364">at line 364</a></div>
+        <code>        static    protected        array
+    <strong>pathsForProviderAndGroup</strong>(string $provider, string $group)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the paths for the provider and group.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$group</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_publishableProviders">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_publishableProviders">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L378">at line 378</a></div>
+        <code>        static            array
+    <strong>publishableProviders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the service providers available for publishing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_publishableGroups">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_publishableGroups">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L388">at line 388</a></div>
+        <code>        static            array
+    <strong>publishableGroups</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the groups available for publishing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commands">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_commands">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L399">at line 399</a></div>
+        <code>                    void
+    <strong>commands</strong>(array|mixed $commands)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the package's custom Artisan commands.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$commands</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_provides">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L313">at line 313</a></div>
+        <code>                    array
+    <strong>provides</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the services provided by the provider.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_when">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L423">at line 423</a></div>
+        <code>                    array
+    <strong>when</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the events that trigger this service provider to register.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDeferred">
+        <div class="location">in <a href="../Support/ServiceProvider.html#method_isDeferred">
+<abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/ServiceProvider.php#L433">at line 433</a></div>
+        <code>                    bool
+    <strong>isDeferred</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the provider is deferred.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSerializedPropertyValue">
+        <div class="location">in <a href="SerializesAndRestoresModelIdentifiers.html#method_getSerializedPropertyValue">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.php#L20">at line 20</a></div>
+        <code>            protected        mixed
+    <strong>getSerializedPropertyValue</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the property value prepared for serialization.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRestoredPropertyValue">
+        <div class="location">in <a href="SerializesAndRestoresModelIdentifiers.html#method_getRestoredPropertyValue">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.php#L49">at line 49</a></div>
+        <code>            protected        mixed
+    <strong>getRestoredPropertyValue</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the restored property value after deserialization.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreCollection">
+        <div class="location">in <a href="SerializesAndRestoresModelIdentifiers.html#method_restoreCollection">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.php#L66">at line 66</a></div>
+        <code>            protected        <a href="../Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a>
+    <strong>restoreCollection</strong>(<a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a> $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore a queueable collection instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Database/Eloquent/Collection.html"><abbr title="Illuminate\Database\Eloquent\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_restoreModel">
+        <div class="location">in <a href="SerializesAndRestoresModelIdentifiers.html#method_restoreModel">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.php#L98">at line 98</a></div>
+        <code>                    <a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+    <strong>restoreModel</strong>(<a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a> $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Restore the model from the model identifier instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Database/ModelIdentifier.html"><abbr title="Illuminate\Contracts\Database\ModelIdentifier">ModelIdentifier</abbr></a></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueryForModelRestoration">
+        <div class="location">in <a href="SerializesAndRestoresModelIdentifiers.html#method_getQueryForModelRestoration">
+<abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.php#L112">at line 112</a></div>
+        <code>            protected        <a href="../Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getQueryForModelRestoration</strong>(<a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $model, array|int $ids)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the query for model restoration.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Database/Eloquent/Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$model</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|int</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Database/Eloquent/Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configureSerializableClosureUses">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L47">at line 47</a></div>
+        <code>            protected        void
+    <strong>configureSerializableClosureUses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configure serializable closures uses.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerManager">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L71">at line 71</a></div>
+        <code>            protected        void
+    <strong>registerManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the queue manager.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerConnection">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L88">at line 88</a></div>
+        <code>            protected        void
+    <strong>registerConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the default queue connection binding.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerConnectors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L101">at line 101</a></div>
+        <code>                    void
+    <strong>registerConnectors</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the connectors on the queue manager.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerNullConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L114">at line 114</a></div>
+        <code>            protected        void
+    <strong>registerNullConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the Null queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerSyncConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L127">at line 127</a></div>
+        <code>            protected        void
+    <strong>registerSyncConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the Sync queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerDatabaseConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L140">at line 140</a></div>
+        <code>            protected        void
+    <strong>registerDatabaseConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the database queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerRedisConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L153">at line 153</a></div>
+        <code>            protected        void
+    <strong>registerRedisConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the Redis queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerBeanstalkdConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L166">at line 166</a></div>
+        <code>            protected        void
+    <strong>registerBeanstalkdConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the Beanstalkd queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerSqsConnector">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L179">at line 179</a></div>
+        <code>            protected        void
+    <strong>registerSqsConnector</strong>(<a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a> $manager)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the Amazon SQS queue connector.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="QueueManager.html"><abbr title="Illuminate\Queue\QueueManager">QueueManager</abbr></a></td>
+                <td>$manager</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerWorker">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L191">at line 191</a></div>
+        <code>            protected        void
+    <strong>registerWorker</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the queue worker.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerListener">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L221">at line 221</a></div>
+        <code>            protected        void
+    <strong>registerListener</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the queue listener.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerFailedJobServices">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L233">at line 233</a></div>
+        <code>            protected        void
+    <strong>registerFailedJobServices</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register the failed job services.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_databaseFailedJobProvider">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L261">at line 261</a></div>
+        <code>            protected        <a href="Failed/DatabaseFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseFailedJobProvider">DatabaseFailedJobProvider</abbr></a>
+    <strong>databaseFailedJobProvider</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new database failed job provider.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Failed/DatabaseFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseFailedJobProvider">DatabaseFailedJobProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_databaseUuidFailedJobProvider">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L274">at line 274</a></div>
+        <code>            protected        <a href="Failed/DatabaseUuidFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseUuidFailedJobProvider">DatabaseUuidFailedJobProvider</abbr></a>
+    <strong>databaseUuidFailedJobProvider</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new database failed job provider that uses UUIDs as IDs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Failed/DatabaseUuidFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DatabaseUuidFailedJobProvider">DatabaseUuidFailedJobProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dynamoFailedJobProvider">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/QueueServiceProvider.php#L287">at line 287</a></div>
+        <code>            protected        <a href="Failed/DynamoDbFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DynamoDbFailedJobProvider">DynamoDbFailedJobProvider</abbr></a>
+    <strong>dynamoFailedJobProvider</strong>(array $config)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new DynamoDb failed job provider.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Failed/DynamoDbFailedJobProvider.html"><abbr title="Illuminate\Queue\Failed\DynamoDbFailedJobProvider">DynamoDbFailedJobProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

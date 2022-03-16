@@ -1,0 +1,3525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Facades\File | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Support_Facades_File" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="File.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Support.html">Support</a></li><li class="backslash">\</li><li><a href="../Facades.html">Facades</a></li><li class="backslash">\</li><li>File</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>File    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>File</strong>        extends <a href="Facade.html"><abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                    static                    protected                                        <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                                                                                
+                                    </td>
+                <td>$app</td>
+                <td class="last"><p>The application instance being facaded.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_app">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolvedInstance">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$resolvedInstance</td>
+                <td class="last"><p>The resolved object instances.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_resolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cached">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$cached</td>
+                <td class="last"><p>Indicates if the resolved instance should be cached.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_cached">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_resolved">resolved</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Run a Closure when the facade has been resolved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_spy">spy</a>()
+        
+                                            <p><p>Convert the facade into a Mockery spy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_partialMock">partialMock</a>()
+        
+                                            <p><p>Initiate a partial mock on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_shouldReceive">shouldReceive</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_expects">expects</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_createFreshMockInstance">createFreshMockInstance</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_createMock">createMock</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_isMock">isMock</a>()
+        
+                                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_getMockableClass">getMockableClass</a>()
+        
+                                            <p><p>Get the mockable class for the bound instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_swap">swap</a>(mixed $instance)
+        
+                                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_getFacadeRoot">getFacadeRoot</a>()
+        
+                                            <p><p>Get the root object behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_getFacadeAccessor">getFacadeAccessor</a>()
+        
+                                            <p><p>Get the registered name of the component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_resolveFacadeInstance">resolveFacadeInstance</a>(string $name)
+        
+                                            <p><p>Resolve the facade root instance from the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_clearResolvedInstance">clearResolvedInstance</a>(string $name)
+        
+                                            <p><p>Clear a resolved facade instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_clearResolvedInstances">clearResolvedInstances</a>()
+        
+                                            <p><p>Clear all of the resolved instances.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_defaultAliases">defaultAliases</a>()
+        
+                                            <p><p>Get the application default aliases.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_getFacadeApplication">getFacadeApplication</a>()
+        
+                                            <p><p>Get the application instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_setFacadeApplication">setFacadeApplication</a>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p><p>Set the application instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method___callStatic">__callStatic</a>(string $method, array $args)
+        
+                                            <p><p>Handle dynamic, static calls to the object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_allFiles">allFiles</a>(string $directory, bool $hidden = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_files">files</a>(string $directory, bool $hidden = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_directories">directories</a>(string $directory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_glob">glob</a>(string $pattern, int $flags)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_cleanDirectory">cleanDirectory</a>(string $directory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_copy">copy</a>(string $path, string $target)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_copyDirectory">copyDirectory</a>(string $directory, string $destination, int|null $options = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_delete">delete</a>(string|array $paths)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_deleteDirectories">deleteDirectories</a>(string $directory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_deleteDirectory">deleteDirectory</a>(string $directory, bool $preserve = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_exists">exists</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_isDirectory">isDirectory</a>(string $directory)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_isFile">isFile</a>(string $file)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_isReadable">isReadable</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_isWritable">isWritable</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_makeDirectory">makeDirectory</a>(string $path, int $mode = 0755, bool $recursive = false, bool $force = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_missing">missing</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_move">move</a>(string $path, string $target)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_moveDirectory">moveDirectory</a>(string $from, string $to, bool $overwrite = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_append">append</a>(string $path, string $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_lastModified">lastModified</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_prepend">prepend</a>(string $path, string $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_size">size</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_put">put</a>(string $path, string $contents, bool $lock = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_chmod">chmod</a>(string $path, int|null $mode = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_getRequire">getRequire</a>(string $path, array $data = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_requireOnce">requireOnce</a>(string $file, array $data = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_basename">basename</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_dirname">dirname</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_extension">extension</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_get">get</a>(string $path, bool $lock = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_hash">hash</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_name">name</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_sharedGet">sharedGet</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_type">type</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|false
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_mimeType">mimeType</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_guessExtension">guessExtension</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_ensureDirectoryExists">ensureDirectoryExists</a>(string $path, int $mode = 0755, bool $recursive = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_link">link</a>(string $target, string $link)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../LazyCollection.html"><abbr title="Illuminate\Support\LazyCollection">LazyCollection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_lines">lines</a>(string $path)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_relativeLink">relativeLink</a>(string $target, string $link)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="File.html#method_replace">replace</a>(string $path, string $content)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resolved">
+        <div class="location">in <a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L43">at line 43</a></div>
+        <code>        static            void
+    <strong>resolved</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run a Closure when the facade has been resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spy">
+        <div class="location">in <a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L61">at line 61</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>spy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the facade into a Mockery spy.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partialMock">
+        <div class="location">in <a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L77">at line 77</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>partialMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a partial mock on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReceive">
+        <div class="location">in <a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L93">at line 93</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>shouldReceive</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expects">
+        <div class="location">in <a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L109">at line 109</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>expects</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFreshMockInstance">
+        <div class="location">in <a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L125">at line 125</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createFreshMockInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMock">
+        <div class="location">in <a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L139">at line 139</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMock">
+        <div class="location">in <a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L151">at line 151</a></div>
+        <code>        static    protected        bool
+    <strong>isMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockableClass">
+        <div class="location">in <a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L164">at line 164</a></div>
+        <code>        static    protected        string|null
+    <strong>getMockableClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the mockable class for the bound instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_swap">
+        <div class="location">in <a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L177">at line 177</a></div>
+        <code>        static            void
+    <strong>swap</strong>(mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeRoot">
+        <div class="location">in <a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L191">at line 191</a></div>
+        <code>        static            mixed
+    <strong>getFacadeRoot</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the root object behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeAccessor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L58">at line 58</a></div>
+        <code>        static    protected        string
+    <strong>getFacadeAccessor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the registered name of the component.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFacadeInstance">
+        <div class="location">in <a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L214">at line 214</a></div>
+        <code>        static    protected        mixed
+    <strong>resolveFacadeInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the facade root instance from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstance">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L235">at line 235</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear a resolved facade instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstances">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L245">at line 245</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstances</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear all of the resolved instances.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultAliases">
+        <div class="location">in <a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L255">at line 255</a></div>
+        <code>        static            <a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>defaultAliases</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application default aliases.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L304">at line 304</a></div>
+        <code>        static            <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+    <strong>getFacadeApplication</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L315">at line 315</a></div>
+        <code>        static            void
+    <strong>setFacadeApplication</strong>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the application instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L329">at line 329</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle dynamic, static calls to the object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allFiles">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            <abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr>
+    <strong>allFiles</strong>(string $directory, bool $hidden = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$hidden</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_files">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            <abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr>
+    <strong>files</strong>(string $directory, bool $hidden = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$hidden</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\Finder\SplFileInfo[]">SplFileInfo[]</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_directories">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            array
+    <strong>directories</strong>(string $directory)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_glob">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            array
+    <strong>glob</strong>(string $pattern, int $flags)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$pattern</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cleanDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>cleanDirectory</strong>(string $directory)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copy">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>copy</strong>(string $path, string $target)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_copyDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>copyDirectory</strong>(string $directory, string $destination, int|null $options = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$destination</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>delete</strong>(string|array $paths)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$paths</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteDirectories">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>deleteDirectories</strong>(string $directory)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>deleteDirectory</strong>(string $directory, bool $preserve = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$preserve</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>exists</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>isDirectory</strong>(string $directory)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$directory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFile">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>isFile</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReadable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>isReadable</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isWritable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>isWritable</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>makeDirectory</strong>(string $path, int $mode = 0755, bool $recursive = false, bool $force = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$recursive</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_missing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>missing</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_move">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>move</strong>(string $path, string $target)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_moveDirectory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            bool
+    <strong>moveDirectory</strong>(string $from, string $to, bool $overwrite = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$overwrite</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_append">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            int
+    <strong>append</strong>(string $path, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lastModified">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            int
+    <strong>lastModified</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepend">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            int
+    <strong>prepend</strong>(string $path, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_size">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            int
+    <strong>size</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            int|bool
+    <strong>put</strong>(string $path, string $contents, bool $lock = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$contents</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$lock</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chmod">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            mixed
+    <strong>chmod</strong>(string $path, int|null $mode = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequire">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            mixed
+    <strong>getRequire</strong>(string $path, array $data = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requireOnce">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            mixed
+    <strong>requireOnce</strong>(string $file, array $data = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_basename">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>basename</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dirname">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>dirname</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extension">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>extension</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>get</strong>(string $path, bool $lock = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$lock</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hash">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>hash</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_name">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>name</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sharedGet">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>sharedGet</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_type">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string
+    <strong>type</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mimeType">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string|false
+    <strong>mimeType</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guessExtension">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            string|null
+    <strong>guessExtension</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureDirectoryExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            void
+    <strong>ensureDirectoryExists</strong>(string $path, int $mode = 0755, bool $recursive = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$recursive</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_link">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            void
+    <strong>link</strong>(string $target, string $link)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$link</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lines">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            <a href="../LazyCollection.html"><abbr title="Illuminate\Support\LazyCollection">LazyCollection</abbr></a>
+    <strong>lines</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../LazyCollection.html"><abbr title="Illuminate\Support\LazyCollection">LazyCollection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_relativeLink">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            void
+    <strong>relativeLink</strong>(string $target, string $link)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$link</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/File.php#L51">at line 51</a></div>
+        <code>        static            void
+    <strong>replace</strong>(string $path, string $content)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

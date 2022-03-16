@@ -1,0 +1,3087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Contracts\Foundation\Application | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../9.x/opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Contracts_Foundation_Application" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" selected>Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" >Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Application.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li ><a href="../../../../9.x/index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">interface</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Contracts.html">Contracts</a></li><li class="backslash">\</li><li><a href="../Foundation.html">Foundation</a></li><li class="backslash">\</li><li>Application</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Application    
+            </h1>
+    </div>
+
+    
+    <p>        interface
+    <strong>Application</strong>        implements        <a href="../Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>        (<a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_bound">bound</a>(string $abstract)
+        
+                                            <p><p>Determine if the given abstract type has been bound.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_bound">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_alias">alias</a>(string $abstract, string $alias)
+        
+                                            <p><p>Alias a type to a different name.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_alias">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_tag">tag</a>(array|string $abstracts, array|mixed $tags)
+        
+                                            <p><p>Assign a set of tags to a given binding.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_tag">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_tagged">tagged</a>(string $tag)
+        
+                                            <p><p>Resolve all of the bindings for a given tag.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_tagged">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_bind">bind</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        
+                                            <p><p>Register a binding with the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_bind">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_bindIf">bindIf</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        
+                                            <p><p>Register a binding if it hasn't already been registered.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_bindIf">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_singleton">singleton</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a shared binding in the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_singleton">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_singletonIf">singletonIf</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a shared binding if it hasn't already been registered.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_singletonIf">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_extend">extend</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $closure)
+        
+                                            <p><p>&quot;Extend&quot; an abstract type in the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_extend">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_instance">instance</a>(string $abstract, mixed $instance)
+        
+                                            <p><p>Register an existing instance as shared in the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_instance">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_addContextualBinding">addContextualBinding</a>(string $concrete, string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $implementation)
+        
+                                            <p><p>Add a contextual binding to the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_addContextualBinding">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_when">when</a>(string|array $concrete)
+        
+                                            <p><p>Define a contextual binding.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_when">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_factory">factory</a>(string $abstract)
+        
+                                            <p><p>Get a closure to resolve the given type from the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_factory">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_flush">flush</a>()
+        
+                                            <p><p>Flush the container of all bindings and resolved instances.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_flush">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_make">make</a>(string $abstract, array $parameters = [])
+        
+                                            <p><p>Resolve the given type from the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_make">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_call">call</a>(callable|string $callback, array $parameters = [], string|null $defaultMethod = null)
+        
+                                            <p><p>Call the given Closure / <a href="../../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="c8aba4a9bbbb88a5adbca0a7ac">[email&#160;protected]</a> and inject its dependencies.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_call">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_resolved">resolved</a>(string $abstract)
+        
+                                            <p><p>Determine if the given abstract type has been resolved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_resolved">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_resolving">resolving</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Register a new resolving callback.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_resolving">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_afterResolving">afterResolving</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Register a new after resolving callback.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Container/Container.html#method_afterResolving">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_version">version</a>()
+        
+                                            <p><p>Get the version number of the application.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_basePath">basePath</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get the base path of the Laravel installation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_bootstrapPath">bootstrapPath</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get the path to the bootstrap directory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_configPath">configPath</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get the path to the application configuration files.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_databasePath">databasePath</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get the path to the database directory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_environmentPath">environmentPath</a>()
+        
+                                            <p><p>Get the path to the environment file directory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_resourcePath">resourcePath</a>(string $path = &#039;&#039;)
+        
+                                            <p><p>Get the path to the resources directory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_storagePath">storagePath</a>()
+        
+                                            <p><p>Get the path to the storage directory.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_environment">environment</a>(string|array ...$environments)
+        
+                                            <p><p>Get or check the current application environment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_runningInConsole">runningInConsole</a>()
+        
+                                            <p><p>Determine if the application is running in the console.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_runningUnitTests">runningUnitTests</a>()
+        
+                                            <p><p>Determine if the application is running unit tests.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_isDownForMaintenance">isDownForMaintenance</a>()
+        
+                                            <p><p>Determine if the application is currently down for maintenance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_registerConfiguredProviders">registerConfiguredProviders</a>()
+        
+                                            <p><p>Register all of the configured providers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_register">register</a>(<a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string $provider, bool $force = false)
+        
+                                            <p><p>Register a service provider with the application.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_registerDeferredProvider">registerDeferredProvider</a>(string $provider, string|null $service = null)
+        
+                                            <p><p>Register a deferred provider and service.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_resolveProvider">resolveProvider</a>(string $provider)
+        
+                                            <p><p>Resolve a service provider instance from the class name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_boot">boot</a>()
+        
+                                            <p><p>Boot the application's service providers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_booting">booting</a>(callable $callback)
+        
+                                            <p><p>Register a new boot listener.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_booted">booted</a>(callable $callback)
+        
+                                            <p><p>Register a new &quot;booted&quot; listener.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_bootstrapWith">bootstrapWith</a>(array $bootstrappers)
+        
+                                            <p><p>Run the given array of bootstrap classes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_configurationIsCached">configurationIsCached</a>()
+        
+                                            <p><p>Determine if the application configuration is cached.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_detectEnvironment">detectEnvironment</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Detect the application's current environment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_environmentFile">environmentFile</a>()
+        
+                                            <p><p>Get the environment file the application is using.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_environmentFilePath">environmentFilePath</a>()
+        
+                                            <p><p>Get the fully qualified path to the environment file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getCachedConfigPath">getCachedConfigPath</a>()
+        
+                                            <p><p>Get the path to the configuration cache file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getCachedServicesPath">getCachedServicesPath</a>()
+        
+                                            <p><p>Get the path to the cached services.php file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getCachedPackagesPath">getCachedPackagesPath</a>()
+        
+                                            <p><p>Get the path to the cached packages.php file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getCachedRoutesPath">getCachedRoutesPath</a>()
+        
+                                            <p><p>Get the path to the routes cache file.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getLocale">getLocale</a>()
+        
+                                            <p><p>Get the current application locale.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getNamespace">getNamespace</a>()
+        
+                                            <p><p>Get the application namespace.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_getProviders">getProviders</a>(<a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string $provider)
+        
+                                            <p><p>Get the registered service provider instances if any exist.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_hasBeenBootstrapped">hasBeenBootstrapped</a>()
+        
+                                            <p><p>Determine if the application has been bootstrapped before.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_loadDeferredProviders">loadDeferredProviders</a>()
+        
+                                            <p><p>Load and boot all of the remaining deferred providers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_loadEnvironmentFrom">loadEnvironmentFrom</a>(string $file)
+        
+                                            <p><p>Set the environment file to be loaded during bootstrapping.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_routesAreCached">routesAreCached</a>()
+        
+                                            <p><p>Determine if the application routes are cached.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_setLocale">setLocale</a>(string $locale)
+        
+                                            <p><p>Set the current application locale.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_shouldSkipMiddleware">shouldSkipMiddleware</a>()
+        
+                                            <p><p>Determine if middleware has been disabled for the application.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Application.html#method_terminate">terminate</a>()
+        
+                                            <p><p>Terminate the application.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_bound">
+        <div class="location">in <a href="../Container/Container.html#method_bound">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L16">at line 16</a></div>
+        <code>                    bool
+    <strong>bound</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given abstract type has been bound.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alias">
+        <div class="location">in <a href="../Container/Container.html#method_alias">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L27">at line 27</a></div>
+        <code>                    void
+    <strong>alias</strong>(string $abstract, string $alias)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Alias a type to a different name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tag">
+        <div class="location">in <a href="../Container/Container.html#method_tag">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L36">at line 36</a></div>
+        <code>                    void
+    <strong>tag</strong>(array|string $abstracts, array|mixed $tags)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assign a set of tags to a given binding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$abstracts</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$tags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagged">
+        <div class="location">in <a href="../Container/Container.html#method_tagged">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L44">at line 44</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr>
+    <strong>tagged</strong>(string $tag)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve all of the bindings for a given tag.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bind">
+        <div class="location">in <a href="../Container/Container.html#method_bind">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L54">at line 54</a></div>
+        <code>                    void
+    <strong>bind</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a binding with the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shared</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bindIf">
+        <div class="location">in <a href="../Container/Container.html#method_bindIf">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L64">at line 64</a></div>
+        <code>                    void
+    <strong>bindIf</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a binding if it hasn't already been registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shared</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singleton">
+        <div class="location">in <a href="../Container/Container.html#method_singleton">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L73">at line 73</a></div>
+        <code>                    void
+    <strong>singleton</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a shared binding in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singletonIf">
+        <div class="location">in <a href="../Container/Container.html#method_singletonIf">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L82">at line 82</a></div>
+        <code>                    void
+    <strong>singletonIf</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a shared binding if it hasn't already been registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location">in <a href="../Container/Container.html#method_extend">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L93">at line 93</a></div>
+        <code>                    void
+    <strong>extend</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $closure)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>&quot;Extend&quot; an abstract type in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instance">
+        <div class="location">in <a href="../Container/Container.html#method_instance">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L102">at line 102</a></div>
+        <code>                    mixed
+    <strong>instance</strong>(string $abstract, mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register an existing instance as shared in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addContextualBinding">
+        <div class="location">in <a href="../Container/Container.html#method_addContextualBinding">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L112">at line 112</a></div>
+        <code>                    void
+    <strong>addContextualBinding</strong>(string $concrete, string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $implementation)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a contextual binding to the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$implementation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../Container/Container.html#method_when">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L120">at line 120</a></div>
+        <code>                    <a href="../Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a>
+    <strong>when</strong>(string|array $concrete)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Define a contextual binding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location">in <a href="../Container/Container.html#method_factory">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L128">at line 128</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>factory</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a closure to resolve the given type from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location">in <a href="../Container/Container.html#method_flush">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L135">at line 135</a></div>
+        <code>                    void
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the container of all bindings and resolved instances.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location">in <a href="../Container/Container.html#method_make">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L146">at line 146</a></div>
+        <code>                    mixed
+    <strong>make</strong>(string $abstract, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the given type from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://laravel.com/api/6.x/Illuminate/Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_call">
+        <div class="location">in <a href="../Container/Container.html#method_call">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L156">at line 156</a></div>
+        <code>                    mixed
+    <strong>call</strong>(callable|string $callback, array $parameters = [], string|null $defaultMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the given Closure / <a href="../../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="741718150707341911001c1b10">[email&#160;protected]</a> and inject its dependencies.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$defaultMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolved">
+        <div class="location">in <a href="../Container/Container.html#method_resolved">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L164">at line 164</a></div>
+        <code>                    bool
+    <strong>resolved</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given abstract type has been resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolving">
+        <div class="location">in <a href="../Container/Container.html#method_resolving">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L173">at line 173</a></div>
+        <code>                    void
+    <strong>resolving</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new resolving callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_afterResolving">
+        <div class="location">in <a href="../Container/Container.html#method_afterResolving">
+<abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> <a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Container/Container.php#L182">at line 182</a></div>
+        <code>                    void
+    <strong>afterResolving</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new after resolving callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_version">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L15">at line 15</a></div>
+        <code>                    string
+    <strong>version</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the version number of the application.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_basePath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L23">at line 23</a></div>
+        <code>                    string
+    <strong>basePath</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base path of the Laravel installation.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bootstrapPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L31">at line 31</a></div>
+        <code>                    string
+    <strong>bootstrapPath</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the bootstrap directory.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L39">at line 39</a></div>
+        <code>                    string
+    <strong>configPath</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the application configuration files.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_databasePath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L47">at line 47</a></div>
+        <code>                    string
+    <strong>databasePath</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the database directory.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_environmentPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L54">at line 54</a></div>
+        <code>                    string
+    <strong>environmentPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the environment file directory.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resourcePath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L62">at line 62</a></div>
+        <code>                    string
+    <strong>resourcePath</strong>(string $path = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the resources directory.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_storagePath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L69">at line 69</a></div>
+        <code>                    string
+    <strong>storagePath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the storage directory.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_environment">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L77">at line 77</a></div>
+        <code>                    string|bool
+    <strong>environment</strong>(string|array ...$environments)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get or check the current application environment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>...$environments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runningInConsole">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L84">at line 84</a></div>
+        <code>                    bool
+    <strong>runningInConsole</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application is running in the console.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_runningUnitTests">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L91">at line 91</a></div>
+        <code>                    bool
+    <strong>runningUnitTests</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application is running unit tests.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isDownForMaintenance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L98">at line 98</a></div>
+        <code>                    bool
+    <strong>isDownForMaintenance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application is currently down for maintenance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerConfiguredProviders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L105">at line 105</a></div>
+        <code>                    void
+    <strong>registerConfiguredProviders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register all of the configured providers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L114">at line 114</a></div>
+        <code>                    <a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>
+    <strong>register</strong>(<a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string $provider, bool $force = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a service provider with the application.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerDeferredProvider">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L123">at line 123</a></div>
+        <code>                    void
+    <strong>registerDeferredProvider</strong>(string $provider, string|null $service = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a deferred provider and service.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$service</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveProvider">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L131">at line 131</a></div>
+        <code>                    <a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>
+    <strong>resolveProvider</strong>(string $provider)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve a service provider instance from the class name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_boot">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L138">at line 138</a></div>
+        <code>                    void
+    <strong>boot</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Boot the application's service providers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_booting">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L146">at line 146</a></div>
+        <code>                    void
+    <strong>booting</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new boot listener.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_booted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L154">at line 154</a></div>
+        <code>                    void
+    <strong>booted</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new &quot;booted&quot; listener.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bootstrapWith">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L162">at line 162</a></div>
+        <code>                    void
+    <strong>bootstrapWith</strong>(array $bootstrappers)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run the given array of bootstrap classes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bootstrappers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_configurationIsCached">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L169">at line 169</a></div>
+        <code>                    bool
+    <strong>configurationIsCached</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application configuration is cached.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detectEnvironment">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L177">at line 177</a></div>
+        <code>                    string
+    <strong>detectEnvironment</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Detect the application's current environment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_environmentFile">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L184">at line 184</a></div>
+        <code>                    string
+    <strong>environmentFile</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the environment file the application is using.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_environmentFilePath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L191">at line 191</a></div>
+        <code>                    string
+    <strong>environmentFilePath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the fully qualified path to the environment file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedConfigPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L198">at line 198</a></div>
+        <code>                    string
+    <strong>getCachedConfigPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the configuration cache file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedServicesPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L205">at line 205</a></div>
+        <code>                    string
+    <strong>getCachedServicesPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the cached services.php file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedPackagesPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L212">at line 212</a></div>
+        <code>                    string
+    <strong>getCachedPackagesPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the cached packages.php file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachedRoutesPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L219">at line 219</a></div>
+        <code>                    string
+    <strong>getCachedRoutesPath</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the path to the routes cache file.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLocale">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L226">at line 226</a></div>
+        <code>                    string
+    <strong>getLocale</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current application locale.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNamespace">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L235">at line 235</a></div>
+        <code>                    string
+    <strong>getNamespace</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application namespace.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProviders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L243">at line 243</a></div>
+        <code>                    array
+    <strong>getProviders</strong>(<a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string $provider)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the registered service provider instances if any exist.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://laravel.com/api/6.x/Illuminate/Support/ServiceProvider.html"><abbr title="Illuminate\Support\ServiceProvider">ServiceProvider</abbr></a>|string</td>
+                <td>$provider</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasBeenBootstrapped">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L250">at line 250</a></div>
+        <code>                    bool
+    <strong>hasBeenBootstrapped</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application has been bootstrapped before.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadDeferredProviders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L257">at line 257</a></div>
+        <code>                    void
+    <strong>loadDeferredProviders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Load and boot all of the remaining deferred providers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadEnvironmentFrom">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L265">at line 265</a></div>
+        <code>                    $this
+    <strong>loadEnvironmentFrom</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the environment file to be loaded during bootstrapping.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_routesAreCached">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L272">at line 272</a></div>
+        <code>                    bool
+    <strong>routesAreCached</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the application routes are cached.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLocale">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L280">at line 280</a></div>
+        <code>                    void
+    <strong>setLocale</strong>(string $locale)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the current application locale.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$locale</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldSkipMiddleware">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L287">at line 287</a></div>
+        <code>                    bool
+    <strong>shouldSkipMiddleware</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if middleware has been disabled for the application.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_terminate">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/6.x/src/Illuminate/Contracts/Foundation/Application.php#L294">at line 294</a></div>
+        <code>                    void
+    <strong>terminate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Terminate the application.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    <script data-cfasync="false" src="../../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>

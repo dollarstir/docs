@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Facades\Redirect | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Support_Facades_Redirect" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Redirect.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Support.html">Support</a></li><li class="backslash">\</li><li><a href="../Facades.html">Facades</a></li><li class="backslash">\</li><li>Redirect</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Redirect    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Redirect</strong>        extends <a href="Facade.html"><abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                    static                    protected                                        <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                                                                                
+                                    </td>
+                <td>$app</td>
+                <td class="last"><p>The application instance being facaded.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_app">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolvedInstance">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$resolvedInstance</td>
+                <td class="last"><p>The resolved object instances.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_resolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cached">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$cached</td>
+                <td class="last"><p>Indicates if the resolved instance should be cached.</p></td>
+                <td><small>from&nbsp;<a href="Facade.html#property_cached">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_resolved">resolved</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Run a Closure when the facade has been resolved.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_spy">spy</a>()
+        
+                                            <p><p>Convert the facade into a Mockery spy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_partialMock">partialMock</a>()
+        
+                                            <p><p>Initiate a partial mock on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_shouldReceive">shouldReceive</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\Expectation">Expectation</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_expects">expects</a>()
+        
+                                            <p><p>Initiate a mock expectation on the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_createFreshMockInstance">createFreshMockInstance</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Mockery\MockInterface">MockInterface</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_createMock">createMock</a>()
+        
+                                            <p><p>Create a fresh mock instance for the given class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_isMock">isMock</a>()
+        
+                                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_getMockableClass">getMockableClass</a>()
+        
+                                            <p><p>Get the mockable class for the bound instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_swap">swap</a>(mixed $instance)
+        
+                                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_getFacadeRoot">getFacadeRoot</a>()
+        
+                                            <p><p>Get the root object behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_getFacadeAccessor">getFacadeAccessor</a>()
+        
+                                            <p><p>Get the registered name of the component.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_resolveFacadeInstance">resolveFacadeInstance</a>(string $name)
+        
+                                            <p><p>Resolve the facade root instance from the container.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_clearResolvedInstance">clearResolvedInstance</a>(string $name)
+        
+                                            <p><p>Clear a resolved facade instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_clearResolvedInstances">clearResolvedInstances</a>()
+        
+                                            <p><p>Clear all of the resolved instances.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_defaultAliases">defaultAliases</a>()
+        
+                                            <p><p>Get the application default aliases.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_getFacadeApplication">getFacadeApplication</a>()
+        
+                                            <p><p>Get the application instance behind the facade.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_setFacadeApplication">setFacadeApplication</a>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        
+                                            <p><p>Set the application instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method___callStatic">__callStatic</a>(string $method, array $args)
+        
+                                            <p><p>Handle dynamic, static calls to the object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_action">action</a>(string $action, mixed $parameters = [], int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_away">away</a>(string $path, int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_back">back</a>(int $status = 302, array $headers = [], mixed $fallback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_guest">guest</a>(string $path, int $status = 302, array $headers = [], bool $secure = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_home">home</a>(int $status = 302)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_intended">intended</a>(string $default = &#039;/&#039;, int $status = 302, array $headers = [], bool $secure = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_refresh">refresh</a>(int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_route">route</a>(string $route, mixed $parameters = [], int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_secure">secure</a>(string $path, int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_signedRoute">signedRoute</a>(string $name, mixed $parameters = [], <abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr> $expiration = null, int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_temporarySignedRoute">temporarySignedRoute</a>(string $name, <abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr> $expiration, mixed $parameters = [], int $status = 302, array $headers = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_to">to</a>(string $path, int $status = 302, array $headers = [], bool $secure = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_getUrlGenerator">getUrlGenerator</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_setSession">setSession</a>(<a href="../../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a> $session)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="Redirect.html#method_setIntendedUrl">setIntendedUrl</a>(string $url)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_resolved">
+        <div class="location">in <a href="Facade.html#method_resolved">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L43">at line 43</a></div>
+        <code>        static            void
+    <strong>resolved</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Run a Closure when the facade has been resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_spy">
+        <div class="location">in <a href="Facade.html#method_spy">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L61">at line 61</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>spy</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the facade into a Mockery spy.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partialMock">
+        <div class="location">in <a href="Facade.html#method_partialMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L77">at line 77</a></div>
+        <code>        static            <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>partialMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a partial mock on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shouldReceive">
+        <div class="location">in <a href="Facade.html#method_shouldReceive">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L93">at line 93</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>shouldReceive</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_expects">
+        <div class="location">in <a href="Facade.html#method_expects">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L109">at line 109</a></div>
+        <code>        static            <abbr title="Mockery\Expectation">Expectation</abbr>
+    <strong>expects</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initiate a mock expectation on the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\Expectation">Expectation</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFreshMockInstance">
+        <div class="location">in <a href="Facade.html#method_createFreshMockInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L125">at line 125</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createFreshMockInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMock">
+        <div class="location">in <a href="Facade.html#method_createMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L139">at line 139</a></div>
+        <code>        static    protected        <abbr title="Mockery\MockInterface">MockInterface</abbr>
+    <strong>createMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a fresh mock instance for the given class.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Mockery\MockInterface">MockInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMock">
+        <div class="location">in <a href="Facade.html#method_isMock">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L151">at line 151</a></div>
+        <code>        static    protected        bool
+    <strong>isMock</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determines whether a mock is set as the instance of the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMockableClass">
+        <div class="location">in <a href="Facade.html#method_getMockableClass">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L164">at line 164</a></div>
+        <code>        static    protected        string|null
+    <strong>getMockableClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the mockable class for the bound instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_swap">
+        <div class="location">in <a href="Facade.html#method_swap">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L177">at line 177</a></div>
+        <code>        static            void
+    <strong>swap</strong>(mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Hotswap the underlying instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeRoot">
+        <div class="location">in <a href="Facade.html#method_getFacadeRoot">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L191">at line 191</a></div>
+        <code>        static            mixed
+    <strong>getFacadeRoot</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the root object behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeAccessor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L31">at line 31</a></div>
+        <code>        static    protected        string
+    <strong>getFacadeAccessor</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the registered name of the component.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFacadeInstance">
+        <div class="location">in <a href="Facade.html#method_resolveFacadeInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L214">at line 214</a></div>
+        <code>        static    protected        mixed
+    <strong>resolveFacadeInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the facade root instance from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstance">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstance">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L235">at line 235</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstance</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear a resolved facade instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clearResolvedInstances">
+        <div class="location">in <a href="Facade.html#method_clearResolvedInstances">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L245">at line 245</a></div>
+        <code>        static            void
+    <strong>clearResolvedInstances</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear all of the resolved instances.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultAliases">
+        <div class="location">in <a href="Facade.html#method_defaultAliases">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L255">at line 255</a></div>
+        <code>        static            <a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>defaultAliases</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application default aliases.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_getFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L304">at line 304</a></div>
+        <code>        static            <a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a>
+    <strong>getFacadeApplication</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the application instance behind the facade.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFacadeApplication">
+        <div class="location">in <a href="Facade.html#method_setFacadeApplication">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L315">at line 315</a></div>
+        <code>        static            void
+    <strong>setFacadeApplication</strong>(<a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a> $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the application instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Foundation/Application.html"><abbr title="Illuminate\Contracts\Foundation\Application">Application</abbr></a></td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="Facade.html#method___callStatic">
+<abbr title="Illuminate\Support\Facades\Facade">Facade</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Facade.php#L329">at line 329</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle dynamic, static calls to the object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_action">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>action</strong>(string $action, mixed $parameters = [], int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_away">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>away</strong>(string $path, int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_back">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>back</strong>(int $status = 302, array $headers = [], mixed $fallback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$fallback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_guest">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>guest</strong>(string $path, int $status = 302, array $headers = [], bool $secure = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$secure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_home">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>home</strong>(int $status = 302)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_intended">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>intended</strong>(string $default = &#039;/&#039;, int $status = 302, array $headers = [], bool $secure = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$secure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_refresh">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>refresh</strong>(int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_route">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>route</strong>(string $route, mixed $parameters = [], int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_secure">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>secure</strong>(string $path, int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_signedRoute">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>signedRoute</strong>(string $name, mixed $parameters = [], <abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr> $expiration = null, int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr></td>
+                <td>$expiration</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_temporarySignedRoute">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>temporarySignedRoute</strong>(string $name, <abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr> $expiration, mixed $parameters = [], int $status = 302, array $headers = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="DateTimeInterface|\DateInterval|int">DateInterval|int</abbr></td>
+                <td>$expiration</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_to">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a>
+    <strong>to</strong>(string $path, int $status = 302, array $headers = [], bool $secure = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$headers</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$secure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Http/RedirectResponse.html"><abbr title="Illuminate\Http\RedirectResponse">RedirectResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUrlGenerator">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            <a href="../../Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a>
+    <strong>getUrlGenerator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Routing/UrlGenerator.html"><abbr title="Illuminate\Routing\UrlGenerator">UrlGenerator</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSession">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            void
+    <strong>setSession</strong>(<a href="../../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a> $session)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a></td>
+                <td>$session</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIntendedUrl">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Facades/Redirect.php#L24">at line 24</a></div>
+        <code>        static            void
+    <strong>setIntendedUrl</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

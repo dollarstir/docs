@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Concerns\HasEvents | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Concerns_HasEvents" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="HasEvents.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../Concerns.html">Concerns</a></li><li class="backslash">\</li><li>HasEvents</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>HasEvents    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>HasEvents</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_dispatchesEvents">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$dispatchesEvents</td>
+                <td class="last"><p>The event map for the model.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_observables">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$observables</td>
+                <td class="last"><p>User exposed observable events.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_observe">observe</a>(object|array|string $classes)
+        
+                                            <p><p>Register observers with the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_registerObserver">registerObserver</a>(object|string $class)
+        
+                                            <p><p>Register a single observer with the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_getObservableEvents">getObservableEvents</a>()
+        
+                                            <p><p>Get the observable event names.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_setObservableEvents">setObservableEvents</a>(array $observables)
+        
+                                            <p><p>Set the observable event names.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_addObservableEvents">addObservableEvents</a>(array|mixed $observables)
+        
+                                            <p><p>Add an observable event name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_removeObservableEvents">removeObservableEvents</a>(array|mixed $observables)
+        
+                                            <p><p>Remove an observable event name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_registerModelEvent">registerModelEvent</a>(string $event, <a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_fireModelEvent">fireModelEvent</a>(string $event, bool $halt = true)
+        
+                                            <p><p>Fire the given event for the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_fireCustomModelEvent">fireCustomModelEvent</a>(string $event, string $method)
+        
+                                            <p><p>Fire a custom model event for the given event.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_filterModelEventResults">filterModelEventResults</a>(mixed $result)
+        
+                                            <p><p>Filter the model event results.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_retrieved">retrieved</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a retrieved model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_saving">saving</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a saving model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_saved">saved</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a saved model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_updating">updating</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register an updating model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_updated">updated</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register an updated model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_creating">creating</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a creating model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_created">created</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a created model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_replicating">replicating</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a replicating model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_deleting">deleting</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a deleting model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_deleted">deleted</a>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        
+                                            <p><p>Register a deleted model event with the dispatcher.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_flushEventListeners">flushEventListeners</a>()
+        
+                                            <p><p>Remove all of the event listeners for the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_getEventDispatcher">getEventDispatcher</a>()
+        
+                                            <p><p>Get the event dispatcher instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_setEventDispatcher">setEventDispatcher</a>(<a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher)
+        
+                                            <p><p>Set the event dispatcher instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_unsetEventDispatcher">unsetEventDispatcher</a>()
+        
+                                            <p><p>Unset the event dispatcher for models.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="HasEvents.html#method_withoutEvents">withoutEvents</a>(callable $callback)
+        
+                                            <p><p>Execute a callback without firing any model events for any model type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_observe">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L38">at line 38</a></div>
+        <code>        static            void
+    <strong>observe</strong>(object|array|string $classes)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register observers with the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|array|string</td>
+                <td>$classes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerObserver">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L55">at line 55</a></div>
+        <code>            protected        void
+    <strong>registerObserver</strong>(object|string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a single observer with the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object|string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getObservableEvents">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L95">at line 95</a></div>
+        <code>                    array
+    <strong>getObservableEvents</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the observable event names.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setObservableEvents">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L113">at line 113</a></div>
+        <code>                    $this
+    <strong>setObservableEvents</strong>(array $observables)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the observable event names.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$observables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addObservableEvents">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L126">at line 126</a></div>
+        <code>                    void
+    <strong>addObservableEvents</strong>(array|mixed $observables)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add an observable event name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$observables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeObservableEvents">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L139">at line 139</a></div>
+        <code>                    void
+    <strong>removeObservableEvents</strong>(array|mixed $observables)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove an observable event name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|mixed</td>
+                <td>$observables</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerModelEvent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L153">at line 153</a></div>
+        <code>        static    protected        void
+    <strong>registerModelEvent</strong>(string $event, <a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireModelEvent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L169">at line 169</a></div>
+        <code>            protected        mixed
+    <strong>fireModelEvent</strong>(string $event, bool $halt = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire the given event for the model.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$halt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireCustomModelEvent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L200">at line 200</a></div>
+        <code>            protected        mixed|null
+    <strong>fireCustomModelEvent</strong>(string $event, string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire a custom model event for the given event.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_filterModelEventResults">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L219">at line 219</a></div>
+        <code>            protected        mixed
+    <strong>filterModelEventResults</strong>(mixed $result)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter the model event results.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$result</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_retrieved">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L236">at line 236</a></div>
+        <code>        static            void
+    <strong>retrieved</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a retrieved model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saving">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L247">at line 247</a></div>
+        <code>        static            void
+    <strong>saving</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a saving model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saved">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L258">at line 258</a></div>
+        <code>        static            void
+    <strong>saved</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a saved model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updating">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L269">at line 269</a></div>
+        <code>        static            void
+    <strong>updating</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register an updating model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updated">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L280">at line 280</a></div>
+        <code>        static            void
+    <strong>updated</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register an updated model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_creating">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L291">at line 291</a></div>
+        <code>        static            void
+    <strong>creating</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a creating model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_created">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L302">at line 302</a></div>
+        <code>        static            void
+    <strong>created</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a created model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_replicating">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L313">at line 313</a></div>
+        <code>        static            void
+    <strong>replicating</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a replicating model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleting">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L324">at line 324</a></div>
+        <code>        static            void
+    <strong>deleting</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a deleting model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleted">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L335">at line 335</a></div>
+        <code>        static            void
+    <strong>deleted</strong>(<a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a deleted model event with the dispatcher.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Events/QueuedClosure.html"><abbr title="Illuminate\Events\QueuedClosure">QueuedClosure</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushEventListeners">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L345">at line 345</a></div>
+        <code>        static            void
+    <strong>flushEventListeners</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove all of the event listeners for the model.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEventDispatcher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L367">at line 367</a></div>
+        <code>        static            <a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a>
+    <strong>getEventDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the event dispatcher instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEventDispatcher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L378">at line 378</a></div>
+        <code>        static            void
+    <strong>setEventDispatcher</strong>(<a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a> $dispatcher)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the event dispatcher instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Contracts/Events/Dispatcher.html"><abbr title="Illuminate\Contracts\Events\Dispatcher">Dispatcher</abbr></a></td>
+                <td>$dispatcher</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetEventDispatcher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L388">at line 388</a></div>
+        <code>        static            void
+    <strong>unsetEventDispatcher</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset the event dispatcher for models.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutEvents">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Concerns/HasEvents.php#L399">at line 399</a></div>
+        <code>        static            mixed
+    <strong>withoutEvents</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a callback without firing any model events for any model type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Eloquent\Relations\Concerns\AsPivot | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../../fonts/doctum-font.css">
+        <script src="../../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../../doctum.js"></script>
+        <script async defer src="../../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Eloquent_Relations_Concerns_AsPivot" data-root-path="../../../../../" data-search-index-url="../../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="AsPivot.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../Eloquent.html">Eloquent</a></li><li class="backslash">\</li><li><a href="../../Relations.html">Relations</a></li><li class="backslash">\</li><li><a href="../Concerns.html">Concerns</a></li><li class="backslash">\</li><li>AsPivot</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>AsPivot    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>AsPivot</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_pivotParent">
+                                                                                <a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a>
+                                                                                
+                                    </td>
+                <td>$pivotParent</td>
+                <td class="last"><p>The parent model of the relationship.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_foreignKey">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$foreignKey</td>
+                <td class="last"><p>The name of the foreign key column.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_relatedKey">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$relatedKey</td>
+                <td class="last"><p>The name of the &quot;other key&quot; column.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_fromAttributes">fromAttributes</a>(<a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, array $attributes, string $table, bool $exists = false)
+        
+                                            <p><p>Create a new pivot model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_fromRawAttributes">fromRawAttributes</a>(<a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, array $attributes, string $table, bool $exists = false)
+        
+                                            <p><p>Create a new pivot model from raw values returned from a query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_setKeysForSelectQuery">setKeysForSelectQuery</a>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        
+                                            <p><p>Set the keys for a select query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_setKeysForSaveQuery">setKeysForSaveQuery</a>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        
+                                            <p><p>Set the keys for a save update query.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_delete">delete</a>()
+        
+                                            <p><p>Delete the pivot model record from the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getDeleteQuery">getDeleteQuery</a>()
+        
+                                            <p><p>Get the query builder for a delete operation on the pivot.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getTable">getTable</a>()
+        
+                                            <p><p>Get the table associated with the model.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getForeignKey">getForeignKey</a>()
+        
+                                            <p><p>Get the foreign key column name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getRelatedKey">getRelatedKey</a>()
+        
+                                            <p><p>Get the &quot;related key&quot; column name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getOtherKey">getOtherKey</a>()
+        
+                                            <p><p>Get the &quot;related key&quot; column name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_setPivotKeys">setPivotKeys</a>(string $foreignKey, string $relatedKey)
+        
+                                            <p><p>Set the key names for the pivot model instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_hasTimestampAttributes">hasTimestampAttributes</a>(array|null $attributes = null)
+        
+                                            <p><p>Determine if the pivot model or given attributes has timestamp attributes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getCreatedAtColumn">getCreatedAtColumn</a>()
+        
+                                            <p><p>Get the name of the &quot;created at&quot; column.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getUpdatedAtColumn">getUpdatedAtColumn</a>()
+        
+                                            <p><p>Get the name of the &quot;updated at&quot; column.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_getQueueableId">getQueueableId</a>()
+        
+                                            <p><p>Get the queueable identity for the entity.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_newQueryForRestoration">newQueryForRestoration</a>(int[]|string[]|string $ids)
+        
+                                            <p><p>Get a new query to restore one or more models by their queueable IDs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_newQueryForCollectionRestoration">newQueryForCollectionRestoration</a>(array $ids)
+        
+                                            <p><p>Get a new query to restore multiple models by their queueable IDs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="AsPivot.html#method_unsetRelations">unsetRelations</a>()
+        
+                                            <p><p>Unset all the loaded relations for the instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_fromAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L40">at line 40</a></div>
+        <code>        static            <a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a>
+    <strong>fromAttributes</strong>(<a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, array $attributes, string $table, bool $exists = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new pivot model instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromRawAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L73">at line 73</a></div>
+        <code>        static            <a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a>
+    <strong>fromRawAttributes</strong>(<a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a> $parent, array $attributes, string $table, bool $exists = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new pivot model from raw values returned from a query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Model.html"><abbr title="Illuminate\Database\Eloquent\Model">Model</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exists</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeysForSelectQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L92">at line 92</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>setKeysForSelectQuery</strong>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the keys for a select query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeysForSaveQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L113">at line 113</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>setKeysForSaveQuery</strong>(<a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the keys for a save update query.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L123">at line 123</a></div>
+        <code>                    int
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete the pivot model record from the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDeleteQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L147">at line 147</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>getDeleteQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the query builder for a delete operation on the pivot.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L160">at line 160</a></div>
+        <code>                    string
+    <strong>getTable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the table associated with the model.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getForeignKey">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L176">at line 176</a></div>
+        <code>                    string
+    <strong>getForeignKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the foreign key column name.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRelatedKey">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L186">at line 186</a></div>
+        <code>                    string
+    <strong>getRelatedKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the &quot;related key&quot; column name.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOtherKey">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L196">at line 196</a></div>
+        <code>                    string
+    <strong>getOtherKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the &quot;related key&quot; column name.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPivotKeys">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L208">at line 208</a></div>
+        <code>                    $this
+    <strong>setPivotKeys</strong>(string $foreignKey, string $relatedKey)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the key names for the pivot model instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$foreignKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$relatedKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasTimestampAttributes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L223">at line 223</a></div>
+        <code>                    bool
+    <strong>hasTimestampAttributes</strong>(array|null $attributes = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the pivot model or given attributes has timestamp attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreatedAtColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L233">at line 233</a></div>
+        <code>                    string
+    <strong>getCreatedAtColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the &quot;created at&quot; column.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpdatedAtColumn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L245">at line 245</a></div>
+        <code>                    string
+    <strong>getUpdatedAtColumn</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name of the &quot;updated at&quot; column.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getQueueableId">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L257">at line 257</a></div>
+        <code>                    mixed
+    <strong>getQueueableId</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the queueable identity for the entity.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newQueryForRestoration">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L276">at line 276</a></div>
+        <code>                    <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>newQueryForRestoration</strong>(int[]|string[]|string $ids)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new query to restore one or more models by their queueable IDs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int[]|string[]|string</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newQueryForCollectionRestoration">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L299">at line 299</a></div>
+        <code>            protected        <a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a>
+    <strong>newQueryForCollectionRestoration</strong>(array $ids)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a new query to restore multiple models by their queueable IDs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ids</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Builder.html"><abbr title="Illuminate\Database\Eloquent\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsetRelations">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.php#L326">at line 326</a></div>
+        <code>                    $this
+    <strong>unsetRelations</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset all the loaded relations for the instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

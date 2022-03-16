@@ -1,0 +1,3021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Http\Resources\Json\ResourceCollection | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../doctum.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Http_Resources_Json_ResourceCollection" data-root-path="../../../../" data-search-index-url="../../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ResourceCollection.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../../Http.html">Http</a></li><li class="backslash">\</li><li><a href="../../Resources.html">Resources</a></li><li class="backslash">\</li><li><a href="../Json.html">Json</a></li><li class="backslash">\</li><li>ResourceCollection</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResourceCollection    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResourceCollection</strong>        extends <a href="JsonResource.html"><abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a>        implements        <a target="_blank" rel="noopener" href="https://www.php.net/Countable">Countable</a>, <a target="_blank" rel="noopener" href="https://www.php.net/IteratorAggregate">IteratorAggregate</a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../CollectsResources.html"><abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../ConditionallyLoadsAttributes.html"><abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../DelegatesToResource.html"><abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Support/Traits/ForwardsCalls.html"><abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_resource">
+                                                                                mixed
+                                                                                
+                                    </td>
+                <td>$resource</td>
+                <td class="last"><p>The resource instance.</p></td>
+                <td><small>from&nbsp;<a href="JsonResource.html#property_resource">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_with">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$with</td>
+                <td class="last"><p>The additional data that should be added to the top-level resource array.</p></td>
+                <td><small>from&nbsp;<a href="JsonResource.html#property_with">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_additional">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$additional</td>
+                <td class="last"><p>The additional meta data that should be added to the resource response.</p></td>
+                <td><small>from&nbsp;<a href="JsonResource.html#property_additional">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wrap">
+                    static                                                            string|null
+                                                                                
+                                    </td>
+                <td>$wrap</td>
+                <td class="last"><p>The &quot;data&quot; wrapper that should be applied.</p></td>
+                <td><small>from&nbsp;<a href="JsonResource.html#property_wrap">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_collects">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$collects</td>
+                <td class="last"><p>The resource that this resource collects.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_collection">
+                                                                                <a href="../../../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$collection</td>
+                <td class="last"><p>The mapped collection instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_preserveAllQueryParameters">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$preserveAllQueryParameters</td>
+                <td class="last"><p>Indicates if all existing request query parameters should be added to pagination links.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queryParameters">
+                                        protected                                        array|null
+                                                                                
+                                    </td>
+                <td>$queryParameters</td>
+                <td class="last"><p>The query parameters that should be added to the pagination links.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_filter">filter</a>(array $data)
+        
+                                            <p><p>Filter the given data, removing any optional values.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_filter">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_mergeData">mergeData</a>(array $data, int $index, array $merge, bool $numericKeys)
+        
+                                            <p><p>Merge the given data in at the given index.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_mergeData">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_removeMissingValues">removeMissingValues</a>(array $data)
+        
+                                            <p><p>Remove the missing values from the filtered data.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_removeMissingValues">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_when">when</a>(bool $condition, mixed $value, mixed $default = null)
+        
+                                            <p><p>Retrieve a value based on a given condition.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_when">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_merge">merge</a>(mixed $value)
+        
+                                            <p><p>Merge a value into the array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_merge">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_mergeWhen">mergeWhen</a>(bool $condition, mixed $value)
+        
+                                            <p><p>Merge a value based on a given condition.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_mergeWhen">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_attributes">attributes</a>(array $attributes)
+        
+                                            <p><p>Merge the given attributes.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_attributes">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_whenAppended">whenAppended</a>(string $attribute, mixed $value = null, mixed $default = null)
+        
+                                            <p><p>Retrieve an accessor when it has been appended.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_whenAppended">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_whenLoaded">whenLoaded</a>(string $relationship, mixed $value = null, mixed $default = null)
+        
+                                            <p><p>Retrieve a relationship if it has been loaded.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_whenLoaded">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_whenPivotLoaded">whenPivotLoaded</a>(string $table, mixed $value, mixed $default = null)
+        
+                                            <p><p>Execute a callback if the given pivot table has been loaded.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_whenPivotLoaded">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_whenPivotLoadedAs">whenPivotLoadedAs</a>(string $accessor, string $table, mixed $value, mixed $default = null)
+        
+                                            <p><p>Execute a callback if the given pivot table with a custom accessor has been loaded.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_whenPivotLoadedAs">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_transform">transform</a>(mixed $value, callable $callback, mixed $default = null)
+        
+                                            <p><p>Transform the given value if it is present.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../ConditionallyLoadsAttributes.html#method_transform">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_forwardCallTo">forwardCallTo</a>(mixed $object, string $method, array $parameters)
+        
+                                            <p><p>Forward a method call to the given object.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_forwardCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_forwardDecoratedCallTo">forwardDecoratedCallTo</a>(mixed $object, string $method, array $parameters)
+        
+                                            <p><p>Forward a method call to the given object, returning $this if the forwarded call returned itself.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_forwardDecoratedCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_throwBadMethodCallException">throwBadMethodCallException</a>(string $method)
+        
+                                            <p><p>Throw a bad method call exception for the given method.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Support/Traits/ForwardsCalls.html#method_throwBadMethodCallException">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_getRouteKey">getRouteKey</a>()
+        
+                                            <p><p>Get the value of the resource's route key.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_getRouteKey">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_getRouteKeyName">getRouteKeyName</a>()
+        
+                                            <p><p>Get the route key for the resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_getRouteKeyName">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_resolveRouteBinding">resolveRouteBinding</a>(mixed $value, string|null $field = null)
+        
+                                            <p><p>Retrieve the model for a bound value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_resolveRouteBinding">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_resolveChildRouteBinding">resolveChildRouteBinding</a>(string $childType, mixed $value, string|null $field = null)
+        
+                                            <p><p>Retrieve the model for a bound value.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_resolveChildRouteBinding">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_offsetExists">offsetExists</a>(mixed $offset)
+        
+                                            <p><p>Determine if the given attribute exists.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_offsetExists">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_offsetGet">offsetGet</a>(mixed $offset)
+        
+                                            <p><p>Get the value for a given offset.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_offsetGet">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
+        
+                                            <p><p>Set the value for a given offset.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_offsetSet">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_offsetUnset">offsetUnset</a>(mixed $offset)
+        
+                                            <p><p>Unset the value for a given offset.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method_offsetUnset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method___isset">__isset</a>(string $key)
+        
+                                            <p><p>Determine if an attribute exists on the resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method___isset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method___unset">__unset</a>(string $key)
+        
+                                            <p><p>Unset an attribute on the resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method___unset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method___get">__get</a>(string $key)
+        
+                                            <p><p>Dynamically get properties from the underlying resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method___get">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method___call">__call</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically pass method calls to the underlying resource.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../DelegatesToResource.html#method___call">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method___construct">__construct</a>(mixed $resource)
+        
+                                            <p><p>Create a new resource instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="JsonResource.html"><abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_make">make</a>(mixed ...$parameters)
+        
+                                            <p><p>Create a new resource instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_make">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="AnonymousResourceCollection.html"><abbr title="Illuminate\Http\Resources\Json\AnonymousResourceCollection">AnonymousResourceCollection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_collection">collection</a>(mixed $resource)
+        
+                                            <p><p>Create a new anonymous resource collection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_collection">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_resolve">resolve</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null $request = null)
+        
+                                            <p><p>Resolve the resource to an array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_resolve">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|<a href="../../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/JsonSerializable">JsonSerializable</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_toArray">toArray</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p><p>Transform the resource into a JSON array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_toJson">toJson</a>(int $options = 0)
+        
+                                            <p><p>Convert the model instance to JSON.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_toJson">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_with">with</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p><p>Get any additional data that should be returned with the resource array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_with">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_additional">additional</a>(array $data)
+        
+                                            <p><p>Add additional meta data to the resource response.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_additional">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_jsonOptions">jsonOptions</a>()
+        
+                                            <p><p>Get the JSON serialization options that should be applied to the resource response.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../CollectsResources.html#method_jsonOptions">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_withResponse">withResponse</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request, <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a> $response)
+        
+                                            <p><p>Customize the response for a request.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_withResponse">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_wrap">wrap</a>(string $value)
+        
+                                            <p><p>Set the string that should wrap the outer-most resource array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_wrap">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_withoutWrapping">withoutWrapping</a>()
+        
+                                            <p><p>Disable wrapping of the outer-most resource array.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_withoutWrapping">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_response">response</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null $request = null)
+        
+                                            <p><p>Transform the resource into an HTTP response.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_response">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_toResponse">toResponse</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p><p>Create an HTTP response that represents the object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p><p>Prepare the resource for JSON serialization.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="JsonResource.html#method_jsonSerialize">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_collectResource">collectResource</a>(mixed $resource)
+        
+                                            <p><p>Map the given collection resource into its individual resources.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../CollectsResources.html#method_collectResource">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_collects">collects</a>()
+        
+                                            <p><p>Get the resource that this resource collects.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../CollectsResources.html#method_collects">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Traversable">Traversable</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_getIterator">getIterator</a>()
+        
+                                            <p><p>Get an iterator for the resource collection.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../CollectsResources.html#method_getIterator">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_preserveQuery">preserveQuery</a>()
+        
+                                            <p><p>Indicate that all current query parameters should be appended to pagination links.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_withQuery">withQuery</a>(array $query)
+        
+                                            <p><p>Specify the query string parameters that should be present on pagination links.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_count">count</a>()
+        
+                                            <p><p>Return the count of items in the resource collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceCollection.html#method_preparePaginatedResponse">preparePaginatedResponse</a>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        
+                                            <p><p>Create a paginate-aware HTTP response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_filter">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_filter">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L15">at line 15</a></div>
+        <code>            protected        array
+    <strong>filter</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter the given data, removing any optional values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeData">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_mergeData">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L52">at line 52</a></div>
+        <code>            protected        array
+    <strong>mergeData</strong>(array $data, int $index, array $merge, bool $numericKeys)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge the given data in at the given index.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$merge</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$numericKeys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeMissingValues">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_removeMissingValues">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L72">at line 72</a></div>
+        <code>            protected        array
+    <strong>removeMissingValues</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove the missing values from the filtered data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_when">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L102">at line 102</a></div>
+        <code>            protected        <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+    <strong>when</strong>(bool $condition, mixed $value, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a value based on a given condition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_merge">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_merge">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L117">at line 117</a></div>
+        <code>            protected        <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed
+    <strong>merge</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge a value into the array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeWhen">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_mergeWhen">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L129">at line 129</a></div>
+        <code>            protected        <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed
+    <strong>mergeWhen</strong>(bool $condition, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge a value based on a given condition.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$condition</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attributes">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_attributes">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L140">at line 140</a></div>
+        <code>            protected        <a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a>
+    <strong>attributes</strong>(array $attributes)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Merge the given attributes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$attributes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MergeValue.html"><abbr title="Illuminate\Http\Resources\MergeValue">MergeValue</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenAppended">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_whenAppended">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L155">at line 155</a></div>
+        <code>            protected        <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+    <strong>whenAppended</strong>(string $attribute, mixed $value = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve an accessor when it has been appended.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$attribute</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenLoaded">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_whenLoaded">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L172">at line 172</a></div>
+        <code>            protected        <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+    <strong>whenLoaded</strong>(string $relationship, mixed $value = null, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve a relationship if it has been loaded.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$relationship</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenPivotLoaded">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_whenPivotLoaded">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L201">at line 201</a></div>
+        <code>            protected        <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+    <strong>whenPivotLoaded</strong>(string $table, mixed $value, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a callback if the given pivot table has been loaded.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenPivotLoadedAs">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_whenPivotLoadedAs">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L215">at line 215</a></div>
+        <code>            protected        <a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed
+    <strong>whenPivotLoadedAs</strong>(string $accessor, string $table, mixed $value, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a callback if the given pivot table with a custom accessor has been loaded.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accessor</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../MissingValue.html"><abbr title="Illuminate\Http\Resources\MissingValue">MissingValue</abbr></a>|mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_transform">
+        <div class="location">in <a href="../ConditionallyLoadsAttributes.html#method_transform">
+<abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/ConditionallyLoadsAttributes.php#L237">at line 237</a></div>
+        <code>            protected        mixed
+    <strong>transform</strong>(mixed $value, callable $callback, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Transform the given value if it is present.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forwardCallTo">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_forwardCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L20">at line 20</a></div>
+        <code>            protected        mixed
+    <strong>forwardCallTo</strong>(mixed $object, string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Forward a method call to the given object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forwardDecoratedCallTo">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_forwardDecoratedCallTo">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L50">at line 50</a></div>
+        <code>            protected        mixed
+    <strong>forwardDecoratedCallTo</strong>(mixed $object, string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Forward a method call to the given object, returning $this if the forwarded call returned itself.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_throwBadMethodCallException">
+        <div class="location">in <a href="../../../Support/Traits/ForwardsCalls.html#method_throwBadMethodCallException">
+<abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/ForwardsCalls.php#L69">at line 69</a></div>
+        <code>        static    protected        void
+    <strong>throwBadMethodCallException</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Throw a bad method call exception for the given method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteKey">
+        <div class="location">in <a href="../DelegatesToResource.html#method_getRouteKey">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L17">at line 17</a></div>
+        <code>                    mixed
+    <strong>getRouteKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the value of the resource's route key.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRouteKeyName">
+        <div class="location">in <a href="../DelegatesToResource.html#method_getRouteKeyName">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L27">at line 27</a></div>
+        <code>                    string
+    <strong>getRouteKeyName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the route key for the resource.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveRouteBinding">
+        <div class="location">in <a href="../DelegatesToResource.html#method_resolveRouteBinding">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L41">at line 41</a></div>
+        <code>                    void
+    <strong>resolveRouteBinding</strong>(mixed $value, string|null $field = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve the model for a bound value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveChildRouteBinding">
+        <div class="location">in <a href="../DelegatesToResource.html#method_resolveChildRouteBinding">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L56">at line 56</a></div>
+        <code>                    void
+    <strong>resolveChildRouteBinding</strong>(string $childType, mixed $value, string|null $field = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Retrieve the model for a bound value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$childType</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">in <a href="../DelegatesToResource.html#method_offsetExists">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L67">at line 67</a></div>
+        <code>                    bool
+    <strong>offsetExists</strong>(mixed $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given attribute exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">in <a href="../DelegatesToResource.html#method_offsetGet">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L78">at line 78</a></div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(mixed $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the value for a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">in <a href="../DelegatesToResource.html#method_offsetSet">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L90">at line 90</a></div>
+        <code>                    void
+    <strong>offsetSet</strong>(mixed $offset, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the value for a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../DelegatesToResource.html#method_offsetUnset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L101">at line 101</a></div>
+        <code>                    void
+    <strong>offsetUnset</strong>(mixed $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset the value for a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../DelegatesToResource.html#method___isset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L112">at line 112</a></div>
+        <code>                    bool
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if an attribute exists on the resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___unset">
+        <div class="location">in <a href="../DelegatesToResource.html#method___unset">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L123">at line 123</a></div>
+        <code>                    void
+    <strong>__unset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset an attribute on the resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">in <a href="../DelegatesToResource.html#method___get">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L134">at line 134</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically get properties from the underlying resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../DelegatesToResource.html#method___call">
+<abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/DelegatesToResource.php#L146">at line 146</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically pass method calls to the underlying resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L49">at line 49</a></div>
+        <code>                    void
+    <strong>__construct</strong>(mixed $resource)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new resource instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location">in <a href="JsonResource.html#method_make">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L66">at line 66</a></div>
+        <code>        static            <a href="JsonResource.html"><abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a>
+    <strong>make</strong>(mixed ...$parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new resource instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>...$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="JsonResource.html"><abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collection">
+        <div class="location">in <a href="JsonResource.html#method_collection">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L77">at line 77</a></div>
+        <code>        static            <a href="AnonymousResourceCollection.html"><abbr title="Illuminate\Http\Resources\Json\AnonymousResourceCollection">AnonymousResourceCollection</abbr></a>
+    <strong>collection</strong>(mixed $resource)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new anonymous resource collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="AnonymousResourceCollection.html"><abbr title="Illuminate\Http\Resources\Json\AnonymousResourceCollection">AnonymousResourceCollection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolve">
+        <div class="location">in <a href="JsonResource.html#method_resolve">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L92">at line 92</a></div>
+        <code>                    array
+    <strong>resolve</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null $request = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the resource to an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L99">at line 99</a></div>
+        <code>                    array|<a href="../../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/JsonSerializable">JsonSerializable</a>
+    <strong>toArray</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Transform the resource into a JSON array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|<a href="../../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<a target="_blank" rel="noopener" href="https://www.php.net/JsonSerializable">JsonSerializable</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location">in <a href="JsonResource.html#method_toJson">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L132">at line 132</a></div>
+        <code>                    string
+    <strong>toJson</strong>(int $options = 0)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the model instance to JSON.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Database/Eloquent/JsonEncodingException.html"><abbr title="Illuminate\Database\Eloquent\JsonEncodingException">JsonEncodingException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_with">
+        <div class="location">in <a href="JsonResource.html#method_with">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L149">at line 149</a></div>
+        <code>                    array
+    <strong>with</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get any additional data that should be returned with the resource array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_additional">
+        <div class="location">in <a href="JsonResource.html#method_additional">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L160">at line 160</a></div>
+        <code>                    $this
+    <strong>additional</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add additional meta data to the resource response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonOptions">
+        <div class="location">in <a href="../CollectsResources.html#method_jsonOptions">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/CollectsResources.php#L72">at line 72</a></div>
+        <code>                    int
+    <strong>jsonOptions</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the JSON serialization options that should be applied to the resource response.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withResponse">
+        <div class="location">in <a href="JsonResource.html#method_withResponse">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L184">at line 184</a></div>
+        <code>                    void
+    <strong>withResponse</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request, <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a> $response)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Customize the response for a request.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location">in <a href="JsonResource.html#method_wrap">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L195">at line 195</a></div>
+        <code>        static            void
+    <strong>wrap</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the string that should wrap the outer-most resource array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withoutWrapping">
+        <div class="location">in <a href="JsonResource.html#method_withoutWrapping">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L205">at line 205</a></div>
+        <code>        static            void
+    <strong>withoutWrapping</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Disable wrapping of the outer-most resource array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_response">
+        <div class="location">in <a href="JsonResource.html#method_response">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L216">at line 216</a></div>
+        <code>                    <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a>
+    <strong>response</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null $request = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Transform the resource into an HTTP response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a>|null</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toResponse">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L110">at line 110</a></div>
+        <code>                    <abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr>
+    <strong>toResponse</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create an HTTP response that represents the object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Response">Response</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">in <a href="JsonResource.html#method_jsonSerialize">
+<abbr title="Illuminate\Http\Resources\Json\JsonResource">JsonResource</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/JsonResource.php#L239">at line 239</a></div>
+        <code>                    array
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prepare the resource for JSON serialization.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collectResource">
+        <div class="location">in <a href="../CollectsResources.html#method_collectResource">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/CollectsResources.php#L22">at line 22</a></div>
+        <code>            protected        mixed
+    <strong>collectResource</strong>(mixed $resource)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Map the given collection resource into its individual resources.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collects">
+        <div class="location">in <a href="../CollectsResources.html#method_collects">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/CollectsResources.php#L48">at line 48</a></div>
+        <code>            protected        string|null
+    <strong>collects</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the resource that this resource collects.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIterator">
+        <div class="location">in <a href="../CollectsResources.html#method_getIterator">
+<abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/CollectsResources.php#L90">at line 90</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Traversable">Traversable</a>
+    <strong>getIterator</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an iterator for the resource collection.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Traversable">Traversable</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preserveQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L61">at line 61</a></div>
+        <code>                    $this
+    <strong>preserveQuery</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that all current query parameters should be appended to pagination links.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withQuery">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L74">at line 74</a></div>
+        <code>                    $this
+    <strong>withQuery</strong>(array $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Specify the query string parameters that should be present on pagination links.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L88">at line 88</a></div>
+        <code>                    int
+    <strong>count</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the count of items in the resource collection.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_preparePaginatedResponse">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Http/Resources/Json/ResourceCollection.php#L125">at line 125</a></div>
+        <code>            protected        <a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a>
+    <strong>preparePaginatedResponse</strong>(<a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a paginate-aware HTTP response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Request.html"><abbr title="Illuminate\Http\Request">Request</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../JsonResponse.html"><abbr title="Illuminate\Http\JsonResponse">JsonResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

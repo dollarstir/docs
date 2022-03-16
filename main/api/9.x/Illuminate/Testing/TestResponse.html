@@ -1,0 +1,4826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Testing\TestResponse | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Testing_TestResponse" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="TestResponse.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Testing.html">Testing</a></li><li class="backslash">\</li><li>TestResponse</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>TestResponse    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>TestResponse</strong>        implements        <a target="_blank" rel="noopener" href="https://www.php.net/ArrayAccess">ArrayAccess</a>                    <i>mixin</i> <a href="../Http/Response.html"><abbr title="\Illuminate\Http\Response">Response</abbr></a>
+                (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Support/Traits/Tappable.html"><abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_macros">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$macros</td>
+                <td class="last"><p>The registered string macros.</p></td>
+                <td><small>from&nbsp;<a href="../Support/Traits/Macroable.html#property_macros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_baseResponse">
+                                                                                <a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a>
+                                                                                
+                                    </td>
+                <td>$baseResponse</td>
+                <td class="last"><p>The response to delegate to.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exceptions">
+                                        protected                                        <a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$exceptions</td>
+                <td class="last"><p>The collection of logged exceptions for the request.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_streamedContent">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$streamedContent</td>
+                <td class="last"><p>The streamed content of the response.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<a href="../Support/HigherOrderTapProxy.html"><abbr title="Illuminate\Support\HigherOrderTapProxy">HigherOrderTapProxy</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_tap">tap</a>(callable|null $callback = null)
+        
+                                            <p><p>Call the given Closure with this instance then return the instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Tappable.html#method_tap">
+<abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_macro">macro</a>(string $name, object|callable $macro)
+        
+                                            <p><p>Register a custom macro.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_mixin">mixin</a>(object $mixin, bool $replace = true)
+        
+                                            <p><p>Mix another object into the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_hasMacro">hasMacro</a>(string $name)
+        
+                                            <p><p>Checks if macro is registered.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_flushMacros">flushMacros</a>()
+        
+                                            <p><p>Flush the existing macros.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method___callStatic">__callStatic</a>(string $method, array $parameters)
+        
+                                            <p><p>Dynamically handle calls to the class.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../Support/Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method___call">__call</a>(string $method, array $args)
+        
+                                            <p><p>Handle dynamic calls into macros or pass missing methods to the base response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method___construct">__construct</a>(<a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a> $response)
+        
+                                            <p><p>Create a new test response instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="TestResponse.html"><abbr title="Illuminate\Testing\TestResponse">TestResponse</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_fromBaseResponse">fromBaseResponse</a>(<a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a> $response)
+        
+                                            <p><p>Create a new TestResponse from another response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSuccessful">assertSuccessful</a>()
+        
+                                            <p><p>Assert that the response has a successful status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertOk">assertOk</a>()
+        
+                                            <p><p>Assert that the response has a 200 status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertCreated">assertCreated</a>()
+        
+                                            <p><p>Assert that the response has a 201 status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertNoContent">assertNoContent</a>(int $status = 204)
+        
+                                            <p><p>Assert that the response has the given status code and no content.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertNotFound">assertNotFound</a>()
+        
+                                            <p><p>Assert that the response has a not found status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertForbidden">assertForbidden</a>()
+        
+                                            <p><p>Assert that the response has a forbidden status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertUnauthorized">assertUnauthorized</a>()
+        
+                                            <p><p>Assert that the response has an unauthorized status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertUnprocessable">assertUnprocessable</a>()
+        
+                                            <p><p>Assert that the response has a 422 status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertStatus">assertStatus</a>(int $status)
+        
+                                            <p><p>Assert that the response has the given status code.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_statusMessageWithDetails">statusMessageWithDetails</a>(string|int $expected, string|int $actual)
+        
+                                            <p><p>Get an assertion message for a status assertion containing extra details when available.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_statusMessageWithException">statusMessageWithException</a>(string|int $expected, string|int $actual, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        
+                                            <p><p>Get an assertion message for a status assertion that has an unexpected exception.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_statusMessageWithErrors">statusMessageWithErrors</a>(string|int $expected, string|int $actual, array $errors)
+        
+                                            <p><p>Get an assertion message for a status assertion that contained errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertRedirect">assertRedirect</a>(string|null $uri = null)
+        
+                                            <p><p>Assert whether the response is redirecting to a given URI.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertRedirectContains">assertRedirectContains</a>(string $uri)
+        
+                                            <p><p>Assert whether the response is redirecting to a URI that contains the given URI.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertRedirectToSignedRoute">assertRedirectToSignedRoute</a>(string|null $name = null, mixed $parameters = [])
+        
+                                            <p><p>Assert whether the response is redirecting to a given signed route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertHeader">assertHeader</a>(string $headerName, mixed $value = null)
+        
+                                            <p><p>Asserts that the response contains the given header and equals the optional value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertHeaderMissing">assertHeaderMissing</a>(string $headerName)
+        
+                                            <p><p>Asserts that the response does not contain the given header.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertLocation">assertLocation</a>(string $uri)
+        
+                                            <p><p>Assert that the current location header matches the given URI.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertDownload">assertDownload</a>(string|null $filename = null)
+        
+                                            <p><p>Assert that the response offers a file download.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertPlainCookie">assertPlainCookie</a>(string $cookieName, mixed $value = null)
+        
+                                            <p><p>Asserts that the response contains the given cookie and equals the optional value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertCookie">assertCookie</a>(string $cookieName, mixed $value = null, bool $encrypted = true, bool $unserialize = false)
+        
+                                            <p><p>Asserts that the response contains the given cookie and equals the optional value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertCookieExpired">assertCookieExpired</a>(string $cookieName)
+        
+                                            <p><p>Asserts that the response contains the given cookie and is expired.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertCookieNotExpired">assertCookieNotExpired</a>(string $cookieName)
+        
+                                            <p><p>Asserts that the response contains the given cookie and is not expired.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertCookieMissing">assertCookieMissing</a>(string $cookieName)
+        
+                                            <p><p>Asserts that the response does not contain the given cookie.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_getCookie">getCookie</a>(string $cookieName, bool $decrypt = true, bool $unserialize = false)
+        
+                                            <p><p>Get the given cookie from the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSee">assertSee</a>(string|array $value, bool $escape = true)
+        
+                                            <p><p>Assert that the given string or array of strings are contained within the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSeeInOrder">assertSeeInOrder</a>(array $values, bool $escape = true)
+        
+                                            <p><p>Assert that the given strings are contained in order within the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSeeText">assertSeeText</a>(string|array $value, bool $escape = true)
+        
+                                            <p><p>Assert that the given string or array of strings are contained within the response text.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSeeTextInOrder">assertSeeTextInOrder</a>(array $values, bool $escape = true)
+        
+                                            <p><p>Assert that the given strings are contained in order within the response text.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertDontSee">assertDontSee</a>(string|array $value, bool $escape = true)
+        
+                                            <p><p>Assert that the given string or array of strings are not contained within the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertDontSeeText">assertDontSeeText</a>(string|array $value, bool $escape = true)
+        
+                                            <p><p>Assert that the given string or array of strings are not contained within the response text.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJson">assertJson</a>(array|callable $value, bool $strict = false)
+        
+                                            <p><p>Assert that the response is a superset of the given JSON.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonPath">assertJsonPath</a>(string $path, mixed $expect)
+        
+                                            <p><p>Assert that the expected value and type exists at the given path in the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertExactJson">assertExactJson</a>(array $data)
+        
+                                            <p><p>Assert that the response has the exact given JSON.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSimilarJson">assertSimilarJson</a>(array $data)
+        
+                                            <p><p>Assert that the response has the similar JSON as given.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonFragment">assertJsonFragment</a>(array $data)
+        
+                                            <p><p>Assert that the response contains the given JSON fragment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonMissing">assertJsonMissing</a>(array $data, bool $exact = false)
+        
+                                            <p><p>Assert that the response does not contain the given JSON fragment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonMissingExact">assertJsonMissingExact</a>(array $data)
+        
+                                            <p><p>Assert that the response does not contain the exact JSON fragment.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonStructure">assertJsonStructure</a>(array $structure = null, array|null $responseData = null)
+        
+                                            <p><p>Assert that the response has a given JSON structure.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonCount">assertJsonCount</a>(int $count, string|null $key = null)
+        
+                                            <p><p>Assert that the response JSON has the expected count of items at the given key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonValidationErrors">assertJsonValidationErrors</a>(string|array $errors, string $responseKey = &#039;errors&#039;)
+        
+                                            <p><p>Assert that the response has the given JSON validation errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonValidationErrorFor">assertJsonValidationErrorFor</a>(string $key, string $responseKey = &#039;errors&#039;)
+        
+                                            <p><p>Assert the response has any JSON validation errors for the given key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertJsonMissingValidationErrors">assertJsonMissingValidationErrors</a>(string|array|null $keys = null, string $responseKey = &#039;errors&#039;)
+        
+                                            <p><p>Assert that the response has no JSON validation errors for the given keys.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="AssertableJsonString.html"><abbr title="Illuminate\Testing\AssertableJsonString">AssertableJsonString</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_decodeResponseJson">decodeResponseJson</a>()
+        
+                                            <p><p>Validate and return the decoded response JSON.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_json">json</a>(string|null $key = null)
+        
+                                            <p><p>Validate and return the decoded response JSON.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertViewIs">assertViewIs</a>(string $value)
+        
+                                            <p><p>Assert that the response view equals the given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertViewHas">assertViewHas</a>(string|array $key, mixed $value = null)
+        
+                                            <p><p>Assert that the response view has a given piece of bound data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertViewHasAll">assertViewHasAll</a>(array $bindings)
+        
+                                            <p><p>Assert that the response view has a given list of bound data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_viewData">viewData</a>(string $key)
+        
+                                            <p><p>Get a piece of data from the original view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertViewMissing">assertViewMissing</a>(string $key)
+        
+                                            <p><p>Assert that the response view is missing a piece of bound data.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_ensureResponseHasView">ensureResponseHasView</a>()
+        
+                                            <p><p>Ensure that the response has a view as its original content.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_responseHasView">responseHasView</a>()
+        
+                                            <p><p>Determine if the original response is a view.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertValid">assertValid</a>(string|array|null $keys = null, string $errorBag = &#039;default&#039;, string $responseKey = &#039;errors&#039;)
+        
+                                            <p><p>Assert that the given keys do not have validation errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertInvalid">assertInvalid</a>(string|array|null $errors = null, string $errorBag = &#039;default&#039;, string $responseKey = &#039;errors&#039;)
+        
+                                            <p><p>Assert that the response has the given validation errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHas">assertSessionHas</a>(string|array $key, mixed $value = null)
+        
+                                            <p><p>Assert that the session has a given value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHasAll">assertSessionHasAll</a>(array $bindings)
+        
+                                            <p><p>Assert that the session has a given list of values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHasInput">assertSessionHasInput</a>(string|array $key, mixed $value = null)
+        
+                                            <p><p>Assert that the session has a given value in the flashed input array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHasErrors">assertSessionHasErrors</a>(string|array $keys = [], mixed $format = null, string $errorBag = &#039;default&#039;)
+        
+                                            <p><p>Assert that the session has the given errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionDoesntHaveErrors">assertSessionDoesntHaveErrors</a>(string|array $keys = [], string|null $format = null, string $errorBag = &#039;default&#039;)
+        
+                                            <p><p>Assert that the session is missing the given errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHasNoErrors">assertSessionHasNoErrors</a>()
+        
+                                            <p><p>Assert that the session has no errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionHasErrorsIn">assertSessionHasErrorsIn</a>(string $errorBag, string|array $keys = [], mixed $format = null)
+        
+                                            <p><p>Assert that the session has the given errors.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_assertSessionMissing">assertSessionMissing</a>(string|array $key)
+        
+                                            <p><p>Assert that the session does not have a given key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_session">session</a>()
+        
+                                            <p><p>Get the current session store.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Testing\never">never</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_dd">dd</a>()
+        
+                                            <p><p>Dump the content from the response and end the script.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Testing\never">never</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_ddHeaders">ddHeaders</a>()
+        
+                                            <p><p>Dump the headers from the response and end the script.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Testing\never">never</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_ddSession">ddSession</a>(string|array $keys = [])
+        
+                                            <p><p>Dump the session from the response and end the script.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_dump">dump</a>(string|null $key = null)
+        
+                                            <p><p>Dump the content from the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_dumpHeaders">dumpHeaders</a>()
+        
+                                            <p><p>Dump the headers from the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_dumpSession">dumpSession</a>(string|array $keys = [])
+        
+                                            <p><p>Dump the session from the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_streamedContent">streamedContent</a>()
+        
+                                            <p><p>Get the streamed content from the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_withExceptions">withExceptions</a>(<a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $exceptions)
+        
+                                            <p><p>Set the previous exceptions on the response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method___get">__get</a>(string $key)
+        
+                                            <p><p>Dynamically access base response parameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method___isset">__isset</a>(string $key)
+        
+                                            <p><p>Proxy isset() checks to the underlying base response.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_offsetExists">offsetExists</a>(string $offset)
+        
+                                            <p><p>Determine if the given offset exists.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_offsetGet">offsetGet</a>(string $offset)
+        
+                                            <p><p>Get the value for a given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_offsetSet">offsetSet</a>(string $offset, mixed $value)
+        
+                                            <p><p>Set the value at the given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="TestResponse.html#method_offsetUnset">offsetUnset</a>(string $offset)
+        
+                                            <p><p>Unset the value at the given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_tap">
+        <div class="location">in <a href="../Support/Traits/Tappable.html#method_tap">
+<abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Support/Traits/Tappable.php#L13">at line 13</a></div>
+        <code>                    $this|<a href="../Support/HigherOrderTapProxy.html"><abbr title="Illuminate\Support\HigherOrderTapProxy">HigherOrderTapProxy</abbr></a>
+    <strong>tap</strong>(callable|null $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the given Closure with this instance then return the instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|null</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<a href="../Support/HigherOrderTapProxy.html"><abbr title="Illuminate\Support\HigherOrderTapProxy">HigherOrderTapProxy</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_macro">
+        <div class="location">in <a href="../Support/Traits/Macroable.html#method_macro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L26">at line 26</a></div>
+        <code>        static            void
+    <strong>macro</strong>(string $name, object|callable $macro)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a custom macro.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>object|callable</td>
+                <td>$macro</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mixin">
+        <div class="location">in <a href="../Support/Traits/Macroable.html#method_mixin">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L40">at line 40</a></div>
+        <code>        static            void
+    <strong>mixin</strong>(object $mixin, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Mix another object into the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>object</td>
+                <td>$mixin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionException">ReflectionException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMacro">
+        <div class="location">in <a href="../Support/Traits/Macroable.html#method_hasMacro">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L60">at line 60</a></div>
+        <code>        static            bool
+    <strong>hasMacro</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Checks if macro is registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flushMacros">
+        <div class="location">in <a href="../Support/Traits/Macroable.html#method_flushMacros">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L70">at line 70</a></div>
+        <code>        static            void
+    <strong>flushMacros</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the existing macros.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___callStatic">
+        <div class="location">in <a href="../Support/Traits/Macroable.html#method___callStatic">
+<abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Macroable/Traits/Macroable.php#L84">at line 84</a></div>
+        <code>        static            mixed
+    <strong>__callStatic</strong>(string $method, array $parameters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically handle calls to the class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1623">at line 1623</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $method, array $args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handle dynamic calls into macros or pass missing methods to the base response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L61">at line 61</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a> $response)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new test response instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fromBaseResponse">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L73">at line 73</a></div>
+        <code>        static            <a href="TestResponse.html"><abbr title="Illuminate\Testing\TestResponse">TestResponse</abbr></a>
+    <strong>fromBaseResponse</strong>(<a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a> $response)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new TestResponse from another response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Http/Response.html"><abbr title="Illuminate\Http\Response">Response</abbr></a></td>
+                <td>$response</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="TestResponse.html"><abbr title="Illuminate\Testing\TestResponse">TestResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSuccessful">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L83">at line 83</a></div>
+        <code>                    $this
+    <strong>assertSuccessful</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a successful status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertOk">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L98">at line 98</a></div>
+        <code>                    $this
+    <strong>assertOk</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a 200 status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertCreated">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L108">at line 108</a></div>
+        <code>                    $this
+    <strong>assertCreated</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a 201 status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNoContent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L119">at line 119</a></div>
+        <code>                    $this
+    <strong>assertNoContent</strong>(int $status = 204)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the given status code and no content.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertNotFound">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L133">at line 133</a></div>
+        <code>                    $this
+    <strong>assertNotFound</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a not found status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertForbidden">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L143">at line 143</a></div>
+        <code>                    $this
+    <strong>assertForbidden</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a forbidden status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertUnauthorized">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L153">at line 153</a></div>
+        <code>                    $this
+    <strong>assertUnauthorized</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has an unauthorized status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertUnprocessable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L163">at line 163</a></div>
+        <code>                    $this
+    <strong>assertUnprocessable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a 422 status code.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertStatus">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L174">at line 174</a></div>
+        <code>                    $this
+    <strong>assertStatus</strong>(int $status)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the given status code.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$status</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessageWithDetails">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L190">at line 190</a></div>
+        <code>            protected        string
+    <strong>statusMessageWithDetails</strong>(string|int $expected, string|int $actual)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an assertion message for a status assertion containing extra details when available.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$expected</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$actual</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessageWithException">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L225">at line 225</a></div>
+        <code>            protected        string
+    <strong>statusMessageWithException</strong>(string|int $expected, string|int $actual, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $exception)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an assertion message for a status assertion that has an unexpected exception.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$expected</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$actual</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$exception</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_statusMessageWithErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L253">at line 253</a></div>
+        <code>            protected        string
+    <strong>statusMessageWithErrors</strong>(string|int $expected, string|int $actual, array $errors)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an assertion message for a status assertion that contained errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$expected</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|int</td>
+                <td>$actual</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$errors</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertRedirect">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L275">at line 275</a></div>
+        <code>                    $this
+    <strong>assertRedirect</strong>(string|null $uri = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert whether the response is redirecting to a given URI.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertRedirectContains">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L295">at line 295</a></div>
+        <code>                    $this
+    <strong>assertRedirectContains</strong>(string $uri)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert whether the response is redirecting to a URI that contains the given URI.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertRedirectToSignedRoute">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L316">at line 316</a></div>
+        <code>                    $this
+    <strong>assertRedirectToSignedRoute</strong>(string|null $name = null, mixed $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert whether the response is redirecting to a given signed route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertHeader">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L354">at line 354</a></div>
+        <code>                    $this
+    <strong>assertHeader</strong>(string $headerName, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response contains the given header and equals the optional value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$headerName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertHeaderMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L378">at line 378</a></div>
+        <code>                    $this
+    <strong>assertHeaderMissing</strong>(string $headerName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response does not contain the given header.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$headerName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertLocation">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L393">at line 393</a></div>
+        <code>                    $this
+    <strong>assertLocation</strong>(string $uri)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the current location header matches the given URI.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDownload">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L408">at line 408</a></div>
+        <code>                    $this
+    <strong>assertDownload</strong>(string|null $filename = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response offers a file download.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$filename</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertPlainCookie">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L457">at line 457</a></div>
+        <code>                    $this
+    <strong>assertPlainCookie</strong>(string $cookieName, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response contains the given cookie and equals the optional value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertCookie">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L473">at line 473</a></div>
+        <code>                    $this
+    <strong>assertCookie</strong>(string $cookieName, mixed $value = null, bool $encrypted = true, bool $unserialize = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response contains the given cookie and equals the optional value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$encrypted</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unserialize</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertCookieExpired">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L500">at line 500</a></div>
+        <code>                    $this
+    <strong>assertCookieExpired</strong>(string $cookieName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response contains the given cookie and is expired.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertCookieNotExpired">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L523">at line 523</a></div>
+        <code>                    $this
+    <strong>assertCookieNotExpired</strong>(string $cookieName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response contains the given cookie and is not expired.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertCookieMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L546">at line 546</a></div>
+        <code>                    $this
+    <strong>assertCookieMissing</strong>(string $cookieName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the response does not contain the given cookie.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCookie">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L564">at line 564</a></div>
+        <code>                    <abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>|null
+    <strong>getCookie</strong>(string $cookieName, bool $decrypt = true, bool $unserialize = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the given cookie from the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cookieName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$decrypt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unserialize</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Symfony\Component\HttpFoundation\Cookie">Cookie</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSee">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L598">at line 598</a></div>
+        <code>                    $this
+    <strong>assertSee</strong>(string|array $value, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given string or array of strings are contained within the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSeeInOrder">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L618">at line 618</a></div>
+        <code>                    $this
+    <strong>assertSeeInOrder</strong>(array $values, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given strings are contained in order within the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSeeText">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L634">at line 634</a></div>
+        <code>                    $this
+    <strong>assertSeeText</strong>(string|array $value, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given string or array of strings are contained within the response text.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSeeTextInOrder">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L656">at line 656</a></div>
+        <code>                    $this
+    <strong>assertSeeTextInOrder</strong>(array $values, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given strings are contained in order within the response text.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDontSee">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L672">at line 672</a></div>
+        <code>                    $this
+    <strong>assertDontSee</strong>(string|array $value, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given string or array of strings are not contained within the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertDontSeeText">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L692">at line 692</a></div>
+        <code>                    $this
+    <strong>assertDontSeeText</strong>(string|array $value, bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given string or array of strings are not contained within the response text.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L714">at line 714</a></div>
+        <code>                    $this
+    <strong>assertJson</strong>(array|callable $value, bool $strict = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response is a superset of the given JSON.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|callable</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L740">at line 740</a></div>
+        <code>                    $this
+    <strong>assertJsonPath</strong>(string $path, mixed $expect)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the expected value and type exists at the given path in the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$expect</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertExactJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L753">at line 753</a></div>
+        <code>                    $this
+    <strong>assertExactJson</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the exact given JSON.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSimilarJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L766">at line 766</a></div>
+        <code>                    $this
+    <strong>assertSimilarJson</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the similar JSON as given.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonFragment">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L779">at line 779</a></div>
+        <code>                    $this
+    <strong>assertJsonFragment</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response contains the given JSON fragment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L793">at line 793</a></div>
+        <code>                    $this
+    <strong>assertJsonMissing</strong>(array $data, bool $exact = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response does not contain the given JSON fragment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$exact</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonMissingExact">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L806">at line 806</a></div>
+        <code>                    $this
+    <strong>assertJsonMissingExact</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response does not contain the exact JSON fragment.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonStructure">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L820">at line 820</a></div>
+        <code>                    $this
+    <strong>assertJsonStructure</strong>(array $structure = null, array|null $responseData = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has a given JSON structure.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$structure</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$responseData</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonCount">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L834">at line 834</a></div>
+        <code>                    $this
+    <strong>assertJsonCount</strong>(int $count, string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response JSON has the expected count of items at the given key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonValidationErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L848">at line 848</a></div>
+        <code>                    $this
+    <strong>assertJsonValidationErrors</strong>(string|array $errors, string $responseKey = &#039;errors&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the given JSON validation errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$errors</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonValidationErrorFor">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L899">at line 899</a></div>
+        <code>                    $this
+    <strong>assertJsonValidationErrorFor</strong>(string $key, string $responseKey = &#039;errors&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert the response has any JSON validation errors for the given key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertJsonMissingValidationErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L924">at line 924</a></div>
+        <code>                    $this
+    <strong>assertJsonMissingValidationErrors</strong>(string|array|null $keys = null, string $responseKey = &#039;errors&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has no JSON validation errors for the given keys.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeResponseJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L966">at line 966</a></div>
+        <code>                    <a href="AssertableJsonString.html"><abbr title="Illuminate\Testing\AssertableJsonString">AssertableJsonString</abbr></a>
+    <strong>decodeResponseJson</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate and return the decoded response JSON.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="AssertableJsonString.html"><abbr title="Illuminate\Testing\AssertableJsonString">AssertableJsonString</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_json">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L989">at line 989</a></div>
+        <code>                    mixed
+    <strong>json</strong>(string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Validate and return the decoded response JSON.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertViewIs">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1000">at line 1000</a></div>
+        <code>                    $this
+    <strong>assertViewIs</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response view equals the given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertViewHas">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1016">at line 1016</a></div>
+        <code>                    $this
+    <strong>assertViewHas</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response view has a given piece of bound data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertViewHasAll">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1043">at line 1043</a></div>
+        <code>                    $this
+    <strong>assertViewHasAll</strong>(array $bindings)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response view has a given list of bound data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_viewData">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1062">at line 1062</a></div>
+        <code>                    mixed
+    <strong>viewData</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a piece of data from the original view.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertViewMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1075">at line 1075</a></div>
+        <code>                    $this
+    <strong>assertViewMissing</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response view is missing a piece of bound data.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ensureResponseHasView">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1089">at line 1089</a></div>
+        <code>            protected        $this
+    <strong>ensureResponseHasView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ensure that the response has a view as its original content.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_responseHasView">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1103">at line 1103</a></div>
+        <code>            protected        bool
+    <strong>responseHasView</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the original response is a view.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertValid">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1116">at line 1116</a></div>
+        <code>                    $this
+    <strong>assertValid</strong>(string|array|null $keys = null, string $errorBag = &#039;default&#039;, string $responseKey = &#039;errors&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the given keys do not have validation errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errorBag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertInvalid">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1159">at line 1159</a></div>
+        <code>                    $this
+    <strong>assertInvalid</strong>(string|array|null $errors = null, string $errorBag = &#039;default&#039;, string $responseKey = &#039;errors&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the response has the given validation errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$errors</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errorBag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$responseKey</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHas">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1212">at line 1212</a></div>
+        <code>                    $this
+    <strong>assertSessionHas</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has a given value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHasAll">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1238">at line 1238</a></div>
+        <code>                    $this
+    <strong>assertSessionHasAll</strong>(array $bindings)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has a given list of values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bindings</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHasInput">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1258">at line 1258</a></div>
+        <code>                    $this
+    <strong>assertSessionHasInput</strong>(string|array $key, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has a given value in the flashed input array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHasErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1294">at line 1294</a></div>
+        <code>                    $this
+    <strong>assertSessionHasErrors</strong>(string|array $keys = [], mixed $format = null, string $errorBag = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has the given errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errorBag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionDoesntHaveErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1321">at line 1321</a></div>
+        <code>                    $this
+    <strong>assertSessionDoesntHaveErrors</strong>(string|array $keys = [], string|null $format = null, string $errorBag = &#039;default&#039;)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session is missing the given errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$errorBag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHasNoErrors">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1353">at line 1353</a></div>
+        <code>                    $this
+    <strong>assertSessionHasNoErrors</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has no errors.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionHasErrorsIn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1376">at line 1376</a></div>
+        <code>                    $this
+    <strong>assertSessionHasErrorsIn</strong>(string $errorBag, string|array $keys = [], mixed $format = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session has the given errors.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$errorBag</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_assertSessionMissing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1387">at line 1387</a></div>
+        <code>                    $this
+    <strong>assertSessionMissing</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assert that the session does not have a given key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_session">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1408">at line 1408</a></div>
+        <code>            protected        <a href="../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a>
+    <strong>session</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the current session store.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Session/Store.html"><abbr title="Illuminate\Session\Store">Store</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dd">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1418">at line 1418</a></div>
+        <code>                    <abbr title="Illuminate\Testing\never">never</abbr>
+    <strong>dd</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the content from the response and end the script.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Testing\never">never</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ddHeaders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1430">at line 1430</a></div>
+        <code>                    <abbr title="Illuminate\Testing\never">never</abbr>
+    <strong>ddHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the headers from the response and end the script.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Testing\never">never</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ddSession">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1443">at line 1443</a></div>
+        <code>                    <abbr title="Illuminate\Testing\never">never</abbr>
+    <strong>ddSession</strong>(string|array $keys = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the session from the response and end the script.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Testing\never">never</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dump">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1456">at line 1456</a></div>
+        <code>                    $this
+    <strong>dump</strong>(string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the content from the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dumpHeaders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1480">at line 1480</a></div>
+        <code>                    $this
+    <strong>dumpHeaders</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the headers from the response.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dumpSession">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1493">at line 1493</a></div>
+        <code>                    $this
+    <strong>dumpSession</strong>(string|array $keys = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the session from the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$keys</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_streamedContent">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1511">at line 1511</a></div>
+        <code>                    string
+    <strong>streamedContent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the streamed content from the response.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withExceptions">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1534">at line 1534</a></div>
+        <code>                    $this
+    <strong>withExceptions</strong>(<a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a> $exceptions)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the previous exceptions on the response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+                <td>$exceptions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1547">at line 1547</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically access base response parameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1558">at line 1558</a></div>
+        <code>                    mixed
+    <strong>__isset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Proxy isset() checks to the underlying base response.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1569">at line 1569</a></div>
+        <code>                    bool
+    <strong>offsetExists</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given offset exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1582">at line 1582</a></div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the value for a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1598">at line 1598</a></div>
+        <code>                    void
+    <strong>offsetSet</strong>(string $offset, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the value at the given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/TestResponse.php#L1611">at line 1611</a></div>
+        <code>                    void
+    <strong>offsetUnset</strong>(string $offset)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset the value at the given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$offset</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

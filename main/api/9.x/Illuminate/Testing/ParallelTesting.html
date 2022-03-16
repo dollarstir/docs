@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Testing\ParallelTesting | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Testing_ParallelTesting" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ParallelTesting.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Testing.html">Testing</a></li><li class="backslash">\</li><li>ParallelTesting</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ParallelTesting    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ParallelTesting</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_container">
+                                        protected                                        <a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>
+                                                                                
+                                    </td>
+                <td>$container</td>
+                <td class="last"><p>The container instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_optionsResolver">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                                                                                
+                                    </td>
+                <td>$optionsResolver</td>
+                <td class="last"><p>The options resolver callback.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tokenResolver">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null
+                                                                                
+                                    </td>
+                <td>$tokenResolver</td>
+                <td class="last"><p>The token resolver callback.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_setUpProcessCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$setUpProcessCallbacks</td>
+                <td class="last"><p>All of the registered &quot;setUp&quot; process callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_setUpTestCaseCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$setUpTestCaseCallbacks</td>
+                <td class="last"><p>All of the registered &quot;setUp&quot; test case callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_setUpTestDatabaseCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$setUpTestDatabaseCallbacks</td>
+                <td class="last"><p>All of the registered &quot;setUp&quot; test database callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tearDownProcessCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$tearDownProcessCallbacks</td>
+                <td class="last"><p>All of the registered &quot;tearDown&quot; process callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tearDownTestCaseCallbacks">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$tearDownTestCaseCallbacks</td>
+                <td class="last"><p>All of the registered &quot;tearDown&quot; test case callbacks.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method___construct">__construct</a>(<a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        
+                                            <p><p>Create a new parallel testing instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_resolveOptionsUsing">resolveOptionsUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $resolver)
+        
+                                            <p><p>Set a callback that should be used when resolving options.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_resolveTokenUsing">resolveTokenUsing</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $resolver)
+        
+                                            <p><p>Set a callback that should be used when resolving the unique process token.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_setUpProcess">setUpProcess</a>(callable $callback)
+        
+                                            <p><p>Register a &quot;setUp&quot; process callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_setUpTestCase">setUpTestCase</a>(callable $callback)
+        
+                                            <p><p>Register a &quot;setUp&quot; test case callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_setUpTestDatabase">setUpTestDatabase</a>(callable $callback)
+        
+                                            <p><p>Register a &quot;setUp&quot; test database callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_tearDownProcess">tearDownProcess</a>(callable $callback)
+        
+                                            <p><p>Register a &quot;tearDown&quot; process callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_tearDownTestCase">tearDownTestCase</a>(callable $callback)
+        
+                                            <p><p>Register a &quot;tearDown&quot; test case callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_callSetUpProcessCallbacks">callSetUpProcessCallbacks</a>()
+        
+                                            <p><p>Call all of the &quot;setUp&quot; process callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_callSetUpTestCaseCallbacks">callSetUpTestCaseCallbacks</a>(<a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a> $testCase)
+        
+                                            <p><p>Call all of the &quot;setUp&quot; test case callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_callSetUpTestDatabaseCallbacks">callSetUpTestDatabaseCallbacks</a>(string $database)
+        
+                                            <p><p>Call all of the &quot;setUp&quot; test database callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_callTearDownProcessCallbacks">callTearDownProcessCallbacks</a>()
+        
+                                            <p><p>Call all of the &quot;tearDown&quot; process callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_callTearDownTestCaseCallbacks">callTearDownTestCaseCallbacks</a>(<a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a> $testCase)
+        
+                                            <p><p>Call all of the &quot;tearDown&quot; test case callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_option">option</a>(string $option)
+        
+                                            <p><p>Get a parallel testing option.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|false
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_token">token</a>()
+        
+                                            <p><p>Gets a unique test token.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_whenRunningInParallel">whenRunningInParallel</a>(callable $callback)
+        
+                                            <p><p>Apply the callback if tests are running in parallel.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="ParallelTesting.html#method_inParallel">inParallel</a>()
+        
+                                            <p><p>Indicates if the current tests are been run in parallel.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L72">at line 72</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new parallel testing instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveOptionsUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L83">at line 83</a></div>
+        <code>                    void
+    <strong>resolveOptionsUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $resolver)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a callback that should be used when resolving options.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveTokenUsing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L94">at line 94</a></div>
+        <code>                    void
+    <strong>resolveTokenUsing</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null $resolver)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set a callback that should be used when resolving the unique process token.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|null</td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpProcess">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L105">at line 105</a></div>
+        <code>                    void
+    <strong>setUpProcess</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;setUp&quot; process callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpTestCase">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L116">at line 116</a></div>
+        <code>                    void
+    <strong>setUpTestCase</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;setUp&quot; test case callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setUpTestDatabase">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L127">at line 127</a></div>
+        <code>                    void
+    <strong>setUpTestDatabase</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;setUp&quot; test database callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDownProcess">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L138">at line 138</a></div>
+        <code>                    void
+    <strong>tearDownProcess</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;tearDown&quot; process callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tearDownTestCase">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L149">at line 149</a></div>
+        <code>                    void
+    <strong>tearDownTestCase</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a &quot;tearDown&quot; test case callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callSetUpProcessCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L159">at line 159</a></div>
+        <code>                    void
+    <strong>callSetUpProcessCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call all of the &quot;setUp&quot; process callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callSetUpTestCaseCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L176">at line 176</a></div>
+        <code>                    void
+    <strong>callSetUpTestCaseCallbacks</strong>(<a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a> $testCase)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call all of the &quot;setUp&quot; test case callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a></td>
+                <td>$testCase</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callSetUpTestDatabaseCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L194">at line 194</a></div>
+        <code>                    void
+    <strong>callSetUpTestDatabaseCallbacks</strong>(string $database)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call all of the &quot;setUp&quot; test database callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callTearDownProcessCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L211">at line 211</a></div>
+        <code>                    void
+    <strong>callTearDownProcessCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call all of the &quot;tearDown&quot; process callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callTearDownTestCaseCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L228">at line 228</a></div>
+        <code>                    void
+    <strong>callTearDownTestCaseCallbacks</strong>(<a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a> $testCase)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call all of the &quot;tearDown&quot; test case callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Foundation/Testing/TestCase.html"><abbr title="Illuminate\Foundation\Testing\TestCase">TestCase</abbr></a></td>
+                <td>$testCase</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_option">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L246">at line 246</a></div>
+        <code>                    mixed
+    <strong>option</strong>(string $option)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a parallel testing option.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_token">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L262">at line 262</a></div>
+        <code>                    string|false
+    <strong>token</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets a unique test token.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenRunningInParallel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L275">at line 275</a></div>
+        <code>            protected        void
+    <strong>whenRunningInParallel</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if tests are running in parallel.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inParallel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Testing/ParallelTesting.php#L287">at line 287</a></div>
+        <code>            protected        bool
+    <strong>inParallel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicates if the current tests are been run in parallel.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

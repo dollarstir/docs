@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Auth\Passwords\DatabaseTokenRepository | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Auth_Passwords_DatabaseTokenRepository" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="DatabaseTokenRepository.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Auth.html">Auth</a></li><li class="backslash">\</li><li><a href="../Passwords.html">Passwords</a></li><li class="backslash">\</li><li>DatabaseTokenRepository</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>DatabaseTokenRepository    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>DatabaseTokenRepository</strong>        implements        <a href="TokenRepositoryInterface.html"><abbr title="Illuminate\Auth\Passwords\TokenRepositoryInterface">TokenRepositoryInterface</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_connection">
+                                        protected                                        <a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a>
+                                                                                
+                                    </td>
+                <td>$connection</td>
+                <td class="last"><p>The database connection instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hasher">
+                                        protected                                        <a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a>
+                                                                                
+                                    </td>
+                <td>$hasher</td>
+                <td class="last"><p>The Hasher implementation.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_table">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$table</td>
+                <td class="last"><p>The token database table.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hashKey">
+                                        protected                                        string
+                                                                                
+                                    </td>
+                <td>$hashKey</td>
+                <td class="last"><p>The hashing key.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expires">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$expires</td>
+                <td class="last"><p>The number of seconds a token should last.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_throttle">
+                                        protected                                        int
+                                                                                
+                                    </td>
+                <td>$throttle</td>
+                <td class="last"><p>Minimum number of seconds before re-redefining the token.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method___construct">__construct</a>(<a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a> $connection, <a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a> $hasher, string $table, string $hashKey, int $expires = 60, int $throttle = 60)
+        
+                                            <p><p>Create a new token repository instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_create">create</a>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        
+                                            <p><p>Create a new token record.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_deleteExisting">deleteExisting</a>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        
+                                            <p><p>Delete all existing reset tokens from the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_getPayload">getPayload</a>(string $email, string $token)
+        
+                                            <p><p>Build the record payload for the table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_exists">exists</a>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user, string $token)
+        
+                                            <p><p>Determine if a token record exists and is valid.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_tokenExpired">tokenExpired</a>(string $createdAt)
+        
+                                            <p><p>Determine if the token has expired.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_recentlyCreatedToken">recentlyCreatedToken</a>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        
+                                            <p><p>Determine if the given user recently created a password reset token.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_tokenRecentlyCreated">tokenRecentlyCreated</a>(string $createdAt)
+        
+                                            <p><p>Determine if the token was recently created.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_delete">delete</a>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        
+                                            <p><p>Delete a token record by user.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_deleteExpired">deleteExpired</a>()
+        
+                                            <p><p>Delete expired tokens.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_createNewToken">createNewToken</a>()
+        
+                                            <p><p>Create a new token for the user.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_getConnection">getConnection</a>()
+        
+                                            <p><p>Get the database connection instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_getTable">getTable</a>()
+        
+                                            <p><p>Begin a new database query against the table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="DatabaseTokenRepository.html#method_getHasher">getHasher</a>()
+        
+                                            <p><p>Get the hasher instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L66">at line 66</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a> $connection, <a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a> $hasher, string $table, string $hashKey, int $expires = 60, int $throttle = 60)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new token repository instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a></td>
+                <td>$hasher</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$hashKey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$expires</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$throttle</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L84">at line 84</a></div>
+        <code>                    string
+    <strong>create</strong>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new token record.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteExisting">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L106">at line 106</a></div>
+        <code>            protected        int
+    <strong>deleteExisting</strong>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete all existing reset tokens from the database.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayload">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L118">at line 118</a></div>
+        <code>            protected        array
+    <strong>getPayload</strong>(string $email, string $token)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build the record payload for the table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L130">at line 130</a></div>
+        <code>                    bool
+    <strong>exists</strong>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user, string $token)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a token record exists and is valid.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tokenExpired">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L147">at line 147</a></div>
+        <code>            protected        bool
+    <strong>tokenExpired</strong>(string $createdAt)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the token has expired.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$createdAt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recentlyCreatedToken">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L158">at line 158</a></div>
+        <code>                    bool
+    <strong>recentlyCreatedToken</strong>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given user recently created a password reset token.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tokenRecentlyCreated">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L173">at line 173</a></div>
+        <code>            protected        bool
+    <strong>tokenRecentlyCreated</strong>(string $createdAt)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the token was recently created.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$createdAt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L190">at line 190</a></div>
+        <code>                    void
+    <strong>delete</strong>(<a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete a token record by user.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Contracts/Auth/CanResetPassword.html"><abbr title="Illuminate\Contracts\Auth\CanResetPassword">CanResetPassword</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteExpired">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L200">at line 200</a></div>
+        <code>                    void
+    <strong>deleteExpired</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete expired tokens.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createNewToken">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L212">at line 212</a></div>
+        <code>                    string
+    <strong>createNewToken</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new token for the user.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConnection">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L222">at line 222</a></div>
+        <code>                    <a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a>
+    <strong>getConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the database connection instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Database/ConnectionInterface.html"><abbr title="Illuminate\Database\ConnectionInterface">ConnectionInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L232">at line 232</a></div>
+        <code>            protected        <a href="../../Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a>
+    <strong>getTable</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Begin a new database query against the table.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Database/Query/Builder.html"><abbr title="Illuminate\Database\Query\Builder">Builder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHasher">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Auth/Passwords/DatabaseTokenRepository.php#L242">at line 242</a></div>
+        <code>                    <a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a>
+    <strong>getHasher</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the hasher instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Contracts/Hashing/Hasher.html"><abbr title="Illuminate\Contracts\Hashing\Hasher">Hasher</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

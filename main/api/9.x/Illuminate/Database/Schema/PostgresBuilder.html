@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Database\Schema\PostgresBuilder | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Database_Schema_PostgresBuilder" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="PostgresBuilder.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Database.html">Database</a></li><li class="backslash">\</li><li><a href="../Schema.html">Schema</a></li><li class="backslash">\</li><li>PostgresBuilder</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>PostgresBuilder    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>PostgresBuilder</strong>        extends <a href="Builder.html"><abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Concerns/ParsesSearchPath.html"><abbr title="Illuminate\Database\Concerns\ParsesSearchPath">ParsesSearchPath</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_connection">
+                                        protected                                        <a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+                                                                                
+                                    </td>
+                <td>$connection</td>
+                <td class="last"><p>The database connection instance.</p></td>
+                <td><small>from&nbsp;<a href="Builder.html#property_connection">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_grammar">
+                                        protected                                        <a href="Grammars/Grammar.html"><abbr title="Illuminate\Database\Schema\Grammars\Grammar">Grammar</abbr></a>
+                                                                                
+                                    </td>
+                <td>$grammar</td>
+                <td class="last"><p>The schema grammar instance.</p></td>
+                <td><small>from&nbsp;<a href="Builder.html#property_grammar">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolver">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                                                                                
+                                    </td>
+                <td>$resolver</td>
+                <td class="last"><p>The Blueprint resolver callback.</p></td>
+                <td><small>from&nbsp;<a href="Builder.html#property_resolver">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultStringLength">
+                    static                                                            int
+                                                                                
+                                    </td>
+                <td>$defaultStringLength</td>
+                <td class="last"><p>The default string length for migrations.</p></td>
+                <td><small>from&nbsp;<a href="Builder.html#property_defaultStringLength">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultMorphKeyType">
+                    static                                                            string
+                                                                                
+                                    </td>
+                <td>$defaultMorphKeyType</td>
+                <td class="last"><p>The default relationship morph key type.</p></td>
+                <td><small>from&nbsp;<a href="Builder.html#property_defaultMorphKeyType">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method___construct">__construct</a>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        
+                                            <p><p>Create a new database Schema manager.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method___construct">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_defaultStringLength">defaultStringLength</a>(int $length)
+        
+                                            <p><p>Set the default string length for migrations.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_defaultStringLength">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_defaultMorphKeyType">defaultMorphKeyType</a>(string $type)
+        
+                                            <p><p>Set the default morph key type for migrations.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_defaultMorphKeyType">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_morphUsingUuids">morphUsingUuids</a>()
+        
+                                            <p><p>Set the default morph key type for migrations to UUIDs.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_morphUsingUuids">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_createDatabase">createDatabase</a>(string $name)
+        
+                                            <p><p>Create a database in the schema.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropDatabaseIfExists">dropDatabaseIfExists</a>(string $name)
+        
+                                            <p><p>Drop a database from the schema if the database exists.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_hasTable">hasTable</a>(string $table)
+        
+                                            <p><p>Determine if the given table exists.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_hasColumn">hasColumn</a>(string $table, string $column)
+        
+                                            <p><p>Determine if the given table has a given column.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_hasColumn">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_hasColumns">hasColumns</a>(string $table, array $columns)
+        
+                                            <p><p>Determine if the given table has given columns.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_hasColumns">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getColumnType">getColumnType</a>(string $table, string $column)
+        
+                                            <p><p>Get the data type for the given column name.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_getColumnType">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getColumnListing">getColumnListing</a>(string $table)
+        
+                                            <p><p>Get the column listing for a given table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_table">table</a>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Modify a table on the schema.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_table">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_create">create</a>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Create a new table on the schema.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_create">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_drop">drop</a>(string $table)
+        
+                                            <p><p>Drop a table from the schema.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_drop">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropIfExists">dropIfExists</a>(string $table)
+        
+                                            <p><p>Drop a table from the schema if it exists.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_dropIfExists">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropColumns">dropColumns</a>(string $table, string|array $columns)
+        
+                                            <p><p>Drop columns from a table schema.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_dropColumns">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropAllTables">dropAllTables</a>()
+        
+                                            <p><p>Drop all tables from the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropAllViews">dropAllViews</a>()
+        
+                                            <p><p>Drop all views from the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_dropAllTypes">dropAllTypes</a>()
+        
+                                            <p><p>Drop all types from the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getAllTables">getAllTables</a>()
+        
+                                            <p><p>Get all of the table names for the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_rename">rename</a>(string $from, string $to)
+        
+                                            <p><p>Rename a table on the schema.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_rename">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_enableForeignKeyConstraints">enableForeignKeyConstraints</a>()
+        
+                                            <p><p>Enable foreign key constraints.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_enableForeignKeyConstraints">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_disableForeignKeyConstraints">disableForeignKeyConstraints</a>()
+        
+                                            <p><p>Disable foreign key constraints.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_disableForeignKeyConstraints">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_build">build</a>(<a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        
+                                            <p><p>Execute the blueprint to build / modify the table.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_build">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_createBlueprint">createBlueprint</a>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Create a new command set with a Closure.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_createBlueprint">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getConnection">getConnection</a>()
+        
+                                            <p><p>Get the database connection instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_getConnection">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_setConnection">setConnection</a>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        
+                                            <p><p>Set the database connection instance.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_setConnection">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_blueprintResolver">blueprintResolver</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $resolver)
+        
+                                            <p><p>Set the Schema Blueprint resolver callback.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Builder.html#method_blueprintResolver">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_parseSearchPath">parseSearchPath</a>(string|array|null $searchPath)
+        
+                                            <p><p>Parse the &quot;search_path&quot; configuration value into an array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getAllViews">getAllViews</a>()
+        
+                                            <p><p>Get all of the view names for the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_getAllTypes">getAllTypes</a>()
+        
+                                            <p><p>Get all of the type names for the database.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="PostgresBuilder.html#method_parseSchemaAndTable">parseSchemaAndTable</a>(string $reference)
+        
+                                            <p><p>Parse the database object reference and extract the database, schema, and table.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Builder.html#method___construct">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L54">at line 54</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new database Schema manager.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultStringLength">
+        <div class="location">in <a href="Builder.html#method_defaultStringLength">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L66">at line 66</a></div>
+        <code>        static            void
+    <strong>defaultStringLength</strong>(int $length)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the default string length for migrations.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_defaultMorphKeyType">
+        <div class="location">in <a href="Builder.html#method_defaultMorphKeyType">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L79">at line 79</a></div>
+        <code>        static            void
+    <strong>defaultMorphKeyType</strong>(string $type)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the default morph key type for migrations.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_morphUsingUuids">
+        <div class="location">in <a href="Builder.html#method_morphUsingUuids">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L93">at line 93</a></div>
+        <code>        static            void
+    <strong>morphUsingUuids</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the default morph key type for migrations to UUIDs.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createDatabase">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L19">at line 19</a></div>
+        <code>                    bool
+    <strong>createDatabase</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a database in the schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropDatabaseIfExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L32">at line 32</a></div>
+        <code>                    bool
+    <strong>dropDatabaseIfExists</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop a database from the schema if the database exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L45">at line 45</a></div>
+        <code>                    bool
+    <strong>hasTable</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given table exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasColumn">
+        <div class="location">in <a href="Builder.html#method_hasColumn">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L146">at line 146</a></div>
+        <code>                    bool
+    <strong>hasColumn</strong>(string $table, string $column)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given table has a given column.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasColumns">
+        <div class="location">in <a href="Builder.html#method_hasColumns">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L160">at line 160</a></div>
+        <code>                    bool
+    <strong>hasColumns</strong>(string $table, array $columns)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given table has given columns.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnType">
+        <div class="location">in <a href="Builder.html#method_getColumnType">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L180">at line 180</a></div>
+        <code>                    string
+    <strong>getColumnType</strong>(string $table, string $column)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the data type for the given column name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$column</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumnListing">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L184">at line 184</a></div>
+        <code>                    array
+    <strong>getColumnListing</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the column listing for a given table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_table">
+        <div class="location">in <a href="Builder.html#method_table">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L209">at line 209</a></div>
+        <code>                    void
+    <strong>table</strong>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Modify a table on the schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_create">
+        <div class="location">in <a href="Builder.html#method_create">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L221">at line 221</a></div>
+        <code>                    void
+    <strong>create</strong>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new table on the schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_drop">
+        <div class="location">in <a href="Builder.html#method_drop">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L236">at line 236</a></div>
+        <code>                    void
+    <strong>drop</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop a table from the schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropIfExists">
+        <div class="location">in <a href="Builder.html#method_dropIfExists">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L249">at line 249</a></div>
+        <code>                    void
+    <strong>dropIfExists</strong>(string $table)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop a table from the schema if it exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropColumns">
+        <div class="location">in <a href="Builder.html#method_dropColumns">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L263">at line 263</a></div>
+        <code>                    void
+    <strong>dropColumns</strong>(string $table, string|array $columns)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop columns from a table schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|array</td>
+                <td>$columns</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropAllTables">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L61">at line 61</a></div>
+        <code>                    void
+    <strong>dropAllTables</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop all tables from the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropAllViews">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L91">at line 91</a></div>
+        <code>                    void
+    <strong>dropAllViews</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop all views from the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropAllTypes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L115">at line 115</a></div>
+        <code>                    void
+    <strong>dropAllTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop all types from the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllTables">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L139">at line 139</a></div>
+        <code>                    void
+    <strong>getAllTables</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all of the table names for the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rename">
+        <div class="location">in <a href="Builder.html#method_rename">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L325">at line 325</a></div>
+        <code>                    void
+    <strong>rename</strong>(string $from, string $to)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rename a table on the schema.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableForeignKeyConstraints">
+        <div class="location">in <a href="Builder.html#method_enableForeignKeyConstraints">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L337">at line 337</a></div>
+        <code>                    bool
+    <strong>enableForeignKeyConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enable foreign key constraints.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableForeignKeyConstraints">
+        <div class="location">in <a href="Builder.html#method_disableForeignKeyConstraints">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L349">at line 349</a></div>
+        <code>                    bool
+    <strong>disableForeignKeyConstraints</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Disable foreign key constraints.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location">in <a href="Builder.html#method_build">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L362">at line 362</a></div>
+        <code>            protected        void
+    <strong>build</strong>(<a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a> $blueprint)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute the blueprint to build / modify the table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+                <td>$blueprint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBlueprint">
+        <div class="location">in <a href="Builder.html#method_createBlueprint">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L374">at line 374</a></div>
+        <code>            protected        <a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a>
+    <strong>createBlueprint</strong>(string $table, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new command set with a Closure.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Blueprint.html"><abbr title="Illuminate\Database\Schema\Blueprint">Blueprint</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConnection">
+        <div class="location">in <a href="Builder.html#method_getConnection">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L392">at line 392</a></div>
+        <code>                    <a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a>
+    <strong>getConnection</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the database connection instance.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setConnection">
+        <div class="location">in <a href="Builder.html#method_setConnection">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L403">at line 403</a></div>
+        <code>                    $this
+    <strong>setConnection</strong>(<a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a> $connection)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the database connection instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Connection.html"><abbr title="Illuminate\Database\Connection">Connection</abbr></a></td>
+                <td>$connection</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_blueprintResolver">
+        <div class="location">in <a href="Builder.html#method_blueprintResolver">
+<abbr title="Illuminate\Database\Schema\Builder">Builder</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/Builder.php#L416">at line 416</a></div>
+        <code>                    void
+    <strong>blueprintResolver</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $resolver)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the Schema Blueprint resolver callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$resolver</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSearchPath">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L240">at line 240</a></div>
+        <code>            protected        array
+    <strong>parseSearchPath</strong>(string|array|null $searchPath)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse the &quot;search_path&quot; configuration value into an array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array|null</td>
+                <td>$searchPath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllViews">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L155">at line 155</a></div>
+        <code>                    array
+    <strong>getAllViews</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all of the view names for the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllTypes">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L171">at line 171</a></div>
+        <code>                    array
+    <strong>getAllTypes</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all of the type names for the database.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseSchemaAndTable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Database/Schema/PostgresBuilder.php#L203">at line 203</a></div>
+        <code>            protected        array
+    <strong>parseSchemaAndTable</strong>(string $reference)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parse the database object reference and extract the database, schema, and table.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$reference</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

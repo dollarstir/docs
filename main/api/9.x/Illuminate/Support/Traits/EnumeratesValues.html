@@ -1,0 +1,3925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Support\Traits\EnumeratesValues | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../doctum.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script async defer src="../../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Support_Traits_EnumeratesValues" data-root-path="../../../" data-search-index-url="../../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="EnumeratesValues.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../../Support.html">Support</a></li><li class="backslash">\</li><li><a href="../Traits.html">Traits</a></li><li class="backslash">\</li><li>EnumeratesValues</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>EnumeratesValues    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>EnumeratesValues</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Conditionable.html"><abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+            </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_escapeWhenCastingToString">
+                                        protected                                        bool
+                                                                                
+                                    </td>
+                <td>$escapeWhenCastingToString</td>
+                <td class="last"><p>Indicates that the object's string representation should be escaped when __toString is invoked.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_proxies">
+                    static                    protected                                        <abbr title="Illuminate\Support\Traits\array&lt;int,string&gt;">array&lt;int,string&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$proxies</td>
+                <td class="last"><p>The methods that can be proxied.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_average">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$average</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_avg">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$avg</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contains">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$contains</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_doesntContain">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$doesntContain</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_each">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$each</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_every">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$every</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filter">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$filter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_first">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$first</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flatMap">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$flatMap</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_groupBy">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$groupBy</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_keyBy">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$keyBy</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_map">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$map</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_max">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$max</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_min">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$min</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_partition">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$partition</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reject">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$reject</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_skipUntil">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$skipUntil</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_skipWhile">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$skipWhile</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_some">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$some</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sortBy">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$sortBy</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sortByDesc">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$sortByDesc</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sum">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$sum</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_takeUntil">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$takeUntil</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_takeWhile">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$takeWhile</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_unique">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$unique</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_unless">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$unless</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_until">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$until</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_when">
+                                                                                <a href="../HigherOrderCollectionProxy.html"><abbr title="Illuminate\Support\HigherOrderCollectionProxy">HigherOrderCollectionProxy</abbr></a>
+                                                            <span class="label label-primary">read-only</span>                    
+                                    </td>
+                <td>$when</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_when">when</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_unless">unless</a>($value, callable $callback = null, callable $default = null)
+        
+                                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_make">make</a>($items = [])
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_wrap">wrap</a>($value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_unwrap">unwrap</a>($value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_empty">empty</a>()
+        
+                                            <p><p>Create a new instance with no items.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_times">times</a>($number, callable $callback = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float|int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_average">average</a>($callback = null)
+        
+                                            <p><p>Alias for the &quot;avg&quot; method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_some">some</a>($key, mixed $operator = null, mixed $value = null)
+        
+                                            <p><p>Alias for the &quot;contains&quot; method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_containsStrict">containsStrict</a>($key, <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null $value = null)
+        
+                                            <p><p>Determine if an item exists, using strict comparison.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\never">never</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_dd">dd</a>(mixed ...$args)
+        
+                                            <p><p>Dump the items and end the script.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_dump">dump</a>()
+        
+                                            <p><p>Dump the items.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_each">each</a>(callable $callback)
+        
+                                            <p><p>Execute a callback over each item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_eachSpread">eachSpread</a>(callable $callback)
+        
+                                            <p><p>Execute a callback over each nested chunk of items.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_every">every</a>($key, mixed $operator = null, mixed $value = null)
+        
+                                            <p><p>Determine if all items pass the given truth test.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_firstWhere">firstWhere</a>(callable|string $key, mixed $operator = null, mixed $value = null)
+        
+                                            <p><p>Get the first item by the given key value pair.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_isNotEmpty">isNotEmpty</a>()
+        
+                                            <p><p>Determine if the collection is not empty.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_mapSpread">mapSpread</a>(callable $callback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_mapToGroups">mapToGroups</a>(callable $callback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_flatMap">flatMap</a>(callable $callback)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_mapInto">mapInto</a>($class)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_min">min</a>($callback = null)
+        
+                                            <p><p>Get the min value of a given key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_max">max</a>($callback = null)
+        
+                                            <p><p>Get the max value of a given key.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_forPage">forPage</a>(int $page, int $perPage)
+        
+                                            <p><p>&quot;Paginate&quot; the collection by slicing it into a smaller collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_partition">partition</a>($key, $operator = null, $value = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_sum">sum</a>($callback = null)
+        
+                                            <p><p>Get the sum of the given values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TWhenEmptyReturnType">TWhenEmptyReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whenEmpty">whenEmpty</a>(callable $callback, callable $default = null)
+        
+                                            <p><p>Apply the callback if the collection is empty.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TWhenNotEmptyReturnType">TWhenNotEmptyReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whenNotEmpty">whenNotEmpty</a>(callable $callback, callable $default = null)
+        
+                                            <p><p>Apply the callback if the collection is not empty.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TUnlessEmptyReturnType">TUnlessEmptyReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_unlessEmpty">unlessEmpty</a>(callable $callback, callable $default = null)
+        
+                                            <p><p>Apply the callback unless the collection is empty.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this|<abbr title="Illuminate\Support\Traits\TUnlessNotEmptyReturnType">TUnlessNotEmptyReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_unlessNotEmpty">unlessNotEmpty</a>(callable $callback, callable $default = null)
+        
+                                            <p><p>Apply the callback unless the collection is not empty.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_where">where</a>(callable|string $key, mixed $operator = null, mixed $value = null)
+        
+                                            <p><p>Filter items by the given key value pair.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereNull">whereNull</a>(string|null $key = null)
+        
+                                            <p><p>Filter items where the value for the given key is null.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereNotNull">whereNotNull</a>(string|null $key = null)
+        
+                                            <p><p>Filter items where the value for the given key is not null.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereStrict">whereStrict</a>(string $key, mixed $value)
+        
+                                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereIn">whereIn</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values, bool $strict = false)
+        
+                                            <p><p>Filter items by the given key value pair.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereInStrict">whereInStrict</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        
+                                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereBetween">whereBetween</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        
+                                            <p><p>Filter items such that the value of the given key is between the given values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereNotBetween">whereNotBetween</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        
+                                            <p><p>Filter items such that the value of the given key is not between the given values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereNotIn">whereNotIn</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values, bool $strict = false)
+        
+                                            <p><p>Filter items by the given key value pair.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereNotInStrict">whereNotInStrict</a>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        
+                                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_whereInstanceOf">whereInstanceOf</a>(<abbr title="Illuminate\Support\Traits\class-string">class-string</abbr>|<abbr title="Illuminate\Support\Traits\array&lt;array-key,class-string&gt;">array&lt;array-key,class-string&gt;</abbr> $type)
+        
+                                            <p><p>Filter the items, removing any items that don't match the given type(s).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\TPipeReturnType">TPipeReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_pipe">pipe</a>(callable $callback)
+        
+                                            <p><p>Pass the collection to the given callback and return the result.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_pipeInto">pipeInto</a>(<abbr title="Illuminate\Support\Traits\class-string">class-string</abbr> $class)
+        
+                                            <p><p>Pass the collection into a new class.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_pipeThrough">pipeThrough</a>(callable[] $callbacks)
+        
+                                            <p><p>Pass the collection through a series of callable pipes and return the result.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Traits\TReduceReturnType">TReduceReturnType</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_reduce">reduce</a>(callable $callback, <abbr title="Illuminate\Support\Traits\TReduceInitial">TReduceInitial</abbr> $initial = null)
+        
+                                            <p><p>Reduce the collection to a single value.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_reduceSpread">reduceSpread</a>(callable $callback, mixed ...$initial)
+        
+                                            <p><p>Reduce the collection to multiple aggregate values.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_reject">reject</a>($callback = true)
+        
+                                            <p><p>Create a collection of all elements that do not pass a given truth test.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_tap">tap</a>(callable $callback)
+        
+                                            <p><p>Pass the collection to the given callback and then return it.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_unique">unique</a>($key = null, bool $strict = false)
+        
+                                            <p><p>Return only unique items from the collection array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_uniqueStrict">uniqueStrict</a>($key = null)
+        
+                                            <p><p>Return only unique items from the collection array using strict comparison.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Support\Collection&lt;\Illuminate\Support\Traits\TKey,\Illuminate\Support\Traits\TValue&gt;">TValue&gt;</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_collect">collect</a>()
+        
+                                            <p><p>Collect the values into a collection.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_toArray">toArray</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_toJson">toJson</a>(int $options = 0)
+        
+                                            <p><p>Get the collection of items as JSON.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/CachingIterator">CachingIterator</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_getCachingIterator">getCachingIterator</a>(int $flags = CachingIterator::CALL_TOSTRING)
+        
+                                            <p><p>Get a CachingIterator instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method___toString">__toString</a>()
+        
+                                            <p><p>Convert the collection to its string representation.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_escapeWhenCastingToString">escapeWhenCastingToString</a>(bool $escape = true)
+        
+                                            <p><p>Indicate that the model's string representation should be escaped when __toString is invoked.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_proxy">proxy</a>(string $method)
+        
+                                            <p><p>Add a method to the list of proxied methods.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method___get">__get</a>(string $key)
+        
+                                            <p><p>Dynamically access collection proxies.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_getArrayableItems">getArrayableItems</a>($items)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_operatorForWhere">operatorForWhere</a>(callable|string $key, string|null $operator = null, mixed $value = null)
+        
+                                            <p><p>Get an operator checker callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_useAsCallable">useAsCallable</a>(mixed $value)
+        
+                                            <p><p>Determine if the given value is callable, but not a string.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    callable
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_valueRetriever">valueRetriever</a>(callable|string|null $value)
+        
+                                            <p><p>Get a value retrieving callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_equality">equality</a>(mixed $value)
+        
+                                            <p><p>Make a function to check an item's equality.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_negate">negate</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Make a function using another function, by negating its result.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="EnumeratesValues.html#method_identity">identity</a>()
+        
+                                            <p><p>Make a function that returns what's passed to it.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location">in <a href="Conditionable.html#method_when">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L21">at line 21</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr>
+    <strong>when</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TWhenReturnType">TWhenReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unless">
+        <div class="location">in <a href="Conditionable.html#method_unless">
+<abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a> <a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Conditionable/Traits/Conditionable.php#L49">at line 49</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr>
+    <strong>unless</strong>($value, callable $callback = null, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TUnlessReturnType">TUnlessReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L108">at line 108</a></div>
+        <code>        static            
+    <strong>make</strong>($items = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L122">at line 122</a></div>
+        <code>        static            
+    <strong>wrap</strong>($value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unwrap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L138">at line 138</a></div>
+        <code>        static            
+    <strong>unwrap</strong>($value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_empty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L148">at line 148</a></div>
+        <code>        static            <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>empty</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new instance with no items.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_times">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L162">at line 162</a></div>
+        <code>        static            
+    <strong>times</strong>($number, callable $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$number</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_average">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L179">at line 179</a></div>
+        <code>                    float|int|null
+    <strong>average</strong>($callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Alias for the &quot;avg&quot; method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float|int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_some">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L192">at line 192</a></div>
+        <code>                    bool
+    <strong>some</strong>($key, mixed $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Alias for the &quot;contains&quot; method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_containsStrict">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L204">at line 204</a></div>
+        <code>                    bool
+    <strong>containsStrict</strong>($key, <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if an item exists, using strict comparison.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dd">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L231">at line 231</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\never">never</abbr>
+    <strong>dd</strong>(mixed ...$args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the items and end the script.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>...$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\never">never</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dump">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L243">at line 243</a></div>
+        <code>                    $this
+    <strong>dump</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dump the items.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_each">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L260">at line 260</a></div>
+        <code>                    $this
+    <strong>each</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a callback over each item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eachSpread">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L277">at line 277</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>eachSpread</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Execute a callback over each nested chunk of items.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_every">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L294">at line 294</a></div>
+        <code>                    bool
+    <strong>every</strong>($key, mixed $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if all items pass the given truth test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_firstWhere">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L319">at line 319</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null
+    <strong>firstWhere</strong>(callable|string $key, mixed $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the first item by the given key value pair.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isNotEmpty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L329">at line 329</a></div>
+        <code>                    bool
+    <strong>isNotEmpty</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the collection is not empty.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapSpread">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L342">at line 342</a></div>
+        <code>                    
+    <strong>mapSpread</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapToGroups">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L362">at line 362</a></div>
+        <code>                    
+    <strong>mapToGroups</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flatMap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L375">at line 375</a></div>
+        <code>                    
+    <strong>flatMap</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mapInto">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L388">at line 388</a></div>
+        <code>                    
+    <strong>mapInto</strong>($class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_min">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L401">at line 401</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>
+    <strong>min</strong>($callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the min value of a given key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\TValue">TValue</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_max">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L420">at line 420</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\TValue">TValue</abbr>
+    <strong>max</strong>($callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the max value of a given key.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\TValue">TValue</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forPage">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L440">at line 440</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>forPage</strong>(int $page, int $perPage)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>&quot;Paginate&quot; the collection by slicing it into a smaller collection.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$page</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$perPage</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_partition">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L455">at line 455</a></div>
+        <code>                    
+    <strong>partition</strong>($key, $operator = null, $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sum">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L481">at line 481</a></div>
+        <code>                    mixed
+    <strong>sum</strong>($callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the sum of the given values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenEmpty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L501">at line 501</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TWhenEmptyReturnType">TWhenEmptyReturnType</abbr>
+    <strong>whenEmpty</strong>(callable $callback, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the collection is empty.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TWhenEmptyReturnType">TWhenEmptyReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whenNotEmpty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L515">at line 515</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TWhenNotEmptyReturnType">TWhenNotEmptyReturnType</abbr>
+    <strong>whenNotEmpty</strong>(callable $callback, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback if the collection is not empty.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TWhenNotEmptyReturnType">TWhenNotEmptyReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unlessEmpty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L529">at line 529</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TUnlessEmptyReturnType">TUnlessEmptyReturnType</abbr>
+    <strong>unlessEmpty</strong>(callable $callback, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback unless the collection is empty.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TUnlessEmptyReturnType">TUnlessEmptyReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unlessNotEmpty">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L543">at line 543</a></div>
+        <code>                    $this|<abbr title="Illuminate\Support\Traits\TUnlessNotEmptyReturnType">TUnlessNotEmptyReturnType</abbr>
+    <strong>unlessNotEmpty</strong>(callable $callback, callable $default = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Apply the callback unless the collection is not empty.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this|<abbr title="Illuminate\Support\Traits\TUnlessNotEmptyReturnType">TUnlessNotEmptyReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_where">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L556">at line 556</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>where</strong>(callable|string $key, mixed $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNull">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L567">at line 567</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereNull</strong>(string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items where the value for the given key is null.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotNull">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L578">at line 578</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereNotNull</strong>(string|null $key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items where the value for the given key is not null.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereStrict">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L590">at line 590</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereStrict</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereIn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L603">at line 603</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereIn</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values, bool $strict = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereInStrict">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L619">at line 619</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereInStrict</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereBetween">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L631">at line 631</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereBetween</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items such that the value of the given key is between the given values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotBetween">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L643">at line 643</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereNotBetween</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items such that the value of the given key is not between the given values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotIn">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L658">at line 658</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereNotIn</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values, bool $strict = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereNotInStrict">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L674">at line 674</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereNotInStrict</strong>(string $key, <a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr> $values)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter items by the given key value pair using strict comparison.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>|<abbr title="Illuminate\Support\Traits\iterable">iterable</abbr></td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_whereInstanceOf">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L685">at line 685</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>whereInstanceOf</strong>(<abbr title="Illuminate\Support\Traits\class-string">class-string</abbr>|<abbr title="Illuminate\Support\Traits\array&lt;array-key,class-string&gt;">array&lt;array-key,class-string&gt;</abbr> $type)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Filter the items, removing any items that don't match the given type(s).</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Support\Traits\class-string">class-string</abbr>|<abbr title="Illuminate\Support\Traits\array&lt;array-key,class-string&gt;">array&lt;array-key,class-string&gt;</abbr></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pipe">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L710">at line 710</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\TPipeReturnType">TPipeReturnType</abbr>
+    <strong>pipe</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pass the collection to the given callback and return the result.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\TPipeReturnType">TPipeReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pipeInto">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L721">at line 721</a></div>
+        <code>                    mixed
+    <strong>pipeInto</strong>(<abbr title="Illuminate\Support\Traits\class-string">class-string</abbr> $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pass the collection into a new class.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Illuminate\Support\Traits\class-string">class-string</abbr></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pipeThrough">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L732">at line 732</a></div>
+        <code>                    mixed
+    <strong>pipeThrough</strong>(callable[] $callbacks)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pass the collection through a series of callable pipes and return the result.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable[]</td>
+                <td>$callbacks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reduce">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L752">at line 752</a></div>
+        <code>                    <abbr title="Illuminate\Support\Traits\TReduceReturnType">TReduceReturnType</abbr>
+    <strong>reduce</strong>(callable $callback, <abbr title="Illuminate\Support\Traits\TReduceInitial">TReduceInitial</abbr> $initial = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reduce the collection to a single value.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Support\Traits\TReduceInitial">TReduceInitial</abbr></td>
+                <td>$initial</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Traits\TReduceReturnType">TReduceReturnType</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reduceSpread">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L772">at line 772</a></div>
+        <code>                    array
+    <strong>reduceSpread</strong>(callable $callback, mixed ...$initial)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reduce the collection to multiple aggregate values.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>...$initial</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/UnexpectedValueException">UnexpectedValueException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reject">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L796">at line 796</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>reject</strong>($callback = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a collection of all elements that do not pass a given truth test.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L813">at line 813</a></div>
+        <code>                    $this
+    <strong>tap</strong>(callable $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pass the collection to the given callback and then return it.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unique">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L827">at line 827</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>unique</strong>($key = null, bool $strict = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return only unique items from the collection array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$strict</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uniqueStrict">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L848">at line 848</a></div>
+        <code>                    <a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+    <strong>uniqueStrict</strong>($key = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return only unique items from the collection array using strict comparison.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collect">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L858">at line 858</a></div>
+        <code>                    <abbr title="Illuminate\Support\Collection&lt;\Illuminate\Support\Traits\TKey,\Illuminate\Support\Traits\TValue&gt;">TValue&gt;</abbr>
+    <strong>collect</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Collect the values into a collection.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Support\Collection&lt;\Illuminate\Support\Traits\TKey,\Illuminate\Support\Traits\TValue&gt;">TValue&gt;</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L868">at line 868</a></div>
+        <code>                    
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L880">at line 880</a></div>
+        <code>                    array
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toJson">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L901">at line 901</a></div>
+        <code>                    string
+    <strong>toJson</strong>(int $options = 0)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the collection of items as JSON.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCachingIterator">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L912">at line 912</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/CachingIterator">CachingIterator</a>
+    <strong>getCachingIterator</strong>(int $flags = CachingIterator::CALL_TOSTRING)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a CachingIterator instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/CachingIterator">CachingIterator</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L922">at line 922</a></div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the collection to its string representation.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_escapeWhenCastingToString">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L935">at line 935</a></div>
+        <code>                    $this
+    <strong>escapeWhenCastingToString</strong>(bool $escape = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Indicate that the model's string representation should be escaped when __toString is invoked.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$escape</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_proxy">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L948">at line 948</a></div>
+        <code>        static            void
+    <strong>proxy</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a method to the list of proxied methods.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L961">at line 961</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically access collection proxies.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayableItems">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L976">at line 976</a></div>
+        <code>            protected        
+    <strong>getArrayableItems</strong>($items)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_operatorForWhere">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1003">at line 1003</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>operatorForWhere</strong>(callable|string $key, string|null $operator = null, mixed $value = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get an operator checker callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useAsCallable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1054">at line 1054</a></div>
+        <code>            protected        bool
+    <strong>useAsCallable</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given value is callable, but not a string.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valueRetriever">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1065">at line 1065</a></div>
+        <code>            protected        callable
+    <strong>valueRetriever</strong>(callable|string|null $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a value retrieving callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string|null</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_equality">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1082">at line 1082</a></div>
+        <code>            protected        
+    <strong>equality</strong>(mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a function to check an item's equality.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_negate">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1095">at line 1095</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>negate</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a function using another function, by negating its result.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_identity">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Traits/EnumeratesValues.php#L1107">at line 1107</a></div>
+        <code>            protected        
+    <strong>identity</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Make a function that returns what's passed to it.</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

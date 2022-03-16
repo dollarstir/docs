@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Traits | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="doctum.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script async defer src="js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../9.x/opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="traits" data-name="" data-root-path="" data-search-index-url="doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../8.x/index.html"
+                            data-version="8.x" selected>Laravel 8.x</option>
+                                            <option
+                            value="../9.x/index.html"
+                            data-version="9.x" >Laravel 9.x</option>
+                                            <option
+                            value="../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="traits.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li class="active"><a href="index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li ><a href="../9.x/index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="namespaces.html">Namespaces</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div id="page-content">    <div class="page-header">
+        <h1>Traits</h1>
+    </div>
+
+    <div class="container-fluid underlined">
+                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/Access/HandlesAuthorization.html"><abbr title="Illuminate\Auth\Access\HandlesAuthorization">HandlesAuthorization</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/Authenticatable.html"><abbr title="Illuminate\Auth\Authenticatable">Authenticatable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/CreatesUserProviders.html"><abbr title="Illuminate\Auth\CreatesUserProviders">CreatesUserProviders</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/GuardHelpers.html"><abbr title="Illuminate\Auth\GuardHelpers">GuardHelpers</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        <p>These methods are typically the same across all guards.</p>
+                    </div>
+                </div>
+                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/MustVerifyEmail.html"><abbr title="Illuminate\Auth\MustVerifyEmail">MustVerifyEmail</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Auth/Passwords/CanResetPassword.html"><abbr title="Illuminate\Auth\Passwords\CanResetPassword">CanResetPassword</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Broadcasting/Broadcasters/UsePusherChannelConventions.html"><abbr title="Illuminate\Broadcasting\Broadcasters\UsePusherChannelConventions">UsePusherChannelConventions</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Broadcasting/InteractsWithBroadcasting.html"><abbr title="Illuminate\Broadcasting\InteractsWithBroadcasting">InteractsWithBroadcasting</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Broadcasting/InteractsWithSockets.html"><abbr title="Illuminate\Broadcasting\InteractsWithSockets">InteractsWithSockets</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Bus/Batchable.html"><abbr title="Illuminate\Bus\Batchable">Batchable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Bus/Queueable.html"><abbr title="Illuminate\Bus\Queueable">Queueable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Cache/HasCacheLock.html"><abbr title="Illuminate\Cache\HasCacheLock">HasCacheLock</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Cache/RetrievesMultipleKeys.html"><abbr title="Illuminate\Cache\RetrievesMultipleKeys">RetrievesMultipleKeys</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/Concerns/CallsCommands.html"><abbr title="Illuminate\Console\Concerns\CallsCommands">CallsCommands</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/Concerns/CreatesMatchingTest.html"><abbr title="Illuminate\Console\Concerns\CreatesMatchingTest">CreatesMatchingTest</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/Concerns/HasParameters.html"><abbr title="Illuminate\Console\Concerns\HasParameters">HasParameters</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/Concerns/InteractsWithIO.html"><abbr title="Illuminate\Console\Concerns\InteractsWithIO">InteractsWithIO</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/ConfirmableTrait.html"><abbr title="Illuminate\Console\ConfirmableTrait">ConfirmableTrait</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Console/Scheduling/ManagesFrequencies.html"><abbr title="Illuminate\Console\Scheduling\ManagesFrequencies">ManagesFrequencies</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Concerns/BuildsQueries.html"><abbr title="Illuminate\Database\Concerns\BuildsQueries">BuildsQueries</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Concerns/ExplainsQueries.html"><abbr title="Illuminate\Database\Concerns\ExplainsQueries">ExplainsQueries</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Concerns/ManagesTransactions.html"><abbr title="Illuminate\Database\Concerns\ManagesTransactions">ManagesTransactions</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/DetectsConcurrencyErrors.html"><abbr title="Illuminate\Database\DetectsConcurrencyErrors">DetectsConcurrencyErrors</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/DetectsLostConnections.html"><abbr title="Illuminate\Database\DetectsLostConnections">DetectsLostConnections</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/BroadcastsEvents.html"><abbr title="Illuminate\Database\Eloquent\BroadcastsEvents">BroadcastsEvents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.html"><abbr title="Illuminate\Database\Eloquent\Concerns\GuardsAttributes">GuardsAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HasAttributes.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HasAttributes">HasAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HasEvents.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HasEvents">HasEvents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HasGlobalScopes.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HasGlobalScopes">HasGlobalScopes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HasRelationships.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HasRelationships">HasRelationships</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HasTimestamps.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HasTimestamps">HasTimestamps</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/HidesAttributes.html"><abbr title="Illuminate\Database\Eloquent\Concerns\HidesAttributes">HidesAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.html"><abbr title="Illuminate\Database\Eloquent\Concerns\QueriesRelationships">QueriesRelationships</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Factories/HasFactory.html"><abbr title="Illuminate\Database\Eloquent\Factories\HasFactory">HasFactory</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/MassPrunable.html"><abbr title="Illuminate\Database\Eloquent\MassPrunable">MassPrunable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Prunable.html"><abbr title="Illuminate\Database\Eloquent\Prunable">Prunable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/AsPivot.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\AsPivot">AsPivot</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/CanBeOneOfMany.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\CanBeOneOfMany">CanBeOneOfMany</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/ComparesRelatedModels.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\ComparesRelatedModels">ComparesRelatedModels</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/InteractsWithDictionary.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary">InteractsWithDictionary</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/InteractsWithPivotTable.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithPivotTable">InteractsWithPivotTable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Relations/Concerns/SupportsDefaultModels.html"><abbr title="Illuminate\Database\Eloquent\Relations\Concerns\SupportsDefaultModels">SupportsDefaultModels</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/SoftDeletes.html"><abbr title="Illuminate\Database\Eloquent\SoftDeletes">SoftDeletes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Database/PDO/Concerns/ConnectsToDatabase.html"><abbr title="Illuminate\Database\PDO\Concerns\ConnectsToDatabase">ConnectsToDatabase</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Auth/Access/Authorizable.html"><abbr title="Illuminate\Foundation\Auth\Access\Authorizable">Authorizable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Auth/Access/AuthorizesRequests.html"><abbr title="Illuminate\Foundation\Auth\Access\AuthorizesRequests">AuthorizesRequests</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Bus/Dispatchable.html"><abbr title="Illuminate\Foundation\Bus\Dispatchable">Dispatchable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Bus/DispatchesJobs.html"><abbr title="Illuminate\Foundation\Bus\DispatchesJobs">DispatchesJobs</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Events/Dispatchable.html"><abbr title="Illuminate\Foundation\Events\Dispatchable">Dispatchable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithAuthentication.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithAuthentication">InteractsWithAuthentication</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithConsole.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithConsole">InteractsWithConsole</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithContainer.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithContainer">InteractsWithContainer</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithDatabase">InteractsWithDatabase</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithDeprecationHandling.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithDeprecationHandling">InteractsWithDeprecationHandling</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithExceptionHandling.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithExceptionHandling">InteractsWithExceptionHandling</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithRedis.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithRedis">InteractsWithRedis</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithSession.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithSession">InteractsWithSession</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithTime.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithTime">InteractsWithTime</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/InteractsWithViews.html"><abbr title="Illuminate\Foundation\Testing\Concerns\InteractsWithViews">InteractsWithViews</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.html"><abbr title="Illuminate\Foundation\Testing\Concerns\MakesHttpRequests">MakesHttpRequests</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Concerns/MocksApplicationServices.html"><abbr title="Illuminate\Foundation\Testing\Concerns\MocksApplicationServices">MocksApplicationServices</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/DatabaseMigrations.html"><abbr title="Illuminate\Foundation\Testing\DatabaseMigrations">DatabaseMigrations</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/DatabaseTransactions.html"><abbr title="Illuminate\Foundation\Testing\DatabaseTransactions">DatabaseTransactions</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/LazilyRefreshDatabase.html"><abbr title="Illuminate\Foundation\Testing\LazilyRefreshDatabase">LazilyRefreshDatabase</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/RefreshDatabase.html"><abbr title="Illuminate\Foundation\Testing\RefreshDatabase">RefreshDatabase</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/Traits/CanConfigureMigrationCommands.html"><abbr title="Illuminate\Foundation\Testing\Traits\CanConfigureMigrationCommands">CanConfigureMigrationCommands</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/WithFaker.html"><abbr title="Illuminate\Foundation\Testing\WithFaker">WithFaker</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/WithoutEvents.html"><abbr title="Illuminate\Foundation\Testing\WithoutEvents">WithoutEvents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Testing/WithoutMiddleware.html"><abbr title="Illuminate\Foundation\Testing\WithoutMiddleware">WithoutMiddleware</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Foundation/Validation/ValidatesRequests.html"><abbr title="Illuminate\Foundation\Validation\ValidatesRequests">ValidatesRequests</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Concerns/InteractsWithContentTypes.html"><abbr title="Illuminate\Http\Concerns\InteractsWithContentTypes">InteractsWithContentTypes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Concerns/InteractsWithFlashData.html"><abbr title="Illuminate\Http\Concerns\InteractsWithFlashData">InteractsWithFlashData</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Concerns/InteractsWithInput.html"><abbr title="Illuminate\Http\Concerns\InteractsWithInput">InteractsWithInput</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/FileHelpers.html"><abbr title="Illuminate\Http\FileHelpers">FileHelpers</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Resources/CollectsResources.html"><abbr title="Illuminate\Http\Resources\CollectsResources">CollectsResources</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Resources/ConditionallyLoadsAttributes.html"><abbr title="Illuminate\Http\Resources\ConditionallyLoadsAttributes">ConditionallyLoadsAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/Resources/DelegatesToResource.html"><abbr title="Illuminate\Http\Resources\DelegatesToResource">DelegatesToResource</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Http/ResponseTrait.html"><abbr title="Illuminate\Http\ResponseTrait">ResponseTrait</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Log/ParsesLogConfiguration.html"><abbr title="Illuminate\Log\ParsesLogConfiguration">ParsesLogConfiguration</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Notifications/HasDatabaseNotifications.html"><abbr title="Illuminate\Notifications\HasDatabaseNotifications">HasDatabaseNotifications</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Notifications/Notifiable.html"><abbr title="Illuminate\Notifications\Notifiable">Notifiable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Notifications/RoutesNotifications.html"><abbr title="Illuminate\Notifications\RoutesNotifications">RoutesNotifications</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Queue/InteractsWithQueue.html"><abbr title="Illuminate\Queue\InteractsWithQueue">InteractsWithQueue</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Queue/SerializesAndRestoresModelIdentifiers.html"><abbr title="Illuminate\Queue\SerializesAndRestoresModelIdentifiers">SerializesAndRestoresModelIdentifiers</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Queue/SerializesModels.html"><abbr title="Illuminate\Queue\SerializesModels">SerializesModels</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Redis/Connections/PacksPhpRedisValues.html"><abbr title="Illuminate\Redis\Connections\PacksPhpRedisValues">PacksPhpRedisValues</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Routing/CreatesRegularExpressionRouteConstraints.html"><abbr title="Illuminate\Routing\CreatesRegularExpressionRouteConstraints">CreatesRegularExpressionRouteConstraints</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Routing/RouteDependencyResolverTrait.html"><abbr title="Illuminate\Routing\RouteDependencyResolverTrait">RouteDependencyResolverTrait</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/InteractsWithTime.html"><abbr title="Illuminate\Support\InteractsWithTime">InteractsWithTime</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/CapsuleManagerTrait.html"><abbr title="Illuminate\Support\Traits\CapsuleManagerTrait">CapsuleManagerTrait</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/Conditionable.html"><abbr title="Illuminate\Support\Traits\Conditionable">Conditionable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/EnumeratesValues.html"><abbr title="Illuminate\Support\Traits\EnumeratesValues">EnumeratesValues</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/ForwardsCalls.html"><abbr title="Illuminate\Support\Traits\ForwardsCalls">ForwardsCalls</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/Localizable.html"><abbr title="Illuminate\Support\Traits\Localizable">Localizable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/Macroable.html"><abbr title="Illuminate\Support\Traits\Macroable">Macroable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/ReflectsClosures.html"><abbr title="Illuminate\Support\Traits\ReflectsClosures">ReflectsClosures</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Support/Traits/Tappable.html"><abbr title="Illuminate\Support\Traits\Tappable">Tappable</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Testing/Concerns/TestDatabases.html"><abbr title="Illuminate\Testing\Concerns\TestDatabases">TestDatabases</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Testing/Fluent/Concerns/Debugging.html"><abbr title="Illuminate\Testing\Fluent\Concerns\Debugging">Debugging</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Testing/Fluent/Concerns/Has.html"><abbr title="Illuminate\Testing\Fluent\Concerns\Has">Has</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Testing/Fluent/Concerns/Interaction.html"><abbr title="Illuminate\Testing\Fluent\Concerns\Interaction">Interaction</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Testing/Fluent/Concerns/Matching.html"><abbr title="Illuminate\Testing\Fluent\Concerns\Matching">Matching</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Validation/Concerns/FormatsMessages.html"><abbr title="Illuminate\Validation\Concerns\FormatsMessages">FormatsMessages</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Validation/Concerns/ReplacesAttributes.html"><abbr title="Illuminate\Validation\Concerns\ReplacesAttributes">ReplacesAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Validation/Concerns/ValidatesAttributes.html"><abbr title="Illuminate\Validation\Concerns\ValidatesAttributes">ValidatesAttributes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Validation/Rules/DatabaseRule.html"><abbr title="Illuminate\Validation\Rules\DatabaseRule">DatabaseRule</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                    <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/Validation/ValidatesWhenResolvedTrait.html"><abbr title="Illuminate\Validation\ValidatesWhenResolvedTrait">ValidatesWhenResolvedTrait</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Provides default implementation of ValidatesWhenResolved contract.</p>
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesAuthorizations.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesAuthorizations">CompilesAuthorizations</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesClasses.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesClasses">CompilesClasses</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesComments.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComments">CompilesComments</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesComponents.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesComponents">CompilesComponents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesConditionals.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesConditionals">CompilesConditionals</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesEchos.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesEchos">CompilesEchos</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesErrors.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesErrors">CompilesErrors</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesHelpers.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesHelpers">CompilesHelpers</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesIncludes.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesIncludes">CompilesIncludes</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesInjections.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesInjections">CompilesInjections</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesJs.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesJs">CompilesJs</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesJson.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesJson">CompilesJson</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesLayouts.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLayouts">CompilesLayouts</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesLoops.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesLoops">CompilesLoops</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesRawPhp.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesRawPhp">CompilesRawPhp</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesStacks.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesStacks">CompilesStacks</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Compilers/Concerns/CompilesTranslations.html"><abbr title="Illuminate\View\Compilers\Concerns\CompilesTranslations">CompilesTranslations</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                            <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesComponents.html"><abbr title="Illuminate\View\Concerns\ManagesComponents">ManagesComponents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesEvents.html"><abbr title="Illuminate\View\Concerns\ManagesEvents">ManagesEvents</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesLayouts.html"><abbr title="Illuminate\View\Concerns\ManagesLayouts">ManagesLayouts</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesLoops.html"><abbr title="Illuminate\View\Concerns\ManagesLoops">ManagesLoops</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesStacks.html"><abbr title="Illuminate\View\Concerns\ManagesStacks">ManagesStacks</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://laravel.com/api/8.x/Illuminate/View/Concerns/ManagesTranslations.html"><abbr title="Illuminate\View\Concerns\ManagesTranslations">ManagesTranslations</abbr></a>
+                    </div>
+                    <div class="col-md-6">
+                        
+                    </div>
+                </div>
+                                                                                                                                                                                                                                                                                                                                    </div>
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

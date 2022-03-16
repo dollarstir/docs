@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Routing\ResourceRegistrar | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Routing_ResourceRegistrar" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ResourceRegistrar.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Routing.html">Routing</a></li><li class="backslash">\</li><li>ResourceRegistrar</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ResourceRegistrar    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ResourceRegistrar</strong>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_router">
+                                        protected                                        <a href="Router.html"><abbr title="Illuminate\Routing\Router">Router</abbr></a>
+                                                                                
+                                    </td>
+                <td>$router</td>
+                <td class="last"><p>The router instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resourceDefaults">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$resourceDefaults</td>
+                <td class="last"><p>The default actions for a resourceful controller.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parameters">
+                                        protected                                        array|string
+                                                                                
+                                    </td>
+                <td>$parameters</td>
+                <td class="last"><p>The parameters set for this resource instance.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parameterMap">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$parameterMap</td>
+                <td class="last"><p>The global parameter mapping.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_singularParameters">
+                    static                    protected                                        bool
+                                                                                
+                                    </td>
+                <td>$singularParameters</td>
+                <td class="last"><p>Singular global parameters.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_verbs">
+                    static                    protected                                        array
+                                                                                
+                                    </td>
+                <td>$verbs</td>
+                <td class="last"><p>The verbs used in the resource URIs.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method___construct">__construct</a>(<a href="Router.html"><abbr title="Illuminate\Routing\Router">Router</abbr></a> $router)
+        
+                                            <p><p>Create a new resource registrar instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="RouteCollection.html"><abbr title="Illuminate\Routing\RouteCollection">RouteCollection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_register">register</a>(string $name, string $controller, array $options = [])
+        
+                                            <p><p>Route a resource to a controller.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_prefixedResource">prefixedResource</a>(string $name, string $controller, array $options)
+        
+                                            <p><p>Build a set of prefixed resource routes.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourcePrefix">getResourcePrefix</a>(string $name)
+        
+                                            <p><p>Extract the resource and prefix from a resource name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourceMethods">getResourceMethods</a>(array $defaults, array $options)
+        
+                                            <p><p>Get the applicable resource methods.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceIndex">addResourceIndex</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the index method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceCreate">addResourceCreate</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the create method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceStore">addResourceStore</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the store method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceShow">addResourceShow</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the show method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceEdit">addResourceEdit</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the edit method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceUpdate">addResourceUpdate</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the update method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_addResourceDestroy">addResourceDestroy</a>(string $name, string $base, string $controller, array $options)
+        
+                                            <p><p>Add the destroy method for a resourceful route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getShallowName">getShallowName</a>(string $name, array $options)
+        
+                                            <p><p>Get the name for a given resource with shallowness applied when applicable.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_setResourceBindingFields">setResourceBindingFields</a>(<a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $bindingFields)
+        
+                                            <p><p>Set the route's binding fields if the resource is scoped.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourceUri">getResourceUri</a>(string $resource)
+        
+                                            <p><p>Get the base resource URI for a given resource.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getNestedResourceUri">getNestedResourceUri</a>(array $segments)
+        
+                                            <p><p>Get the URI for a nested resource segment array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourceWildcard">getResourceWildcard</a>(string $value)
+        
+                                            <p><p>Format a resource parameter for usage.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourceAction">getResourceAction</a>(string $resource, string $controller, string $method, array $options)
+        
+                                            <p><p>Get the action array for a resource route.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getResourceRouteName">getResourceRouteName</a>(string $resource, string $method, array $options)
+        
+                                            <p><p>Get the name for a given resource.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_singularParameters">singularParameters</a>(bool $singular = true)
+        
+                                            <p><p>Set or unset the unmapped global parameters to singular.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_getParameters">getParameters</a>()
+        
+                                            <p><p>Get the global parameter map.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_setParameters">setParameters</a>(array $parameters = [])
+        
+                                            <p><p>Set the global parameter mapping.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="ResourceRegistrar.html#method_verbs">verbs</a>(array $verbs = [])
+        
+                                            <p><p>Get or set the action verbs used in the resource URIs.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L60">at line 60</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="Router.html"><abbr title="Illuminate\Routing\Router">Router</abbr></a> $router)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new resource registrar instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Router.html"><abbr title="Illuminate\Routing\Router">Router</abbr></a></td>
+                <td>$router</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L73">at line 73</a></div>
+        <code>                    <a href="RouteCollection.html"><abbr title="Illuminate\Routing\RouteCollection">RouteCollection</abbr></a>
+    <strong>register</strong>(string $name, string $controller, array $options = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Route a resource to a controller.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="RouteCollection.html"><abbr title="Illuminate\Routing\RouteCollection">RouteCollection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prefixedResource">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L120">at line 120</a></div>
+        <code>            protected        void
+    <strong>prefixedResource</strong>(string $name, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Build a set of prefixed resource routes.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourcePrefix">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L140">at line 140</a></div>
+        <code>            protected        array
+    <strong>getResourcePrefix</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Extract the resource and prefix from a resource name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceMethods">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L159">at line 159</a></div>
+        <code>            protected        array
+    <strong>getResourceMethods</strong>(array $defaults, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the applicable resource methods.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$defaults</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceIndex">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L183">at line 183</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceIndex</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the index method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceCreate">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L203">at line 203</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceCreate</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the create method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceStore">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L223">at line 223</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceStore</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the store method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceShow">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L243">at line 243</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceShow</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the show method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceEdit">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L263">at line 263</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceEdit</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the edit method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceUpdate">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L283">at line 283</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceUpdate</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the update method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addResourceDestroy">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L303">at line 303</a></div>
+        <code>            protected        <a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a>
+    <strong>addResourceDestroy</strong>(string $name, string $base, string $controller, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add the destroy method for a resourceful route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$base</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShallowName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L321">at line 321</a></div>
+        <code>            protected        string
+    <strong>getShallowName</strong>(string $name, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name for a given resource with shallowness applied when applicable.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setResourceBindingFields">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L335">at line 335</a></div>
+        <code>            protected        void
+    <strong>setResourceBindingFields</strong>(<a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a> $route, array $bindingFields)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the route's binding fields if the resource is scoped.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="Route.html"><abbr title="Illuminate\Routing\Route">Route</abbr></a></td>
+                <td>$route</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bindingFields</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceUri">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L352">at line 352</a></div>
+        <code>                    string
+    <strong>getResourceUri</strong>(string $resource)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the base resource URI for a given resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNestedResourceUri">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L374">at line 374</a></div>
+        <code>            protected        string
+    <strong>getNestedResourceUri</strong>(array $segments)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the URI for a nested resource segment array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$segments</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceWildcard">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L390">at line 390</a></div>
+        <code>                    string
+    <strong>getResourceWildcard</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Format a resource parameter for usage.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceAction">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L412">at line 412</a></div>
+        <code>            protected        array
+    <strong>getResourceAction</strong>(string $resource, string $controller, string $method, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the action array for a resource route.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$controller</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResourceRouteName">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L445">at line 445</a></div>
+        <code>            protected        string
+    <strong>getResourceRouteName</strong>(string $resource, string $method, array $options)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the name for a given resource.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$resource</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singularParameters">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L474">at line 474</a></div>
+        <code>        static            void
+    <strong>singularParameters</strong>(bool $singular = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set or unset the unmapped global parameters to singular.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$singular</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParameters">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L484">at line 484</a></div>
+        <code>        static            array
+    <strong>getParameters</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the global parameter map.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setParameters">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L495">at line 495</a></div>
+        <code>        static            void
+    <strong>setParameters</strong>(array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the global parameter mapping.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_verbs">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Routing/ResourceRegistrar.php#L506">at line 506</a></div>
+        <code>        static            array
+    <strong>verbs</strong>(array $verbs = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get or set the action verbs used in the resource URIs.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$verbs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

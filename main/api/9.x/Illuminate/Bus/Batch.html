@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Bus\Batch | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Bus_Batch" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Batch.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Bus.html">Bus</a></li><li class="backslash">\</li><li>Batch</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Batch    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Batch</strong>        implements        <a href="../Contracts/Support/Arrayable.html"><abbr title="Illuminate\Contracts\Support\Arrayable">Arrayable</abbr></a>, <a target="_blank" rel="noopener" href="https://www.php.net/JsonSerializable">JsonSerializable</a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_queue">
+                                        protected                                        <a href="../Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a>
+                                                                                
+                                    </td>
+                <td>$queue</td>
+                <td class="last"><p>The queue factory implementation.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_repository">
+                                        protected                                        <a href="BatchRepository.html"><abbr title="Illuminate\Bus\BatchRepository">BatchRepository</abbr></a>
+                                                                                
+                                    </td>
+                <td>$repository</td>
+                <td class="last"><p>The repository implementation.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_id">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$id</td>
+                <td class="last"><p>The batch ID.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$name</td>
+                <td class="last"><p>The batch name.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_totalJobs">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$totalJobs</td>
+                <td class="last"><p>The total number of jobs that belong to the batch.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pendingJobs">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$pendingJobs</td>
+                <td class="last"><p>The total number of jobs that are still pending.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_failedJobs">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$failedJobs</td>
+                <td class="last"><p>The total number of jobs that have failed.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_failedJobIds">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$failedJobIds</td>
+                <td class="last"><p>The IDs of the jobs that have failed.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                                                                array
+                                                                                
+                                    </td>
+                <td>$options</td>
+                <td class="last"><p>The batch options.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdAt">
+                                                                                <abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr>
+                                                                                
+                                    </td>
+                <td>$createdAt</td>
+                <td class="last"><p>The date indicating when the batch was created.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cancelledAt">
+                                                                                <abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr>|null
+                                                                                
+                                    </td>
+                <td>$cancelledAt</td>
+                <td class="last"><p>The date indicating when the batch was cancelled.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_finishedAt">
+                                                                                <abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr>|null
+                                                                                
+                                    </td>
+                <td>$finishedAt</td>
+                <td class="last"><p>The date indicating when the batch was finished.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method___construct">__construct</a>(<a href="../Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue, <a href="BatchRepository.html"><abbr title="Illuminate\Bus\BatchRepository">BatchRepository</abbr></a> $repository, string $id, string $name, int $totalJobs, int $pendingJobs, int $failedJobs, array $failedJobIds, array $options, <abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr> $createdAt, <abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null $cancelledAt = null, <abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null $finishedAt = null)
+        
+                                            <p><p>Create a new batch instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_fresh">fresh</a>()
+        
+                                            <p><p>Get a fresh instance of the batch represented by this ID.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_add">add</a>(<a href="../Support/Enumerable.html"><abbr title="Illuminate\Support\Enumerable">Enumerable</abbr></a>|object|array $jobs)
+        
+                                            <p><p>Add additional jobs to the batch.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_prepareBatchedChain">prepareBatchedChain</a>(array $chain)
+        
+                                            <p><p>Prepare a chain that exists within the jobs being added.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_processedJobs">processedJobs</a>()
+        
+                                            <p><p>Get the total number of jobs that have been processed by the batch thus far.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_progress">progress</a>()
+        
+                                            <p><p>Get the percentage of jobs that have been processed (between 0-100).</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_recordSuccessfulJob">recordSuccessfulJob</a>(string $jobId)
+        
+                                            <p><p>Record that a job within the batch finished successfully, executing any callbacks if necessary.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_decrementPendingJobs">decrementPendingJobs</a>(string $jobId)
+        
+                                            <p><p>Decrement the pending jobs for the batch.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_finished">finished</a>()
+        
+                                            <p><p>Determine if the batch has finished executing.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_hasThenCallbacks">hasThenCallbacks</a>()
+        
+                                            <p><p>Determine if the batch has &quot;success&quot; callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_allowsFailures">allowsFailures</a>()
+        
+                                            <p><p>Determine if the batch allows jobs to fail without cancelling the batch.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_hasFailures">hasFailures</a>()
+        
+                                            <p><p>Determine if the batch has job failures.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_recordFailedJob">recordFailedJob</a>(string $jobId, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
+        
+                                            <p><p>Record that a job within the batch failed to finish successfully, executing any callbacks if necessary.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_incrementFailedJobs">incrementFailedJobs</a>(string $jobId)
+        
+                                            <p><p>Increment the failed jobs for the batch.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_hasCatchCallbacks">hasCatchCallbacks</a>()
+        
+                                            <p><p>Determine if the batch has &quot;catch&quot; callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_hasFinallyCallbacks">hasFinallyCallbacks</a>()
+        
+                                            <p><p>Determine if the batch has &quot;finally&quot; callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_cancel">cancel</a>()
+        
+                                            <p><p>Cancel the batch.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_canceled">canceled</a>()
+        
+                                            <p><p>Determine if the batch has been cancelled.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_cancelled">cancelled</a>()
+        
+                                            <p><p>Determine if the batch has been cancelled.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_delete">delete</a>()
+        
+                                            <p><p>Delete the batch from storage.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_invokeHandlerCallback">invokeHandlerCallback</a>(callable $handler, <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a> $batch, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e = null)
+        
+                                            <p><p>Invoke a batch callback handler.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_toArray">toArray</a>()
+        
+                                            <p><p>Convert the batch to an array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p><p>Get the JSON serializable representation of the object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Batch.html#method___get">__get</a>(string $key)
+        
+                                            <p><p>Dynamically access the batch's &quot;options&quot; via properties.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L118">at line 118</a></div>
+        <code>                    void
+    <strong>__construct</strong>(<a href="../Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a> $queue, <a href="BatchRepository.html"><abbr title="Illuminate\Bus\BatchRepository">BatchRepository</abbr></a> $repository, string $id, string $name, int $totalJobs, int $pendingJobs, int $failedJobs, array $failedJobIds, array $options, <abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr> $createdAt, <abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null $cancelledAt = null, <abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null $finishedAt = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new batch instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Queue/Factory.html"><abbr title="Illuminate\Contracts\Queue\Factory">Factory</abbr></a></td>
+                <td>$queue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="BatchRepository.html"><abbr title="Illuminate\Bus\BatchRepository">BatchRepository</abbr></a></td>
+                <td>$repository</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$totalJobs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pendingJobs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$failedJobs</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$failedJobIds</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Carbon\CarbonImmutable">CarbonImmutable</abbr></td>
+                <td>$createdAt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null</td>
+                <td>$cancelledAt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Illuminate\Bus\Carbon\CarbonImmutable">CarbonImmutable</abbr>|null</td>
+                <td>$finishedAt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fresh">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L150">at line 150</a></div>
+        <code>                    <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a>
+    <strong>fresh</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a fresh instance of the batch represented by this ID.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L161">at line 161</a></div>
+        <code>                    <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a>
+    <strong>add</strong>(<a href="../Support/Enumerable.html"><abbr title="Illuminate\Support\Enumerable">Enumerable</abbr></a>|object|array $jobs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add additional jobs to the batch.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Support/Enumerable.html"><abbr title="Illuminate\Support\Enumerable">Enumerable</abbr></a>|object|array</td>
+                <td>$jobs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareBatchedChain">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L205">at line 205</a></div>
+        <code>            protected        <a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a>
+    <strong>prepareBatchedChain</strong>(array $chain)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prepare a chain that exists within the jobs being added.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$chain</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Support/Collection.html"><abbr title="Illuminate\Support\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processedJobs">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L219">at line 219</a></div>
+        <code>                    int
+    <strong>processedJobs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the total number of jobs that have been processed by the batch thus far.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_progress">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L229">at line 229</a></div>
+        <code>                    int
+    <strong>progress</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the percentage of jobs that have been processed (between 0-100).</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recordSuccessfulJob">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L240">at line 240</a></div>
+        <code>                    void
+    <strong>recordSuccessfulJob</strong>(string $jobId)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Record that a job within the batch finished successfully, executing any callbacks if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$jobId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrementPendingJobs">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L271">at line 271</a></div>
+        <code>                    <a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a>
+    <strong>decrementPendingJobs</strong>(string $jobId)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrement the pending jobs for the batch.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$jobId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_finished">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L281">at line 281</a></div>
+        <code>                    bool
+    <strong>finished</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has finished executing.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasThenCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L291">at line 291</a></div>
+        <code>                    bool
+    <strong>hasThenCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has &quot;success&quot; callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowsFailures">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L301">at line 301</a></div>
+        <code>                    bool
+    <strong>allowsFailures</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch allows jobs to fail without cancelling the batch.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFailures">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L311">at line 311</a></div>
+        <code>                    bool
+    <strong>hasFailures</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has job failures.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_recordFailedJob">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L323">at line 323</a></div>
+        <code>                    void
+    <strong>recordFailedJob</strong>(string $jobId, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Record that a job within the batch failed to finish successfully, executing any callbacks if necessary.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$jobId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_incrementFailedJobs">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L354">at line 354</a></div>
+        <code>                    <a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a>
+    <strong>incrementFailedJobs</strong>(string $jobId)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Increment the failed jobs for the batch.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$jobId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="UpdatedBatchJobCounts.html"><abbr title="Illuminate\Bus\UpdatedBatchJobCounts">UpdatedBatchJobCounts</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasCatchCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L364">at line 364</a></div>
+        <code>                    bool
+    <strong>hasCatchCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has &quot;catch&quot; callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasFinallyCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L374">at line 374</a></div>
+        <code>                    bool
+    <strong>hasFinallyCallbacks</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has &quot;finally&quot; callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancel">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L384">at line 384</a></div>
+        <code>                    void
+    <strong>cancel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Cancel the batch.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_canceled">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L394">at line 394</a></div>
+        <code>                    bool
+    <strong>canceled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has been cancelled.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelled">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L404">at line 404</a></div>
+        <code>                    bool
+    <strong>cancelled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the batch has been cancelled.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_delete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L414">at line 414</a></div>
+        <code>                    void
+    <strong>delete</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete the batch from storage.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_invokeHandlerCallback">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L427">at line 427</a></div>
+        <code>            protected        void
+    <strong>invokeHandlerCallback</strong>(callable $handler, <a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a> $batch, <a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Invoke a batch callback handler.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$handler</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="Batch.html"><abbr title="Illuminate\Bus\Batch">Batch</abbr></a></td>
+                <td>$batch</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L443">at line 443</a></div>
+        <code>                    
+    <strong>toArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Convert the batch to an array.</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L465">at line 465</a></div>
+        <code>                    array
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the JSON serializable representation of the object.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Bus/Batch.php#L476">at line 476</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically access the batch's &quot;options&quot; via properties.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

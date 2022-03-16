@@ -1,0 +1,4539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Container\Container | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Container_Container" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="Container.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Container.html">Container</a></li><li class="backslash">\</li><li>Container</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Container    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Container</strong>        implements        <a target="_blank" rel="noopener" href="https://www.php.net/ArrayAccess">ArrayAccess</a>, <a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instance">
+                    static                    protected                                        <a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+                                                                                
+                                    </td>
+                <td>$instance</td>
+                <td class="last"><p>The current globally available container (if any).</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolved">
+                                        protected                                        bool[]
+                                                                                
+                                    </td>
+                <td>$resolved</td>
+                <td class="last"><p>An array of the types that have been resolved.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bindings">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$bindings</td>
+                <td class="last"><p>The container's bindings.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_methodBindings">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>[]
+                                                                                
+                                    </td>
+                <td>$methodBindings</td>
+                <td class="last"><p>The container's method bindings.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_instances">
+                                        protected                                        object[]
+                                                                                
+                                    </td>
+                <td>$instances</td>
+                <td class="last"><p>The container's shared instances.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_scopedInstances">
+                                        protected                                        array
+                                                                                
+                                    </td>
+                <td>$scopedInstances</td>
+                <td class="last"><p>The container's scoped instances.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_aliases">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$aliases</td>
+                <td class="last"><p>The registered type aliases.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_abstractAliases">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$abstractAliases</td>
+                <td class="last"><p>The registered aliases keyed by the abstract name.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_extenders">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$extenders</td>
+                <td class="last"><p>The extension closures for services.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tags">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$tags</td>
+                <td class="last"><p>All of the registered tags.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_buildStack">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$buildStack</td>
+                <td class="last"><p>The stack of concretions currently being built.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_with">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$with</td>
+                <td class="last"><p>The parameter override stack.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contextual">
+                                                                                array[]
+                                                                                
+                                    </td>
+                <td>$contextual</td>
+                <td class="last"><p>The contextual binding map.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reboundCallbacks">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$reboundCallbacks</td>
+                <td class="last"><p>All of the registered rebound callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalBeforeResolvingCallbacks">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>[]
+                                                                                
+                                    </td>
+                <td>$globalBeforeResolvingCallbacks</td>
+                <td class="last"><p>All of the global before resolving callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalResolvingCallbacks">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>[]
+                                                                                
+                                    </td>
+                <td>$globalResolvingCallbacks</td>
+                <td class="last"><p>All of the global resolving callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_globalAfterResolvingCallbacks">
+                                        protected                                        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>[]
+                                                                                
+                                    </td>
+                <td>$globalAfterResolvingCallbacks</td>
+                <td class="last"><p>All of the global after resolving callbacks.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_beforeResolvingCallbacks">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$beforeResolvingCallbacks</td>
+                <td class="last"><p>All of the before resolving callbacks by class type.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolvingCallbacks">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$resolvingCallbacks</td>
+                <td class="last"><p>All of the resolving callbacks by class type.</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afterResolvingCallbacks">
+                                        protected                                        array[]
+                                                                                
+                                    </td>
+                <td>$afterResolvingCallbacks</td>
+                <td class="last"><p>All of the after resolving callbacks by class type.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Contracts/Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_when">when</a>(string|array $concrete)
+        
+                                            <p><p>Define a contextual binding.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_bound">bound</a>(string $abstract)
+        
+                                            <p><p>Determine if the given abstract type has been bound.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_has">has</a>(string $id)
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolved">resolved</a>(string $abstract)
+        
+                                            <p><p>Determine if the given abstract type has been resolved.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_isShared">isShared</a>(string $abstract)
+        
+                                            <p><p>Determine if a given type is shared.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_isAlias">isAlias</a>(string $name)
+        
+                                            <p><p>Determine if a given string is an alias.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_bind">bind</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        
+                                            <p><p>Register a binding with the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getClosure">getClosure</a>(string $abstract, string $concrete)
+        
+                                            <p><p>Get the Closure to be used when building a type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_hasMethodBinding">hasMethodBinding</a>(string $method)
+        
+                                            <p><p>Determine if the container has a method binding.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_bindMethod">bindMethod</a>(array|string $method, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Bind a callback to resolve with Container::call.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_parseBindMethod">parseBindMethod</a>(array|string $method)
+        
+                                            <p><p>Get the method to be bound in <a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="0a69666b79794a676f7e62656e">[email&#160;protected]</a> format.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_callMethodBinding">callMethodBinding</a>(string $method, mixed $instance)
+        
+                                            <p><p>Get the method binding for the given method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_addContextualBinding">addContextualBinding</a>(string $concrete, string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $implementation)
+        
+                                            <p><p>Add a contextual binding to the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_bindIf">bindIf</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        
+                                            <p><p>Register a binding if it hasn't already been registered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_singleton">singleton</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a shared binding in the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_singletonIf">singletonIf</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a shared binding if it hasn't already been registered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_scoped">scoped</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a scoped binding in the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_scopedIf">scopedIf</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        
+                                            <p><p>Register a scoped binding if it hasn't already been registered.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_extend">extend</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $closure)
+        
+                                            <p><p>&quot;Extend&quot; an abstract type in the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_instance">instance</a>(string $abstract, mixed $instance)
+        
+                                            <p><p>Register an existing instance as shared in the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_removeAbstractAlias">removeAbstractAlias</a>(string $searched)
+        
+                                            <p><p>Remove an alias from the contextual binding alias cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_tag">tag</a>(array|string $abstracts, array|mixed $tags)
+        
+                                            <p><p>Assign a set of tags to a given binding.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_tagged">tagged</a>(string $tag)
+        
+                                            <p><p>Resolve all of the bindings for a given tag.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_alias">alias</a>(string $abstract, string $alias)
+        
+                                            <p><p>Alias a type to a different name.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_rebinding">rebinding</a>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        
+                                            <p><p>Bind a new callback to an abstract's rebind event.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_refresh">refresh</a>(string $abstract, mixed $target, string $method)
+        
+                                            <p><p>Refresh an instance on the given target and method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_rebound">rebound</a>(string $abstract)
+        
+                                            <p><p>Fire the &quot;rebound&quot; callbacks for the given abstract type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getReboundCallbacks">getReboundCallbacks</a>(string $abstract)
+        
+                                            <p><p>Get the rebound callbacks for a given type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_wrap">wrap</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, array $parameters = [])
+        
+                                            <p><p>Wrap the given closure such that its dependencies will be injected when executed.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_call">call</a>(callable|string $callback, array $parameters = [], string|null $defaultMethod = null)
+        
+                                            <p><p>Call the given Closure / <a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="dfbcb3beacac9fb2baabb7b0bb">[email&#160;protected]</a> and inject its dependencies.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_factory">factory</a>(string $abstract)
+        
+                                            <p><p>Get a closure to resolve the given type from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_makeWith">makeWith</a>(string|callable $abstract, array $parameters = [])
+        
+                                            <p><p>An alias function name for make().</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_make">make</a>(string $abstract, array $parameters = [])
+        
+                                            <p><p>Resolve the given type from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_get">get</a>(string $id)
+        
+                                            <p>{@inheritdoc}</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolve">resolve</a>(string|callable $abstract, array $parameters = [], bool $raiseEvents = true)
+        
+                                            <p><p>Resolve the given type from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getConcrete">getConcrete</a>(string|callable $abstract)
+        
+                                            <p><p>Get the concrete type for a given abstract.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getContextualConcrete">getContextualConcrete</a>(string|callable $abstract)
+        
+                                            <p><p>Get the contextual concrete binding for the given abstract.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_findInContextualBindings">findInContextualBindings</a>(string|callable $abstract)
+        
+                                            <p><p>Find the concrete binding for the given abstract in the contextual binding array.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_isBuildable">isBuildable</a>(mixed $concrete, string $abstract)
+        
+                                            <p><p>Determine if the given concrete is buildable.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_build">build</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $concrete)
+        
+                                            <p><p>Instantiate a concrete instance of the given type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolveDependencies">resolveDependencies</a>(array $dependencies)
+        
+                                            <p><p>Resolve all of the dependencies from the ReflectionParameters.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_hasParameterOverride">hasParameterOverride</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $dependency)
+        
+                                            <p><p>Determine if the given dependency has a parameter override.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getParameterOverride">getParameterOverride</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $dependency)
+        
+                                            <p><p>Get a parameter override for a dependency.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getLastParameterOverride">getLastParameterOverride</a>()
+        
+                                            <p><p>Get the last parameter override.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolvePrimitive">resolvePrimitive</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        
+                                            <p><p>Resolve a non-class hinted primitive dependency.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolveClass">resolveClass</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        
+                                            <p><p>Resolve a class based dependency from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolveVariadicClass">resolveVariadicClass</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        
+                                            <p><p>Resolve a class based variadic dependency from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_notInstantiable">notInstantiable</a>(string $concrete)
+        
+                                            <p><p>Throw an exception that the concrete is not instantiable.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_unresolvablePrimitive">unresolvablePrimitive</a>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        
+                                            <p><p>Throw an exception for an unresolvable primitive.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_beforeResolving">beforeResolving</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Register a new before resolving callback for all types.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_resolving">resolving</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Register a new resolving callback.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_afterResolving">afterResolving</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        
+                                            <p><p>Register a new after resolving callback for all types.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_fireBeforeResolvingCallbacks">fireBeforeResolvingCallbacks</a>(string $abstract, array $parameters = [])
+        
+                                            <p><p>Fire all of the before resolving callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_fireBeforeCallbackArray">fireBeforeCallbackArray</a>(string $abstract, array $parameters, array $callbacks)
+        
+                                            <p><p>Fire an array of callbacks with an object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_fireResolvingCallbacks">fireResolvingCallbacks</a>(string $abstract, mixed $object)
+        
+                                            <p><p>Fire all of the resolving callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_fireAfterResolvingCallbacks">fireAfterResolvingCallbacks</a>(string $abstract, mixed $object)
+        
+                                            <p><p>Fire all of the after resolving callbacks.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getCallbacksForType">getCallbacksForType</a>(string $abstract, object $object, array $callbacksPerType)
+        
+                                            <p><p>Get all callbacks for a given type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_fireCallbackArray">fireCallbackArray</a>(mixed $object, array $callbacks)
+        
+                                            <p><p>Fire an array of callbacks with an object.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getBindings">getBindings</a>()
+        
+                                            <p><p>Get the container's bindings.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getAlias">getAlias</a>(string $abstract)
+        
+                                            <p><p>Get the alias for an abstract if available.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getExtenders">getExtenders</a>(string $abstract)
+        
+                                            <p><p>Get the extender callbacks for a given type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_forgetExtenders">forgetExtenders</a>(string $abstract)
+        
+                                            <p><p>Remove all of the extender callbacks for a given type.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_dropStaleInstances">dropStaleInstances</a>(string $abstract)
+        
+                                            <p><p>Drop all of the stale instances and aliases.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_forgetInstance">forgetInstance</a>(string $abstract)
+        
+                                            <p><p>Remove a resolved instance from the instance cache.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_forgetInstances">forgetInstances</a>()
+        
+                                            <p><p>Clear all of the instances from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_forgetScopedInstances">forgetScopedInstances</a>()
+        
+                                            <p><p>Clear all of the scoped instances from the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_flush">flush</a>()
+        
+                                            <p><p>Flush the container of all bindings and resolved instances.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_getInstance">getInstance</a>()
+        
+                                            <p><p>Get the globally available instance of the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>|<a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_setInstance">setInstance</a>(<a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container = null)
+        
+                                            <p><p>Set the shared instance of the container.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_offsetExists">offsetExists</a>(string $key)
+        
+                                            <p><p>Determine if a given offset exists.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_offsetGet">offsetGet</a>(string $key)
+        
+                                            <p><p>Get the value at a given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_offsetSet">offsetSet</a>(string $key, mixed $value)
+        
+                                            <p><p>Set the value at a given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method_offsetUnset">offsetUnset</a>(string $key)
+        
+                                            <p><p>Unset the value at a given offset.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method___get">__get</a>(string $key)
+        
+                                            <p><p>Dynamically access container services.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="Container.html#method___set">__set</a>(string $key, mixed $value)
+        
+                                            <p><p>Dynamically set container services.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_when">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L165">at line 165</a></div>
+        <code>                    <a href="../Contracts/Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a>
+    <strong>when</strong>(string|array $concrete)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Define a contextual binding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Contracts/Container/ContextualBindingBuilder.html"><abbr title="Illuminate\Contracts\Container\ContextualBindingBuilder">ContextualBindingBuilder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bound">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L182">at line 182</a></div>
+        <code>                    bool
+    <strong>bound</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given abstract type has been bound.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_has">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L194">at line 194</a></div>
+        <code>                    bool
+    <strong>has</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p>{@inheritdoc}</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolved">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L205">at line 205</a></div>
+        <code>                    bool
+    <strong>resolved</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given abstract type has been resolved.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isShared">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L221">at line 221</a></div>
+        <code>                    bool
+    <strong>isShared</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given type is shared.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isAlias">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L234">at line 234</a></div>
+        <code>                    bool
+    <strong>isAlias</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given string is an alias.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bind">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L249">at line 249</a></div>
+        <code>                    void
+    <strong>bind</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a binding with the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shared</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/TypeError">TypeError</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getClosure">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L288">at line 288</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>getClosure</strong>(string $abstract, string $concrete)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the Closure to be used when building a type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasMethodBinding">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L307">at line 307</a></div>
+        <code>                    bool
+    <strong>hasMethodBinding</strong>(string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the container has a method binding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bindMethod">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L319">at line 319</a></div>
+        <code>                    void
+    <strong>bindMethod</strong>(array|string $method, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Bind a callback to resolve with Container::call.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_parseBindMethod">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L330">at line 330</a></div>
+        <code>            protected        string
+    <strong>parseBindMethod</strong>(array|string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the method to be bound in <a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="dfbcb3beacac9fb2baabb7b0bb">[email&#160;protected]</a> format.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_callMethodBinding">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L346">at line 346</a></div>
+        <code>                    mixed
+    <strong>callMethodBinding</strong>(string $method, mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the method binding for the given method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addContextualBinding">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L359">at line 359</a></div>
+        <code>                    void
+    <strong>addContextualBinding</strong>(string $concrete, string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $implementation)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a contextual binding to the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$implementation</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bindIf">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L372">at line 372</a></div>
+        <code>                    void
+    <strong>bindIf</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null, bool $shared = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a binding if it hasn't already been registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$shared</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singleton">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L386">at line 386</a></div>
+        <code>                    void
+    <strong>singleton</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a shared binding in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_singletonIf">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L398">at line 398</a></div>
+        <code>                    void
+    <strong>singletonIf</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a shared binding if it hasn't already been registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scoped">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L412">at line 412</a></div>
+        <code>                    void
+    <strong>scoped</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a scoped binding in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_scopedIf">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L426">at line 426</a></div>
+        <code>                    void
+    <strong>scopedIf</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null $concrete = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a scoped binding if it hasn't already been registered.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_extend">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L444">at line 444</a></div>
+        <code>                    void
+    <strong>extend</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $closure)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>&quot;Extend&quot; an abstract type in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L468">at line 468</a></div>
+        <code>                    mixed
+    <strong>instance</strong>(string $abstract, mixed $instance)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register an existing instance as shared in the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeAbstractAlias">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L494">at line 494</a></div>
+        <code>            protected        void
+    <strong>removeAbstractAlias</strong>(string $searched)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove an alias from the contextual binding alias cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$searched</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tag">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L516">at line 516</a></div>
+        <code>                    void
+    <strong>tag</strong>(array|string $abstracts, array|mixed $tags)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Assign a set of tags to a given binding.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|string</td>
+                <td>$abstracts</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|mixed</td>
+                <td>$tags</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_tagged">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L537">at line 537</a></div>
+        <code>                    <abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr>
+    <strong>tagged</strong>(string $tag)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve all of the bindings for a given tag.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Illuminate\Contracts\Container\iterable">iterable</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_alias">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L559">at line 559</a></div>
+        <code>                    void
+    <strong>alias</strong>(string $abstract, string $alias)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Alias a type to a different name.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/LogicException">LogicException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rebinding">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L577">at line 577</a></div>
+        <code>                    mixed
+    <strong>rebinding</strong>(string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Bind a new callback to an abstract's rebind event.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_refresh">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L594">at line 594</a></div>
+        <code>                    mixed
+    <strong>refresh</strong>(string $abstract, mixed $target, string $method)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Refresh an instance on the given target and method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$target</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rebound">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L607">at line 607</a></div>
+        <code>            protected        void
+    <strong>rebound</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire the &quot;rebound&quot; callbacks for the given abstract type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getReboundCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L622">at line 622</a></div>
+        <code>            protected        array
+    <strong>getReboundCallbacks</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the rebound callbacks for a given type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wrap">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L634">at line 634</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>wrap</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Wrap the given closure such that its dependencies will be injected when executed.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_call">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L651">at line 651</a></div>
+        <code>                    mixed
+    <strong>call</strong>(callable|string $callback, array $parameters = [], string|null $defaultMethod = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Call the given Closure / <a href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="ed8e818c9e9ead808899858289">[email&#160;protected]</a> and inject its dependencies.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|string</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$defaultMethod</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_factory">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L662">at line 662</a></div>
+        <code>                    <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>
+    <strong>factory</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a closure to resolve the given type from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeWith">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L678">at line 678</a></div>
+        <code>                    mixed
+    <strong>makeWith</strong>(string|callable $abstract, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>An alias function name for make().</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|callable</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_make">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L692">at line 692</a></div>
+        <code>                    mixed
+    <strong>make</strong>(string $abstract, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the given type from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L702">at line 702</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p>{@inheritdoc}</p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolve">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L726">at line 726</a></div>
+        <code>            protected        mixed
+    <strong>resolve</strong>(string|callable $abstract, array $parameters = [], bool $raiseEvents = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve the given type from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|callable</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$raiseEvents</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Container/CircularDependencyException.html"><abbr title="Illuminate\Contracts\Container\CircularDependencyException">CircularDependencyException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConcrete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L797">at line 797</a></div>
+        <code>            protected        mixed
+    <strong>getConcrete</strong>(string|callable $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the concrete type for a given abstract.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|callable</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getContextualConcrete">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L815">at line 815</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|array|null
+    <strong>getContextualConcrete</strong>(string|callable $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the contextual concrete binding for the given abstract.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|callable</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|array|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_findInContextualBindings">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L841">at line 841</a></div>
+        <code>            protected        <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null
+    <strong>findInContextualBindings</strong>(string|callable $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Find the concrete binding for the given abstract in the contextual binding array.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|callable</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBuildable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L853">at line 853</a></div>
+        <code>            protected        bool
+    <strong>isBuildable</strong>(mixed $concrete, string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given concrete is buildable.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_build">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L867">at line 867</a></div>
+        <code>                    mixed
+    <strong>build</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $concrete)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Instantiate a concrete instance of the given type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Contracts/Container/CircularDependencyException.html"><abbr title="Illuminate\Contracts\Container\CircularDependencyException">CircularDependencyException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveDependencies">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L928">at line 928</a></div>
+        <code>            protected        array
+    <strong>resolveDependencies</strong>(array $dependencies)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve all of the dependencies from the ReflectionParameters.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$dependencies</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasParameterOverride">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L965">at line 965</a></div>
+        <code>            protected        bool
+    <strong>hasParameterOverride</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $dependency)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the given dependency has a parameter override.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$dependency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParameterOverride">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L978">at line 978</a></div>
+        <code>            protected        mixed
+    <strong>getParameterOverride</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $dependency)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get a parameter override for a dependency.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$dependency</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastParameterOverride">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L988">at line 988</a></div>
+        <code>            protected        array
+    <strong>getLastParameterOverride</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the last parameter override.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolvePrimitive">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1001">at line 1001</a></div>
+        <code>            protected        mixed
+    <strong>resolvePrimitive</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve a non-class hinted primitive dependency.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveClass">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1022">at line 1022</a></div>
+        <code>            protected        mixed
+    <strong>resolveClass</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve a class based dependency from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveVariadicClass">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1056">at line 1056</a></div>
+        <code>            protected        mixed
+    <strong>resolveVariadicClass</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resolve a class based variadic dependency from the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_notInstantiable">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1079">at line 1079</a></div>
+        <code>            protected        void
+    <strong>notInstantiable</strong>(string $concrete)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Throw an exception that the concrete is not instantiable.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$concrete</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unresolvablePrimitive">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1100">at line 1100</a></div>
+        <code>            protected        void
+    <strong>unresolvablePrimitive</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a> $parameter)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Throw an exception for an unresolvable primitive.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/ReflectionParameter">ReflectionParameter</a></td>
+                <td>$parameter</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/BindingResolutionException.html"><abbr title="Illuminate\Contracts\Container\BindingResolutionException">BindingResolutionException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beforeResolving">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1114">at line 1114</a></div>
+        <code>                    void
+    <strong>beforeResolving</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new before resolving callback for all types.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolving">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1134">at line 1134</a></div>
+        <code>                    void
+    <strong>resolving</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new resolving callback.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_afterResolving">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1154">at line 1154</a></div>
+        <code>                    void
+    <strong>afterResolving</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string $abstract, <a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a> $callback = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Register a new after resolving callback for all types.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a>|string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Closure">Closure</a></td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireBeforeResolvingCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1174">at line 1174</a></div>
+        <code>            protected        void
+    <strong>fireBeforeResolvingCallbacks</strong>(string $abstract, array $parameters = [])
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire all of the before resolving callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireBeforeCallbackArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1193">at line 1193</a></div>
+        <code>            protected        void
+    <strong>fireBeforeCallbackArray</strong>(string $abstract, array $parameters, array $callbacks)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire an array of callbacks with an object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parameters</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$callbacks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireResolvingCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1207">at line 1207</a></div>
+        <code>            protected        void
+    <strong>fireResolvingCallbacks</strong>(string $abstract, mixed $object)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire all of the resolving callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireAfterResolvingCallbacks">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1225">at line 1225</a></div>
+        <code>            protected        void
+    <strong>fireAfterResolvingCallbacks</strong>(string $abstract, mixed $object)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire all of the after resolving callbacks.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCallbacksForType">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1242">at line 1242</a></div>
+        <code>            protected        array
+    <strong>getCallbacksForType</strong>(string $abstract, object $object, array $callbacksPerType)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get all callbacks for a given type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$callbacksPerType</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fireCallbackArray">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1262">at line 1262</a></div>
+        <code>            protected        void
+    <strong>fireCallbackArray</strong>(mixed $object, array $callbacks)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fire an array of callbacks with an object.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$callbacks</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBindings">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1274">at line 1274</a></div>
+        <code>                    array
+    <strong>getBindings</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the container's bindings.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAlias">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1285">at line 1285</a></div>
+        <code>                    string
+    <strong>getAlias</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the alias for an abstract if available.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtenders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1298">at line 1298</a></div>
+        <code>            protected        array
+    <strong>getExtenders</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the extender callbacks for a given type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgetExtenders">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1309">at line 1309</a></div>
+        <code>                    void
+    <strong>forgetExtenders</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove all of the extender callbacks for a given type.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dropStaleInstances">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1320">at line 1320</a></div>
+        <code>            protected        void
+    <strong>dropStaleInstances</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Drop all of the stale instances and aliases.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgetInstance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1331">at line 1331</a></div>
+        <code>                    void
+    <strong>forgetInstance</strong>(string $abstract)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Remove a resolved instance from the instance cache.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$abstract</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgetInstances">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1341">at line 1341</a></div>
+        <code>                    void
+    <strong>forgetInstances</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear all of the instances from the container.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgetScopedInstances">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1351">at line 1351</a></div>
+        <code>                    void
+    <strong>forgetScopedInstances</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Clear all of the scoped instances from the container.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_flush">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1363">at line 1363</a></div>
+        <code>                    void
+    <strong>flush</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Flush the container of all bindings and resolved instances.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1378">at line 1378</a></div>
+        <code>        static            <a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+    <strong>getInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the globally available instance of the container.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInstance">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1393">at line 1393</a></div>
+        <code>        static            <a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>|<a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a>
+    <strong>setInstance</strong>(<a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a> $container = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the shared instance of the container.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a></td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Contracts/Container/Container.html"><abbr title="Illuminate\Contracts\Container\Container">Container</abbr></a>|<a href="Container.html"><abbr title="Illuminate\Container\Container">Container</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1404">at line 1404</a></div>
+        <code>                    bool
+    <strong>offsetExists</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if a given offset exists.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1415">at line 1415</a></div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the value at a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1427">at line 1427</a></div>
+        <code>                    void
+    <strong>offsetSet</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Set the value at a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1440">at line 1440</a></div>
+        <code>                    void
+    <strong>offsetUnset</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unset the value at a given offset.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1451">at line 1451</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically access container services.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___set">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Container/Container.php#L1463">at line 1463</a></div>
+        <code>                    void
+    <strong>__set</strong>(string $key, mixed $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Dynamically set container services.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    <script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+
+</html>

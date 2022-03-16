@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Illuminate\Queue\ListenerOptions | Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+        <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.5/opensearch.xml"
+          title="Laravel API (5.5)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../5.8/opensearch.xml"
+          title="Laravel API (5.8)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../6.x/opensearch.xml"
+          title="Laravel API (6.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../7.x/opensearch.xml"
+          title="Laravel API (7.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../8.x/opensearch.xml"
+          title="Laravel API (8.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../opensearch.xml"
+          title="Laravel API (9.x)" />
+    <link rel="search"
+          type="application/opensearchdescription+xml"
+          href="../../../master/opensearch.xml"
+          title="Laravel API (master)" />
+    </head>
+
+    <body id="class" data-name="class:Illuminate_Queue_ListenerOptions" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select class="form-control" id="version-switcher" name="version">
+                                            <option
+                            value="../../../5.5/index.html"
+                            data-version="5.5" >Laravel 5.5</option>
+                                            <option
+                            value="../../../5.8/index.html"
+                            data-version="5.8" >Laravel 5.8</option>
+                                            <option
+                            value="../../../6.x/index.html"
+                            data-version="6.x" >Laravel 6.x</option>
+                                            <option
+                            value="../../../7.x/index.html"
+                            data-version="7.x" >Laravel 7.x</option>
+                                            <option
+                            value="../../../8.x/index.html"
+                            data-version="8.x" >Laravel 8.x</option>
+                                            <option
+                            value="../../../9.x/index.html"
+                            data-version="9.x" selected>Laravel 9.x</option>
+                                            <option
+                            value="../../../master/index.html"
+                            data-version="master" >Laravel Dev</option>
+                                    </select>
+            </form>
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                                        <li role="presentation" class="dropdown visible-xs-block visible-sm-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ListenerOptions.html#"
+                            role="button" aria-haspopup="true" aria-expanded="false">Versions&nbsp;<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li ><a href="../../../5.5/index.html" data-version="5.5">Laravel 5.5</a></li>
+                        <li ><a href="../../../5.8/index.html" data-version="5.8">Laravel 5.8</a></li>
+                        <li ><a href="../../../6.x/index.html" data-version="6.x">Laravel 6.x</a></li>
+                        <li ><a href="../../../7.x/index.html" data-version="7.x">Laravel 7.x</a></li>
+                        <li ><a href="../../../8.x/index.html" data-version="8.x">Laravel 8.x</a></li>
+                        <li class="active"><a href="../../index.html" data-version="9.x">Laravel 9.x</a></li>
+                        <li ><a href="../../../master/index.html" data-version="master">Laravel Dev</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Illuminate.html">Illuminate</a></li><li class="backslash">\</li><li><a href="../Queue.html">Queue</a></li><li class="backslash">\</li><li>ListenerOptions</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ListenerOptions    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ListenerOptions</strong>        extends <a href="WorkerOptions.html"><abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a>        (<a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/ListenerOptions.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_name">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$name</td>
+                <td class="last"><p>The name of the worker.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_name">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_backoff">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$backoff</td>
+                <td class="last"><p>The number of seconds to wait before retrying a job that encountered an uncaught exception.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_backoff">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_memory">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$memory</td>
+                <td class="last"><p>The maximum amount of RAM the worker may consume.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_memory">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timeout">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$timeout</td>
+                <td class="last"><p>The maximum number of seconds a child worker may run.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_timeout">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sleep">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$sleep</td>
+                <td class="last"><p>The number of seconds to wait in between polling the queue.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_sleep">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rest">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$rest</td>
+                <td class="last"><p>The number of seconds to rest between jobs.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_rest">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxTries">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$maxTries</td>
+                <td class="last"><p>The maximum number of times a job may be attempted.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_maxTries">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_force">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$force</td>
+                <td class="last"><p>Indicates if the worker should run in maintenance mode.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_force">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_stopWhenEmpty">
+                                                                                bool
+                                                                                
+                                    </td>
+                <td>$stopWhenEmpty</td>
+                <td class="last"><p>Indicates if the worker should stop when the queue is empty.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_stopWhenEmpty">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxJobs">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$maxJobs</td>
+                <td class="last"><p>The maximum number of jobs to run.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_maxJobs">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxTime">
+                                                                                int
+                                                                                
+                                    </td>
+                <td>$maxTime</td>
+                <td class="last"><p>The maximum number of seconds a worker may live.</p></td>
+                <td><small>from&nbsp;<a href="WorkerOptions.html#property_maxTime">
+<abbr title="Illuminate\Queue\WorkerOptions">WorkerOptions</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_environment">
+                                                                                string
+                                                                                
+                                    </td>
+                <td>$environment</td>
+                <td class="last"><p>The environment the worker should run in.</p></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="ListenerOptions.html#method___construct">__construct</a>(string $name = &#039;default&#039;, string|null $environment = null, int $backoff = 0, int $memory = 128, int $timeout = 60, int $sleep = 3, int $maxTries = 1, bool $force = false)
+        
+                                            <p><p>Create a new listener options instance.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/laravel/framework/blob/9.x/src/Illuminate/Queue/ListenerOptions.php#L27">at line 27</a></div>
+        <code>                    void
+    <strong>__construct</strong>(string $name = &#039;default&#039;, string|null $environment = null, int $backoff = 0, int $memory = 128, int $timeout = 60, int $sleep = 3, int $maxTries = 1, bool $force = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Create a new listener options instance.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$environment</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$backoff</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$memory</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timeout</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$sleep</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maxTries</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
