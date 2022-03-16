@@ -250,8 +250,7 @@
                         Art <br class="hidden lg:inline"><span class="text-red-500">Framework</span></h1>
                     <p
                         class="mt-6 max-w-xl mx-auto text-center text-gray-700 text-md leading-relaxed md:mt-8 md:text-lg lg:mt-10">
-                        Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the
-                        foundation — freeing you to create without sweating the small things.</p>
+                        Yolk is a PHP framework that helps to easily build web applications. Comes with in-built sql queries and has custom UI .</p>
                     <div
                         class="mt-6 max-w-sm mx-auto flex flex-col justify-center items-center gap-4 sm:flex-row md:mt-8 lg:mt-10">
                         <a class="group relative inline-flex border border-red-500 focus:outline-none w-full sm:w-auto"
