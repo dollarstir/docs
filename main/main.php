@@ -162,17 +162,10 @@
                         <ul>
                             <li><a class="block w-full py-2" href="https://forge.laravel.com">Documentation</a></li>
                             <li><a class="block w-full py-2" href="https://vapor.laravel.com">Download</a></li>
-                            <li><a class="block w-full py-3" href="https://laravel-news.com"></a></li>
-                            <li><a class="block w-full py-3" href="https://partners.laravel.com">Partners</a></li>
-                            <li class="flex sm:justify-center"><a
-                                    class="group relative inline-flex border border-red-600 focus:outline-none mt-3 w-full max-w-md"
-                                    href="docs/9.x.html">
-                                    <span
-                                        class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
-                                        Documentation
-                                    </span>
-                                </a>
-                            </li>
+                            <li><a class="block w-full py-3" href="https://laravel-news.com">Plugins</a></li>
+                            <li><a class="block w-full py-3" href="https://partners.laravel.com">Community</a></li>
+                            <li><a class="block w-full py-3" href="https://partners.laravel.com">Donate</a></li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -252,8 +245,8 @@
                     </svg>
                 </div>
                 <div class="relative">
-                    <h1 class="max-w-3xl mx-auto text-5xl font-bold text-center md:text-6xl lg:text-7xl">The PHP
-                        Framework <br class="hidden lg:inline"><span class="text-red-500">for Web Artisans</span></h1>
+                    <h1 class="max-w-3xl mx-auto text-5xl font-bold text-center md:text-6xl lg:text-7xl">State Of The 
+                        Art <br class="hidden lg:inline"><span class="text-red-500">Framework</span></h1>
                     <p
                         class="mt-6 max-w-xl mx-auto text-center text-gray-700 text-md leading-relaxed md:mt-8 md:text-lg lg:mt-10">
                         Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the
