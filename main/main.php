@@ -22,25 +22,33 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://laravel.com/">
-    <meta property="twitter:title" content="Laravel - The PHP Framework For Web Artisans">
+    <meta property="twitter:url" content="https://phpyolk.com/">
+    <meta property="twitter:title" content="Yolk - State of the art framework">
     <meta property="twitter:description"
-        content="Laravel is a PHP web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things.">
-    <meta property="twitter:image" content="https://laravel.com/img/og-image.jpg">
+        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built sql queries and has custom UI">
+    <meta property="twitter:image" content="yolkassets/img/shot.png">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ff2d20">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ff2d20">
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" sizes="57x57" href="yolkassets/default/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="yolkassets/default/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="yolkassets/default/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="yolkassets/default/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="yolkassets/default/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="yolkassets/default/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="yolkassets/default/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="yolkassets/default/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="yolkassets/default/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="yolkassets/default/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="yolkassets/default/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="yolkassets/default/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="yolkassets/default/favicon-16x16.png">
+<link rel="manifest" href="yolkassets/default/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="https://use.typekit.net/ins2wgm.css">
-    <link rel="stylesheet" type="text/css" href="css/app-id=b59affd817f095c5db73.css">
+    <link rel="stylesheet" type="text/css" href="main/css/app-id=b59affd817f095c5db73.css">
 
     <script>
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -2146,22 +2154,15 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         var algolia_app_id = 'E3MIRNPJH5';
         var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
         var version = '9.x';
-    </script>
+    </script> -->
 
-    <script src="js/app-id=100f797fd909ecd1c2f2.js"></script>
+    <script src="main/js/app-id=100f797fd909ecd1c2f2.js"></script>
 
-    <script>
-        var _gaq = [['_setAccount', 'UA-23865777-1'], ['_trackPageview']];
-        (function (d, t) {
-            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g, s)
-        }(document, 'script'));
-    </script>
+    
 </body>
 
 </html>
