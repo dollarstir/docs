@@ -1767,10 +1767,10 @@
 
     <script src="main/js/app-id=100f797fd909ecd1c2f2.js"></script>
     <script src="main/js/particle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0/dist/tsparticles.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/web-particles@1.1.0/dist/web-particles.min.js"></script>
+    <script src="main/js/tsparticles.min.js"></script>
+<script src="main/js/custom-elements-es5-adapter.js"></script>
+<script src="main/js/webcomponents-loader.js"></script>
+<script type="module" src="main/js/web-particles.min.js"></script>
 
     
 </body>
