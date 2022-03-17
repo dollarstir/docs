@@ -139,12 +139,13 @@
                         <button
                             class="ml-2 relative w-10 h-10 inline-flex items-center justify-center p-2 text-gray-700 lg:hidden"
                             aria-label="Toggle Menu" @click.prevent="navIsOpen = !navIsOpen">
-                            <svg x-show="! navIsOpen" class="w-6" viewBox="0 0 28 12" fill="none"
+                            <!-- <svg x-show="! navIsOpen" class="w-6" viewBox="0 0 28 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <line y1="1" x2="28" y2="1" stroke="currentColor" stroke-width="2" />
                                 <line y1="11" x2="28" y2="11" stroke="currentColor" stroke-width="2" />
-                                <!-- <line y1="1" x2="28" y2="1" stroke="currentColor" stroke-width="2" /> -->
-                            </svg>
+                                
+                            </svg> -->
+                            <?php echo image::solidsvg('grip','20px','20px','x-show="! navIsOpen" class="w-6" viewBox="0 0 28 12" fill="none"'); ?>
                             <svg x-show="navIsOpen" x-cloak class="absolute inset-0 mt-2.5 ml-2.5 w-5"
                                 viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect y="1.41406" width="2" height="24" transform="rotate(-45 0 1.41406)"
