@@ -218,32 +218,26 @@
             <center><h2 class="text-4xl font-bold max-w-lg md:text-5xl">We get what you are looking for</h2></center>
             <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
+                    <!-- <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#F9322C" d="M.5.5h31v31H.5z" />
                         <path
                             d="M8 11v10c0 2.21 3.582 4 8 4s8-1.79 8-4V11M8 11c0 2.21 3.582 4 8 4s8-1.79 8-4M8 11c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
                             stroke="#F9322C" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <h3 class="mt-5 text-xl font-bold">Database</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Laravel's <a class="underline"
-                            href="docs/9.x/eloquent.html">"Eloquent" ORM</a> provides best-in-class database abstraction
-                        without the headaches. Query and update your data without breaking a sweat. Eloquent pairs
-                        perfectly with MySQL, Postgres, SQLite, and SQL Server.</p>
+                    </svg> -->
+                    <h3 class="mt-5 text-xl font-bold">Backend Bot</h3>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">The Yolk <strong><a href="docs/9.x/eloquent.html">backend bot</a></strong> provides  in-built database queries which helps to send, fetch, delete and update records in database tables without any stress</p>
                 </div>
                 <div>
-                    <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
+                    <!-- <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke="currentColor" d="M.5.5h31v31H.5z" />
                         <path
                             d="M23 15H9m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0v-2a2 2 0 0 0-2-2M9 15v-2a2 2 0 0 1 2-2m10 0V9a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v2m10 0H11"
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <h3 class="mt-5 text-xl font-bold">Queues</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Dispatch background jobs to perform slow tasks
-                        like sending emails and generating reports while maintaining blazing fast response times.
-                        Laravel's <a class="underline" href="docs/9.x/queues.html">robust queue system</a> can process
-                        jobs using Redis, Amazon SQS, or even MySQL and Postgres.</p>
+                    </svg> -->
+                    <h3 class="mt-5 text-xl font-bold">Yolk UI</h3>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Laravel's <a class="underline" href="docs/9.x/queues.html">robust queue system</a> can processjobs using Redis, Amazon SQS, or even MySQL and Postgres.</p>
                 </div>
                 <div>
                     <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
