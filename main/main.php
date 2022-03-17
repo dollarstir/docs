@@ -123,12 +123,12 @@
                         <!-- <li><a href="https://partners.laravel.com">Partners</a></li> -->
                     </ul>
                     <div class="flex-1 flex items-center justify-end">
-                        <button @click.prevent="$dispatch('toggle-search-modal')">
+                        <!-- <button @click.prevent="$dispatch('toggle-search-modal')">
                             <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
-                        </button>
+                        </button> -->
                         <!-- <a class="group relative inline-flex border border-red-600 focus:outline-none hidden lg:ml-4 lg:inline-flex"
                             href="docs/9.x.html">
                             <span
@@ -321,92 +321,74 @@
         </div>
     </div>
 
-    <div class="relative overflow-hidden pt-12 pb-16 md:pt-24 lg:pt-48">
-        <div class="max-w-screen-xl w-full mx-auto px-5 grid gap-12 lg:grid-cols-2">
-            <div class="flex justify-center items-center">
-                <svg class="text-red-500 w-[302px] lg:w-[454px]" width="454" height="219" viewBox="0 0 454 219"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="currentColor" stroke-width="2"
-                        d="M215 124h100v86H215zM1 124h100v86H1zM345 124h100v86H345zM131 124h54v86h-54z" />
-                    <path fill="#fff" stroke="#565454" stroke-width="2"
-                        d="M223 132h100v86H223zM9 132h100v86H9zM353 132h100v86H353zM139 132h54v86h-54z" />
-                    <path
-                        d="M278.571 177.947c-4.461 7.651-10.385 12.535-13.232 10.907-2.846-1.627-1.538-9.15 2.924-16.801 4.46-7.651 10.385-12.535 13.231-10.907 2.847 1.627 1.539 9.15-2.923 16.801Z"
-                        stroke="#232323" stroke-width="1.667" />
-                    <path
-                        d="M257.167 175c0 3.222 7.089 5.833 15.833 5.833 8.745 0 15.833-2.611 15.833-5.833s-7.088-5.833-15.833-5.833c-8.744 0-15.833 2.611-15.833 5.833Z"
-                        stroke="#232323" stroke-width="1.667" />
-                    <path
-                        d="M267.429 177.947c4.461 7.651 10.385 12.535 13.232 10.907 2.847-1.627 1.538-9.15-2.923-16.801-4.461-7.651-10.385-12.535-13.232-10.907-2.847 1.627-1.538 9.15 2.923 16.801Z"
-                        stroke="#232323" stroke-width="1.667" />
-                    <path d="M273 177.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" stroke="#232323" stroke-width="1.667" />
-                    <path d="m403 165.678-2.938-4.845H395.5l7.5 12.5 7.5-12.5h-4.563l-2.938 4.845H403Z" stroke="#232323"
-                        stroke-width="1.667" stroke-linejoin="round" />
-                    <path d="M414.173 160.833 403 179.152l-11.173-18.319H385.5l17.5 28.334 17.5-28.334h-6.327Z"
-                        stroke="#232323" stroke-width="1.667" stroke-linejoin="round" />
-                    <path stroke="#565454" stroke-width="2" d="M229 138h5" />
-                    <path
-                        d="M219.625 39.375v7.875m-15.75-34.875 7.875-4.5 7.875 4.5-7.875 4.5-7.875-4.5Zm15.75 0v18-18Z"
-                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M203.875 12.375V38.25l15.75 9 15.75-9V21.375" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M211.75 16.875v18l7.875 4.5 23.625-13.5v-9" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="m227.5 16.875 7.875-4.5 7.875 4.5-7.875 4.5-7.875-4.5Zm0 0v9m0 0 7.875 4.5m-7.875-4.5-15.75 9"
-                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path stroke="#565454" stroke-width="2"
-                        d="M237 138h5M163 139h6M245 138h5M15 138h5M359 138h5M23 138h5M367 138h5M31 138h5M375 138h5" />
-                    <path stroke="currentColor" stroke-width="2"
-                        d="M394 124V94M264 124V94M50 124V94M222 94V64M157 124V94M49 94h346" />
-                    <path
-                        d="M71.69 185.017c-.086.134-.177.281-.259.415l-.134.217a4.263 4.263 0 0 1-.372.523c-.221.254-.41.357-.683.357-.473 0-.755-.311-1.33-1.153l-.059-.086c-.466-.686-1.22-1.794-2.652-1.794-1.458 0-2.156 1.144-2.574 1.83l-.052.085c-.518.844-.755 1.118-1.202 1.118-.473 0-.755-.311-1.33-1.153l-.059-.086c-.466-.686-1.22-1.794-2.651-1.794-1.46 0-2.157 1.144-2.575 1.83l-.052.085c-.518.844-.755 1.118-1.202 1.118-.473 0-.755-.311-1.33-1.153l-.059-.086c-.466-.686-1.22-1.794-2.651-1.794-1.46 0-2.156 1.144-2.575 1.83l-.052.085c-.518.844-.755 1.118-1.202 1.118-.273 0-.488-.106-.74-.371a15.965 15.965 0 0 1-2.06-7.892c0-8.561 6.603-15.431 14.665-15.431s14.665 6.87 14.665 15.431c0 2.423-.53 4.714-1.474 6.751Z"
-                        stroke="#232323" stroke-width="1.67" />
-                    <path
-                        d="M64.494 174.755c0 2.088-.534 3.748-1.586 4.881-1.041 1.122-2.707 1.852-5.24 1.852-2.531 0-4.197-.73-5.238-1.852-1.052-1.133-1.586-2.793-1.586-4.881 0-4.084 3.154-7.693 6.825-7.693 3.671 0 6.825 3.609 6.825 7.693Z"
-                        stroke="#232323" stroke-width="1.67" />
-                    <path
-                        d="M55.609 175.006c1.586 0 2.872-1.419 2.872-3.17s-1.286-3.171-2.872-3.171c-1.587 0-2.873 1.42-2.873 3.171s1.287 3.17 2.873 3.17Z"
-                        fill="#232323" />
-                    <path
-                        d="M55.13 172.567c.793 0 1.436-.655 1.436-1.463s-.643-1.463-1.436-1.463c-.793 0-1.436.655-1.436 1.463s.643 1.463 1.436 1.463Z"
-                        fill="#fff" />
-                </svg>
-            </div>
-            <div class="w-full flex justify-center items-center">
-                <div class="sm:max-w-[480px]">
-                    <h2 class="text-4xl font-bold md:text-5xl">Monolith or API — the choice is yours.</h2>
-                    <p class="mt-6 text-gray-700 leading-relaxed">Build robust, full-stack applications in PHP using
-                        Laravel and <a class="underline" href="https://laravel-livewire.com">Livewire</a>. Love
-                        JavaScript? Build a monolithic JavaScript driven frontend by pairing Laravel with <a
-                            class="underline" href="https://inertiajs.com">Inertia</a>.</p>
-                    <p class="mt-6 text-gray-700 leading-relaxed">Or, let Laravel serve as a robust backend API for your
-                        Next.js application, mobile application, or other frontend. Either way, our starter kits will
-                        have you productive in minutes.</p>
-                    <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
-                        href="docs/9.x/starter-kits.html">
-                        <span
-                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
-                            Starter Kits
-                        </span>
-                    </a>
+
+    <div class="relative overflow-hidden py-16 md:pt-48">
+        <span
+            class="hidden absolute bg-radial-gradient opacity-[.15] pointer-events-none lg:inline-flex right-[-20%] top-0 w-[640px] h-[640px]"></span>
+        <div class="max-w-screen-xl w-full mx-auto px-5">
+            <center><h2 class="text-4xl font-bold max-w-lg md:text-5xl">Our Partners</h2></center>
+            <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <!-- <img src="yolkassets/img/uvitech.png" style="width:90%"/> -->
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="150.000000pt" height="50.000000pt" viewBox="0 0 150.000000 50.000000" preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.10, written by Peter Selinger 2001-2011
+</metadata>
+<g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M416 365 c39 -116 7 -208 -89 -254 -50 -24 -83 -26 -123 -8 -91 39 -128 92 -128 184 0 35 -3 58 -8 51 -4 -7 -8 -42 -8 -77 0 -55 4 -71 32 -114 34 -53 106 -97 161 -97 54 0 126 40 160 89 28 41 31 54 31 116 1 50 -5 79 -17 100 -10 17 -15 21 -11 10z"/>
+<path d="M214 354 c-37 -18 -54 -64 -42 -110 11 -43 40 -66 85 -66 76 0 112 97 58 156 -13 14 -28 26 -34 26 -5 0 -15 2 -23 5 -7 2 -27 -2 -44 -11z m83 -36 c13 -12 23 -33 23 -47 0 -32 -37 -71 -67 -71 -56 0 -84 80 -41 120 28 26 56 25 85 -2z"/>
+<path d="M238 313 c6 -2 18 -2 25 0 6 3 1 5 -13 5 -14 0 -19 -2 -12 -5z"/>
+<path d="M207 303 c-14 -14 -6 -61 13 -78 11 -10 23 -16 26 -13 10 11 -8 58 -23 58 -10 0 -14 7 -10 20 5 21 4 24 -6 13z"/>
+<path d="M296 272 c-4 -13 -5 -26 -2 -29 10 -11 18 4 14 29 l-4 23 -8 -23z"/>
+<path d="M520 282 c0 -26 5 -53 12 -60 15 -15 51 -15 66 0 14 14 16 108 2 108 -5 0 -10 -15 -10 -34 0 -43 -9 -66 -25 -66 -16 0 -25 23 -25 66 0 19 -4 34 -10 34 -5 0 -10 -22 -10 -48z"/>
+<path d="M679 273 c24 -80 43 -81 69 -4 17 50 18 61 6 61 -8 0 -18 -19 -26 -47 l-11 -47 -14 47 c-8 26 -20 47 -27 47 -11 0 -11 -11 3 -57z"/>
+<path d="M820 270 c0 -33 4 -60 10 -60 6 0 10 27 10 60 0 33 -4 60 -10 60 -6 0 -10 -27 -10 -60z"/>
+<path d="M895 319 c-4 -6 2 -13 14 -16 17 -4 21 -13 21 -49 0 -24 5 -44 10 -44 6 0 10 20 10 45 0 33 4 45 15 45 8 0 15 7 15 15 0 18 -75 22 -85 4z"/>
+<path d="M1037 293 c-11 -80 -10 -83 34 -83 21 0 39 5 39 10 0 6 -11 10 -25 10 -16 0 -25 6 -25 15 0 8 9 15 20 15 11 0 20 5 20 10 0 6 -9 10 -20 10 -11 0 -20 6 -20 13 0 8 10 13 21 13 12 -1 24 5 26 12 3 8 -7 12 -30 12 -33 0 -36 -2 -40 -37z"/>
+<path d="M1182 314 c-26 -18 -30 -65 -6 -88 17 -18 74 -22 74 -6 0 6 -11 10 -25 10 -27 0 -48 30 -39 55 4 9 19 19 35 22 16 3 26 9 23 14 -8 14 -37 11 -62 -7z"/>
+<path d="M1300 270 c0 -47 3 -60 15 -60 9 0 15 9 15 25 0 18 5 25 20 25 15 0 20 -7 20 -25 0 -16 6 -25 15 -25 12 0 15 13 15 60 0 47 -3 60 -15 60 -9 0 -15 -9 -15 -25 0 -18 -5 -25 -20 -25 -15 0 -20 7 -20 25 0 16 -6 25 -15 25 -12 0 -15 -13 -15 -60z"/>
+<path d="M550 145 c0 -6 7 -12 15 -12 8 0 15 6 15 12 0 6 -7 12 -15 12 -8 0 -15 -6 -15 -12z"/>
+<path d="M590 145 c0 -8 2 -15 4 -15 2 0 6 7 10 15 3 8 1 15 -4 15 -6 0 -10 -7 -10 -15z"/>
+<path d="M616 143 c-6 -14 -5 -15 5 -6 7 7 10 15 7 18 -3 3 -9 -2 -12 -12z"/>
+<path d="M640 144 c0 -8 5 -12 10 -9 6 3 10 10 10 16 0 5 -4 9 -10 9 -5 0 -10 -7 -10 -16z"/>
+<path d="M670 151 c0 -6 5 -13 10 -16 6 -3 10 1 10 9 0 9 -4 16 -10 16 -5 0 -10 -4 -10 -9z"/>
+<path d="M700 151 c0 -6 4 -12 8 -15 5 -3 9 1 9 9 0 8 -4 15 -9 15 -4 0 -8 -4 -8 -9z"/>
+<path d="M730 145 c0 -8 5 -15 10 -15 6 0 10 7 10 15 0 8 -4 15 -10 15 -5 0 -10 -7 -10 -15z"/>
+<path d="M761 144 c0 -11 3 -14 6 -6 3 7 2 16 -1 19 -3 4 -6 -2 -5 -13z"/>
+<path d="M830 151 c0 -6 4 -13 10 -16 6 -3 7 1 4 9 -7 18 -14 21 -14 7z"/>
+<path d="M880 150 c0 -5 5 -10 10 -10 6 0 10 5 10 10 0 6 -4 10 -10 10 -5 0 -10 -4 -10 -10z"/>
+<path d="M911 144 c0 -11 3 -14 6 -6 3 7 2 16 -1 19 -3 4 -6 -2 -5 -13z"/>
+<path d="M942 146 c7 -8 15 -10 16 -5 2 6 11 4 20 -3 14 -10 15 -10 5 2 -7 7 -22 15 -33 17 -17 2 -19 1 -8 -11z"/>
+<path d="M1047 144 c5 -13 7 -13 14 -2 7 10 9 11 9 0 0 -7 5 -10 10 -7 18 11 10 25 -15 25 -18 0 -23 -4 -18 -16z"/>
+<path d="M1106 153 c-3 -3 -6 -11 -6 -17 0 -6 5 -4 10 4 6 9 13 11 18 5 11 -15 32 -17 32 -2 0 13 -42 21 -54 10z"/>
+<path d="M1181 143 c-17 -19 16 -18 35 1 12 13 12 15 -4 13 -10 0 -24 -7 -31 -14z"/>
+<path d="M1241 144 c0 -11 3 -14 6 -6 3 7 2 16 -1 19 -3 4 -6 -2 -5 -13z"/>
+<path d="M1286 143 c12 -12 16 -12 28 0 12 12 10 14 -14 14 -24 0 -26 -2 -14 -14z"/>
+<path d="M1341 144 c0 -11 3 -14 6 -6 3 7 2 16 -1 19 -3 4 -6 -2 -5 -13z"/>
+<path d="M1360 150 c0 -5 5 -10 10 -10 6 0 10 5 10 10 0 6 -4 10 -10 10 -5 0 -10 -4 -10 -10z"/>
+<path d="M1390 151 c0 -6 4 -13 10 -16 6 -3 7 1 4 9 -7 18 -14 21 -14 7z"/>
+</g>
+</svg>
+                    
+                </div>
+                <div>
+                <img src="yolkassets/img/paystack.png"  style="background-color:black;"/ >
+                    
+                </div>
+                <div>
+                <img src="yolkassets/img/mnotify.png" style="height:65px;width:80%;background-color:black"/>
+              
+                    
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1013.12 241.26"><rect fill="#2a3362" x="328.78" y="82.1" width="16.11" height="82.89"></rect> <path fill="#2a3362" d="M407.24,135.58c0,11.44-7.36,16.58-17.16,16.58s-16.35-5.14-16.35-16V106.62H357.62V139.9c0,16.57,10.39,26.26,27.67,26.26,10.86,0,16.93-4,21-8.52h.94l1.4,7.36h14.82V106.62H407.24Z"></path> <path fill="#2a3362" d="M565.27,153.44c-11.79,0-18.44-5.37-19.49-13.19h51.13a33.78,33.78,0,0,0,.35-4.91c-.11-21-16-29.89-33-29.89-19.73,0-34.56,11.8-34.56,30.83,0,18.09,14.25,29.88,35.61,29.88,17.87,0,29.77-7.93,32.23-20.08H581.62C579.63,150.87,573.91,153.44,565.27,153.44Zm-1-35.26c10.28,0,16.23,4.55,17.17,11H546.13C547.64,123,553.6,118.18,564.22,118.18Z"></path> <path fill="#2a3362" d="M624.63,115h-1l-1.52-8.41H607.47V165h16.11V139.9c0-11.33,6.53-17.63,18.68-17.63a32.5,32.5,0,0,1,6.58.58V106.62h-2.25C635.85,106.62,629.18,108.84,624.63,115Z"></path> <polygon fill="#2a3362" points="727.94 146.78 727.01 146.78 713.23 110.24 696.65 110.24 683.11 146.67 682.06 146.67 669.22 106.62 653.22 106.62 672.95 165 690.47 165 704.48 127.75 705.41 127.75 719.19 165 736.82 165 756.55 106.62 740.55 106.62 727.94 146.78"></polygon> <path fill="#2a3362" d="M820.67,148V128.46c0-15.88-13.43-23-30.13-23-17.74,0-28.83,8.41-30.35,21H776.3c1.17-5.49,5.84-8.52,14.24-8.52s14,3.15,14,9.57V129l-26.27,2c-12.14.94-21,6.31-21,17.75,0,11.79,10.16,17.39,25.1,17.39,12.06,0,19.41-3.36,23.91-8.43h.8c2.53,5.7,7.66,7.27,13.24,7.27h6.77V153.09h-1.52C822.18,153.09,820.67,151.46,820.67,148Zm-16.12-6.19c0,9.23-11,12.26-20.43,12.26-6.42,0-10.62-1.63-10.62-6.07,0-4,3.62-5.95,9-6.42l22.06-1.63Z"></path> <polygon fill="#2a3362" points="880.23 106.62 861.43 148.89 860.38 148.89 841.35 106.62 823.95 106.62 851.15 165 870.42 165 897.5 106.62 880.23 106.62"></polygon> <path fill="#2a3362" d="M949,146.08c-2,4.79-7.71,7.36-16.35,7.36-11.79,0-18.44-5.37-19.49-13.19h51.13a33.78,33.78,0,0,0,.35-4.91c-.11-21-16-29.89-33-29.89-19.73,0-34.55,11.8-34.55,30.83,0,18.09,14.24,29.88,35.6,29.88,17.87,0,29.77-7.93,32.23-20.08Zm-17.4-27.9c10.28,0,16.23,4.55,17.17,11H913.47C915,123,920.94,118.18,931.56,118.18Z"></path> <path fill="#2a3362" d="M302.6,102.32c0-5.14,3.62-7.35,8.29-7.35a24.17,24.17,0,0,1,6.42.93L320,84.22a36.71,36.71,0,0,0-12.14-2.1c-11.91,0-21.48,6.31-21.48,19.38v5.12h-13.9v12.79h13.9V165H302.6v-45.6h18.16V106.62H302.6Z"></path> <path fill="#2a3362" d="M459,90.16H444l-.84,16.46H430.48v12.79h12.38v28.78c0,9.8,5,18,20,18a52.84,52.84,0,0,0,11.56-1.28V152.62a34.29,34.29,0,0,1-6.66.82c-8.05,0-8.75-4.55-8.75-8.06v-26h16V106.62H459Z"></path> <path fill="#2a3362" d="M509.59,90.16H494.64l-.84,16.46H481.09v12.79h12.38v28.78c0,9.8,5,18,20,18A52.84,52.84,0,0,0,525,164.88V152.62a34.29,34.29,0,0,1-6.66.82c-8.05,0-8.75-4.55-8.75-8.06v-26h16.05V106.62H509.59Z"></path> <path fill="#009a46" d="M48.23,79.89c0-9.37,2.74-17.37,8.49-23.12l10,10C55.59,77.86,65.31,112.34,97,144.06s66.19,41.43,77.31,30.32l10,10c-18.76,18.76-61.49,5.45-97.26-30.33C62.24,129.23,48.23,101.07,48.23,79.89Z"></path> <path fill="#ff5805" d="M111.29,193c-9.37,0-17.37-2.74-23.13-8.49l10-10c11.11,11.11,45.59,1.39,77.31-30.32S216.89,78,205.78,66.89l10-10c18.77,18.76,5.45,61.49-30.33,97.26C160.63,179,132.47,193,111.29,193Z"></path> <path fill="#f5afcb" d="M188.76,139.84c-6.07-17.48-18.47-36.16-34.92-52.6-35.77-35.78-78.5-49.1-97.26-30.33h0c-1.33,1.34-.18,4.65,2.58,7.41s6.07,3.9,7.4,2.57c11.12-11.11,45.6-1.39,77.31,30.33,15,15,26.18,31.75,31.57,47.25,4.72,13.59,4.26,24.55-1.24,30.05h0c-1.34,1.33-.18,4.65,2.57,7.4s6.07,3.91,7.41,2.57C193.79,174.88,195.42,159,188.76,139.84Z"></path> <path fill="#ff9b00" d="M215.76,56.91c-9.63-9.63-25.49-11.26-44.67-4.59-17.47,6.06-36.16,18.47-52.6,34.91C82.72,123,69.4,165.73,88.16,184.5h0c1.34,1.33,4.65.18,7.41-2.57s3.91-6.07,2.57-7.41C87,163.41,96.75,128.93,128.47,97.21c15-15,31.75-26.18,47.25-31.57,13.59-4.71,24.55-4.26,30.06,1.24h0c1.33,1.33,4.65.18,7.4-2.58S217.09,58.24,215.76,56.91Z"></path></svg>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hidden md:block md:overflow-hidden md:mt-24">
-        <div class="flex items-center justify-center gap-x-10">
-            <img src="main/images/companies/st-jude.png" alt="St. Jude" style="height: 61px">
-            <img src="main/images/companies/disney.png" alt="Disney" style="height: 39px">
-            <img src="main/images/companies/wwe.png" alt="WWE" style="height: 42px">
-            <img src="main/images/companies/warner-bros.png" alt="Warner Bros" style="height: 37px">
-            <img src="main/images/companies/bankrate.png" alt="Bankrate" style="height: 24px">
-            <img src="main/images/companies/twitch.png" alt="twitch" style="height: 32px">
-            <img src="main/images/companies/the-new-york-times.png" alt="The New York Times" style="height: 31px">
-            <img src="main/images/companies/about-you.png" alt="About You" style="height: 28px">
-        </div>
-    </div>
+   
+
 
     
 
