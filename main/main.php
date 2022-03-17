@@ -226,7 +226,14 @@
                             stroke="#F9322C" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Backend Bot</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">The Yolk <strong><a href="docs/9.x/eloquent.html">backend bot</a></strong> provides  in-built database queries which helps to send, fetch, delete and update records in database tables without any stress</p>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">The Yolk <strong><a href="docs/9.x/eloquent.html">backend bot</a></strong> provides  in-built database queries which helps to send, fetch, delete and update records in database tables without any stress<a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
+                            href="docs/9.x/http-tests.html">
+                            <span
+                                class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                                Learn More
+                            </span>
+                        </a>
+                    </p>
                 </div>
                 <div>
                     <!-- <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
@@ -237,17 +244,19 @@
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Yolk UI</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk UI has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It takes css </storng></p>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk  has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It takes uses any type of css </storng>
+                        <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
+                            href="docs/9.x/http-tests.html">
+                            <span
+                                class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                                Learn More
+                            </span>
+                        </a>
+                    </p>
                 </div>
                 <div>
-                    <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke="#F9322C" d="M.5.5h31v31H.5z" />
-                        <path
-                            d="m10.171 15.828-2.12 2.122M19 19l-2 5-4-11 11 4-5 2Zm0 0 5 5-5-5ZM11.188 6.239l.777 2.897-.777-2.897Zm-2.052 5.726-2.898-.777 2.898.777ZM17.95 8.05l-2.122 2.122L17.95 8.05Z"
-                            stroke="#F9322C" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <h3 class="mt-5 text-xl font-bold">WebSockets</h3>
+                   
+                    <h3 class="mt-5 text-xl font-bold"></h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed"><a class="underline"
                             href="docs/9.x/broadcasting.html">Laravel Echo</a> and event broadcasting make it a cinch to
                         build modern, realtime user experiences. Create amazing realtime applications while powering
