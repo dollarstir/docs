@@ -1382,7 +1382,7 @@
         <div class="max-w-screen-2xl mx-auto w-full px-5">
             <div>
                 <a href="index.html" class="inline-flex">
-                    <img class="w-16 h-16" src="main/img/logomark.min.svg" alt="Laravel" loading="lazy">
+                    <img class="w-40 h-40" src="yolkassets/img/logo1.png" alt="Yolk" loading="lazy" style="width:100%;height:200px;">
                 </a>
             </div>
 
