@@ -145,7 +145,7 @@
                                 <line y1="11" x2="28" y2="11" stroke="currentColor" stroke-width="2" />
                                 
                             </svg> -->
-                            <!-- <?php echo image::solidsvg('grip','20px','20px','x-show="!navIsOpen" class="w-6" viewBox="0 0 28 12" fill="none"'); ?> -->
+                            <?php echo image::solidsvg('grip','40px','40px','x-show="!navIsOpen" class="w-6" viewBox="0 0 28 12" fill="none"'); ?>
                             
                             <!-- <svg x-show="navIsOpen" x-cloak class="absolute inset-0 mt-2.5 ml-2.5 w-5"
                                 viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
