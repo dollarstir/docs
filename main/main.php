@@ -256,22 +256,26 @@
                 </div>
                 <div>
                    
-                    <h3 class="mt-5 text-xl font-bold"></h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed"><a class="underline"
-                            href="docs/9.x/broadcasting.html">Laravel Echo</a> and event broadcasting make it a cinch to
-                        build modern, realtime user experiences. Create amazing realtime applications while powering
-                        your WebSockets with pure PHP, Node.js, or serverless solutions like <a class="underline"
-                            href="https://pusher.com">Pusher</a> and <a class="underline"
-                            href="https://ably.com">Ably</a>.</p>
+                    <h3 class="mt-5 text-xl font-bold">Plugins</h3>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+                            Yolk has made it possible for anyone to create plugins which can be paid or free. This plugin can be a template made with Yolk Ui, E-cormerce website made with yolk framework,encryption system. 
+                            <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
+                            href="docs/9.x/http-tests.html">
+                            <span
+                                class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                                Learn More
+                            </span>
+                        </a>
+                    </p>
                 </div>
                 <div>
-                    <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
+                    <!-- <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke="#F9322C" d="M.5.5h31v31H.5z" />
                         <path
                             d="M19 11a2 2 0 0 1 2 2l-2-2Zm6 2a6 6 0 0 1-7.743 5.743L15 21h-2v2h-2v2H8a1 1 0 0 1-1-1v-2.586a1 1 0 0 1 .293-.707l5.964-5.964A6 6 0 1 1 25 13v0Z"
                             stroke="#F9322C" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Authentication</h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">Stop sweating authentication. Laravel provides
                         scaffolding for secure, session based authentication, while <a class="underline"
