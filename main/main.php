@@ -237,7 +237,7 @@
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Yolk UI</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Laravel's <a class="underline" href="docs/9.x/queues.html">robust queue system</a> can processjobs using Redis, Amazon SQS, or even MySQL and Postgres.</p>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk UI has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It takes css </storng></p>
                 </div>
                 <div>
                     <svg class="w-8 h-8 text-red-500" viewBox="0 0 32 32" fill="none"
