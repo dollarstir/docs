@@ -492,6 +492,63 @@
                         
                     </div>
                 </li>
+                <li>
+                    <div class="space-y-4">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <img class="object-cover shadow-lg rounded-lg" loading="lazy" width="400" height="400" src="yolkassets/img/c.jpg" alt="Frederick Ennin">
+                        </div>
+                        <ul class="flex space-x-5">
+                            <li>
+                                <a href="https://github.com/dollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">GitHub</span>
+                                    <?php echo Image::brandsvg('github'); ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/iamdollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Twitter</span>
+                                    <?php echo Image::brandsvg('twitter'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://facebook.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Facebook</span>
+                                    <?php echo Image::brandsvg('facebook'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://linkedin.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('linkedin'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://slack.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('slack'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://youtube.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Youtube</span>
+                                    <?php echo Image::brandsvg('youtube'); ?>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="text-lg leading-6 font-medium space-y-1 text-center">
+                            <h3 class="text-red-600">Frederick Ennin</h3>
+                            <p class="text-gray-600"> <em>Creator & CEO</em></p>
+                            <p class="text-gray-600">Accra, Ghana</p>
+                        </div>
+
+                        
+                    </div>
+                </li>
                 
                 
             </ul>
