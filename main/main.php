@@ -143,6 +143,7 @@
                                 xmlns="http://www.w3.org/2000/svg">
                                 <line y1="1" x2="28" y2="1" stroke="currentColor" stroke-width="2" />
                                 <line y1="11" x2="28" y2="11" stroke="currentColor" stroke-width="2" />
+                                <!-- <line y1="1" x2="28" y2="1" stroke="currentColor" stroke-width="2" /> -->
                             </svg>
                             <svg x-show="navIsOpen" x-cloak class="absolute inset-0 mt-2.5 ml-2.5 w-5"
                                 viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -922,7 +923,7 @@
         </ul>
     </div> -->
 
-    <div class="relative max-w-screen-xl mx-auto px-5 pt-16 md:pt-24 lg:pt-36 pb-24">
+    <!-- <div class="relative max-w-screen-xl mx-auto px-5 pt-16 md:pt-24 lg:pt-36 pb-24">
         <div class="absolute right-[12%] -translate-y-20 pointer-events-none">
             <svg x-data="{
         initializeAnimation: false,
@@ -1217,9 +1218,9 @@
                 </div>
             </blockquote>
         </div>
-    </div>
+    </div> -->
 
-    <div class="relative">
+    <!-- <div class="relative">
         <span
             class="hidden absolute bg-radial-gradient opacity-[.15] pointer-events-none lg:inline-flex left-[-20%] -top-24 w-[640px] h-[640px]"></span>
         <div class="relative max-w-screen-xl mx-auto grid gap-12 px-5 pt-16 md:pt-24 pb-24 lg:grid-cols-2 lg:pt-16">
@@ -1305,9 +1306,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="relative overflow-hidden">
+    <!-- <div class="relative overflow-hidden">
         <div class="absolute top-[45%] -left-2 pointer-events-none sm:left-[12%] lg:top-2/3 lg:left-[12%] xl:top-3/4">
             <svg x-data="{
         initializeAnimation: false,
@@ -1372,7 +1373,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <footer class="relative pt-12 ">
         <div class="max-w-screen-2xl mx-auto w-full px-5">
