@@ -278,7 +278,7 @@
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Integrations</h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-                        Yolk comes with Mobile money apis which can helps accept payment on websites, Bulk sms and Bulk Email system . We partnered with <a class="underline" href="http://paystack.com" target="blank">Paystack</a>, <a class="underline" href="http://uvitech.com" target="blank">Uvitech</a>, <a class="underline" href="http://mnotify.com" target="blank">Mnotify</a><a class="underline" href="http://mnotify.com" target="blank">Flutterwave</a> 
+                        Yolk comes with Mobile money apis which can helps accept payment on websites, Bulk sms and Bulk Email system . We partnered with <a class="underline" href="http://paystack.com" target="blank">Paystack</a>, <a class="underline" href="http://uvitech.com" target="blank">Uvitech</a>, <a class="underline" href="http://mnotify.com" target="blank">Mnotify</a>, <a class="underline" href="http://flutterwave.com" target="blank">Flutterwave</a> etc.
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
