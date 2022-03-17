@@ -495,7 +495,7 @@
                 <li>
                     <div class="space-y-4">
                         <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover shadow-lg rounded-lg" loading="lazy" width="400" height="400" src="yolkassets/img/c.jpg" alt="Frederick Ennin">
+                            <img class="object-cover shadow-lg rounded-lg" loading="lazy" width="400" height="400" src="yolkassets/img/josh.jpg" alt="Joshua Tetteh">
                         </div>
                         <ul class="flex space-x-5">
                             <li>
