@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="main/css/typeskit.css">
     <link rel="stylesheet" type="text/css" href="main/css/app-id=b59affd817f095c5db73.css">
     <link rel="stylesheet" href="main/css/main.css">
+    <link rel="stylesheet" href="main/css/particle.css">
 
     <script>
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -173,62 +174,15 @@
             </div>
         </header>
     </div>
-
+   
     <div>
+    <web-particles id="tsparticles" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#ffffff"},"links":{"color":"#ffffff","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
         <section class="relative overflow-hidden pt-48 pb-20 lg:pt-48 xl:pt-56 xl:pb-28">
+        
             <span
                 class="hidden absolute bg-radial-gradient opacity-[.15] pointer-events-none lg:inline-flex left-[-20%] -top-24 w-[640px] h-[640px]"></span>
             <div class="relative max-w-screen-xl px-5 mx-auto">
-                <div class="absolute -left-2 -translate-y-12 pointer-events-none md:left-[12%]">
-                    <svg x-data="{
-        initializeAnimation: false,
-        init() {
-            setTimeout(() => {
-                this.initializeAnimation = true;
-            }, 0);
-        },
-    }" :class="initializeAnimation ? 'animate-cube' : ''" class="text-red-600" width="46" height="53"
-                        viewBox="0 0 46 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m23.102 1 22.1 12.704v25.404M23.101 1l-22.1 12.704v25.404" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" />
-                        <path d="m45.202 39.105-22.1 12.702L1 39.105" stroke="currentColor" stroke-width="1.435"
-                            stroke-linejoin="bevel" />
-                        <path transform="matrix(.86698 .49834 .00003 1 1 13.699)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.405H0z" />
-                        <path transform="matrix(.86698 -.49834 -.00003 1 23.102 26.402)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.405H0z" />
-                        <path transform="matrix(.86701 -.49829 .86701 .49829 1 13.702)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.491H0z" />
-                    </svg>
-                </div>
-                <div class="absolute -right-2 -translate-y-20 pointer-events-none md:right-1/4">
-                    <svg x-data="{
-        initializeAnimation: false,
-        init() {
-            setTimeout(() => {
-                this.initializeAnimation = true;
-            }, 2000);
-        },
-    }" :class="initializeAnimation ? 'animate-cube' : ''" class="text-red-600" width="46" height="53"
-                        viewBox="0 0 46 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m23.102 1 22.1 12.704v25.404M23.101 1l-22.1 12.704v25.404" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" />
-                        <path d="m45.202 39.105-22.1 12.702L1 39.105" stroke="currentColor" stroke-width="1.435"
-                            stroke-linejoin="bevel" />
-                        <path transform="matrix(.86698 .49834 .00003 1 1 13.699)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.405H0z" />
-                        <path transform="matrix(.86698 -.49834 -.00003 1 23.102 26.402)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.405H0z" />
-                        <path transform="matrix(.86701 -.49829 .86701 .49829 1 13.702)" stroke="currentColor"
-                            stroke-width="1.435" stroke-linejoin="bevel" d="M0 0h25.491v25.491H0z" />
-                    </svg>
-                </div>
-                <div class="absolute bottom-0 right-6 -translate-y-20 pointer-events-none md:right-[12%]">
-                <svg  width="46" height="53">
-                    <ellipse cx="200" cy="80" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:1" />
-                    Sorry, your browser does not support inline SVG.  
-                </svg>
-                </div>
+                
                 <div class="relative">
                     <h1 class="max-w-3xl mx-auto text-5xl font-bold text-center md:text-6xl lg:text-7xl">State Of The 
                         Art <br class="hidden lg:inline"><span class="text-red-500">Framework</span></h1>
@@ -1812,6 +1766,11 @@
     </script> -->
 
     <script src="main/js/app-id=100f797fd909ecd1c2f2.js"></script>
+    <script src="main/js/particle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.28.0/dist/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/custom-elements-es5-adapter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.5.0/webcomponents-loader.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/web-particles@1.1.0/dist/web-particles.min.js"></script>
 
     
 </body>
