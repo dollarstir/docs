@@ -478,10 +478,11 @@
                             <li>
                                 <a href="https://youtube.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">Youtube</span>
-                                    <?php echo Image::brandsvg('slack'); ?>
+                                    <?php echo Image::brandsvg('youtube'); ?>
                                 </a>
                             </li>
                         </ul>
+                        
                         <div class="text-lg leading-6 font-medium space-y-1 text-center">
                             <h3 class="text-red-600">Frederick Ennin</h3>
                             <p class="text-gray-600"> <em>Creator & CEO</em></p>
