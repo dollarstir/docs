@@ -440,28 +440,55 @@
                         <div class="aspect-w-3 aspect-h-2">
                             <img class="object-cover shadow-lg rounded-lg" loading="lazy" width="400" height="400" src="https://unavatar.vercel.app/github/taylorotwell" alt="Frederick Ennin">
                         </div>
-                        <div class="text-lg leading-6 font-medium space-y-1">
-                            <h3 class="text-red-600">Taylor Otwell</h3>
-                            <p class="text-gray-600">Arkansas, United States</p>
+                        <ul class="flex space-x-5">
+                            <li>
+                                <a href="https://github.com/dollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">GitHub</span>
+                                    <?php echo Image::brandsvg('github'); ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/iamdollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Twitter</span>
+                                    <?php echo Image::brandsvg('twitter'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://facebook.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Facebook</span>
+                                    <?php echo Image::brandsvg('facebook'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://linkedin.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('linkedin'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://slack.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('slack'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://youtube.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Youtube</span>
+                                    <?php echo Image::brandsvg('slack'); ?>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="text-lg leading-6 font-medium space-y-1 text-center">
+                            <h3 class="text-red-600">Frederick Ennin</h3>
+                            <p class="text-gray-600"> <em>Creator & CEO</em></p>
+                            <p class="text-gray-600">Accra, Ghana</p>
                         </div>
 
-                        <ul class="flex space-x-5">
-                                                        <li>
-                                <a href="https://twitter.com/taylorotwell" target="_blank" class="text-gray-400 hover:text-gray-500">
-                                    <span class="sr-only">Twitter</span>
-
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                                        <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                                    </svg>
-                                </a>
-                            </li>
-                                                                                    <li>
-                                <a href="https://github.com/taylorotwell" target="_blank" class="text-gray-400 hover:text-gray-500">
-                                    <span class="sr-only">GitHub</span>
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                                </a>
-                            </li>
-                                                    </ul>
+                        
                     </div>
                 </li>
                                 <li>
