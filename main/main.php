@@ -615,7 +615,7 @@
     </div>
     
 
-    <div class="max-w-screen-xl mx-auto px-5 pt-16 pb-24 md:pt-24 lg:pt-48">
+    <!-- <div class="max-w-screen-xl mx-auto px-5 pt-16 pb-24 md:pt-24 lg:pt-48">
         <div class="sm:max-w-xl">
             <h2 class="text-4xl font-bold md:text-5xl">Enterprise scale without the enterprise complexity.</h2>
             <p class="mt-6 text-gray-700 leading-relaxed">Our vast library of meticulously maintained packages means
@@ -920,7 +920,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <div class="relative max-w-screen-xl mx-auto px-5 pt-16 md:pt-24 lg:pt-36 pb-24">
         <div class="absolute right-[12%] -translate-y-20 pointer-events-none">
