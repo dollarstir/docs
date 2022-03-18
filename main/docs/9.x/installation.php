@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php head('');?>
+    <?php head('installation');?>
 
     <script>
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
