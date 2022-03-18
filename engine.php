@@ -8,11 +8,5 @@ $router = new Router([
             return Viewer::view('main/main.php', $context);
         }
     ),
-    new Route(
-        '/login1',
-        function ($context) {
-            return Viewer::view('/widgets/login/login.php', $context);
-        }
-    ),
 ]);
 $router->launch();
