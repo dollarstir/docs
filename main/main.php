@@ -1436,52 +1436,43 @@
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
                             <li>
-                                <a href="team.html" class="transition-colors hover:text-gray-600 ">Our Team</a>
+                                <a href="community" class="transition-colors hover:text-gray-600 ">Our Community</a>
                             </li>
                             <li>
-                                <a href="docs/9.x/releases.html" class="transition-colors hover:text-gray-600 ">Release
+                                <a href="release" class="transition-colors hover:text-gray-600 ">Release
                                     Notes</a>
                             </li>
                             <li>
-                                <a href="docs/9.x/installation.html"
+                                <a href="gettingstarted"
                                     class="transition-colors hover:text-gray-600 ">Getting Started</a>
                             </li>
                             <li>
                                 <a href="docs/9.x/routing.html"
                                     class="transition-colors hover:text-gray-600 ">Routing</a>
                             </li>
-                            <li>
-                                <a href="docs/9.x/blade.html" class="transition-colors hover:text-gray-600 ">Blade
-                                    Templates</a>
-                            </li>
+                           
                             <li>
                                 <a href="docs/9.x/authentication.html"
                                     class="transition-colors hover:text-gray-600 ">Authentication</a>
                             </li>
                             <li>
                                 <a href="docs/9.x/authorization.html"
-                                    class="transition-colors hover:text-gray-600 ">Authorization</a>
+                                    class="transition-colors hover:text-gray-600 ">Sessions</a>
                             </li>
+                            
                             <li>
-                                <a href="docs/9.x/artisan.html" class="transition-colors hover:text-gray-600 ">Artisan
-                                    Console</a>
+                                <a href="backend"
+                                    class="transition-colors hover:text-gray-600 ">Backend Bolt</a>
                             </li>
-                            <li>
-                                <a href="docs/9.x/database.html"
-                                    class="transition-colors hover:text-gray-600 ">Database</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/eloquent.html" class="transition-colors hover:text-gray-600 ">Eloquent
-                                    ORM</a>
-                            </li>
+                            
                             <li>
                                 <a href="docs/9.x/testing.html"
-                                    class="transition-colors hover:text-gray-600 ">Testing</a>
+                                    class="transition-colors hover:text-gray-600 ">Yolk UI</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                <!-- <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
                     <span class="uppercase ">Resources</span>
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
@@ -1513,13 +1504,13 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
                     <span class="uppercase ">Partners</span>
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
                             <li>
-                                <a href="https://vehikl.com" class="transition-colors hover:text-gray-600 ">Vehikl</a>
+                                <a href="https://uvitechgh.com" class="transition-colors hover:text-gray-600 ">Vehikl</a>
                             </li>
                             <li>
                                 <a href="https://tighten.co" class="transition-colors hover:text-gray-600 ">Tighten</a>
