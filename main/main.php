@@ -1,7 +1,8 @@
+<?php include '../components/header.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php echo header('home');?>
+<?php echo head('home');?>
 
 <body x-data="{
         navIsOpen: false,
