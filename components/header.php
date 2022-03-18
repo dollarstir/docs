@@ -108,7 +108,7 @@ function head($id){
             <link rel="stylesheet" href="main/css/main.css">
             <link rel="stylesheet" href="main/css/particle.css">
             <link rel="stylesheet" href="main/css/aos.css">';
-            break
+            break;
         
     }
 }
