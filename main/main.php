@@ -386,22 +386,22 @@
     </div>
 
 
-    <div class="relative overflow-hidden py-16 md:pt-24 lg:pt-61">
+    <div class="relative overflow-hidden py-16 md:pt-24 lg:pt-64">
         
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
                 <div class="overflow-hidden flex justify-center lg:order-last">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
-                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/momo.png" style="border-radius:10px;"/>
+                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/sms.png" style="border-radius:10px;"/>
                             
                         
                     </div>
                 </div>
                 <div class="w-full flex justify-center items-center px-5 xl:px-0">
                     <div class="sm:max-w-[480px]">
-                        <h2 class="text-4xl font-bold md:text-5xl">Accept Mobile money Payment </h2>
-                        <p class="mt-6 text-gray-700 leading-relaxed">yolk has intergrated mobile money payment which helps to easily accept money on your wesbite .</p>
+                        <h2 class="text-4xl font-bold md:text-5xl">Send Bulk sms  </h2>
+                        <p class="mt-6 text-gray-700 leading-relaxed">yolk has intergrated bulk sms sender which helps to send bulk sms to users .</p>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x.html">
                             <span
