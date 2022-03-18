@@ -88,7 +88,7 @@
                         <img
                             class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
                             :class="{ 'w-12 h-12': navIsOpen }"
-                            src="../../img/logomark.min.svg"
+                            src="main/img/logomark.min.svg"
                             alt="Laravel"
                             width="50"
                             height="52"
@@ -103,14 +103,14 @@
                             x-transition:leave="duration-250 ease-in"
                             x-transition:leave-start="opacity-100"
                             x-transition:leave-end="opacity-0"
-                            src="../../img/logotype.min.svg"
-                            alt="Laravel"
+                            src="main/img/logotype.min.svg"
+                            alt="Yolk Framework"
                             width="114"
                             height="29"
                         >
                         <img
-                            src="../../img/logotype.min.svg"
-                            alt="Laravel"
+                            src="main/img/logotype.min.svg"
+                            alt="Yol Framework"
                             class="hidden ml-4 lg:block"
                             width="114"
                             height="29"
