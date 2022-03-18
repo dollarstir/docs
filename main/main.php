@@ -10,14 +10,14 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="Yolk - State of the art framework">
     <meta name="description"
-        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built sql queries and has custom UI ">
+        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure ">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phpyolk.com/">
     <meta property="og:title" content="Yolk - State of the art framework">
     <meta property="og:description"
-        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built sql queries and has custom UI">
+        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure">
     <meta property="og:image" content="yolkassets/img/shot.png">
 
     <!-- Twitter -->
@@ -25,7 +25,7 @@
     <meta property="twitter:url" content="https://phpyolk.com/">
     <meta property="twitter:title" content="Yolk - State of the art framework">
     <meta property="twitter:description"
-        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built sql queries and has custom UI">
+        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure">
     <meta property="twitter:image" content="yolkassets/img/shot.png">
 
     <!-- Favicon -->
@@ -192,7 +192,7 @@
                         Art <br class="hidden lg:inline"><span class="text-red-500">Framework</span></h1>
                     <p
                         class="mt-6 max-w-xl mx-auto text-center text-gray-700 text-md leading-relaxed md:mt-8 md:text-lg lg:mt-10">
-                        Yolk is a PHP framework that helps to easily build web applications. Comes with in-built sql queries and has custom UI .</p>
+                        Yolk is a PHP framework that helps to easily build web applications. Comes with in-built database queries and has custom tags and structure .</p>
                     <div
                         class="mt-6 max-w-sm mx-auto flex flex-col justify-center items-center gap-4 sm:flex-row md:mt-8 lg:mt-10">
                         <a class="group relative inline-flex border border-red-500 focus:outline-none w-full sm:w-auto"
@@ -631,7 +631,7 @@
 
             <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
                 <div class="col-span-12 lg:col-span-4">
-                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">Yolk is a PHP framework that helps to easily build web applications. Comes with in-built sql queries and has custom UI.</p>
+                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">Yolk is a PHP framework that helps to easily build web applications. Comes with in-built database queries and has custom tags and structure.</p>
                     <ul class="mt-6 flex items-center space-x-3">
                     <li>
                             <a href="https://github.com/yolk-framwork">
@@ -771,8 +771,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-10 border-t pt-6 pb-16 border-gray-200 ">
-                <p class="text-xs text-gray-700 ">
+            <web-particles id="tsparticles2" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#ffffff"},"links":{"color":"#ffffff","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
+            <div class="mt-10 border-t pt-6 pb-16 border-gray-700 text-center ">
+                <p class="text-xs text-gray-900 ">
                      Copyright &copy; <?php echo date('Y');?>  PHP Yolk framework LLC.
                 </p>
                
