@@ -1419,7 +1419,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/laravelphp">
+                            <a href="https://www.youtube.com/yolkframework">
                                 <img id="footer__youtube_dark" class="hidden w-6 h-6"
                                     src="main/img/social/youtube.dark.min.svg" alt="YouTube" width="169" height="150"
                                     loading="lazy">
