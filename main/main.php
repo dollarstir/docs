@@ -762,17 +762,17 @@
                     <span class="uppercase ">Plugins</span>
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
-                            <!-- <li>
-                                <a href="docs/9.x/billing.html"
-                                    class="transition-colors hover:text-gray-600 ">Cashier</a>
-                            </li> -->
+                            <li>
+                                <a href="cryptonite"
+                                    class="transition-colors hover:text-gray-600 ">cryptonite</a>
+                            </li>
                             
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="mt-10 border-t pt-6 pb-16 border-gray-700 text-center" style="background-color: rgb(228, 222, 222);margin:0 !important;width:100% !important;">
+            <div class="mt-10 border-t pt-6 pb-16 border-gray-700 text-center" style="background-color: rgb(228, 222, 222);">
                 <p class="text-xs text-gray-900 ">
                     
                      Copyright &copy; <?php echo date('Y');?>  PHP Yolk framework LLC.
