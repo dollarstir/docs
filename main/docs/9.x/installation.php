@@ -108,13 +108,13 @@
                             width="114"
                             height="29"
                         >
-                        <img
+                        <!-- <img
                             src="yolkassets/img/logo.png"
                             alt="Yol Framework"
                             class="hidden ml-4 lg:block"
                             width="114"
                             height="29"
-                        >
+                        > -->
                     </a>
                     <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
                         <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
@@ -762,8 +762,8 @@
                 <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
                     <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
                         <a href="home" class="flex items-center">
-                            <img class="" src="yolkassets/img/logo.png" alt="Yolk Framework">
-                            <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
+                            <img class="" src="yolkassets/img/logo.png" alt="Yolk Framework" style="height:50px;">
+                            <!-- <img class="hidden ml-5 sm:block" src="yolkassets/img/logo.png" alt="Yolk Framework"> -->
                         </a>
                         <div class="flex-1 flex items-center justify-end">
                             <button id="header__sun" onclick="toSystemMode()" title="Switch to system theme" class="relative w-10 h-10 focus:outline-none focus:shadow-outline text-gray-500">
