@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Yolk - State of the art framework</title>
+    <title>Yolk Framework - State of the art framework</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Yolk - State of the art framework">
+    <meta name="title" content="Yolk Framework - State of the art framework">
     <meta name="keyword" content="PHP Yolk, Yolk, Framework, State of the art framework, UI,ui, Yolk Ui, Yolk UI">
     <meta name="description"
         content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure ">
@@ -16,7 +16,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://phpyolk.com/">
-    <meta property="og:title" content="Yolk - State of the art framework">
+    <meta property="og:title" content="Yolk Framework - State of the art framework">
     <meta property="og:description"
         content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure">
     <meta property="og:image" content="yolkassets/img/shot.png">
@@ -24,7 +24,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://phpyolk.com/">
-    <meta property="twitter:title" content="Yolk - State of the art framework">
+    <meta property="twitter:title" content="Yolk Framework - State of the art framework">
     <meta property="twitter:description"
         content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure">
     <meta property="twitter:image" content="yolkassets/img/shot.png">
