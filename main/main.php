@@ -1432,7 +1432,7 @@
                     </ul>
                 </div>
                 <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
-                    <span class="uppercase ">Highlights</span>
+                    <span class="uppercase ">Quick Links</span>
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
                             <li>
