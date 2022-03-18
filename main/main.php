@@ -1391,7 +1391,7 @@
                     <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">Yolk is a PHP framework that helps to easily build web applications. Comes with in-built sql queries and has custom UI.</p>
                     <ul class="mt-6 flex items-center space-x-3">
                     <li>
-                            <a href="https://github.com/yolk">
+                            <a href="https://github.com/yolk-framwork">
                                 <img id="footer__github_dark" class="hidden w-6 h-6"
                                     src="main/img/social/github.dark.min.svg" alt="GitHub" width="24" height="24"
                                     loading="lazy">
