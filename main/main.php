@@ -197,10 +197,10 @@
                     <div
                         class="mt-6 max-w-sm mx-auto flex flex-col justify-center items-center gap-4 sm:flex-row md:mt-8 lg:mt-10">
                         <a class="group relative inline-flex border border-red-500 focus:outline-none w-full sm:w-auto"
-                            href="docs/9.x.html">
+                            href="getstarted">
                             <span
                                 class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-white text-center font-bold uppercase bg-red-500 ring-1  ring-offset-1 ring-offset-red-500 transform transition-transform">
-                                Get Started
+                                Let's Start
                             </span>
                         </a>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none w-full sm:w-auto"
