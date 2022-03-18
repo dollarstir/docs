@@ -84,6 +84,7 @@ toLightMode();
                 @keydown.window.escape="navIsOpen = false"
             >
                 <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
+                   
                     <a href="home" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
                         <img
                             class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
@@ -108,6 +109,7 @@ toLightMode();
                             width="114"
                             height="29"
                         >
+                        <button class="hidden ml-4 lg:block" @click.prevent="$dispatch('toggle-search-modal')"><?php echo icons::far('users') ;?></button>
                         <!-- <img
                             src="yolkassets/img/logo.png"
                             alt="Yol Framework"
