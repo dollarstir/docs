@@ -1388,10 +1388,7 @@
 
             <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
                 <div class="col-span-12 lg:col-span-4">
-                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">Laravel is a web application framework with
-                        expressive, elegant syntax. We believe development must be an enjoyable and creative experience
-                        to be truly fulfilling. Laravel attempts to take the pain out of development by easing common
-                        tasks used in most web projects.</p>
+                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">https://torchlight.dev</p>
                     <ul class="mt-6 flex items-center space-x-3">
                         <li>
                             <a href="https://twitter.com/laravelphp">
@@ -1652,11 +1649,9 @@
             </div>
             <div class="mt-10 border-t pt-6 pb-16 border-gray-200 ">
                 <p class="text-xs text-gray-700 ">
-                    Laravel is a Trademark of Taylor Otwell. Copyright &copy; 2011-2022 Laravel LLC.
+                     Copyright &copy; <?php echo date('Y');?>  Yolk LLC.
                 </p>
-                <p class="mt-6 text-xs text-gray-700 ">
-                    Code highlighting provided by <a href="https://torchlight.dev">Torchlight</a>
-                </p>
+               
             </div>
         </div>
     </footer>
@@ -1755,12 +1750,7 @@
         </div>
     </div>
 
-    <!-- <script>
-        var algolia_app_id = 'E3MIRNPJH5';
-        var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
-        var version = '9.x';
-    </script> -->
-
+   
     <script src="main/js/app-id=100f797fd909ecd1c2f2.js"></script>
     <script src="main/js/particle.js"></script>
     <script src="main/js/tsparticles.min.js"></script>
