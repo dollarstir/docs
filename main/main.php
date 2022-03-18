@@ -356,6 +356,36 @@
     </div>
 
 
+    <div class="relative overflow-hidden py-16 md:pt-24 lg:pt-64">
+        
+       
+        <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
+            <div class="relative w-full grid gap-12 lg:grid-cols-2">
+                <div class="overflow-hidden flex justify-center lg:order-last">
+                    <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
+                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/momo.png" style="border-radius:10px;"/>
+                            
+                        
+                    </div>
+                </div>
+                <div class="w-full flex justify-center items-center px-5 xl:px-0">
+                    <div class="sm:max-w-[480px]">
+                        <h2 class="text-4xl font-bold md:text-5xl">Accept Mobile money Payment </h2>
+                        <p class="mt-6 text-gray-700 leading-relaxed">yolk has intergrated mobile money payment which helps to easily accept money on your wesbite .</p>
+                        <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
+                            href="docs/9.x.html">
+                            <span
+                                class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                                Start Learning
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="relative overflow-hidden py-16 md:pt-48">
         <span
             class="hidden absolute bg-radial-gradient opacity-[.15] pointer-events-none lg:inline-flex right-[-20%] top-0 w-[640px] h-[640px]"></span>
