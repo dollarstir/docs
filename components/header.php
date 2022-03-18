@@ -8,7 +8,7 @@ function head($id){
             
             break;
         case "installation":
-            $title = "Yolk Framework - Installation";
+            $title = "Installation - Yolk Framework - State of the art framework ";
             
             break;
         
