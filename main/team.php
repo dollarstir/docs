@@ -8,7 +8,9 @@ YolkUI::run(new Wrapper(
         el::body([
             el::p('',"Send money with yolkpay"),
             Yolkpay::paybutton(),
-            yolkpay::pay('Dollar','Stir','kpin463@gmail.com',),
+            yolkpay::pay('Dollar',
+            'Stir','kpin463@gmail.com',
+            '0556676471','10','ASDDSD2322'),
             import('js'),
             yolkpay::handler(),
 
