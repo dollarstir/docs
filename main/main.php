@@ -1510,140 +1510,39 @@
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
                             <li>
-                                <a href="https://uvitechgh.com" class="transition-colors hover:text-gray-600 ">Vehikl</a>
+                                <a href="https://uvitechgh.com" class="transition-colors hover:text-gray-600 ">Uvitech</a>
                             </li>
                             <li>
-                                <a href="https://tighten.co" class="transition-colors hover:text-gray-600 ">Tighten</a>
+                                <a href="https://paystack.com" class="transition-colors hover:text-gray-600 ">Paystack</a>
                             </li>
                             <li>
-                                <a href="https://64robots.com/" class="transition-colors hover:text-gray-600 ">64
-                                    Robots</a>
+                                <a href="https://flutterwave.com.com/" class="transition-colors hover:text-gray-600 ">Flutterwave
+                                    </a>
                             </li>
                             <li>
-                                <a href="https://kirschbaumdevelopment.com/"
-                                    class="transition-colors hover:text-gray-600 ">Kirschbaum</a>
+                                <a href="https://mnotify.com/"
+                                    class="transition-colors hover:text-gray-600 ">Mnotify</a>
                             </li>
-                            <li>
-                                <a href="https://www.curotec.com/services/technologies/laravel/"
-                                    class="transition-colors hover:text-gray-600 ">Curotec</a>
-                            </li>
-                            <li>
-                                <a href="https://jump24.co.uk/"
-                                    class="transition-colors hover:text-gray-600 ">Jump24</a>
-                            </li>
-                            <li>
-                                <a href="https://www.a2design.biz/" class="transition-colors hover:text-gray-600 ">A2
-                                    Design</a>
-                            </li>
-                            <li>
-                                <a href="https://corporate.aboutyou.de/app/uploads/2019/08/INTRO-Pitch-I-AY-Tech.pdf?utm_source=laravelpartnersfindoutmore&utm_medium=socialgroups&utm_campaign=tech"
-                                    class="transition-colors hover:text-gray-600 ">ABOUT YOU</a>
-                            </li>
-                            <li>
-                                <a href="https://www.byte5.net/" class="transition-colors hover:text-gray-600 ">Byte
-                                    5</a>
-                            </li>
-                            <li>
-                                <a href="https://cubettech.com/"
-                                    class="transition-colors hover:text-gray-600 ">Cubet</a>
-                            </li>
-                            <li>
-                                <a href="https://www.cyber-duck.co.uk/how-we-work/technology/laravel?utm_source=Laravel%20Partner&utm_medium=Sponsorship"
-                                    class="transition-colors hover:text-gray-600 ">Cyber-Duck</a>
-                            </li>
-                            <li>
-                                <a href="https://devsquad.com/"
-                                    class="transition-colors hover:text-gray-600 ">DevSquad</a>
-                            </li>
-                            <li>
-                                <a href="https://www.ideil.com/"
-                                    class="transition-colors hover:text-gray-600 ">Ideil</a>
-                            </li>
-                            <li>
-                                <a href="https://romegadigital.com/"
-                                    class="transition-colors hover:text-gray-600 ">Romega Software</a>
-                            </li>
-                            <li>
-                                <a href="https://www.worksome.com/"
-                                    class="transition-colors hover:text-gray-600 ">Worksome</a>
-                            </li>
-                            <li>
-                                <a href="https://webreinvent.com/?utm_source=laravel&utm_medium=laravel.com&utm_campaign=patreon-sponsors"
-                                    class="transition-colors hover:text-gray-600 ">WebReinvent</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
-                    <span class="uppercase ">Ecosystem</span>
+                    <span class="uppercase ">Plugins</span>
                     <div class="mt-5">
                         <ul class="space-y-3 text-gray-700 ">
-                            <li>
+                            <!-- <li>
                                 <a href="docs/9.x/billing.html"
                                     class="transition-colors hover:text-gray-600 ">Cashier</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/dusk.html" class="transition-colors hover:text-gray-600 ">Dusk</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/broadcasting.html"
-                                    class="transition-colors hover:text-gray-600 ">Echo</a>
-                            </li>
-                            <li>
-                                <a href="https://envoyer.io" class="transition-colors hover:text-gray-600 ">Envoyer</a>
-                            </li>
-                            <li>
-                                <a href="https://forge.laravel.com"
-                                    class="transition-colors hover:text-gray-600 ">Forge</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/homestead.html"
-                                    class="transition-colors hover:text-gray-600 ">Homestead</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/horizon.html"
-                                    class="transition-colors hover:text-gray-600 ">Horizon</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/mix.html" class="transition-colors hover:text-gray-600 ">Mix</a>
-                            </li>
-                            <li>
-                                <a href="https://nova.laravel.com"
-                                    class="transition-colors hover:text-gray-600 ">Nova</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/passport.html"
-                                    class="transition-colors hover:text-gray-600 ">Passport</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/scout.html" class="transition-colors hover:text-gray-600 ">Scout</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/socialite.html"
-                                    class="transition-colors hover:text-gray-600 ">Socialite</a>
-                            </li>
-                            <li>
-                                <a href="https://spark.laravel.com"
-                                    class="transition-colors hover:text-gray-600 ">Spark</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/telescope.html"
-                                    class="transition-colors hover:text-gray-600 ">Telescope</a>
-                            </li>
-                            <li>
-                                <a href="docs/9.x/valet.html" class="transition-colors hover:text-gray-600 ">Valet</a>
-                            </li>
-                            <li>
-                                <a href="https://vapor.laravel.com"
-                                    class="transition-colors hover:text-gray-600 ">Vapor</a>
-                            </li>
+                            </li> -->
+                            
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="mt-10 border-t pt-6 pb-16 border-gray-200 ">
                 <p class="text-xs text-gray-700 ">
-                     Copyright &copy; <?php echo date('Y');?>  Yolk LLC.
+                     Copyright &copy; <?php echo date('Y');?>  PHP Yolk framework LLC.
                 </p>
                
             </div>
