@@ -51,6 +51,7 @@
     <link rel="stylesheet" type="text/css" href="main/css/app-id=b59affd817f095c5db73.css">
     <link rel="stylesheet" href="main/css/main.css">
     <link rel="stylesheet" href="main/css/particle.css">
+    <link rel="stylesheet" href="main/css/aos.css">
 
     <script>
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -331,7 +332,7 @@
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                <div class="overflow-hidden flex justify-center lg:order-last">
+                <div class="overflow-hidden flex justify-center lg:order-last" data-aos="fade-right">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
                         <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/ui.png" style="border-radius:10px;"/>
                             
@@ -361,7 +362,7 @@
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                <div class="overflow-hidden flex justify-center lg:order-last">
+                <div class="overflow-hidden flex justify-center lg:order-last" data-aos="fade-left">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
                         <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/momo.png" style="border-radius:10px;"/>
                             
@@ -391,9 +392,9 @@
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                <div class="overflow-hidden flex justify-center lg:order-last">
+                <div class="overflow-hidden flex justify-center lg:order-last" data-aos="fade-right">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
-                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/sms.png" style="border-radius:10px;" data-aos="fade-down-left" data-aos-duration="1500"/>
+                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/sms.png" style="border-radius:10px;"/>
                             
                         
                     </div>
