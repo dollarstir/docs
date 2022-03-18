@@ -715,39 +715,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
-                    <span class="uppercase ">Resources</span>
-                    <div class="mt-5">
-                        <ul class="space-y-3 text-gray-700 ">
-                            <li>
-                                <a href="https://laracasts.com"
-                                    class="transition-colors hover:text-gray-600 ">Laracasts</a>
-                            </li>
-                            <li>
-                                <a href="https://laravel-news.com"
-                                    class="transition-colors hover:text-gray-600 ">Laravel News</a>
-                            </li>
-                            <li>
-                                <a href="https://laracon.us" class="transition-colors hover:text-gray-600 ">Laracon</a>
-                            </li>
-                            <li>
-                                <a href="https://laracon.eu/" class="transition-colors hover:text-gray-600 ">Laracon
-                                    EU</a>
-                            </li>
-                            <li>
-                                <a href="https://larajobs.com" class="transition-colors hover:text-gray-600 ">Jobs</a>
-                            </li>
-                            <li>
-                                <a href="https://certification.laravel.com/"
-                                    class="transition-colors hover:text-gray-600 ">Certification</a>
-                            </li>
-                            <li>
-                                <a href="https://laracasts.com/discuss"
-                                    class="transition-colors hover:text-gray-600 ">Forums</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
+                
                 <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
                     <span class="uppercase ">Partners</span>
                     <div class="mt-5">
@@ -765,6 +733,26 @@
                             <li>
                                 <a href="https://mnotify.com/"
                                     class="transition-colors hover:text-gray-600 ">Mnotify</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-xs col-span-6 md:col-span-3 lg:col-span-2">
+                    <span class="uppercase ">Intergrations</span>
+                    <div class="mt-5">
+                        <ul class="space-y-3 text-gray-700 ">
+                            <li>
+                                <a href="mobilemoney"
+                                    class="transition-colors hover:text-gray-600 ">Mobile Money </a>
+                            </li>
+                            <li>
+                                <a href="bulksms"
+                                    class="transition-colors hover:text-gray-600 ">Bulk sms</a>
+                            </li>
+                            <li>
+                                <a href="bulkmail" class="transition-colors hover:text-gray-600 ">Bulk Email Sender</a>
                             </li>
                             
                         </ul>
