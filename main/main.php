@@ -9,6 +9,7 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Yolk - State of the art framework">
+    <meta name="keyword" content="PHP Yolk, Yolk, Framework, State of the art framework, UI,ui, Yolk Ui, Yolk UI">
     <meta name="description"
         content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure ">
 
