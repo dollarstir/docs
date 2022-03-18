@@ -88,7 +88,7 @@
                         <img
                             class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
                             :class="{ 'w-12 h-12': navIsOpen }"
-                            src="main/img/logomark.min.svg"
+                            src="yolkassets/img/logo.png"
                             alt="Yolk Framework"
                             width="50"
                             height="52"
@@ -103,13 +103,13 @@
                             x-transition:leave="duration-250 ease-in"
                             x-transition:leave-start="opacity-100"
                             x-transition:leave-end="opacity-0"
-                            src="main/img/logotype.min.svg"
+                            src="yolkassets/img/logo.png"
                             alt="Yolk Framework"
                             width="114"
                             height="29"
                         >
                         <img
-                            src="main/img/logotype.min.svg"
+                            src="yolkassets/img/logo.png"
                             alt="Yol Framework"
                             class="hidden ml-4 lg:block"
                             width="114"
@@ -761,8 +761,8 @@
             >
                 <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
                     <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
-                        <a href="../../index" class="flex items-center">
-                            <img class="" src="../../img/logomark.min.svg" alt="Laravel">
+                        <a href="home" class="flex items-center">
+                            <img class="" src="yolkassets/img/logo.png" alt="Yolk Framework">
                             <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
                         </a>
                         <div class="flex-1 flex items-center justify-end">
