@@ -943,6 +943,7 @@
 <script src="main/js/custom-elements-es5-adapter.js"></script>
 <script src="main/js/webcomponents-loader.js"></script>
 <script type="module" src="main/js/web-particles.min.js"></script>
+<script src="main/js/aos.js"></script>
 
     
 </body>
