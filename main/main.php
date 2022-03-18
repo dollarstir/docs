@@ -333,7 +333,7 @@
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
                 <div class="overflow-hidden flex justify-center lg:order-last">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
-                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/shot.png" style="border-radius:10px;"/>
+                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/ui.png" style="border-radius:10px;"/>
                             
                         
                     </div>
@@ -341,7 +341,7 @@
                 <div class="w-full flex justify-center items-center px-5 xl:px-0">
                     <div class="sm:max-w-[480px]">
                         <h2 class="text-4xl font-bold md:text-5xl">Widget Based  Ui</h2>
-                        <p class="mt-6 text-gray-700 leading-relaxed">Our routing system is easy to use and boost search engine optimization.we provide custom get request </p>
+                        <p class="mt-6 text-gray-700 leading-relaxed">yolk ui has a widget based nature making it easy to write less but do more .</p>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x.html">
                             <span
