@@ -393,7 +393,7 @@
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
                 <div class="overflow-hidden flex justify-center lg:order-last">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
-                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/sms.png" style="border-radius:10px;"/>
+                        <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/sms.png" style="border-radius:10px;" data-aos="fade-down-left" data-aos-duration="1500"/>
                             
                         
                     </div>
@@ -944,6 +944,7 @@
 <script src="main/js/webcomponents-loader.js"></script>
 <script type="module" src="main/js/web-particles.min.js"></script>
 <script src="main/js/aos.js"></script>
+
 
     
 </body>
