@@ -120,7 +120,7 @@
                         <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
                             <div class="docs_sidebar">
                                 <ul>
-<li>
+<!-- <li>
 <h2>Prologue</h2>
 <ul>
 <li>
@@ -133,7 +133,7 @@
 <a href="contributions">Contribution Guide</a>
 </li>
 </ul>
-</li>
+</li> -->
 <li>
 <h2>Getting Started</h2>
 <ul>
