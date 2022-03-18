@@ -84,12 +84,12 @@
                 @keydown.window.escape="navIsOpen = false"
             >
                 <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
-                    <a href="../../index" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+                    <a href="home" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
                         <img
                             class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
                             :class="{ 'w-12 h-12': navIsOpen }"
                             src="main/img/logomark.min.svg"
-                            alt="Laravel"
+                            alt="Yolk Framework"
                             width="50"
                             height="52"
                         >
