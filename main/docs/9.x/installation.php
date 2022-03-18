@@ -5,6 +5,8 @@
     <?php head('installation');?>
 
     <script>
+
+    toLightMode()
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         if (localStorage.theme === 'system') {
             if (e.matches) {
@@ -56,7 +58,7 @@
 
     <a
     id="skip-to-content-link"
-    href="installation.html#main-content"
+    href="installation#main-content"
     class="absolute bg-gray-100 px-4 py-2 top-3 left-3 text-gray-700 shadow-xl"
 >
     Skip to content
@@ -82,7 +84,7 @@
                 @keydown.window.escape="navIsOpen = false"
             >
                 <div class="relative min-h-0 flex-1 flex flex-col xl:w-80">
-                    <a href="../../index.html" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
+                    <a href="../../index" class="flex items-center py-8 px-4 lg:px-8 xl:px-16">
                         <img
                             class="w-8 h-8 shrink-0 transition-all duration-300 lg:w-12 lg:h-12"
                             :class="{ 'w-12 h-12': navIsOpen }"
@@ -122,13 +124,13 @@
 <h2>Prologue</h2>
 <ul>
 <li>
-<a href="releases.html">Release Notes</a>
+<a href="releases">Release Notes</a>
 </li>
 <li>
-<a href="upgrade.html">Upgrade Guide</a>
+<a href="upgrade">Upgrade Guide</a>
 </li>
 <li>
-<a href="contributions.html">Contribution Guide</a>
+<a href="contributions">Contribution Guide</a>
 </li>
 </ul>
 </li>
@@ -136,19 +138,19 @@
 <h2>Getting Started</h2>
 <ul>
 <li>
-<a href="installation.html">Installation</a>
+<a href="installation">Installation</a>
 </li>
 <li>
-<a href="configuration.html">Configuration</a>
+<a href="configuration">Configuration</a>
 </li>
 <li>
-<a href="structure.html">Directory Structure</a>
+<a href="structure">Directory Structure</a>
 </li>
 <li>
-<a href="starter-kits.html">Starter Kits</a>
+<a href="starter-kits">Starter Kits</a>
 </li>
 <li>
-<a href="deployment.html">Deployment</a>
+<a href="deployment">Deployment</a>
 </li>
 </ul>
 </li>
@@ -156,16 +158,16 @@
 <h2>Architecture Concepts</h2>
 <ul>
 <li>
-<a href="lifecycle.html">Request Lifecycle</a>
+<a href="lifecycle">Request Lifecycle</a>
 </li>
 <li>
-<a href="container.html">Service Container</a>
+<a href="container">Service Container</a>
 </li>
 <li>
-<a href="providers.html">Service Providers</a>
+<a href="providers">Service Providers</a>
 </li>
 <li>
-<a href="facades.html">Facades</a>
+<a href="facades">Facades</a>
 </li>
 </ul>
 </li>
@@ -173,43 +175,43 @@
 <h2>The Basics</h2>
 <ul>
 <li>
-<a href="routing.html">Routing</a>
+<a href="routing">Routing</a>
 </li>
 <li>
-<a href="middleware.html">Middleware</a>
+<a href="middleware">Middleware</a>
 </li>
 <li>
-<a href="csrf.html">CSRF Protection</a>
+<a href="csrf">CSRF Protection</a>
 </li>
 <li>
-<a href="controllers.html">Controllers</a>
+<a href="controllers">Controllers</a>
 </li>
 <li>
-<a href="requests.html">Requests</a>
+<a href="requests">Requests</a>
 </li>
 <li>
-<a href="responses.html">Responses</a>
+<a href="responses">Responses</a>
 </li>
 <li>
-<a href="views.html">Views</a>
+<a href="views">Views</a>
 </li>
 <li>
-<a href="blade.html">Blade Templates</a>
+<a href="blade">Blade Templates</a>
 </li>
 <li>
-<a href="urls.html">URL Generation</a>
+<a href="urls">URL Generation</a>
 </li>
 <li>
-<a href="session.html">Session</a>
+<a href="session">Session</a>
 </li>
 <li>
-<a href="validation.html">Validation</a>
+<a href="validation">Validation</a>
 </li>
 <li>
-<a href="errors.html">Error Handling</a>
+<a href="errors">Error Handling</a>
 </li>
 <li>
-<a href="logging.html">Logging</a>
+<a href="logging">Logging</a>
 </li>
 </ul>
 </li>
@@ -217,55 +219,55 @@
 <h2>Digging Deeper</h2>
 <ul>
 <li>
-<a href="artisan.html">Artisan Console</a>
+<a href="artisan">Artisan Console</a>
 </li>
 <li>
-<a href="broadcasting.html">Broadcasting</a>
+<a href="broadcasting">Broadcasting</a>
 </li>
 <li>
-<a href="cache.html">Cache</a>
+<a href="cache">Cache</a>
 </li>
 <li>
-<a href="collections.html">Collections</a>
+<a href="collections">Collections</a>
 </li>
 <li>
-<a href="mix.html">Compiling Assets</a>
+<a href="mix">Compiling Assets</a>
 </li>
 <li>
-<a href="contracts.html">Contracts</a>
+<a href="contracts">Contracts</a>
 </li>
 <li>
-<a href="events.html">Events</a>
+<a href="events">Events</a>
 </li>
 <li>
-<a href="filesystem.html">File Storage</a>
+<a href="filesystem">File Storage</a>
 </li>
 <li>
-<a href="helpers.html">Helpers</a>
+<a href="helpers">Helpers</a>
 </li>
 <li>
-<a href="http-client.html">HTTP Client</a>
+<a href="http-client">HTTP Client</a>
 </li>
 <li>
-<a href="localization.html">Localization</a>
+<a href="localization">Localization</a>
 </li>
 <li>
-<a href="mail.html">Mail</a>
+<a href="mail">Mail</a>
 </li>
 <li>
-<a href="notifications.html">Notifications</a>
+<a href="notifications">Notifications</a>
 </li>
 <li>
-<a href="packages.html">Package Development</a>
+<a href="packages">Package Development</a>
 </li>
 <li>
-<a href="queues.html">Queues</a>
+<a href="queues">Queues</a>
 </li>
 <li>
-<a href="rate-limiting.html">Rate Limiting</a>
+<a href="rate-limiting">Rate Limiting</a>
 </li>
 <li>
-<a href="scheduling.html">Task Scheduling</a>
+<a href="scheduling">Task Scheduling</a>
 </li>
 </ul>
 </li>
@@ -273,22 +275,22 @@
 <h2>Security</h2>
 <ul>
 <li>
-<a href="authentication.html">Authentication</a>
+<a href="authentication">Authentication</a>
 </li>
 <li>
-<a href="authorization.html">Authorization</a>
+<a href="authorization">Authorization</a>
 </li>
 <li>
-<a href="verification.html">Email Verification</a>
+<a href="verification">Email Verification</a>
 </li>
 <li>
-<a href="encryption.html">Encryption</a>
+<a href="encryption">Encryption</a>
 </li>
 <li>
-<a href="hashing.html">Hashing</a>
+<a href="hashing">Hashing</a>
 </li>
 <li>
-<a href="passwords.html">Password Reset</a>
+<a href="passwords">Password Reset</a>
 </li>
 </ul>
 </li>
@@ -296,22 +298,22 @@
 <h2>Database</h2>
 <ul>
 <li>
-<a href="database.html">Getting Started</a>
+<a href="database">Getting Started</a>
 </li>
 <li>
-<a href="queries.html">Query Builder</a>
+<a href="queries">Query Builder</a>
 </li>
 <li>
-<a href="pagination.html">Pagination</a>
+<a href="pagination">Pagination</a>
 </li>
 <li>
-<a href="migrations.html">Migrations</a>
+<a href="migrations">Migrations</a>
 </li>
 <li>
-<a href="seeding.html">Seeding</a>
+<a href="seeding">Seeding</a>
 </li>
 <li>
-<a href="redis.html">Redis</a>
+<a href="redis">Redis</a>
 </li>
 </ul>
 </li>
@@ -319,22 +321,22 @@
 <h2>Eloquent ORM</h2>
 <ul>
 <li>
-<a href="eloquent.html">Getting Started</a>
+<a href="eloquent">Getting Started</a>
 </li>
 <li>
-<a href="eloquent-relationships.html">Relationships</a>
+<a href="eloquent-relationships">Relationships</a>
 </li>
 <li>
-<a href="eloquent-collections.html">Collections</a>
+<a href="eloquent-collections">Collections</a>
 </li>
 <li>
-<a href="eloquent-mutators.html">Mutators / Casts</a>
+<a href="eloquent-mutators">Mutators / Casts</a>
 </li>
 <li>
-<a href="eloquent-resources.html">API Resources</a>
+<a href="eloquent-resources">API Resources</a>
 </li>
 <li>
-<a href="eloquent-serialization.html">Serialization</a>
+<a href="eloquent-serialization">Serialization</a>
 </li>
 </ul>
 </li>
@@ -342,22 +344,22 @@
 <h2>Testing</h2>
 <ul>
 <li>
-<a href="testing.html">Getting Started</a>
+<a href="testing">Getting Started</a>
 </li>
 <li>
-<a href="http-tests.html">HTTP Tests</a>
+<a href="http-tests">HTTP Tests</a>
 </li>
 <li>
-<a href="console-tests.html">Console Tests</a>
+<a href="console-tests">Console Tests</a>
 </li>
 <li>
-<a href="dusk.html">Browser Tests</a>
+<a href="dusk">Browser Tests</a>
 </li>
 <li>
-<a href="database-testing.html">Database</a>
+<a href="database-testing">Database</a>
 </li>
 <li>
-<a href="mocking.html">Mocking</a>
+<a href="mocking">Mocking</a>
 </li>
 </ul>
 </li>
@@ -365,60 +367,60 @@
 <h2>Packages</h2>
 <ul>
 <li>
-<a href="starter-kits.html#laravel-breeze">Breeze</a>
+<a href="starter-kits#laravel-breeze">Breeze</a>
 </li>
 <li>
-<a href="billing.html">Cashier (Stripe)</a>
+<a href="billing">Cashier (Stripe)</a>
 </li>
 <li>
-<a href="cashier-paddle.html">Cashier (Paddle)</a>
+<a href="cashier-paddle">Cashier (Paddle)</a>
 </li>
 <li>
-<a href="dusk.html">Dusk</a>
+<a href="dusk">Dusk</a>
 </li>
 <li>
-<a href="envoy.html">Envoy</a>
+<a href="envoy">Envoy</a>
 </li>
 <li>
-<a href="fortify.html">Fortify</a>
+<a href="fortify">Fortify</a>
 </li>
 <li>
-<a href="homestead.html">Homestead</a>
+<a href="homestead">Homestead</a>
 </li>
 <li>
-<a href="horizon.html">Horizon</a>
+<a href="horizon">Horizon</a>
 </li>
 <li>
 <a href="https://jetstream.laravel.com">Jetstream</a>
 </li>
 <li>
-<a href="octane.html">Octane</a>
+<a href="octane">Octane</a>
 </li>
 <li>
-<a href="passport.html">Passport</a>
+<a href="passport">Passport</a>
 </li>
 <li>
-<a href="sail.html">Sail</a>
+<a href="sail">Sail</a>
 </li>
 <li>
-<a href="sanctum.html">Sanctum</a>
+<a href="sanctum">Sanctum</a>
 </li>
 <li>
-<a href="scout.html">Scout</a>
+<a href="scout">Scout</a>
 </li>
 <li>
-<a href="socialite.html">Socialite</a>
+<a href="socialite">Socialite</a>
 </li>
 <li>
-<a href="telescope.html">Telescope</a>
+<a href="telescope">Telescope</a>
 </li>
 <li>
-<a href="valet.html">Valet</a>
+<a href="valet">Valet</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="../../api/9.x/index.html">API Documentation</a>
+<a href="../../api/9.x/index">API Documentation</a>
 </li>
 </ul>
 
@@ -431,13 +433,13 @@
 <h2>Prologue</h2>
 <ul>
 <li>
-<a href="releases.html">Release Notes</a>
+<a href="releases">Release Notes</a>
 </li>
 <li>
-<a href="upgrade.html">Upgrade Guide</a>
+<a href="upgrade">Upgrade Guide</a>
 </li>
 <li>
-<a href="contributions.html">Contribution Guide</a>
+<a href="contributions">Contribution Guide</a>
 </li>
 </ul>
 </li>
@@ -445,19 +447,19 @@
 <h2>Getting Started</h2>
 <ul>
 <li>
-<a href="installation.html">Installation</a>
+<a href="installation">Installation</a>
 </li>
 <li>
-<a href="configuration.html">Configuration</a>
+<a href="configuration">Configuration</a>
 </li>
 <li>
-<a href="structure.html">Directory Structure</a>
+<a href="structure">Directory Structure</a>
 </li>
 <li>
-<a href="starter-kits.html">Starter Kits</a>
+<a href="starter-kits">Starter Kits</a>
 </li>
 <li>
-<a href="deployment.html">Deployment</a>
+<a href="deployment">Deployment</a>
 </li>
 </ul>
 </li>
@@ -465,16 +467,16 @@
 <h2>Architecture Concepts</h2>
 <ul>
 <li>
-<a href="lifecycle.html">Request Lifecycle</a>
+<a href="lifecycle">Request Lifecycle</a>
 </li>
 <li>
-<a href="container.html">Service Container</a>
+<a href="container">Service Container</a>
 </li>
 <li>
-<a href="providers.html">Service Providers</a>
+<a href="providers">Service Providers</a>
 </li>
 <li>
-<a href="facades.html">Facades</a>
+<a href="facades">Facades</a>
 </li>
 </ul>
 </li>
@@ -482,43 +484,43 @@
 <h2>The Basics</h2>
 <ul>
 <li>
-<a href="routing.html">Routing</a>
+<a href="routing">Routing</a>
 </li>
 <li>
-<a href="middleware.html">Middleware</a>
+<a href="middleware">Middleware</a>
 </li>
 <li>
-<a href="csrf.html">CSRF Protection</a>
+<a href="csrf">CSRF Protection</a>
 </li>
 <li>
-<a href="controllers.html">Controllers</a>
+<a href="controllers">Controllers</a>
 </li>
 <li>
-<a href="requests.html">Requests</a>
+<a href="requests">Requests</a>
 </li>
 <li>
-<a href="responses.html">Responses</a>
+<a href="responses">Responses</a>
 </li>
 <li>
-<a href="views.html">Views</a>
+<a href="views">Views</a>
 </li>
 <li>
-<a href="blade.html">Blade Templates</a>
+<a href="blade">Blade Templates</a>
 </li>
 <li>
-<a href="urls.html">URL Generation</a>
+<a href="urls">URL Generation</a>
 </li>
 <li>
-<a href="session.html">Session</a>
+<a href="session">Session</a>
 </li>
 <li>
-<a href="validation.html">Validation</a>
+<a href="validation">Validation</a>
 </li>
 <li>
-<a href="errors.html">Error Handling</a>
+<a href="errors">Error Handling</a>
 </li>
 <li>
-<a href="logging.html">Logging</a>
+<a href="logging">Logging</a>
 </li>
 </ul>
 </li>
@@ -526,55 +528,55 @@
 <h2>Digging Deeper</h2>
 <ul>
 <li>
-<a href="artisan.html">Artisan Console</a>
+<a href="artisan">Artisan Console</a>
 </li>
 <li>
-<a href="broadcasting.html">Broadcasting</a>
+<a href="broadcasting">Broadcasting</a>
 </li>
 <li>
-<a href="cache.html">Cache</a>
+<a href="cache">Cache</a>
 </li>
 <li>
-<a href="collections.html">Collections</a>
+<a href="collections">Collections</a>
 </li>
 <li>
-<a href="mix.html">Compiling Assets</a>
+<a href="mix">Compiling Assets</a>
 </li>
 <li>
-<a href="contracts.html">Contracts</a>
+<a href="contracts">Contracts</a>
 </li>
 <li>
-<a href="events.html">Events</a>
+<a href="events">Events</a>
 </li>
 <li>
-<a href="filesystem.html">File Storage</a>
+<a href="filesystem">File Storage</a>
 </li>
 <li>
-<a href="helpers.html">Helpers</a>
+<a href="helpers">Helpers</a>
 </li>
 <li>
-<a href="http-client.html">HTTP Client</a>
+<a href="http-client">HTTP Client</a>
 </li>
 <li>
-<a href="localization.html">Localization</a>
+<a href="localization">Localization</a>
 </li>
 <li>
-<a href="mail.html">Mail</a>
+<a href="mail">Mail</a>
 </li>
 <li>
-<a href="notifications.html">Notifications</a>
+<a href="notifications">Notifications</a>
 </li>
 <li>
-<a href="packages.html">Package Development</a>
+<a href="packages">Package Development</a>
 </li>
 <li>
-<a href="queues.html">Queues</a>
+<a href="queues">Queues</a>
 </li>
 <li>
-<a href="rate-limiting.html">Rate Limiting</a>
+<a href="rate-limiting">Rate Limiting</a>
 </li>
 <li>
-<a href="scheduling.html">Task Scheduling</a>
+<a href="scheduling">Task Scheduling</a>
 </li>
 </ul>
 </li>
@@ -582,22 +584,22 @@
 <h2>Security</h2>
 <ul>
 <li>
-<a href="authentication.html">Authentication</a>
+<a href="authentication">Authentication</a>
 </li>
 <li>
-<a href="authorization.html">Authorization</a>
+<a href="authorization">Authorization</a>
 </li>
 <li>
-<a href="verification.html">Email Verification</a>
+<a href="verification">Email Verification</a>
 </li>
 <li>
-<a href="encryption.html">Encryption</a>
+<a href="encryption">Encryption</a>
 </li>
 <li>
-<a href="hashing.html">Hashing</a>
+<a href="hashing">Hashing</a>
 </li>
 <li>
-<a href="passwords.html">Password Reset</a>
+<a href="passwords">Password Reset</a>
 </li>
 </ul>
 </li>
@@ -605,22 +607,22 @@
 <h2>Database</h2>
 <ul>
 <li>
-<a href="database.html">Getting Started</a>
+<a href="database">Getting Started</a>
 </li>
 <li>
-<a href="queries.html">Query Builder</a>
+<a href="queries">Query Builder</a>
 </li>
 <li>
-<a href="pagination.html">Pagination</a>
+<a href="pagination">Pagination</a>
 </li>
 <li>
-<a href="migrations.html">Migrations</a>
+<a href="migrations">Migrations</a>
 </li>
 <li>
-<a href="seeding.html">Seeding</a>
+<a href="seeding">Seeding</a>
 </li>
 <li>
-<a href="redis.html">Redis</a>
+<a href="redis">Redis</a>
 </li>
 </ul>
 </li>
@@ -628,22 +630,22 @@
 <h2>Eloquent ORM</h2>
 <ul>
 <li>
-<a href="eloquent.html">Getting Started</a>
+<a href="eloquent">Getting Started</a>
 </li>
 <li>
-<a href="eloquent-relationships.html">Relationships</a>
+<a href="eloquent-relationships">Relationships</a>
 </li>
 <li>
-<a href="eloquent-collections.html">Collections</a>
+<a href="eloquent-collections">Collections</a>
 </li>
 <li>
-<a href="eloquent-mutators.html">Mutators / Casts</a>
+<a href="eloquent-mutators">Mutators / Casts</a>
 </li>
 <li>
-<a href="eloquent-resources.html">API Resources</a>
+<a href="eloquent-resources">API Resources</a>
 </li>
 <li>
-<a href="eloquent-serialization.html">Serialization</a>
+<a href="eloquent-serialization">Serialization</a>
 </li>
 </ul>
 </li>
@@ -651,22 +653,22 @@
 <h2>Testing</h2>
 <ul>
 <li>
-<a href="testing.html">Getting Started</a>
+<a href="testing">Getting Started</a>
 </li>
 <li>
-<a href="http-tests.html">HTTP Tests</a>
+<a href="http-tests">HTTP Tests</a>
 </li>
 <li>
-<a href="console-tests.html">Console Tests</a>
+<a href="console-tests">Console Tests</a>
 </li>
 <li>
-<a href="dusk.html">Browser Tests</a>
+<a href="dusk">Browser Tests</a>
 </li>
 <li>
-<a href="database-testing.html">Database</a>
+<a href="database-testing">Database</a>
 </li>
 <li>
-<a href="mocking.html">Mocking</a>
+<a href="mocking">Mocking</a>
 </li>
 </ul>
 </li>
@@ -674,60 +676,60 @@
 <h2>Packages</h2>
 <ul>
 <li>
-<a href="starter-kits.html#laravel-breeze">Breeze</a>
+<a href="starter-kits#laravel-breeze">Breeze</a>
 </li>
 <li>
-<a href="billing.html">Cashier (Stripe)</a>
+<a href="billing">Cashier (Stripe)</a>
 </li>
 <li>
-<a href="cashier-paddle.html">Cashier (Paddle)</a>
+<a href="cashier-paddle">Cashier (Paddle)</a>
 </li>
 <li>
-<a href="dusk.html">Dusk</a>
+<a href="dusk">Dusk</a>
 </li>
 <li>
-<a href="envoy.html">Envoy</a>
+<a href="envoy">Envoy</a>
 </li>
 <li>
-<a href="fortify.html">Fortify</a>
+<a href="fortify">Fortify</a>
 </li>
 <li>
-<a href="homestead.html">Homestead</a>
+<a href="homestead">Homestead</a>
 </li>
 <li>
-<a href="horizon.html">Horizon</a>
+<a href="horizon">Horizon</a>
 </li>
 <li>
 <a href="https://jetstream.laravel.com">Jetstream</a>
 </li>
 <li>
-<a href="octane.html">Octane</a>
+<a href="octane">Octane</a>
 </li>
 <li>
-<a href="passport.html">Passport</a>
+<a href="passport">Passport</a>
 </li>
 <li>
-<a href="sail.html">Sail</a>
+<a href="sail">Sail</a>
 </li>
 <li>
-<a href="sanctum.html">Sanctum</a>
+<a href="sanctum">Sanctum</a>
 </li>
 <li>
-<a href="scout.html">Scout</a>
+<a href="scout">Scout</a>
 </li>
 <li>
-<a href="socialite.html">Socialite</a>
+<a href="socialite">Socialite</a>
 </li>
 <li>
-<a href="telescope.html">Telescope</a>
+<a href="telescope">Telescope</a>
 </li>
 <li>
-<a href="valet.html">Valet</a>
+<a href="valet">Valet</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="../../api/9.x/index.html">API Documentation</a>
+<a href="../../api/9.x/index">API Documentation</a>
 </li>
 </ul>
 
@@ -759,7 +761,7 @@
             >
                 <div class="relative mx-auto w-full py-10 bg-white transition duration-200 dark:bg-dark-700">
                     <div class="mx-auto px-8 sm:px-16 flex items-center justify-between">
-                        <a href="../../index.html" class="flex items-center">
+                        <a href="../../index" class="flex items-center">
                             <img class="" src="../../img/logomark.min.svg" alt="Laravel">
                             <img class="hidden ml-5 sm:block" src="../../img/logotype.min.svg" alt="Laravel">
                         </a>
@@ -812,13 +814,13 @@
 <h2>Prologue</h2>
 <ul>
 <li>
-<a href="releases.html">Release Notes</a>
+<a href="releases">Release Notes</a>
 </li>
 <li>
-<a href="upgrade.html">Upgrade Guide</a>
+<a href="upgrade">Upgrade Guide</a>
 </li>
 <li>
-<a href="contributions.html">Contribution Guide</a>
+<a href="contributions">Contribution Guide</a>
 </li>
 </ul>
 </li>
@@ -826,19 +828,19 @@
 <h2>Getting Started</h2>
 <ul>
 <li>
-<a href="installation.html">Installation</a>
+<a href="installation">Installation</a>
 </li>
 <li>
-<a href="configuration.html">Configuration</a>
+<a href="configuration">Configuration</a>
 </li>
 <li>
-<a href="structure.html">Directory Structure</a>
+<a href="structure">Directory Structure</a>
 </li>
 <li>
-<a href="starter-kits.html">Starter Kits</a>
+<a href="starter-kits">Starter Kits</a>
 </li>
 <li>
-<a href="deployment.html">Deployment</a>
+<a href="deployment">Deployment</a>
 </li>
 </ul>
 </li>
@@ -846,16 +848,16 @@
 <h2>Architecture Concepts</h2>
 <ul>
 <li>
-<a href="lifecycle.html">Request Lifecycle</a>
+<a href="lifecycle">Request Lifecycle</a>
 </li>
 <li>
-<a href="container.html">Service Container</a>
+<a href="container">Service Container</a>
 </li>
 <li>
-<a href="providers.html">Service Providers</a>
+<a href="providers">Service Providers</a>
 </li>
 <li>
-<a href="facades.html">Facades</a>
+<a href="facades">Facades</a>
 </li>
 </ul>
 </li>
@@ -863,43 +865,43 @@
 <h2>The Basics</h2>
 <ul>
 <li>
-<a href="routing.html">Routing</a>
+<a href="routing">Routing</a>
 </li>
 <li>
-<a href="middleware.html">Middleware</a>
+<a href="middleware">Middleware</a>
 </li>
 <li>
-<a href="csrf.html">CSRF Protection</a>
+<a href="csrf">CSRF Protection</a>
 </li>
 <li>
-<a href="controllers.html">Controllers</a>
+<a href="controllers">Controllers</a>
 </li>
 <li>
-<a href="requests.html">Requests</a>
+<a href="requests">Requests</a>
 </li>
 <li>
-<a href="responses.html">Responses</a>
+<a href="responses">Responses</a>
 </li>
 <li>
-<a href="views.html">Views</a>
+<a href="views">Views</a>
 </li>
 <li>
-<a href="blade.html">Blade Templates</a>
+<a href="blade">Blade Templates</a>
 </li>
 <li>
-<a href="urls.html">URL Generation</a>
+<a href="urls">URL Generation</a>
 </li>
 <li>
-<a href="session.html">Session</a>
+<a href="session">Session</a>
 </li>
 <li>
-<a href="validation.html">Validation</a>
+<a href="validation">Validation</a>
 </li>
 <li>
-<a href="errors.html">Error Handling</a>
+<a href="errors">Error Handling</a>
 </li>
 <li>
-<a href="logging.html">Logging</a>
+<a href="logging">Logging</a>
 </li>
 </ul>
 </li>
@@ -907,55 +909,55 @@
 <h2>Digging Deeper</h2>
 <ul>
 <li>
-<a href="artisan.html">Artisan Console</a>
+<a href="artisan">Artisan Console</a>
 </li>
 <li>
-<a href="broadcasting.html">Broadcasting</a>
+<a href="broadcasting">Broadcasting</a>
 </li>
 <li>
-<a href="cache.html">Cache</a>
+<a href="cache">Cache</a>
 </li>
 <li>
-<a href="collections.html">Collections</a>
+<a href="collections">Collections</a>
 </li>
 <li>
-<a href="mix.html">Compiling Assets</a>
+<a href="mix">Compiling Assets</a>
 </li>
 <li>
-<a href="contracts.html">Contracts</a>
+<a href="contracts">Contracts</a>
 </li>
 <li>
-<a href="events.html">Events</a>
+<a href="events">Events</a>
 </li>
 <li>
-<a href="filesystem.html">File Storage</a>
+<a href="filesystem">File Storage</a>
 </li>
 <li>
-<a href="helpers.html">Helpers</a>
+<a href="helpers">Helpers</a>
 </li>
 <li>
-<a href="http-client.html">HTTP Client</a>
+<a href="http-client">HTTP Client</a>
 </li>
 <li>
-<a href="localization.html">Localization</a>
+<a href="localization">Localization</a>
 </li>
 <li>
-<a href="mail.html">Mail</a>
+<a href="mail">Mail</a>
 </li>
 <li>
-<a href="notifications.html">Notifications</a>
+<a href="notifications">Notifications</a>
 </li>
 <li>
-<a href="packages.html">Package Development</a>
+<a href="packages">Package Development</a>
 </li>
 <li>
-<a href="queues.html">Queues</a>
+<a href="queues">Queues</a>
 </li>
 <li>
-<a href="rate-limiting.html">Rate Limiting</a>
+<a href="rate-limiting">Rate Limiting</a>
 </li>
 <li>
-<a href="scheduling.html">Task Scheduling</a>
+<a href="scheduling">Task Scheduling</a>
 </li>
 </ul>
 </li>
@@ -963,22 +965,22 @@
 <h2>Security</h2>
 <ul>
 <li>
-<a href="authentication.html">Authentication</a>
+<a href="authentication">Authentication</a>
 </li>
 <li>
-<a href="authorization.html">Authorization</a>
+<a href="authorization">Authorization</a>
 </li>
 <li>
-<a href="verification.html">Email Verification</a>
+<a href="verification">Email Verification</a>
 </li>
 <li>
-<a href="encryption.html">Encryption</a>
+<a href="encryption">Encryption</a>
 </li>
 <li>
-<a href="hashing.html">Hashing</a>
+<a href="hashing">Hashing</a>
 </li>
 <li>
-<a href="passwords.html">Password Reset</a>
+<a href="passwords">Password Reset</a>
 </li>
 </ul>
 </li>
@@ -986,22 +988,22 @@
 <h2>Database</h2>
 <ul>
 <li>
-<a href="database.html">Getting Started</a>
+<a href="database">Getting Started</a>
 </li>
 <li>
-<a href="queries.html">Query Builder</a>
+<a href="queries">Query Builder</a>
 </li>
 <li>
-<a href="pagination.html">Pagination</a>
+<a href="pagination">Pagination</a>
 </li>
 <li>
-<a href="migrations.html">Migrations</a>
+<a href="migrations">Migrations</a>
 </li>
 <li>
-<a href="seeding.html">Seeding</a>
+<a href="seeding">Seeding</a>
 </li>
 <li>
-<a href="redis.html">Redis</a>
+<a href="redis">Redis</a>
 </li>
 </ul>
 </li>
@@ -1009,22 +1011,22 @@
 <h2>Eloquent ORM</h2>
 <ul>
 <li>
-<a href="eloquent.html">Getting Started</a>
+<a href="eloquent">Getting Started</a>
 </li>
 <li>
-<a href="eloquent-relationships.html">Relationships</a>
+<a href="eloquent-relationships">Relationships</a>
 </li>
 <li>
-<a href="eloquent-collections.html">Collections</a>
+<a href="eloquent-collections">Collections</a>
 </li>
 <li>
-<a href="eloquent-mutators.html">Mutators / Casts</a>
+<a href="eloquent-mutators">Mutators / Casts</a>
 </li>
 <li>
-<a href="eloquent-resources.html">API Resources</a>
+<a href="eloquent-resources">API Resources</a>
 </li>
 <li>
-<a href="eloquent-serialization.html">Serialization</a>
+<a href="eloquent-serialization">Serialization</a>
 </li>
 </ul>
 </li>
@@ -1032,22 +1034,22 @@
 <h2>Testing</h2>
 <ul>
 <li>
-<a href="testing.html">Getting Started</a>
+<a href="testing">Getting Started</a>
 </li>
 <li>
-<a href="http-tests.html">HTTP Tests</a>
+<a href="http-tests">HTTP Tests</a>
 </li>
 <li>
-<a href="console-tests.html">Console Tests</a>
+<a href="console-tests">Console Tests</a>
 </li>
 <li>
-<a href="dusk.html">Browser Tests</a>
+<a href="dusk">Browser Tests</a>
 </li>
 <li>
-<a href="database-testing.html">Database</a>
+<a href="database-testing">Database</a>
 </li>
 <li>
-<a href="mocking.html">Mocking</a>
+<a href="mocking">Mocking</a>
 </li>
 </ul>
 </li>
@@ -1055,60 +1057,60 @@
 <h2>Packages</h2>
 <ul>
 <li>
-<a href="starter-kits.html#laravel-breeze">Breeze</a>
+<a href="starter-kits#laravel-breeze">Breeze</a>
 </li>
 <li>
-<a href="billing.html">Cashier (Stripe)</a>
+<a href="billing">Cashier (Stripe)</a>
 </li>
 <li>
-<a href="cashier-paddle.html">Cashier (Paddle)</a>
+<a href="cashier-paddle">Cashier (Paddle)</a>
 </li>
 <li>
-<a href="dusk.html">Dusk</a>
+<a href="dusk">Dusk</a>
 </li>
 <li>
-<a href="envoy.html">Envoy</a>
+<a href="envoy">Envoy</a>
 </li>
 <li>
-<a href="fortify.html">Fortify</a>
+<a href="fortify">Fortify</a>
 </li>
 <li>
-<a href="homestead.html">Homestead</a>
+<a href="homestead">Homestead</a>
 </li>
 <li>
-<a href="horizon.html">Horizon</a>
+<a href="horizon">Horizon</a>
 </li>
 <li>
 <a href="https://jetstream.laravel.com">Jetstream</a>
 </li>
 <li>
-<a href="octane.html">Octane</a>
+<a href="octane">Octane</a>
 </li>
 <li>
-<a href="passport.html">Passport</a>
+<a href="passport">Passport</a>
 </li>
 <li>
-<a href="sail.html">Sail</a>
+<a href="sail">Sail</a>
 </li>
 <li>
-<a href="sanctum.html">Sanctum</a>
+<a href="sanctum">Sanctum</a>
 </li>
 <li>
-<a href="scout.html">Scout</a>
+<a href="scout">Scout</a>
 </li>
 <li>
-<a href="socialite.html">Socialite</a>
+<a href="socialite">Socialite</a>
 </li>
 <li>
-<a href="telescope.html">Telescope</a>
+<a href="telescope">Telescope</a>
 </li>
 <li>
-<a href="valet.html">Valet</a>
+<a href="valet">Valet</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="../../api/9.x/index.html">API Documentation</a>
+<a href="../../api/9.x/index">API Documentation</a>
 </li>
 </ul>
 
@@ -1190,52 +1192,52 @@
     <h1>Installation</h1>
 <ul>
 <li>
-<a href="installation.html#meet-laravel">Meet Laravel</a>
+<a href="installation#meet-laravel">Meet Laravel</a>
 <ul>
 <li>
-<a href="installation.html#why-laravel">Why Laravel?</a>
+<a href="installation#why-laravel">Why Laravel?</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="installation.html#your-first-laravel-project">Your First Laravel Project</a>
+<a href="installation#your-first-laravel-project">Your First Laravel Project</a>
 <ul>
 <li>
-<a href="installation.html#getting-started-on-macos">Getting Started On macOS</a>
+<a href="installation#getting-started-on-macos">Getting Started On macOS</a>
 </li>
 <li>
-<a href="installation.html#getting-started-on-windows">Getting Started On Windows</a>
+<a href="installation#getting-started-on-windows">Getting Started On Windows</a>
 </li>
 <li>
-<a href="installation.html#getting-started-on-linux">Getting Started On Linux</a>
+<a href="installation#getting-started-on-linux">Getting Started On Linux</a>
 </li>
 <li>
-<a href="installation.html#choosing-your-sail-services">Choosing Your Sail Services</a>
+<a href="installation#choosing-your-sail-services">Choosing Your Sail Services</a>
 </li>
 <li>
-<a href="installation.html#installation-via-composer">Installation Via Composer</a>
+<a href="installation#installation-via-composer">Installation Via Composer</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="installation.html#initial-configuration">Initial Configuration</a>
+<a href="installation#initial-configuration">Initial Configuration</a>
 <ul>
 <li>
-<a href="installation.html#environment-based-configuration">Environment Based Configuration</a>
+<a href="installation#environment-based-configuration">Environment Based Configuration</a>
 </li>
 <li>
-<a href="installation.html#directory-configuration">Directory Configuration</a>
+<a href="installation#directory-configuration">Directory Configuration</a>
 </li>
 </ul>
 </li>
 <li>
-<a href="installation.html#next-steps">Next Steps</a>
+<a href="installation#next-steps">Next Steps</a>
 <ul>
 <li>
-<a href="installation.html#laravel-the-fullstack-framework">Laravel The Full Stack Framework</a>
+<a href="installation#laravel-the-fullstack-framework">Laravel The Full Stack Framework</a>
 </li>
 <li>
-<a href="installation.html#laravel-the-api-backend">Laravel The API Backend</a>
+<a href="installation#laravel-the-api-backend">Laravel The API Backend</a>
 </li>
 </ul>
 </li>
@@ -1250,7 +1252,7 @@
 <p>There are a variety of tools and frameworks available to you when building a web application. However, we believe Laravel is the best choice for building modern, full-stack web applications.</p>
 <h4>A Progressive Framework</h4>
 <p>We like to call Laravel a &quot;progressive&quot; framework. By that, we mean that Laravel grows with you. If you're just taking your first steps into web development, Laravel's vast library of documentation, guides, and <a href="https://laracasts.com">video tutorials</a> will help you learn the ropes without becoming overwhelmed.</p>
-<p>If you're a senior developer, Laravel gives you robust tools for <a href="container.html">dependency injection</a>, <a href="testing.html">unit testing</a>, <a href="queues.html">queues</a>, <a href="broadcasting.html">real-time events</a>, and more. Laravel is fine-tuned for building professional web applications and ready to handle enterprise work loads.</p>
+<p>If you're a senior developer, Laravel gives you robust tools for <a href="container">dependency injection</a>, <a href="testing">unit testing</a>, <a href="queues">queues</a>, <a href="broadcasting">real-time events</a>, and more. Laravel is fine-tuned for building professional web applications and ready to handle enterprise work loads.</p>
 <h4>A Scalable Framework</h4>
 <p>Laravel is incredibly scalable. Thanks to the scaling-friendly nature of PHP and Laravel's built-in support for fast, distributed cache systems like Redis, horizontal scaling with Laravel is a breeze. In fact, Laravel applications have been easily scaled to handle hundreds of millions of requests per month.</p>
 <p>Need extreme scaling? Platforms like <a href="https://vapor.laravel.com">Laravel Vapor</a> allow you to run your Laravel application at nearly limitless scale on AWS's latest serverless technology.</p>
@@ -1258,7 +1260,7 @@
 <p>Laravel combines the best packages in the PHP ecosystem to offer the most robust and developer friendly framework available. In addition, thousands of talented developers from around the world have <a href="https://github.com/laravel/framework">contributed to the framework</a>. Who knows, maybe you'll even become a Laravel contributor.</p>
 <p><a name="your-first-laravel-project"></a></p>
 <h2>Your First Laravel Project</h2>
-<p>We want it to be as easy as possible to get started with Laravel. There are a variety of options for developing and running a Laravel project on your own computer. While you may wish to explore these options at a later time, Laravel provides <a href="sail.html">Sail</a>, a built-in solution for running your Laravel project using <a href="https://www.docker.com">Docker</a>.</p>
+<p>We want it to be as easy as possible to get started with Laravel. There are a variety of options for developing and running a Laravel project on your own computer. While you may wish to explore these options at a later time, Laravel provides <a href="sail">Sail</a>, a built-in solution for running your Laravel project using <a href="https://www.docker.com">Docker</a>.</p>
 <p>Docker is a tool for running applications and services in small, light-weight &quot;containers&quot; which do not interfere with your local computer's installed software or configuration. This means you don't have to worry about configuring or setting up complicated development tools such as web servers and databases on your personal computer. To get started, you only need to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>.</p>
 <p>Laravel Sail is a light-weight command-line interface for interacting with Laravel's default Docker configuration. Sail provides a great starting point for building a Laravel application using PHP, MySQL, and Redis without requiring prior Docker experience.</p>
 <blockquote>
@@ -1274,7 +1276,7 @@
 <p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
 <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
 <blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail.html">complete documentation</a>.</p>
+<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
 </blockquote>
 <p><a name="getting-started-on-windows"></a></p>
 <h3>Getting Started On Windows</h3>
@@ -1290,7 +1292,7 @@
 <p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
 <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
 <blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail.html">complete documentation</a>.</p>
+<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
 </blockquote>
 <h4>Developing Within WSL2</h4>
 <p>Of course, you will need to be able to modify the Laravel application files that were created within your WSL2 installation. To accomplish this, we recommend using Microsoft's <a href="https://code.visualstudio.com">Visual Studio Code</a> editor and their first-party extension for <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development</a>.</p>
@@ -1305,14 +1307,14 @@
 <p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
 <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
 <blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail.html">complete documentation</a>.</p>
+<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
 </blockquote>
 <p><a name="choosing-your-sail-services"></a></p>
 <h3>Choosing Your Sail Services</h3>
 <p>When creating a new Laravel application via Sail, you may use the <code>with</code> query string variable to choose which services should be configured in your new application's <code>docker-compose.yml</code> file. Available services include <code>mysql</code>, <code>pgsql</code>, <code>mariadb</code>, <code>redis</code>, <code>memcached</code>, <code>meilisearch</code>, <code>minio</code>, <code>selenium</code>, and <code>mailhog</code>:</p>
 <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://laravel.build/example-app?with=mysql,redis</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
 <p>If you do not specify which services you would like configured, a default stack of <code>mysql</code>, <code>redis</code>, <code>meilisearch</code>, <code>mailhog</code>, and <code>selenium</code> will be configured.</p>
-<p>You may instruct Sail to install a default <a href="sail.html#using-devcontainers">Devcontainer</a> by adding the <code>devcontainer</code> parameter to the URL:</p>
+<p>You may instruct Sail to install a default <a href="sail#using-devcontainers">Devcontainer</a> by adding the <code>devcontainer</code> parameter to the URL:</p>
 <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://laravel.build/example-app?with=mysql,redis&amp;devcontainer</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
 <p><a name="installation-via-composer"></a></p>
 <h3>Installation Via Composer</h3>
@@ -1352,7 +1354,7 @@
 <p>Since many of Laravel's configuration option values may vary depending on whether your application is running on your local computer or on a production web server, many important configuration values are defined using the <code>.env</code> file that exists at the root of your application.</p>
 <p>Your <code>.env</code> file should not be committed to your application's source control, since each developer / server using your application could require a different environment configuration. Furthermore, this would be a security risk in the event an intruder gains access to your source control repository, since any sensitive credentials would get exposed.</p>
 <blockquote>
-<p>{tip} For more information about the <code>.env</code> file and environment based configuration, check out the full <a href="configuration.html#environment-configuration">configuration documentation</a>.</p>
+<p>{tip} For more information about the <code>.env</code> file and environment based configuration, check out the full <a href="configuration#environment-configuration">configuration documentation</a>.</p>
 </blockquote>
 <p><a name="directory-configuration"></a></p>
 <h3>Directory Configuration</h3>
@@ -1363,40 +1365,40 @@
 <div class="content-list" markdown="1">
 <ul>
 <li>
-<a href="lifecycle.html">Request Lifecycle</a>
+<a href="lifecycle">Request Lifecycle</a>
 </li>
 <li>
-<a href="configuration.html">Configuration</a>
+<a href="configuration">Configuration</a>
 </li>
 <li>
-<a href="structure.html">Directory Structure</a>
+<a href="structure">Directory Structure</a>
 </li>
 <li>
-<a href="container.html">Service Container</a>
+<a href="container">Service Container</a>
 </li>
 <li>
-<a href="facades.html">Facades</a>
+<a href="facades">Facades</a>
 </li>
 </ul>
 </div>
 <p>How you want to use Laravel will also dictate the next steps on your journey. There are a variety of ways to use Laravel, and we'll explore two primary use cases for the framework below.</p>
 <p><a name="laravel-the-fullstack-framework"></a></p>
 <h3>Laravel The Full Stack Framework</h3>
-<p>Laravel may serve as a full stack framework. By &quot;full stack&quot; framework we mean that you are going to use Laravel to route requests to your application and render your frontend via <a href="blade.html">Blade templates</a> or using a single-page application hybrid technology like <a href="https://inertiajs.com">Inertia.js</a>. This is the most common way to use the Laravel framework.</p>
-<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing.html">routing</a>, <a href="views.html">views</a>, or the <a href="eloquent.html">Eloquent ORM</a>. In addition, you might be interested in learning about community packages like <a href="https://laravel-livewire.com">Livewire</a> and <a href="https://inertiajs.com">Inertia.js</a>. These packages allow you to use Laravel as a full-stack framework while enjoying many of the UI benefits provided by single-page JavaScript applications.</p>
-<p>If you are using Laravel as a full stack framework, we also strongly encourage you to learn how to compile your application's CSS and JavaScript using <a href="mix.html">Laravel Mix</a>.</p>
+<p>Laravel may serve as a full stack framework. By &quot;full stack&quot; framework we mean that you are going to use Laravel to route requests to your application and render your frontend via <a href="blade">Blade templates</a> or using a single-page application hybrid technology like <a href="https://inertiajs.com">Inertia.js</a>. This is the most common way to use the Laravel framework.</p>
+<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing">routing</a>, <a href="views">views</a>, or the <a href="eloquent">Eloquent ORM</a>. In addition, you might be interested in learning about community packages like <a href="https://laravel-livewire.com">Livewire</a> and <a href="https://inertiajs.com">Inertia.js</a>. These packages allow you to use Laravel as a full-stack framework while enjoying many of the UI benefits provided by single-page JavaScript applications.</p>
+<p>If you are using Laravel as a full stack framework, we also strongly encourage you to learn how to compile your application's CSS and JavaScript using <a href="mix">Laravel Mix</a>.</p>
 <blockquote>
-<p>{tip} If you want to get a head start building your application, check out one of our official <a href="starter-kits.html">application starter kits</a>.</p>
+<p>{tip} If you want to get a head start building your application, check out one of our official <a href="starter-kits">application starter kits</a>.</p>
 </blockquote>
 <p><a name="laravel-the-api-backend"></a></p>
 <h3>Laravel The API Backend</h3>
-<p>Laravel may also serve as an API backend to a JavaScript single-page application or mobile application. For example, you might use Laravel as an API backend for your <a href="https://nextjs.org">Next.js</a> application. In this context, you may use Laravel to provide <a href="sanctum.html">authentication</a> and data storage / retrieval for your application, while also taking advantage of Laravel's powerful services such as queues, emails, notifications, and more.</p>
-<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing.html">routing</a>, <a href="sanctum.html">Laravel Sanctum</a>, and the <a href="eloquent.html">Eloquent ORM</a>.</p>
+<p>Laravel may also serve as an API backend to a JavaScript single-page application or mobile application. For example, you might use Laravel as an API backend for your <a href="https://nextjs.org">Next.js</a> application. In this context, you may use Laravel to provide <a href="sanctum">authentication</a> and data storage / retrieval for your application, while also taking advantage of Laravel's powerful services such as queues, emails, notifications, and more.</p>
+<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing">routing</a>, <a href="sanctum">Laravel Sanctum</a>, and the <a href="eloquent">Eloquent ORM</a>.</p>
 <blockquote>
-<p>{tip} Need a head start scaffolding your Laravel backend and Next.js frontend? Laravel Breeze offers an <a href="starter-kits.html#breeze-and-next">API stack</a> as well as a <a href="https://github.com/laravel/breeze-next">Next.js frontend implementation</a> so you can get started in minutes.</p>
+<p>{tip} Need a head start scaffolding your Laravel backend and Next.js frontend? Laravel Breeze offers an <a href="starter-kits#breeze-and-next">API stack</a> as well as a <a href="https://github.com/laravel/breeze-next">Next.js frontend implementation</a> so you can get started in minutes.</p>
 </blockquote>
 
-                                <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?serve=CKYILK3E&placement=laravelcom" id="_carbonads_js"></script>
+                                
 </div>
                         </section>
                     </section>
