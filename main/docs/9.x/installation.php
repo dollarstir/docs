@@ -1126,8 +1126,8 @@ toLightMode();
                                                                                     <option  value="https://laravel.com/docs/5.0/installation">5.0</option>
                                                                                     <option  value="https://laravel.com/docs/4.2/installation">4.2</option>
                                                                             </select>
-                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="../../img/icons/drop_arrow.min.svg" alt="">
-                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="../../img/icons/drop_arrow.dark.min.svg" alt="">
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="main/img/icons/drop_arrow.min.svg" alt="">
+                                    <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="main/img/icons/drop_arrow.dark.min.svg" alt="">
                                 </div>
                             </div>
                         </div>
