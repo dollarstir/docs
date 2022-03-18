@@ -1518,15 +1518,8 @@
     var version = '9.x';
 </script>
 
-<script src="../../js/app-id=100f797fd909ecd1c2f2.js"></script>
+<?php js();?>
 
-<script>
-    var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
-    (function(d,t){
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)
-    }(document,'script'));
-</script>
+
 </body>
 </html>
