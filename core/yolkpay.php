@@ -16,7 +16,7 @@ class Yolkpay
     public $amount;
     public $orderid;
 
-    public static function pay()
+    public static function paybutton()
     {
         echo '<button type="submit" onclick="payWithPaystack()"> Pay </button>';
     }
@@ -26,7 +26,7 @@ class Yolkpay
         echo ' <script src="https://js.paystack.co/v1/inline.js"></script>';
     }
 
-    public function payscript($fname, $lname, $email, $phone, $amount, $ref = '')
+    public function pay($fname, $lname, $email, $phone, $amount, $ref = '')
     {
         if ($ref == '') {
             $r1 = 'YP';
