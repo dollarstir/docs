@@ -2,7 +2,7 @@
 require __DIR__ . '/../core/config.php';
 require __DIR__ . '/../core/yc.php';
 require __DIR__ . '/../core/transmitter.php';
-// require __DIR__ . '/../components/header.php';
+require __DIR__ . '/../components/header.php';
 
 Config::init();
 
