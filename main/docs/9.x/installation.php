@@ -1110,21 +1110,9 @@ toLightMode();
                                         class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
                                         @change="window.location = $event.target.value"
                                     >
-                                                                                    <option  value="https://laravel.com/docs/master/installation">Master</option>
-                                                                                    <option selected value="https://laravel.com/docs/9.x/installation">9.x</option>
-                                                                                    <option  value="https://laravel.com/docs/8.x/installation">8.x</option>
-                                                                                    <option  value="https://laravel.com/docs/7.x/installation">7.x</option>
-                                                                                    <option  value="https://laravel.com/docs/6.x/installation">6.x</option>
-                                                                                    <option  value="https://laravel.com/docs/5.8/installation">5.8</option>
-                                                                                    <option  value="https://laravel.com/docs/5.7/installation">5.7</option>
-                                                                                    <option  value="https://laravel.com/docs/5.6/installation">5.6</option>
-                                                                                    <option  value="https://laravel.com/docs/5.5/installation">5.5</option>
-                                                                                    <option  value="https://laravel.com/docs/5.4/installation">5.4</option>
-                                                                                    <option  value="https://laravel.com/docs/5.3/installation">5.3</option>
-                                                                                    <option  value="https://laravel.com/docs/5.2/installation">5.2</option>
-                                                                                    <option  value="https://laravel.com/docs/5.1/installation">5.1</option>
-                                                                                    <option  value="https://laravel.com/docs/5.0/installation">5.0</option>
-                                                                                    <option  value="https://laravel.com/docs/4.2/installation">4.2</option>
+                                                                                   
+                                                                                    <option selected value="installation">1.0</option>
+                                                                                    
                                                                             </select>
                                     <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow" src="main/img/icons/drop_arrow.min.svg" alt="">
                                     <img class="absolute inset-y-0 right-0 mt-2.5 w-2.5 h-2.5 text-gray-900 pointer-events-none" id="docs_search__version_arrow_dark" src="main/img/icons/drop_arrow.dark.min.svg" alt="">
