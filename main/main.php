@@ -1388,19 +1388,10 @@
 
             <div class="mt-6 grid grid-cols-12 md:gap-x-8 gap-y-12 sm:mt-12">
                 <div class="col-span-12 lg:col-span-4">
-                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">https://torchlight.dev</p>
+                    <p class="max-w-sm text-xs text-gray-700 sm:text-sm ">Yolk is a PHP framework that helps to easily build web applications. Comes with in-built sql queries and has custom UI.</p>
                     <ul class="mt-6 flex items-center space-x-3">
-                        <li>
-                            <a href="https://twitter.com/laravelphp">
-                                <img id="footer__twitter_dark" class="hidden w-6 h-6"
-                                    src="main/img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20"
-                                    loading="lazy">
-                                <img id="footer__twitter" class="inline-block w-6 h-6" src="main/img/social/twitter.min.svg"
-                                    alt="Twitter" width="24" height="20" loading="lazy">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/laravel">
+                    <li>
+                            <a href="https://github.com/yolk">
                                 <img id="footer__github_dark" class="hidden w-6 h-6"
                                     src="main/img/social/github.dark.min.svg" alt="GitHub" width="24" height="24"
                                     loading="lazy">
@@ -1408,6 +1399,16 @@
                                     alt="GitHub" width="24" height="24" loading="lazy">
                             </a>
                         </li>
+                        <li>
+                            <a href="https://twitter.com/phpyolk">
+                                <img id="footer__twitter_dark" class="hidden w-6 h-6"
+                                    src="main/img/social/twitter.dark.min.svg" alt="Twitter" width="24" height="20"
+                                    loading="lazy">
+                                <img id="footer__twitter" class="inline-block w-6 h-6" src="main/img/social/twitter.min.svg"
+                                    alt="Twitter" width="24" height="20" loading="lazy">
+                            </a>
+                        </li>
+                        
                         <li>
                             <a href="https://discord.gg/mPZNm7A">
                                 <img id="footer__discord_dark" class="hidden w-6 h-6"
