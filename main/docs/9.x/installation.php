@@ -416,24 +416,10 @@ toLightMode();
                         <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
                             <div class="docs_sidebar">
                                 <ul>
-<li>
-<h2>Prologue</h2>
-<ul>
-<li>
-<a href="releases">Release Notes</a>
-</li>
-<li>
-<a href="upgrade">Upgrade Guide</a>
-</li>
-<li>
-<a href="contributions">Contribution Guide</a>
-</li>
-</ul>
-</li>
-<li>
+                                <li class="sub--on">
 <h2>Getting Started</h2>
 <ul>
-<li>
+<li  class="active">
 <a href="installation">Installation</a>
 </li>
 <li>
@@ -797,24 +783,10 @@ toLightMode();
                     >
                         <div class="relative p-8 bg-white docs_sidebar dark:bg-dark-600">
                             <ul>
-<li>
-<h2>Prologue</h2>
-<ul>
-<li>
-<a href="releases">Release Notes</a>
-</li>
-<li>
-<a href="upgrade">Upgrade Guide</a>
-</li>
-<li>
-<a href="contributions">Contribution Guide</a>
-</li>
-</ul>
-</li>
-<li>
+                            <li class="sub--on">
 <h2>Getting Started</h2>
 <ul>
-<li>
+<li  class="active">
 <a href="installation">Installation</a>
 </li>
 <li>
