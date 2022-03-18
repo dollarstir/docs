@@ -109,7 +109,7 @@ toLightMode();
                             width="114"
                             height="29"
                         >
-                        <button class="hidden ml-4 lg:block" @click.prevent="$dispatch('toggle-search-modal')"><?php echo icons::far('users') ;?></button>
+                       
                         <!-- <img
                             src="yolkassets/img/logo.png"
                             alt="Yol Framework"
@@ -118,6 +118,7 @@ toLightMode();
                             height="29"
                         > -->
                     </a>
+                    
                     <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
                         <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
                             <div class="docs_sidebar">
