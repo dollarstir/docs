@@ -1410,12 +1410,14 @@
                         </li>
                         
                         <li>
-                            <a href="https://discord.gg/mPZNm7A">
-                                <img id="footer__discord_dark" class="hidden w-6 h-6"
-                                    src="main/img/social/discord.dark.min.svg" alt="Discord" width="21" height="24"
-                                    loading="lazy">
-                                <img id="footer__discord" class="inline-block w-6 h-6" src="main/img/social/discord.min.svg"
-                                    alt="Discord" width="21" height="24" loading="lazy">
+                            <a href="https://facebook.com/phpyolk">
+                                <!-- <img id="footer__discord_dark" class="hidden w-6 h-6"
+                                    src="main/img/social/facebook.dark.min.svg" alt="facebook" width="21" height="24"
+                                    loading="lazy"> -->
+                                    <?php echo Image::brandsvg('facebook','20px','20px','hidden w-6 h-6','footer__discord_dark');?>
+                                <!-- <img id="footer__discord" class="inline-block w-6 h-6" src="main/img/social/facebook.min.svg"
+                                    alt="facebook" width="21" height="24" loading="lazy"> -->
+                                    <?php echo Image::brandsvg('facebook','20px','20px','inline-block w-6 h-6','footer__discord');?>
                             </a>
                         </li>
                         <li>
