@@ -1359,36 +1359,13 @@ toLightMode();
 
 <?php  footer();?>
 
-<div
-    x-data="searchComponent()"
-    @toggle-search-modal.window="open = !open"
-    @keydown.window.escape="close"
-    @keydown.window="handleKeydown"
-    @keydown.escape.prevent.stop="close"
-    x-show="open"
-    x-cloak
-    x-trap.noscroll.inert="open"
-    role="dialog"
-    aria-modal="true"
-    x-id="['search-modal']"
-    :aria-labelledby="$id('search-modal')"
-    class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
+<div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
 >
-    <div x-show="open" x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
+    <div x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
 
-    <div
-        x-show="open"
-        x-transition
-        @click="close()"
-        class="relative min-h-screen flex items-start justify-center p-4 lg:py-20"
-    >
-        <div
-            @click.stop
-            class="relative max-w-2xl w-full bg-dark-700 pt-8 px-8 pb-16"
-        >
-            <div
-                class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600"
-            >
+    <div x-show="open" x-transition @click="close()" class="relative min-h-screen flex items-start justify-center p-4 lg:py-20">
+        <div @click.stop class="relative max-w-2xl w-full bg-dark-700 pt-8 px-8 pb-16">
+            <div class="relative w-full border-b border-gray-600 border-opacity-50 overflow-hidden transition-all duration-500 focus-within:border-gray-600">
                 <svg class="absolute inset-y-0 left-0 mt-1 w-5 h-5 text-gray-500 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 <input
                     x-model.debouce.200ms="search"
@@ -1402,16 +1379,10 @@ toLightMode();
             </div>
 
             <div x-show="search">
-                <div x-show="hits.length" x-cloak class="mt-5 divide-y divide-gray-700 z-30">
-                    <template x-for="(hit, index) in hits" :key="index" hidden>
-                        <div>
-                            <a
-                                :id="'search-result-' + index"
-                                :href="hit.url"
-                                class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200"
-                                @keydown.arrow-up.prevent="focusPreviousResult(index)"
-                                @keydown.arrow-down.prevent="focusNextResult(index)"
-                            >
+                <div  x-cloak class="mt-5 divide-y divide-gray-700 z-30">
+                    <template  hidden>
+                        <div id="ress">
+                            <!-- <a :id="'search-result-' + index" :href="hit.url" class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200">
                                 <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
                                 <div class="mt-2">
                                     <div x-show="hit._highlightResult.hierarchy.lvl1" class="text-sm">
@@ -1434,7 +1405,7 @@ toLightMode();
                                         > <span x-html="hit._highlightResult.hierarchy.lvl5 ? hit._highlightResult.hierarchy.lvl5.value : ''"></span>
                                     </div>
                                 </div>
-                            </a>
+                            </a> -->
                         </div>
                     </template>
                 </div>
@@ -1464,11 +1435,7 @@ toLightMode();
     </div>
 </div>
 
-<script>
-    var algolia_app_id = 'E3MIRNPJH5';
-    var algolia_search_key = '1fa3a8fec06eb1858d6ca137211225c0';
-    var version = '9.x';
-</script>
+
 
 <?php js();?>
 
