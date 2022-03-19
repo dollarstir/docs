@@ -200,7 +200,7 @@
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Yolk UI</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk  has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It can be styled with any type of css any type of css </storng>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk  has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It can be styled with any type of css </storng>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
