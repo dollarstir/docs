@@ -1380,13 +1380,11 @@ toLightMode();
                    
                 </div>
 
-                <div x-show="! hits.length" x-cloak class="mt-8 pb-32">
-                    <div x-text="`We didn't find any result for '${search}'. Sorry!`"></div>
-                </div>
+                
             </div>
 
             <div x-show="! search" class="mt-8 pb-32">
-                <p>Enter a search term to find results in the documentation.</p>
+                <p>Enter any topic or sub topic ....</p>
             </div>
 
            
