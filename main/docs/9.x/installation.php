@@ -1378,34 +1378,7 @@ toLightMode();
 
             <div x-show="search">
                 <div  x-cloak class="mt-5 divide-y divide-gray-700 z-30" id="ress">
-                    <template>
-                        <div >
-                            <!-- <a :id="'search-result-' + index" :href="hit.url" class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200">
-                                <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
-                                <div class="mt-2">
-                                    <div x-show="hit._highlightResult.hierarchy.lvl1" class="text-sm">
-                                        <span class="text-red-600 opacity-75">#</span> <span x-html="hit._highlightResult.hierarchy.lvl1 ? hit._highlightResult.hierarchy.lvl1.value : ''"></span>
-                                    </div>
-
-                                    <div x-show="hit._highlightResult.hierarchy.lvl2" class="text-sm">
-                                        > <span x-html="hit._highlightResult.hierarchy.lvl2 ? hit._highlightResult.hierarchy.lvl2.value : ''"></span>
-                                    </div>
-
-                                    <div x-show="hit._highlightResult.hierarchy.lvl3" class="text-sm">
-                                        > <span x-html="hit._highlightResult.hierarchy.lvl3 ? hit._highlightResult.hierarchy.lvl3.value : ''"></span>
-                                    </div>
-
-                                    <div x-show="hit._highlightResult.hierarchy.lvl4" class="text-sm">
-                                        > <span x-html="hit._highlightResult.hierarchy.lvl4 ? hit._highlightResult.hierarchy.lvl4.value : ''"></span>
-                                    </div>
-
-                                    <div x-show="hit._highlightResult.hierarchy.lvl5" class="text-sm">
-                                        > <span x-html="hit._highlightResult.hierarchy.lvl5 ? hit._highlightResult.hierarchy.lvl5.value : ''"></span>
-                                    </div>
-                                </div>
-                            </a> -->
-                        </div>
-                    </template>
+                   
                 </div>
 
                 <div x-show="! hits.length" x-cloak class="mt-8 pb-32">
