@@ -707,6 +707,8 @@ $("#mysearch").keyup(function() {
     }
 });
 
+// closing search
+
 
 
     
