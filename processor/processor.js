@@ -683,7 +683,7 @@ $("#mysearch").keyup(function() {
     //Validating, if "name" is empty.
     if (name == "") {
         //Assigning empty value to "display" div in "search.php" file.
-        $(".ress").html("");
+        $("#ress").html("");
     }
     //If name is not empty.
     else {
@@ -701,7 +701,7 @@ $("#mysearch").keyup(function() {
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $(".ress").html(html).show();
+                $("#ress").html(html)
             }
         });
     }

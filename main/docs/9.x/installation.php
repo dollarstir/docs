@@ -1377,9 +1377,9 @@ toLightMode();
             </div>
 
             <div x-show="search">
-                <div  x-cloak class="mt-5 divide-y divide-gray-700 z-30">
-                    <template  hidden>
-                        <div id="ress">
+                <div  x-cloak class="mt-5 divide-y divide-gray-700 z-30" id="ress">
+                    <template>
+                        <div >
                             <!-- <a :id="'search-result-' + index" :href="hit.url" class="search-result -mx-2 block p-3 text-gray-400 transition-colors duration-200 focus:outline-none focus:bg-dark-800 focus:text-gray-200 hover:text-gray-200">
                                 <div x-show="hit._highlightResult.hierarchy.lvl0" class="text-sm font-medium" x-html="hit._highlightResult.hierarchy.lvl0 ? hit._highlightResult.hierarchy.lvl0.value : ''"></div>
                                 <div class="mt-2">
