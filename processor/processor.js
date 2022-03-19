@@ -1,5 +1,7 @@
 
 $(function(){
+
+    // $('#tgsearch').css('display','none');
    $('#socl').click(function(){
     swal({
         title: "Done!",
@@ -708,10 +710,15 @@ $("#mysearch").keyup(function() {
 });
 
 // closing search
-$('#closesearch').click(function(){
-    $('#tgsearch').hide(300);
+$('#cseaeee').on('click',function(){
+    $('#tgsearch').hide();
 
 });
+
+$("#bringsearch").click(function(){
+    $('#tgsearch').css('display','block');
+    $('#tgsearch').show(200);
+})
 
 
 

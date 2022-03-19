@@ -1126,7 +1126,7 @@ toLightMode();
                             <div class="flex-1 flex items-center">
                                 <button
                                     class="relative inline-flex items-center text-gray-800 transition-colors dark:text-gray-400 w-full"
-                                    @click.prevent="$dispatch('toggle-search-modal')"
+                                    id="bringsearch"
                                 >
                                     <svg class="w-5 h-5 text-gray-700 pointer-events-none transition-colors dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                                     <span class="ml-3">Search</span>
@@ -1359,7 +1359,7 @@ toLightMode();
 
 <?php  footer();?>
 
-<div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto" id="tgsearch">
+<div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto" id="tgsearch"  style="display:none;">
     <div x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
 
     <div x-show="open" x-transition @click="close()" class="relative min-h-screen flex items-start justify-center p-4 lg:py-20">
@@ -1392,8 +1392,8 @@ toLightMode();
            
         </div>
 
-        <button  x-transition.opacity class="absolute top-8 right-8 text-gray-400" id="closesearch">
-            <span class="sr-only">Close search</span>
+        <button class="absolute top-8 right-8 text-gray-400" id="cseaeee">
+           
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
