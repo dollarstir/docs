@@ -677,13 +677,13 @@ $('.editstaff').submit(function(e){
 
 
 
-$("#search").keyup(function() {
+$("#mysearch").keyup(function() {
     //Assigning search box value to javascript variable named as "name".
-    var name = $('#search').val();
+    var name = $('#mysearch').val();
     //Validating, if "name" is empty.
     if (name == "") {
         //Assigning empty value to "display" div in "search.php" file.
-        $("#display").html("");
+        $(".ress").html("");
     }
     //If name is not empty.
     else {
