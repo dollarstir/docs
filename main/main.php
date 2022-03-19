@@ -97,7 +97,7 @@
                                 <line y1="11" x2="28" y2="11" stroke="currentColor" stroke-width="2" />
                                 
                             </svg> -->
-                            <?php echo image::solidsvg('grip','40px','40px','w-6','','x-show="!navIsOpen" viewBox="0 0 28 12" fill="none"'); ?>
+                            <?php echo image::solidsvg('grip','50px !important','50px !important','w-6','','x-show="!navIsOpen" viewBox="0 0 28 12" fill="none"'); ?>
                             <?php echo image::solidsvg('x','40px','40px','absolute inset-0 mt-2.5 ml-2.5 w-5','','x-show="navIsOpen" x-cloak viewBox="0 0 19 19" fill="none"'); ?>
                             
                             <!-- <svg x-show="navIsOpen" x-cloak class="absolute inset-0 mt-2.5 ml-2.5 w-5"
