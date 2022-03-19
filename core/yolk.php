@@ -53,8 +53,9 @@ class Yolk
                 <script src="'.Path::rebase('ui/js/all.min.js').'"></script>
                 <script src="'.Path::rebase('ui/js/sweetalert2.all.min.js').'"></script>
                     
-                <script src="'.Path::rebase('processor.js').'"></script>
-                <script src="' . Path::rebase('ui/js/igniter.js') . '"></script>';
+                <script src="'.Path::rebase('processor/processor.js').'"></script>
+                
+                ';
 
                 // break;
         }
