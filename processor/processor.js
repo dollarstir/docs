@@ -692,7 +692,7 @@ $("#search").keyup(function() {
             //AJAX type is "Post".
             type: "POST",
             //Data will be sent to "ajax.php".
-            url: "processor.php?action=search",
+            url: "processor/processor.php?action=search",
             //Data, that will be sent to "ajax.php".
             data: {
                 //Assigning value of "name" into "search" variable.
@@ -701,7 +701,7 @@ $("#search").keyup(function() {
             //If result found, this funtion will be called.
             success: function(html) {
                 //Assigning result to "display" div in "search.php" file.
-                $("#display").html(html).show();
+                $(".ress").html(html).show();
             }
         });
     }
