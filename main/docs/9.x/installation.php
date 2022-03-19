@@ -1359,8 +1359,7 @@ toLightMode();
 
 <?php  footer();?>
 
-<div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto"
->
+<div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto" id="tgsearch">
     <div x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
 
     <div x-show="open" x-transition @click="close()" class="relative min-h-screen flex items-start justify-center p-4 lg:py-20">

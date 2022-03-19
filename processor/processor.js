@@ -708,6 +708,10 @@ $("#mysearch").keyup(function() {
 });
 
 // closing search
+$('#closesearch').click(function(){
+    $('#tgsearch').hide(300);
+
+});
 
 
 
