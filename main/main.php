@@ -45,11 +45,7 @@
         updateTheme();
     </script>
 
-<style>
-            body{
-                <?php echo backgroundcolor('red',true);?>
-            }
-        </style>
+
 </head>
 
 <body x-data="{
