@@ -148,7 +148,7 @@
                     <div
                         class="mt-6 max-w-sm mx-auto flex flex-col justify-center items-center gap-4 sm:flex-row md:mt-8 lg:mt-10">
                         <a class="group relative inline-flex border border-red-500 focus:outline-none w-full sm:w-auto"
-                            href="getstarted">
+                            href="installation">
                             <span
                                 class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-white text-center font-bold uppercase bg-red-500 ring-1  ring-offset-1 ring-offset-red-500 transform transition-transform">
                                 Let's Start
@@ -182,7 +182,7 @@
                             stroke="#F9322C" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Backend Bot</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">The Yolk <strong><a href="docs/9.x/eloquent.html">backend bot</a></strong> provides  in-built database queries which helps to send, fetch, delete and update records in database tables without any stress<a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">The Yolk <strong><a href="docs/9.x/eloquent.html">backend bot</a></strong> provides  in-built database queries which helps to send, fetch, delete and update records in database tables without any stress<br><a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
                                 class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
@@ -200,7 +200,7 @@
                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Yolk UI</h3>
-                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk  has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It can be styled with any type of css </storng>
+                    <p class="mt-4 text-gray-700 text-sm leading-relaxed">Yolk  has it own tags call the <storng>yolk Ui elements. Note with the yolk ui you code everything in php no html tags involved . It can be styled with any type of css <br></storng>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
@@ -253,7 +253,7 @@
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                <div class="overflow-hidden flex justify-center lg:order-last" data-aos="fade-left">
+                <div class="w-full flex justify-center items-center px-5 xl:px-0" data-aos="fade-left">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
                         <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/shot.png" style="border-radius:10px;"/>
                             
@@ -313,7 +313,7 @@
        
         <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
             <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                <div class="overflow-hidden flex justify-center lg:order-last" data-aos="fade-left">
+                <div class="w-full flex justify-center items-center px-5 xl:px-0" data-aos="fade-left">
                     <div class="translate-x-32 sm:translate-x-0 lg:translate-x-20 xl:translate-x-0">
                         <img width="587" height="342" viewBox="0 0 587 342"  src="yolkassets/img/momo.png" style="border-radius:10px;"/>
                             
@@ -708,13 +708,7 @@
                     <p>Enter a search term to find results in the documentation.</p>
                 </div>
 
-                <div class="absolute bottom-0 inset-x-0 border-t border-dark-800 text-gray-400 flex justify-end">
-                    <a class="px-4 py-2 inline-block" target="_blank"
-                        href="https://www.algolia.com/?utm_source=laravel&utm_medium=link&utm_campaign=laravel_documentation_search">
-                        <img width="105" src="main/img/icons/algolia.dark.min.svg" id="docs_search__algolia_dark"
-                            alt="Algolia">
-                    </a>
-                </div>
+                
             </div>
 
             <button x-show="open" x-transition.opacity class="absolute top-8 right-8 text-gray-400"

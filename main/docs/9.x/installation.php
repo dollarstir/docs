@@ -119,606 +119,603 @@ toLightMode();
                         > -->
                     </a>
                     
-                    <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
-                        <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
-                            <div class="docs_sidebar">
-                                <ul>
+    <div class="overflow-y-auto overflow-x-hidden px-4 lg:overflow-hidden lg:px-8 xl:px-16">
+        <nav x-show="navIsOpen" x-cloak class="mt-4 lg:hidden">
+            <div class="docs_sidebar">
+                <ul>
 
-<li class="sub--on">
-<h2>Getting Started</h2>
-<ul>
-<li  class="active">
-<a href="installation">Installation</a>
-</li>
-<li>
-<a href="configuration">Configuration</a>
-</li>
-<li>
-<a href="structure">Directory Structure</a>
-</li>
-<li>
-<a href="starter-kits">Starter Kits</a>
-</li>
-<li>
-<a href="deployment">Deployment</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Architecture Concepts</h2>
-<ul>
-<li>
-<a href="lifecycle">Request Lifecycle</a>
-</li>
-<li>
-<a href="container">Service Container</a>
-</li>
-<li>
-<a href="providers">Service Providers</a>
-</li>
-<li>
-<a href="facades">Facades</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>The Basics</h2>
-<ul>
-<li>
-<a href="routing">Routing</a>
-</li>
-<li>
-<a href="middleware">Middleware</a>
-</li>
-<li>
-<a href="csrf">CSRF Protection</a>
-</li>
-<li>
-<a href="controllers">Controllers</a>
-</li>
-<li>
-<a href="requests">Requests</a>
-</li>
-<li>
-<a href="responses">Responses</a>
-</li>
-<li>
-<a href="views">Views</a>
-</li>
-<li>
-<a href="blade">Blade Templates</a>
-</li>
-<li>
-<a href="urls">URL Generation</a>
-</li>
-<li>
-<a href="session">Session</a>
-</li>
-<li>
-<a href="validation">Validation</a>
-</li>
-<li>
-<a href="errors">Error Handling</a>
-</li>
-<li>
-<a href="logging">Logging</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Digging Deeper</h2>
-<ul>
-<li>
-<a href="artisan">Artisan Console</a>
-</li>
-<li>
-<a href="broadcasting">Broadcasting</a>
-</li>
-<li>
-<a href="cache">Cache</a>
-</li>
-<li>
-<a href="collections">Collections</a>
-</li>
-<li>
-<a href="mix">Compiling Assets</a>
-</li>
-<li>
-<a href="contracts">Contracts</a>
-</li>
-<li>
-<a href="events">Events</a>
-</li>
-<li>
-<a href="filesystem">File Storage</a>
-</li>
-<li>
-<a href="helpers">Helpers</a>
-</li>
-<li>
-<a href="http-client">HTTP Client</a>
-</li>
-<li>
-<a href="localization">Localization</a>
-</li>
-<li>
-<a href="mail">Mail</a>
-</li>
-<li>
-<a href="notifications">Notifications</a>
-</li>
-<li>
-<a href="packages">Package Development</a>
-</li>
-<li>
-<a href="queues">Queues</a>
-</li>
-<li>
-<a href="rate-limiting">Rate Limiting</a>
-</li>
-<li>
-<a href="scheduling">Task Scheduling</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Security</h2>
-<ul>
-<li>
-<a href="authentication">Authentication</a>
-</li>
-<li>
-<a href="authorization">Authorization</a>
-</li>
-<li>
-<a href="verification">Email Verification</a>
-</li>
-<li>
-<a href="encryption">Encryption</a>
-</li>
-<li>
-<a href="hashing">Hashing</a>
-</li>
-<li>
-<a href="passwords">Password Reset</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Database</h2>
-<ul>
-<li>
-<a href="database">Getting Started</a>
-</li>
-<li>
-<a href="queries">Query Builder</a>
-</li>
-<li>
-<a href="pagination">Pagination</a>
-</li>
-<li>
-<a href="migrations">Migrations</a>
-</li>
-<li>
-<a href="seeding">Seeding</a>
-</li>
-<li>
-<a href="redis">Redis</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Eloquent ORM</h2>
-<ul>
-<li>
-<a href="eloquent">Getting Started</a>
-</li>
-<li>
-<a href="eloquent-relationships">Relationships</a>
-</li>
-<li>
-<a href="eloquent-collections">Collections</a>
-</li>
-<li>
-<a href="eloquent-mutators">Mutators / Casts</a>
-</li>
-<li>
-<a href="eloquent-resources">API Resources</a>
-</li>
-<li>
-<a href="eloquent-serialization">Serialization</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Testing</h2>
-<ul>
-<li>
-<a href="testing">Getting Started</a>
-</li>
-<li>
-<a href="http-tests">HTTP Tests</a>
-</li>
-<li>
-<a href="console-tests">Console Tests</a>
-</li>
-<li>
-<a href="dusk">Browser Tests</a>
-</li>
-<li>
-<a href="database-testing">Database</a>
-</li>
-<li>
-<a href="mocking">Mocking</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Packages</h2>
-<ul>
-<li>
-<a href="starter-kits#laravel-breeze">Breeze</a>
-</li>
-<li>
-<a href="billing">Cashier (Stripe)</a>
-</li>
-<li>
-<a href="cashier-paddle">Cashier (Paddle)</a>
-</li>
-<li>
-<a href="dusk">Dusk</a>
-</li>
-<li>
-<a href="envoy">Envoy</a>
-</li>
-<li>
-<a href="fortify">Fortify</a>
-</li>
-<li>
-<a href="homestead">Homestead</a>
-</li>
-<li>
-<a href="horizon">Horizon</a>
-</li>
-<li>
-<a href="https://jetstream.laravel.com">Jetstream</a>
-</li>
-<li>
-<a href="octane">Octane</a>
-</li>
-<li>
-<a href="passport">Passport</a>
-</li>
-<li>
-<a href="sail">Sail</a>
-</li>
-<li>
-<a href="sanctum">Sanctum</a>
-</li>
-<li>
-<a href="scout">Scout</a>
-</li>
-<li>
-<a href="socialite">Socialite</a>
-</li>
-<li>
-<a href="telescope">Telescope</a>
-</li>
-<li>
-<a href="valet">Valet</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="../../api/9.x/index">API Documentation</a>
-</li>
-</ul>
+                    <li class="sub--on">
+                    <h2>Getting Started</h2>
+                    <ul>
+                    <li  class="active">
+                    <a href="installation">Installation</a>
+                    </li>
+                    <li>
+                    <a href="configuration">Configuration</a>
+                    </li>
+                    <li>
+                    <a href="structure">Directory Structure</a>
+                    </li>
+                    <li>
+                    <a href="starter-kits">Starter Kits</a>
+                    </li>
+                    <li>
+                    <a href="deployment">Deployment</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Architecture Concepts</h2>
+                    <ul>
+                    <li>
+                    <a href="lifecycle">Request Lifecycle</a>
+                    </li>
+                    <li>
+                    <a href="container">Service Container</a>
+                    </li>
+                    <li>
+                    <a href="providers">Service Providers</a>
+                    </li>
+                    <li>
+                    <a href="facades">Facades</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>The Basics</h2>
+                    <ul>
+                    <li>
+                    <a href="routing">Routing</a>
+                    </li>
+                    <li>
+                    <a href="middleware">Middleware</a>
+                    </li>
+                    <li>
+                    <a href="csrf">CSRF Protection</a>
+                    </li>
+                    <li>
+                    <a href="controllers">Controllers</a>
+                    </li>
+                    <li>
+                    <a href="requests">Requests</a>
+                    </li>
+                    <li>
+                    <a href="responses">Responses</a>
+                    </li>
+                    <li>
+                    <a href="views">Views</a>
+                    </li>
+                    <li>
+                    <a href="blade">Blade Templates</a>
+                    </li>
+                    <li>
+                    <a href="urls">URL Generation</a>
+                    </li>
+                    <li>
+                    <a href="session">Session</a>
+                    </li>
+                    <li>
+                    <a href="validation">Validation</a>
+                    </li>
+                    <li>
+                    <a href="errors">Error Handling</a>
+                    </li>
+                    <li>
+                    <a href="logging">Logging</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Digging Deeper</h2>
+                    <ul>
+                    <li>
+                    <a href="artisan">Artisan Console</a>
+                    </li>
+                    <li>
+                    <a href="broadcasting">Broadcasting</a>
+                    </li>
+                    <li>
+                    <a href="cache">Cache</a>
+                    </li>
+                    <li>
+                    <a href="collections">Collections</a>
+                    </li>
+                    <li>
+                    <a href="mix">Compiling Assets</a>
+                    </li>
+                    <li>
+                    <a href="contracts">Contracts</a>
+                    </li>
+                    <li>
+                    <a href="events">Events</a>
+                    </li>
+                    <li>
+                    <a href="filesystem">File Storage</a>
+                    </li>
+                    <li>
+                    <a href="helpers">Helpers</a>
+                    </li>
+                    <li>
+                    <a href="http-client">HTTP Client</a>
+                    </li>
+                    <li>
+                    <a href="localization">Localization</a>
+                    </li>
+                    <li>
+                    <a href="mail">Mail</a>
+                    </li>
+                    <li>
+                    <a href="notifications">Notifications</a>
+                    </li>
+                    <li>
+                    <a href="packages">Package Development</a>
+                    </li>
+                    <li>
+                    <a href="queues">Queues</a>
+                    </li>
+                    <li>
+                    <a href="rate-limiting">Rate Limiting</a>
+                    </li>
+                    <li>
+                    <a href="scheduling">Task Scheduling</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Security</h2>
+                    <ul>
+                    <li>
+                    <a href="authentication">Authentication</a>
+                    </li>
+                    <li>
+                    <a href="authorization">Authorization</a>
+                    </li>
+                    <li>
+                    <a href="verification">Email Verification</a>
+                    </li>
+                    <li>
+                    <a href="encryption">Encryption</a>
+                    </li>
+                    <li>
+                    <a href="hashing">Hashing</a>
+                    </li>
+                    <li>
+                    <a href="passwords">Password Reset</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Database</h2>
+                    <ul>
+                    <li>
+                    <a href="database">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="queries">Query Builder</a>
+                    </li>
+                    <li>
+                    <a href="pagination">Pagination</a>
+                    </li>
+                    <li>
+                    <a href="migrations">Migrations</a>
+                    </li>
+                    <li>
+                    <a href="seeding">Seeding</a>
+                    </li>
+                    <li>
+                    <a href="redis">Redis</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Eloquent ORM</h2>
+                    <ul>
+                    <li>
+                    <a href="eloquent">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-relationships">Relationships</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-collections">Collections</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-mutators">Mutators / Casts</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-resources">API Resources</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-serialization">Serialization</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Testing</h2>
+                    <ul>
+                    <li>
+                    <a href="testing">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="http-tests">HTTP Tests</a>
+                    </li>
+                    <li>
+                    <a href="console-tests">Console Tests</a>
+                    </li>
+                    <li>
+                    <a href="dusk">Browser Tests</a>
+                    </li>
+                    <li>
+                    <a href="database-testing">Database</a>
+                    </li>
+                    <li>
+                    <a href="mocking">Mocking</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Packages</h2>
+                    <ul>
+                    <li>
+                    <a href="starter-kits#laravel-breeze">Breeze</a>
+                    </li>
+                    <li>
+                    <a href="billing">Cashier (Stripe)</a>
+                    </li>
+                    <li>
+                    <a href="cashier-paddle">Cashier (Paddle)</a>
+                    </li>
+                    <li>
+                    <a href="dusk">Dusk</a>
+                    </li>
+                    <li>
+                    <a href="envoy">Envoy</a>
+                    </li>
+                    <li>
+                    <a href="fortify">Fortify</a>
+                    </li>
+                    <li>
+                    <a href="homestead">Homestead</a>
+                    </li>
+                    <li>
+                    <a href="horizon">Horizon</a>
+                    </li>
+                    <li>
+                    <a href="https://jetstream.laravel.com">Jetstream</a>
+                    </li>
+                    <li>
+                    <a href="octane">Octane</a>
+                    </li>
+                    <li>
+                    <a href="passport">Passport</a>
+                    </li>
+                    <li>
+                    <a href="sail">Sail</a>
+                    </li>
+                    <li>
+                    <a href="sanctum">Sanctum</a>
+                    </li>
+                    <li>
+                    <a href="scout">Scout</a>
+                    </li>
+                    <li>
+                    <a href="socialite">Socialite</a>
+                    </li>
+                    <li>
+                    <a href="telescope">Telescope</a>
+                    </li>
+                    <li>
+                    <a href="valet">Valet</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="../../api/9.x/index">API Documentation</a>
+                    </li>
+                </ul>
 
-                            </div>
-                        </nav>
-                        <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
-                            <div class="docs_sidebar">
-                                <ul>
-                                <li class="sub--on">
-<h2>Getting Started</h2>
-<ul>
-<li  class="active">
-<a href="installation">Installation</a>
-</li>
-<li>
-<a href="configuration">Configuration</a>
-</li>
-<li>
-<a href="structure">Directory Structure</a>
-</li>
-<li>
-<a href="starter-kits">Starter Kits</a>
-</li>
-<li>
-<a href="deployment">Deployment</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Architecture Concepts</h2>
-<ul>
-<li>
-<a href="lifecycle">Request Lifecycle</a>
-</li>
-<li>
-<a href="container">Service Container</a>
-</li>
-<li>
-<a href="providers">Service Providers</a>
-</li>
-<li>
-<a href="facades">Facades</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>The Basics</h2>
-<ul>
-<li>
-<a href="routing">Routing</a>
-</li>
-<li>
-<a href="middleware">Middleware</a>
-</li>
-<li>
-<a href="csrf">CSRF Protection</a>
-</li>
-<li>
-<a href="controllers">Controllers</a>
-</li>
-<li>
-<a href="requests">Requests</a>
-</li>
-<li>
-<a href="responses">Responses</a>
-</li>
-<li>
-<a href="views">Views</a>
-</li>
-<li>
-<a href="blade">Blade Templates</a>
-</li>
-<li>
-<a href="urls">URL Generation</a>
-</li>
-<li>
-<a href="session">Session</a>
-</li>
-<li>
-<a href="validation">Validation</a>
-</li>
-<li>
-<a href="errors">Error Handling</a>
-</li>
-<li>
-<a href="logging">Logging</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Digging Deeper</h2>
-<ul>
-<li>
-<a href="artisan">Artisan Console</a>
-</li>
-<li>
-<a href="broadcasting">Broadcasting</a>
-</li>
-<li>
-<a href="cache">Cache</a>
-</li>
-<li>
-<a href="collections">Collections</a>
-</li>
-<li>
-<a href="mix">Compiling Assets</a>
-</li>
-<li>
-<a href="contracts">Contracts</a>
-</li>
-<li>
-<a href="events">Events</a>
-</li>
-<li>
-<a href="filesystem">File Storage</a>
-</li>
-<li>
-<a href="helpers">Helpers</a>
-</li>
-<li>
-<a href="http-client">HTTP Client</a>
-</li>
-<li>
-<a href="localization">Localization</a>
-</li>
-<li>
-<a href="mail">Mail</a>
-</li>
-<li>
-<a href="notifications">Notifications</a>
-</li>
-<li>
-<a href="packages">Package Development</a>
-</li>
-<li>
-<a href="queues">Queues</a>
-</li>
-<li>
-<a href="rate-limiting">Rate Limiting</a>
-</li>
-<li>
-<a href="scheduling">Task Scheduling</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Security</h2>
-<ul>
-<li>
-<a href="authentication">Authentication</a>
-</li>
-<li>
-<a href="authorization">Authorization</a>
-</li>
-<li>
-<a href="verification">Email Verification</a>
-</li>
-<li>
-<a href="encryption">Encryption</a>
-</li>
-<li>
-<a href="hashing">Hashing</a>
-</li>
-<li>
-<a href="passwords">Password Reset</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Database</h2>
-<ul>
-<li>
-<a href="database">Getting Started</a>
-</li>
-<li>
-<a href="queries">Query Builder</a>
-</li>
-<li>
-<a href="pagination">Pagination</a>
-</li>
-<li>
-<a href="migrations">Migrations</a>
-</li>
-<li>
-<a href="seeding">Seeding</a>
-</li>
-<li>
-<a href="redis">Redis</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Eloquent ORM</h2>
-<ul>
-<li>
-<a href="eloquent">Getting Started</a>
-</li>
-<li>
-<a href="eloquent-relationships">Relationships</a>
-</li>
-<li>
-<a href="eloquent-collections">Collections</a>
-</li>
-<li>
-<a href="eloquent-mutators">Mutators / Casts</a>
-</li>
-<li>
-<a href="eloquent-resources">API Resources</a>
-</li>
-<li>
-<a href="eloquent-serialization">Serialization</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Testing</h2>
-<ul>
-<li>
-<a href="testing">Getting Started</a>
-</li>
-<li>
-<a href="http-tests">HTTP Tests</a>
-</li>
-<li>
-<a href="console-tests">Console Tests</a>
-</li>
-<li>
-<a href="dusk">Browser Tests</a>
-</li>
-<li>
-<a href="database-testing">Database</a>
-</li>
-<li>
-<a href="mocking">Mocking</a>
-</li>
-</ul>
-</li>
-<li>
-<h2>Packages</h2>
-<ul>
-<li>
-<a href="starter-kits#laravel-breeze">Breeze</a>
-</li>
-<li>
-<a href="billing">Cashier (Stripe)</a>
-</li>
-<li>
-<a href="cashier-paddle">Cashier (Paddle)</a>
-</li>
-<li>
-<a href="dusk">Dusk</a>
-</li>
-<li>
-<a href="envoy">Envoy</a>
-</li>
-<li>
-<a href="fortify">Fortify</a>
-</li>
-<li>
-<a href="homestead">Homestead</a>
-</li>
-<li>
-<a href="horizon">Horizon</a>
-</li>
-<li>
-<a href="https://jetstream.laravel.com">Jetstream</a>
-</li>
-<li>
-<a href="octane">Octane</a>
-</li>
-<li>
-<a href="passport">Passport</a>
-</li>
-<li>
-<a href="sail">Sail</a>
-</li>
-<li>
-<a href="sanctum">Sanctum</a>
-</li>
-<li>
-<a href="scout">Scout</a>
-</li>
-<li>
-<a href="socialite">Socialite</a>
-</li>
-<li>
-<a href="telescope">Telescope</a>
-</li>
-<li>
-<a href="valet">Valet</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="../../api/9.x/index">API Documentation</a>
-</li>
-</ul>
+            </div>
+        </nav>
+        <nav id="indexed-nav" class="hidden lg:block lg:mt-4">
+            <div class="docs_sidebar">
+                <ul>
+                    <li class="sub--on"><h2>Getting Started</h2>
+                    <ul>
+                    <li  class="active">
+                    <a href="installation">Installation</a>
+                    </li>
+                    <li>
+                    <a href="configuration">Configuration</a>
+                    </li>
+                    <li>
+                    <a href="structure">Directory Structure</a>
+                    </li>
+                    <li>
+                    <a href="starter-kits">Starter Kits</a>
+                    </li>
+                    <li>
+                    <a href="deployment">Deployment</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Architecture Concepts</h2>
+                    <ul>
+                    <li>
+                    <a href="lifecycle">Request Lifecycle</a>
+                    </li>
+                    <li>
+                    <a href="container">Service Container</a>
+                    </li>
+                    <li>
+                    <a href="providers">Service Providers</a>
+                    </li>
+                    <li>
+                    <a href="facades">Facades</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>The Basics</h2>
+                    <ul>
+                    <li>
+                    <a href="routing">Routing</a>
+                    </li>
+                    <li>
+                    <a href="middleware">Middleware</a>
+                    </li>
+                    <li>
+                    <a href="csrf">CSRF Protection</a>
+                    </li>
+                    <li>
+                    <a href="controllers">Controllers</a>
+                    </li>
+                    <li>
+                    <a href="requests">Requests</a>
+                    </li>
+                    <li>
+                    <a href="responses">Responses</a>
+                    </li>
+                    <li>
+                    <a href="views">Views</a>
+                    </li>
+                    <li>
+                    <a href="blade">Blade Templates</a>
+                    </li>
+                    <li>
+                    <a href="urls">URL Generation</a>
+                    </li>
+                    <li>
+                    <a href="session">Session</a>
+                    </li>
+                    <li>
+                    <a href="validation">Validation</a>
+                    </li>
+                    <li>
+                    <a href="errors">Error Handling</a>
+                    </li>
+                    <li>
+                    <a href="logging">Logging</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Digging Deeper</h2>
+                    <ul>
+                    <li>
+                    <a href="artisan">Artisan Console</a>
+                    </li>
+                    <li>
+                    <a href="broadcasting">Broadcasting</a>
+                    </li>
+                    <li>
+                    <a href="cache">Cache</a>
+                    </li>
+                    <li>
+                    <a href="collections">Collections</a>
+                    </li>
+                    <li>
+                    <a href="mix">Compiling Assets</a>
+                    </li>
+                    <li>
+                    <a href="contracts">Contracts</a>
+                    </li>
+                    <li>
+                    <a href="events">Events</a>
+                    </li>
+                    <li>
+                    <a href="filesystem">File Storage</a>
+                    </li>
+                    <li>
+                    <a href="helpers">Helpers</a>
+                    </li>
+                    <li>
+                    <a href="http-client">HTTP Client</a>
+                    </li>
+                    <li>
+                    <a href="localization">Localization</a>
+                    </li>
+                    <li>
+                    <a href="mail">Mail</a>
+                    </li>
+                    <li>
+                    <a href="notifications">Notifications</a>
+                    </li>
+                    <li>
+                    <a href="packages">Package Development</a>
+                    </li>
+                    <li>
+                    <a href="queues">Queues</a>
+                    </li>
+                    <li>
+                    <a href="rate-limiting">Rate Limiting</a>
+                    </li>
+                    <li>
+                    <a href="scheduling">Task Scheduling</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Security</h2>
+                    <ul>
+                    <li>
+                    <a href="authentication">Authentication</a>
+                    </li>
+                    <li>
+                    <a href="authorization">Authorization</a>
+                    </li>
+                    <li>
+                    <a href="verification">Email Verification</a>
+                    </li>
+                    <li>
+                    <a href="encryption">Encryption</a>
+                    </li>
+                    <li>
+                    <a href="hashing">Hashing</a>
+                    </li>
+                    <li>
+                    <a href="passwords">Password Reset</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Database</h2>
+                    <ul>
+                    <li>
+                    <a href="database">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="queries">Query Builder</a>
+                    </li>
+                    <li>
+                    <a href="pagination">Pagination</a>
+                    </li>
+                    <li>
+                    <a href="migrations">Migrations</a>
+                    </li>
+                    <li>
+                    <a href="seeding">Seeding</a>
+                    </li>
+                    <li>
+                    <a href="redis">Redis</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Eloquent ORM</h2>
+                    <ul>
+                    <li>
+                    <a href="eloquent">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-relationships">Relationships</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-collections">Collections</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-mutators">Mutators / Casts</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-resources">API Resources</a>
+                    </li>
+                    <li>
+                    <a href="eloquent-serialization">Serialization</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Testing</h2>
+                    <ul>
+                    <li>
+                    <a href="testing">Getting Started</a>
+                    </li>
+                    <li>
+                    <a href="http-tests">HTTP Tests</a>
+                    </li>
+                    <li>
+                    <a href="console-tests">Console Tests</a>
+                    </li>
+                    <li>
+                    <a href="dusk">Browser Tests</a>
+                    </li>
+                    <li>
+                    <a href="database-testing">Database</a>
+                    </li>
+                    <li>
+                    <a href="mocking">Mocking</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <h2>Packages</h2>
+                    <ul>
+                    <li>
+                    <a href="starter-kits#laravel-breeze">Breeze</a>
+                    </li>
+                    <li>
+                    <a href="billing">Cashier (Stripe)</a>
+                    </li>
+                    <li>
+                    <a href="cashier-paddle">Cashier (Paddle)</a>
+                    </li>
+                    <li>
+                    <a href="dusk">Dusk</a>
+                    </li>
+                    <li>
+                    <a href="envoy">Envoy</a>
+                    </li>
+                    <li>
+                    <a href="fortify">Fortify</a>
+                    </li>
+                    <li>
+                    <a href="homestead">Homestead</a>
+                    </li>
+                    <li>
+                    <a href="horizon">Horizon</a>
+                    </li>
+                    <li>
+                    <a href="https://jetstream.laravel.com">Jetstream</a>
+                    </li>
+                    <li>
+                    <a href="octane">Octane</a>
+                    </li>
+                    <li>
+                    <a href="passport">Passport</a>
+                    </li>
+                    <li>
+                    <a href="sail">Sail</a>
+                    </li>
+                    <li>
+                    <a href="sanctum">Sanctum</a>
+                    </li>
+                    <li>
+                    <a href="scout">Scout</a>
+                    </li>
+                    <li>
+                    <a href="socialite">Socialite</a>
+                    </li>
+                    <li>
+                    <a href="telescope">Telescope</a>
+                    </li>
+                    <li>
+                    <a href="valet">Valet</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                    <a href="../../api/9.x/index">API Documentation</a>
+                    </li>
+                </ul>
 
-                            </div>
-                        </nav>
+            </div>
+        </nav>
 
-                        
-                                                    <div :class="{ 'hidden': !navIsOpen }" x-cloak class="mt-4 px-3 py-2 border-dashed border-gray-200 border rounded-lg text-xs leading-loose text-gray-700 lg:block dark:border-gray-400 dark:text-gray-200">
-                                <span class="font-medium">Laravel Forge:</span> create and manage PHP 8 servers. Deploy your Laravel applications in seconds. <a class="underline text-red-600" href="https://forge.laravel.com">Sign up now!</a>.
-                            </div>
-                        
-                        
-                                            </div>
+                            
+                                                    
+                            
+                            
+    </div>
                     <div class="sticky bottom-0 flex-1 flex flex-col justify-end lg:hidden">
                         <div class="py-4 px-4 bg-white">
                             <button class="relative ml-1 w-6 h-6 text-red-600 lg:hidden focus:outline-none focus:shadow-outline" aria-label="Menu" @click.prevent="navIsOpen = !navIsOpen">
