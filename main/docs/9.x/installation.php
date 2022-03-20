@@ -6,6 +6,8 @@
 
     <script>
 
+        
+
 toLightMode();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         if (localStorage.theme === 'system') {

@@ -2,10 +2,10 @@
 function aligncontent($value='',$isimportant=false){
 
    if($isimportant){
-       return 'align-content:'.$value.' !important';
+       return 'align-content:'.$value.' !important;';
    }
    else{
-       return 'align-content:'.$value;
+       return 'align-content:'.$value.';';
    }
 
 
@@ -15,10 +15,10 @@ function aligncontent($value='',$isimportant=false){
 function alignitems($value='',$isimportant=false){
 
     if($isimportant){
-        return 'align-items:'.$value.' !important';
+        return 'align-items:'.$value.' !important;';
     }
     else{
-        return 'align-items:'.$value;
+        return 'align-items:'.$value.';';
     }
  
  
@@ -27,10 +27,10 @@ function alignitems($value='',$isimportant=false){
  function alignself($value='',$isimportant=false){
 
     if($isimportant){
-        return 'align-self:'.$value.' !important';
+        return 'align-self:'.$value.' !important;';
     }
     else{
-        return 'align-self:'.$value;
+        return 'align-self:'.$value.';';
     }
  
  
@@ -39,10 +39,10 @@ function alignitems($value='',$isimportant=false){
  function all($value='',$isimportant=false){
 
     if($isimportant){
-        return 'all:'.$value.' !important';
+        return 'all:'.$value.' !important;';
     }
     else{
-        return 'all:'.$value;
+        return 'all:'.$value.';';
     }
  
  
@@ -51,10 +51,10 @@ function alignitems($value='',$isimportant=false){
  function animation($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation:'.$value.' !important';
+        return 'animation:'.$value.' !important;';
     }
     else{
-        return 'animation:'.$value;
+        return 'animation:'.$value.';';
     }
  
  
@@ -63,10 +63,10 @@ function alignitems($value='',$isimportant=false){
  function animationdelay($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-delay :'.$value.' !important';
+        return 'animation-delay :'.$value.' !important;';
     }
     else{
-        return 'animation-delay :'.$value;
+        return 'animation-delay :'.$value.';';
     }
  
  
@@ -77,10 +77,10 @@ function alignitems($value='',$isimportant=false){
  function animationdirection ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-direction :'.$value.' !important';
+        return 'animation-direction :'.$value.' !important;';
     }
     else{
-        return 'animation-direction :'.$value;
+        return 'animation-direction :'.$value.';';
     }
  
  
@@ -90,10 +90,10 @@ function alignitems($value='',$isimportant=false){
  function animationduration ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-duration :'.$value.' !important';
+        return 'animation-duration :'.$value.' !important;';
     }
     else{
-        return 'animation-duration :'.$value;
+        return 'animation-duration :'.$value.';';
     }
  
  
@@ -103,10 +103,10 @@ function alignitems($value='',$isimportant=false){
  function animationfillmode ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-fill-mode :'.$value.' !important';
+        return 'animation-fill-mode :'.$value.' !important;';
     }
     else{
-        return 'animation-fill-mode :'.$value;
+        return 'animation-fill-mode :'.$value.';';
     }
  
  
@@ -116,10 +116,10 @@ function alignitems($value='',$isimportant=false){
  function animationiterationcount ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-iteration-count :'.$value.' !important';
+        return 'animation-iteration-count :'.$value.' !important;';
     }
     else{
-        return 'animation-iteration-count :'.$value;
+        return 'animation-iteration-count :'.$value.';';
     }
  
  
@@ -129,10 +129,10 @@ function alignitems($value='',$isimportant=false){
  function animationname($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-name:'.$value.' !important';
+        return 'animation-name:'.$value.' !important;';
     }
     else{
-        return 'animation-name:'.$value;
+        return 'animation-name:'.$value.';';
     }
  
  
@@ -142,10 +142,10 @@ function alignitems($value='',$isimportant=false){
  function animationplaystate ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-play-state :'.$value.' !important';
+        return 'animation-play-state :'.$value.' !important;';
     }
     else{
-        return 'animation-play-state :'.$value;
+        return 'animation-play-state :'.$value.';';
     }
  
  
@@ -155,10 +155,10 @@ function alignitems($value='',$isimportant=false){
  function animationtimingfunction($value='',$isimportant=false){
 
     if($isimportant){
-        return 'animation-timing-function :'.$value.' !important';
+        return 'animation-timing-function :'.$value.' !important;';
     }
     else{
-        return 'animation-timing-function :'.$value;
+        return 'animation-timing-function :'.$value.';';
     }
  
  
@@ -168,10 +168,10 @@ function alignitems($value='',$isimportant=false){
  function backfacevisibility ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'backface-visibility :'.$value.' !important';
+        return 'backface-visibility :'.$value.' !important;';
     }
     else{
-        return 'backface-visibility :'.$value;
+        return 'backface-visibility :'.$value.';';
     }
  
  
@@ -181,10 +181,10 @@ function alignitems($value='',$isimportant=false){
  function background($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background:'.$value.' !important';
+        return 'background:'.$value.' !important;';
     }
     else{
-        return 'background:'.$value;
+        return 'background:'.$value.';';
     }
  
  
@@ -194,10 +194,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundattachment($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-attachment:'.$value.' !important';
+        return 'background-attachment:'.$value.' !important;';
     }
     else{
-        return 'background-attachment:'.$value;
+        return 'background-attachment:'.$value.';';
     }
  
  
@@ -207,10 +207,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundclip ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-clip :'.$value.' !important';
+        return 'background-clip :'.$value.' !important;';
     }
     else{
-        return 'background-clip :'.$value;
+        return 'background-clip :'.$value.';';
     }
  
  
@@ -220,10 +220,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundcolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-color:'.$value.' !important';
+        return 'background-color:'.$value.' !important;';
     }
     else{
-        return 'background-color:'.$value;
+        return 'background-color:'.$value.';';
     }
  
  
@@ -233,10 +233,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundimage($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-image:'.$value.' !important';
+        return 'background-image:'.$value.' !important;';
     }
     else{
-        return 'background-image:'.$value;
+        return 'background-image:'.$value.';';
     }
  
  
@@ -246,10 +246,10 @@ function alignitems($value='',$isimportant=false){
  function bgimage($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-image:'.$value.' !important';
+        return 'background-image:'.$value.' !important;';
     }
     else{
-        return 'background-image:'.$value;
+        return 'background-image:'.$value.';';
     }
  
  
@@ -259,10 +259,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundorigin ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-origin :'.$value.' !important';
+        return 'background-origin :'.$value.' !important;';
     }
     else{
-        return 'background-origin :'.$value;
+        return 'background-origin :'.$value.';';
     }
  
  
@@ -272,10 +272,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundposition($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-position:'.$value.' !important';
+        return 'background-position:'.$value.' !important;';
     }
     else{
-        return 'background-position:'.$value;
+        return 'background-position:'.$value.';';
     }
  
  
@@ -285,10 +285,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundrepeat($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-repeat:'.$value.' !important';
+        return 'background-repeat:'.$value.' !important;';
     }
     else{
-        return 'background-repeat:'.$value;
+        return 'background-repeat:'.$value.';';
     }
  
  
@@ -298,10 +298,10 @@ function alignitems($value='',$isimportant=false){
  function bgrepeat($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-repeat:'.$value.' !important';
+        return 'background-repeat:'.$value.' !important;';
     }
     else{
-        return 'background-repeat:'.$value;
+        return 'background-repeat:'.$value.';';
     }
  
  
@@ -311,10 +311,10 @@ function alignitems($value='',$isimportant=false){
  function backgroundsize ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-size :'.$value.' !important';
+        return 'background-size :'.$value.' !important;';
     }
     else{
-        return 'background-size :'.$value;
+        return 'background-size :'.$value.';';
     }
  
  
@@ -324,10 +324,10 @@ function alignitems($value='',$isimportant=false){
  function bgsize ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'background-size :'.$value.' !important';
+        return 'background-size :'.$value.' !important;';
     }
     else{
-        return 'background-size :'.$value;
+        return 'background-size :'.$value.';';
     }
  
  
@@ -337,10 +337,10 @@ function alignitems($value='',$isimportant=false){
  function border($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border:'.$value.' !important';
+        return 'border:'.$value.' !important;';
     }
     else{
-        return 'border:'.$value;
+        return 'border:'.$value.';';
     }
  
  
@@ -350,10 +350,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottom($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom:'.$value.' !important';
+        return 'border-bottom:'.$value.' !important;';
     }
     else{
-        return 'border-bottom:'.$value;
+        return 'border-bottom:'.$value.';';
     }
  
  
@@ -363,10 +363,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottomcolorll($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom-color:'.$value.' !important';
+        return 'border-bottom-color:'.$value.' !important;';
     }
     else{
-        return 'border-bottom-color:'.$value;
+        return 'border-bottom-color:'.$value.';';
     }
  
  
@@ -375,10 +375,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottomleftradius ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom-left-radius :'.$value.' !important';
+        return 'border-bottom-left-radius :'.$value.' !important;';
     }
     else{
-        return 'border-bottom-left-radius :'.$value;
+        return 'border-bottom-left-radius :'.$value.';';
     }
  
  
@@ -388,10 +388,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottomrightradius ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom-right-radius :'.$value.' !important';
+        return 'border-bottom-right-radius :'.$value.' !important;';
     }
     else{
-        return 'border-bottom-right-radius :'.$value;
+        return 'border-bottom-right-radius :'.$value.';';
     }
  
  
@@ -401,10 +401,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottomstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom-style:'.$value.' !important';
+        return 'border-bottom-style:'.$value.' !important;';
     }
     else{
-        return 'border-bottom-style:'.$value;
+        return 'border-bottom-style:'.$value.';';
     }
  
  
@@ -414,10 +414,10 @@ function alignitems($value='',$isimportant=false){
  function borderbottomwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-bottom-width:'.$value.' !important';
+        return 'border-bottom-width:'.$value.' !important;';
     }
     else{
-        return 'border-bottom-width:'.$value;
+        return 'border-bottom-width:'.$value.';';
     }
  
  
@@ -427,10 +427,10 @@ function alignitems($value='',$isimportant=false){
  function bordercollapse($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-collapse:'.$value.' !important';
+        return 'border-collapse:'.$value.' !important;';
     }
     else{
-        return 'border-collapse:'.$value;
+        return 'border-collapse:'.$value.';';
     }
  
  
@@ -440,10 +440,10 @@ function alignitems($value='',$isimportant=false){
  function bordercolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-color:'.$value.' !important';
+        return 'border-color:'.$value.' !important;';
     }
     else{
-        return 'border-color:'.$value;
+        return 'border-color:'.$value.';';
     }
  
  
@@ -453,10 +453,10 @@ function alignitems($value='',$isimportant=false){
  function borderimage ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image :'.$value.' !important';
+        return 'border-image :'.$value.' !important;';
     }
     else{
-        return 'border-image :'.$value;
+        return 'border-image :'.$value.';';
     }
  
  
@@ -466,10 +466,10 @@ function alignitems($value='',$isimportant=false){
  function borderimageoutset ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image-outset :'.$value.' !important';
+        return 'border-image-outset :'.$value.' !important;';
     }
     else{
-        return 'border-image-outset :'.$value;
+        return 'border-image-outset :'.$value.';';
     }
  
  
@@ -479,10 +479,10 @@ function alignitems($value='',$isimportant=false){
  function borderimagerepeat ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image-repeat :'.$value.' !important';
+        return 'border-image-repeat :'.$value.' !important;';
     }
     else{
-        return 'border-image-repeat :'.$value;
+        return 'border-image-repeat :'.$value.';';
     }
  
  
@@ -492,10 +492,10 @@ function alignitems($value='',$isimportant=false){
  function borderimageslice ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image-slice :'.$value.' !important';
+        return 'border-image-slice :'.$value.' !important;';
     }
     else{
-        return 'border-image-slice :'.$value;
+        return 'border-image-slice :'.$value.';';
     }
  
  
@@ -504,10 +504,10 @@ function alignitems($value='',$isimportant=false){
  function borderimagesource ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image-source :'.$value.' !important';
+        return 'border-image-source :'.$value.' !important;';
     }
     else{
-        return 'border-image-source :'.$value;
+        return 'border-image-source :'.$value.';';
     }
  
  
@@ -516,10 +516,10 @@ function alignitems($value='',$isimportant=false){
  function borderimagewidth ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-image-width :'.$value.' !important';
+        return 'border-image-width :'.$value.' !important;';
     }
     else{
-        return 'border-image-width :'.$value;
+        return 'border-image-width :'.$value.';';
     }
  
  
@@ -528,10 +528,10 @@ function alignitems($value='',$isimportant=false){
  function borderleft($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-leftl:'.$value.' !important';
+        return 'border-leftl:'.$value.' !important;';
     }
     else{
-        return 'border-leftll:'.$value;
+        return 'border-leftll:'.$value.';';
     }
  
  
@@ -540,10 +540,10 @@ function alignitems($value='',$isimportant=false){
  function borderleftcolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'alborder-left-colorl:'.$value.' !important';
+        return 'alborder-left-colorl:'.$value.' !important;';
     }
     else{
-        return 'aborder-left-colorll:'.$value;
+        return 'aborder-left-colorll:'.$value.';';
     }
  
  
@@ -552,10 +552,10 @@ function alignitems($value='',$isimportant=false){
  function borderleftstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-left-style:'.$value.' !important';
+        return 'border-left-style:'.$value.' !important;';
     }
     else{
-        return 'aborder-left-stylell:'.$value;
+        return 'aborder-left-stylell:'.$value.';';
     }
  
  
@@ -564,10 +564,10 @@ function alignitems($value='',$isimportant=false){
  function borderleftwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-left-widthl:'.$value.' !important';
+        return 'border-left-widthl:'.$value.' !important;';
     }
     else{
-        return 'border-left-width:'.$value;
+        return 'border-left-width:'.$value.';';
     }
  
  
@@ -576,10 +576,10 @@ function alignitems($value='',$isimportant=false){
  function borderradius ($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-radius :'.$value.' !important';
+        return 'border-radius :'.$value.' !important;';
     }
     else{
-        return 'border-radius :'.$value;
+        return 'border-radius :'.$value.';';
     }
  
  
@@ -588,10 +588,10 @@ function alignitems($value='',$isimportant=false){
  function borderright($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-right:'.$value.' !important';
+        return 'border-right:'.$value.' !important;';
     }
     else{
-        return 'border-right:'.$value;
+        return 'border-right:'.$value.';';
     }
  
  
@@ -600,10 +600,10 @@ function alignitems($value='',$isimportant=false){
  function borderrightcolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-right-color:'.$value.' !important';
+        return 'border-right-color:'.$value.' !important;';
     }
     else{
-        return 'border-right-colorll:'.$value;
+        return 'border-right-colorll:'.$value.';';
     }
  
  
@@ -612,10 +612,10 @@ function alignitems($value='',$isimportant=false){
  function borderrightstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-right-style:'.$value.' !important';
+        return 'border-right-style:'.$value.' !important;';
     }
     else{
-        return 'border-right-style:'.$value;
+        return 'border-right-style:'.$value.';';
     }
  
  
@@ -624,10 +624,10 @@ function alignitems($value='',$isimportant=false){
  function borderrightwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-right-width:'.$value.' !important';
+        return 'border-right-width:'.$value.' !important;';
     }
     else{
-        return 'border-right-width:'.$value;
+        return 'border-right-width:'.$value.';';
     }
  
  
@@ -636,10 +636,10 @@ function alignitems($value='',$isimportant=false){
  function borderspacing($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-spacing:'.$value.' !important';
+        return 'border-spacing:'.$value.' !important;';
     }
     else{
-        return 'border-spacing:'.$value;
+        return 'border-spacing:'.$value.';';
     }
  
  
@@ -648,10 +648,10 @@ function alignitems($value='',$isimportant=false){
  function borderstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-style:'.$value.' !important';
+        return 'border-style:'.$value.' !important;';
     }
     else{
-        return 'border-style:'.$value;
+        return 'border-style:'.$value.';';
     }
  
  
@@ -660,10 +660,10 @@ function alignitems($value='',$isimportant=false){
  function bordertop($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top:'.$value.' !important';
+        return 'border-top:'.$value.' !important;';
     }
     else{
-        return 'border-top:'.$value;
+        return 'border-top:'.$value.';';
     }
  
  
@@ -672,10 +672,10 @@ function alignitems($value='',$isimportant=false){
  function bordertopcolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top-color:'.$value.' !important';
+        return 'border-top-color:'.$value.' !important;';
     }
     else{
-        return 'border-top-color:'.$value;
+        return 'border-top-color:'.$value.';';
     }
  
  
@@ -684,10 +684,10 @@ function alignitems($value='',$isimportant=false){
  function bordertopleftradius($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top-left-radius:'.$value.' !important';
+        return 'border-top-left-radius:'.$value.' !important;';
     }
     else{
-        return 'border-top-left-radius:'.$value;
+        return 'border-top-left-radius:'.$value.';';
     }
  
  
@@ -696,10 +696,10 @@ function alignitems($value='',$isimportant=false){
  function bordertoprightradius($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top-right-radius:'.$value.' !important';
+        return 'border-top-right-radius:'.$value.' !important;';
     }
     else{
-        return 'border-top-right-radius:'.$value;
+        return 'border-top-right-radius:'.$value.';';
     }
  
  
@@ -708,10 +708,10 @@ function alignitems($value='',$isimportant=false){
  function bordertopstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top-style:'.$value.' !important';
+        return 'border-top-style:'.$value.' !important;';
     }
     else{
-        return 'border-top-style:'.$value;
+        return 'border-top-style:'.$value.';';
     }
  
  
@@ -720,10 +720,10 @@ function alignitems($value='',$isimportant=false){
  function bordertopwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-top-width:'.$value.' !important';
+        return 'border-top-width:'.$value.' !important;';
     }
     else{
-        return 'border-top-width:'.$value;
+        return 'border-top-width:'.$value.';';
     }
  
  
@@ -732,10 +732,10 @@ function alignitems($value='',$isimportant=false){
  function borderwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'border-width:'.$value.' !important';
+        return 'border-width:'.$value.' !important;';
     }
     else{
-        return 'border-width:'.$value;
+        return 'border-width:'.$value.';';
     }
  
  
@@ -744,10 +744,10 @@ function alignitems($value='',$isimportant=false){
  function bottom($value='',$isimportant=false){
 
     if($isimportant){
-        return 'bottom:'.$value.' !important';
+        return 'bottom:'.$value.' !important;';
     }
     else{
-        return 'bottom:'.$value;
+        return 'bottom:'.$value.';';
     }
  
  
@@ -757,10 +757,10 @@ function alignitems($value='',$isimportant=false){
  function boxdecorationbreak($value='',$isimportant=false){
 
     if($isimportant){
-        return 'box-decoration-break:'.$value.' !important';
+        return 'box-decoration-break:'.$value.' !important;';
     }
     else{
-        return 'box-decoration-break:'.$value;
+        return 'box-decoration-break:'.$value.';';
     }
  
  
@@ -769,10 +769,10 @@ function alignitems($value='',$isimportant=false){
  function boxshadow($value='',$isimportant=false){
 
     if($isimportant){
-        return 'box-shadow:'.$value.' !important';
+        return 'box-shadow:'.$value.' !important;';
     }
     else{
-        return 'box-shadow:'.$value;
+        return 'box-shadow:'.$value.';';
     }
  
  
@@ -781,10 +781,10 @@ function alignitems($value='',$isimportant=false){
  function boxsizing($value='',$isimportant=false){
 
     if($isimportant){
-        return 'box-sizing:'.$value.' !important';
+        return 'box-sizing:'.$value.' !important;';
     }
     else{
-        return 'box-sizing:'.$value;
+        return 'box-sizing:'.$value.';';
     }
  
  
@@ -793,10 +793,10 @@ function alignitems($value='',$isimportant=false){
  function breakafter($value='',$isimportant=false){
 
     if($isimportant){
-        return 'break-after:'.$value.' !important';
+        return 'break-after:'.$value.' !important;';
     }
     else{
-        return 'break-after:'.$value;
+        return 'break-after:'.$value.';';
     }
  
  
@@ -806,10 +806,10 @@ function alignitems($value='',$isimportant=false){
  function breakbefore($value='',$isimportant=false){
 
     if($isimportant){
-        return 'break-before:'.$value.' !important';
+        return 'break-before:'.$value.' !important;';
     }
     else{
-        return 'break-before:'.$value;
+        return 'break-before:'.$value.';';
     }
  
  
@@ -818,10 +818,10 @@ function alignitems($value='',$isimportant=false){
  function breakinside($value='',$isimportant=false){
 
     if($isimportant){
-        return 'break-inside:'.$value.' !important';
+        return 'break-inside:'.$value.' !important;';
     }
     else{
-        return 'break-inside:'.$value;
+        return 'break-inside:'.$value.';';
     }
  
  
@@ -829,10 +829,10 @@ function alignitems($value='',$isimportant=false){
  function captionside($value='',$isimportant=false){
 
     if($isimportant){
-        return 'caption-side:'.$value.' !important';
+        return 'caption-side:'.$value.' !important;';
     }
     else{
-        return 'caption-side:'.$value;
+        return 'caption-side:'.$value.';';
     }
  
  
@@ -841,10 +841,10 @@ function alignitems($value='',$isimportant=false){
  function caretcolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'caret-color:'.$value.' !important';
+        return 'caret-color:'.$value.' !important;';
     }
     else{
-        return 'caret-color:'.$value;
+        return 'caret-color:'.$value.';';
     }
  
  
@@ -853,10 +853,10 @@ function alignitems($value='',$isimportant=false){
  function charset($value='',$isimportant=false){
 
     if($isimportant){
-        return '@charset:'.$value.' !important';
+        return '@charset:'.$value.' !important;';
     }
     else{
-        return '@charset:'.$value;
+        return '@charset:'.$value.';';
     }
  
  
@@ -865,10 +865,10 @@ function alignitems($value='',$isimportant=false){
  function clear($value='',$isimportant=false){
 
     if($isimportant){
-        return 'clear:'.$value.' !important';
+        return 'clear:'.$value.' !important;';
     }
     else{
-        return 'clear:'.$value;
+        return 'clear:'.$value.';';
     }
  
  
@@ -877,10 +877,10 @@ function alignitems($value='',$isimportant=false){
  function clip($value='',$isimportant=false){
 
     if($isimportant){
-        return 'clip:'.$value.' !important';
+        return 'clip:'.$value.' !important;';
     }
     else{
-        return 'clip:'.$value;
+        return 'clip:'.$value.';';
     }
  
  
@@ -889,10 +889,10 @@ function alignitems($value='',$isimportant=false){
  function color($value='',$isimportant=false){
 
     if($isimportant){
-        return 'color:'.$value.' !important';
+        return 'color:'.$value.' !important;';
     }
     else{
-        return 'color:'.$value;
+        return 'color:'.$value.';';
     }
  
  
@@ -901,10 +901,10 @@ function alignitems($value='',$isimportant=false){
  function columncount($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-count:'.$value.' !important';
+        return 'column-count:'.$value.' !important;';
     }
     else{
-        return 'column-count:'.$value;
+        return 'column-count:'.$value.';';
     }
  
  
@@ -913,10 +913,10 @@ function alignitems($value='',$isimportant=false){
  function columnfill($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-fill:'.$value.' !important';
+        return 'column-fill:'.$value.' !important;';
     }
     else{
-        return 'column-fill:'.$value;
+        return 'column-fill:'.$value.';';
     }
  
  
@@ -925,10 +925,10 @@ function alignitems($value='',$isimportant=false){
  function columngap($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-gap:'.$value.' !important';
+        return 'column-gap:'.$value.' !important;';
     }
     else{
-        return 'column-gap:'.$value;
+        return 'column-gap:'.$value.';';
     }
  
  
@@ -937,10 +937,10 @@ function alignitems($value='',$isimportant=false){
  function columnrule($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-rule:'.$value.' !important';
+        return 'column-rule:'.$value.' !important;';
     }
     else{
-        return 'column-rule:'.$value;
+        return 'column-rule:'.$value.';';
     }
  
  
@@ -949,10 +949,10 @@ function alignitems($value='',$isimportant=false){
  function columnrulecolor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-rule-color:'.$value.' !important';
+        return 'column-rule-color:'.$value.' !important;';
     }
     else{
-        return 'column-rule-color:'.$value;
+        return 'column-rule-color:'.$value.';';
     }
  
  
@@ -961,10 +961,10 @@ function alignitems($value='',$isimportant=false){
  function columnrulestyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-rule-style:'.$value.' !important';
+        return 'column-rule-style:'.$value.' !important;';
     }
     else{
-        return 'column-rule-style:'.$value;
+        return 'column-rule-style:'.$value.';';
     }
  
  
@@ -973,10 +973,10 @@ function alignitems($value='',$isimportant=false){
  function columnrulewidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-rule-width:'.$value.' !important';
+        return 'column-rule-width:'.$value.' !important;';
     }
     else{
-        return 'column-rule-width:'.$value;
+        return 'column-rule-width:'.$value.';';
     }
  
  
@@ -985,10 +985,10 @@ function alignitems($value='',$isimportant=false){
  function columnspan($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-span:'.$value.' !important';
+        return 'column-span:'.$value.' !important;';
     }
     else{
-        return 'column-span:'.$value;
+        return 'column-span:'.$value.';';
     }
  
  
@@ -997,10 +997,10 @@ function alignitems($value='',$isimportant=false){
  function columnwidth($value='',$isimportant=false){
 
     if($isimportant){
-        return 'column-width:'.$value.' !important';
+        return 'column-width:'.$value.' !important;';
     }
     else{
-        return 'column-width:'.$value;
+        return 'column-width:'.$value.';';
     }
  
  
@@ -1009,10 +1009,10 @@ function alignitems($value='',$isimportant=false){
  function columns($value='',$isimportant=false){
 
     if($isimportant){
-        return 'columns:'.$value.' !important';
+        return 'columns:'.$value.' !important;';
     }
     else{
-        return 'columns:'.$value;
+        return 'columns:'.$value.';';
     }
  
  
@@ -1021,10 +1021,10 @@ function alignitems($value='',$isimportant=false){
  function content($value='',$isimportant=false){
 
     if($isimportant){
-        return 'content:'.$value.' !important';
+        return 'content:'.$value.' !important;';
     }
     else{
-        return 'content:'.$value;
+        return 'content:'.$value.';';
     }
  
  
@@ -1033,10 +1033,10 @@ function alignitems($value='',$isimportant=false){
  function counterincrement($value='',$isimportant=false){
 
     if($isimportant){
-        return 'counter-increment:'.$value.' !important';
+        return 'counter-increment:'.$value.' !important;';
     }
     else{
-        return 'counter-increment:'.$value;
+        return 'counter-increment:'.$value.';';
     }
  
  
@@ -1045,10 +1045,10 @@ function alignitems($value='',$isimportant=false){
  function counterreset($value='',$isimportant=false){
 
     if($isimportant){
-        return 'counter-reset:'.$value.' !important';
+        return 'counter-reset:'.$value.' !important;';
     }
     else{
-        return 'counter-reset:'.$value;
+        return 'counter-reset:'.$value.';';
     }
  
  
@@ -1057,10 +1057,10 @@ function alignitems($value='',$isimportant=false){
  function cursor($value='',$isimportant=false){
 
     if($isimportant){
-        return 'cursor:'.$value.' !important';
+        return 'cursor:'.$value.' !important;';
     }
     else{
-        return 'cursor:'.$value;
+        return 'cursor:'.$value.';';
     }
  
  
@@ -1069,10 +1069,10 @@ function alignitems($value='',$isimportant=false){
  function direction($value='',$isimportant=false){
 
     if($isimportant){
-        return 'direction:'.$value.' !important';
+        return 'direction:'.$value.' !important;';
     }
     else{
-        return 'direction:'.$value;
+        return 'direction:'.$value.';';
     }
  
  
@@ -1081,10 +1081,10 @@ function alignitems($value='',$isimportant=false){
  function display($value='',$isimportant=false){
 
     if($isimportant){
-        return 'display:'.$value.' !important';
+        return 'display:'.$value.' !important;';
     }
     else{
-        return 'display:'.$value;
+        return 'display:'.$value.';';
     }
  
  
@@ -1093,10 +1093,10 @@ function alignitems($value='',$isimportant=false){
  function emptycells($value='',$isimportant=false){
 
     if($isimportant){
-        return 'empty-cells:'.$value.' !important';
+        return 'empty-cells:'.$value.' !important;';
     }
     else{
-        return 'empty-cells:'.$value;
+        return 'empty-cells:'.$value.';';
     }
  
  
@@ -1105,10 +1105,10 @@ function alignitems($value='',$isimportant=false){
  function filter($value='',$isimportant=false){
 
     if($isimportant){
-        return 'filter:'.$value.' !important';
+        return 'filter:'.$value.' !important;';
     }
     else{
-        return 'filter:'.$value;
+        return 'filter:'.$value.';';
     }
  
  
@@ -1117,10 +1117,10 @@ function alignitems($value='',$isimportant=false){
  function flex($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex:'.$value.' !important';
+        return 'flex:'.$value.' !important;';
     }
     else{
-        return 'flex:'.$value;
+        return 'flex:'.$value.';';
     }
  
  
@@ -1129,10 +1129,10 @@ function alignitems($value='',$isimportant=false){
  function flexbasis($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-basis:'.$value.' !important';
+        return 'flex-basis:'.$value.' !important;';
     }
     else{
-        return 'flex-basis:'.$value;
+        return 'flex-basis:'.$value.';';
     }
  
  
@@ -1141,10 +1141,10 @@ function alignitems($value='',$isimportant=false){
  function flexdirection($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-direction:'.$value.' !important';
+        return 'flex-direction:'.$value.' !important;';
     }
     else{
-        return 'flex-direction:'.$value;
+        return 'flex-direction:'.$value.';';
     }
  
  
@@ -1153,10 +1153,10 @@ function alignitems($value='',$isimportant=false){
  function flexflow($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-flow:'.$value.' !important';
+        return 'flex-flow:'.$value.' !important;';
     }
     else{
-        return 'flex-flow:'.$value;
+        return 'flex-flow:'.$value.';';
     }
  
  
@@ -1165,10 +1165,10 @@ function alignitems($value='',$isimportant=false){
  function flexgrow($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-grow:'.$value.' !important';
+        return 'flex-grow:'.$value.' !important;';
     }
     else{
-        return 'flex-grow:'.$value;
+        return 'flex-grow:'.$value.';';
     }
  
  
@@ -1177,10 +1177,10 @@ function alignitems($value='',$isimportant=false){
  function flexshrink($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-shrink:'.$value.' !important';
+        return 'flex-shrink:'.$value.' !important;';
     }
     else{
-        return 'flex-shrink:'.$value;
+        return 'flex-shrink:'.$value.';';
     }
  
  
@@ -1189,10 +1189,10 @@ function alignitems($value='',$isimportant=false){
  function flexwrap($value='',$isimportant=false){
 
     if($isimportant){
-        return 'flex-wrap:'.$value.' !important';
+        return 'flex-wrap:'.$value.' !important;';
     }
     else{
-        return 'flex-wrap:'.$value;
+        return 'flex-wrap:'.$value.';';
     }
  
  
@@ -1203,10 +1203,10 @@ function alignitems($value='',$isimportant=false){
  function float($value='',$isimportant=false){
 
     if($isimportant){
-        return 'float:'.$value.' !important';
+        return 'float:'.$value.' !important;';
     }
     else{
-        return 'float:'.$value;
+        return 'float:'.$value.';';
     }
  
  
@@ -1216,10 +1216,10 @@ function alignitems($value='',$isimportant=false){
  function font($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font:'.$value.' !important';
+        return 'font:'.$value.' !important;';
     }
     else{
-        return 'font:'.$value;
+        return 'font:'.$value.';';
     }
  
  
@@ -1229,10 +1229,10 @@ function alignitems($value='',$isimportant=false){
  function fontface($value='',$isimportant=false){
 
     if($isimportant){
-        return '@font-face:'.$value.' !important';
+        return '@font-face:'.$value.' !important;';
     }
     else{
-        return '@font-face:'.$value;
+        return '@font-face:'.$value.';';
     }
  
  
@@ -1241,10 +1241,10 @@ function alignitems($value='',$isimportant=false){
  function fontfamily($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-family:'.$value.' !important';
+        return 'font-family:'.$value.' !important;';
     }
     else{
-        return 'font-family:'.$value;
+        return 'font-family:'.$value.';';
     }
  
  
@@ -1253,10 +1253,10 @@ function alignitems($value='',$isimportant=false){
  function fontfeaturesettings($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-feature-settings:'.$value.' !important';
+        return 'font-feature-settings:'.$value.' !important;';
     }
     else{
-        return 'font-feature-settings:'.$value;
+        return 'font-feature-settings:'.$value.';';
     }
  
  
@@ -1265,10 +1265,10 @@ function alignitems($value='',$isimportant=false){
  function fontfeaturevalues($value='',$isimportant=false){
 
     if($isimportant){
-        return '@font-feature-values:'.$value.' !important';
+        return '@font-feature-values:'.$value.' !important;';
     }
     else{
-        return '@font-feature-values:'.$value;
+        return '@font-feature-values:'.$value.';';
     }
  
  
@@ -1277,10 +1277,10 @@ function alignitems($value='',$isimportant=false){
  function fontkerning($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-kerning:'.$value.' !important';
+        return 'font-kerning:'.$value.' !important;';
     }
     else{
-        return 'font-kerning:'.$value;
+        return 'font-kerning:'.$value.';';
     }
  
  
@@ -1289,10 +1289,10 @@ function alignitems($value='',$isimportant=false){
  function fontlanguageoverride($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-language-override:'.$value.' !important';
+        return 'font-language-override:'.$value.' !important;';
     }
     else{
-        return 'font-language-override:'.$value;
+        return 'font-language-override:'.$value.';';
     }
  
  
@@ -1301,10 +1301,10 @@ function alignitems($value='',$isimportant=false){
  function fontsize($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-size:'.$value.' !important';
+        return 'font-size:'.$value.' !important;';
     }
     else{
-        return 'font-size:'.$value;
+        return 'font-size:'.$value.';';
     }
  
  
@@ -1313,10 +1313,10 @@ function alignitems($value='',$isimportant=false){
  function fontsizeadjust($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-size-adjust:'.$value.' !important';
+        return 'font-size-adjust:'.$value.' !important;';
     }
     else{
-        return 'font-size-adjust:'.$value;
+        return 'font-size-adjust:'.$value.';';
     }
  
  
@@ -1325,10 +1325,10 @@ function alignitems($value='',$isimportant=false){
  function fontstretch($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-stretch:'.$value.' !important';
+        return 'font-stretch:'.$value.' !important;';
     }
     else{
-        return 'font-stretch:'.$value;
+        return 'font-stretch:'.$value.';';
     }
  
  
@@ -1337,10 +1337,10 @@ function alignitems($value='',$isimportant=false){
  function fontstyle($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-style:'.$value.' !important';
+        return 'font-style:'.$value.' !important;';
     }
     else{
-        return 'font-style:'.$value;
+        return 'font-style:'.$value.';';
     }
  
  
@@ -1349,10 +1349,10 @@ function alignitems($value='',$isimportant=false){
  function fontsynthesis($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-synthesis:'.$value.' !important';
+        return 'font-synthesis:'.$value.' !important;';
     }
     else{
-        return 'font-synthesis:'.$value;
+        return 'font-synthesis:'.$value.';';
     }
  
  
@@ -1361,10 +1361,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariant($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant:'.$value.' !important';
+        return 'font-variant:'.$value.' !important;';
     }
     else{
-        return 'font-variant:'.$value;
+        return 'font-variant:'.$value.';';
     }
  
  
@@ -1373,10 +1373,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariantalternates($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-alternates:'.$value.' !important';
+        return 'font-variant-alternates:'.$value.' !important;';
     }
     else{
-        return 'afont-variant-alternatesll:'.$value;
+        return 'afont-variant-alternatesll:'.$value.';';
     }
  
  
@@ -1385,10 +1385,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariantcaps($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-caps:'.$value.' !important';
+        return 'font-variant-caps:'.$value.' !important;';
     }
     else{
-        return 'font-variant-caps:'.$value;
+        return 'font-variant-caps:'.$value.';';
     }
  
  
@@ -1397,10 +1397,10 @@ function alignitems($value='',$isimportant=false){
  function fontvarianteastasian($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-east-asian:'.$value.' !important';
+        return 'font-variant-east-asian:'.$value.' !important;';
     }
     else{
-        return 'font-variant-east-asian:'.$value;
+        return 'font-variant-east-asian:'.$value.';';
     }
  
  
@@ -1409,10 +1409,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariantligatures($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-ligatures:'.$value.' !important';
+        return 'font-variant-ligatures:'.$value.' !important;';
     }
     else{
-        return 'font-variant-ligatures:'.$value;
+        return 'font-variant-ligatures:'.$value.';';
     }
  
  
@@ -1421,10 +1421,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariantnumeric($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-numeric:'.$value.' !important';
+        return 'font-variant-numeric:'.$value.' !important;';
     }
     else{
-        return 'font-variant-numeric:'.$value;
+        return 'font-variant-numeric:'.$value.';';
     }
  
  
@@ -1433,10 +1433,10 @@ function alignitems($value='',$isimportant=false){
  function fontvariantposition($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-variant-position:'.$value.' !important';
+        return 'font-variant-position:'.$value.' !important;';
     }
     else{
-        return 'font-variant-position:'.$value;
+        return 'font-variant-position:'.$value.';';
     }
  
  
@@ -1445,10 +1445,10 @@ function alignitems($value='',$isimportant=false){
  function fontweight($value='',$isimportant=false){
 
     if($isimportant){
-        return 'font-weight:'.$value.' !important';
+        return 'font-weight:'.$value.' !important;';
     }
     else{
-        return 'font-weight:'.$value;
+        return 'font-weight:'.$value.';';
     }
  
  
@@ -1457,10 +1457,10 @@ function alignitems($value='',$isimportant=false){
  function gap($value='',$isimportant=false){
 
     if($isimportant){
-        return 'gap:'.$value.' !important';
+        return 'gap:'.$value.' !important;';
     }
     else{
-        return 'gap:'.$value;
+        return 'gap:'.$value.';';
     }
  
  
@@ -1469,10 +1469,10 @@ function alignitems($value='',$isimportant=false){
  function grid($value='',$isimportant=false){
 
     if($isimportant){
-        return 'grid:'.$value.' !important';
+        return 'grid:'.$value.' !important;';
     }
     else{
-        return 'grid:'.$value;
+        return 'grid:'.$value.';';
     }
  
  
@@ -1481,10 +1481,10 @@ function alignitems($value='',$isimportant=false){
  function gridarea($value='',$isimportant=false){
 
     if($isimportant){
-        return 'grid-area:'.$value.' !important';
+        return 'grid-area:'.$value.' !important;';
     }
     else{
-        return 'grid-area:'.$value;
+        return 'grid-area:'.$value.';';
     }
  
  
@@ -1493,10 +1493,10 @@ function alignitems($value='',$isimportant=false){
 //  function all($value='',$isimportant=false){
 
 //     if($isimportant){
-//         return 'all:'.$value.' !important';
+//         return 'all:'.$value.' !important;';
 //     }
 //     else{
-//         return 'all:'.$value;
+//         return 'all:'.$value.';';
 //     }
  
  
