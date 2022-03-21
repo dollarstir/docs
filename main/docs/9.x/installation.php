@@ -468,36 +468,22 @@ toLightMode();
                     <a href="card">Card</a>
                     </li>
                     <li>
-                    <a href="responses">Responses</a>
+                    <a href="card">File Upload</a>
                     </li>
                     <li>
-                    <a href="views">Views</a>
+                    <a href="responses">Icons</a>
                     </li>
                     <li>
-                    <a href="blade">Blade Templates</a>
+                    <a href="views">SVG Icons</a>
                     </li>
-                    <li>
-                    <a href="urls">URL Generation</a>
-                    </li>
-                    <li>
-                    <a href="session">Session</a>
-                    </li>
-                    <li>
-                    <a href="validation">Validation</a>
-                    </li>
-                    <li>
-                    <a href="errors">Error Handling</a>
-                    </li>
-                    <li>
-                    <a href="logging">Logging</a>
-                    </li>
+                    
                     </ul>
                     </li>
                     <li>
-                    <h2>Digging Deeper</h2>
+                    <h2>Compulsory Widgets</h2>
                     <ul>
                     <li>
-                    <a href="artisan">Artisan Console</a>
+                    <a href="artisan"></a>
                     </li>
                     <li>
                     <a href="broadcasting">Broadcasting</a>
