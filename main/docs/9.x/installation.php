@@ -564,19 +564,19 @@ toLightMode();
                     </ul>
                     </li>
                     <li>
-                    <h2>Packages</h2>
+                    <h2>Database Bot</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">Breeze</a>
+                    <a href="starter-kits#laravel-breeze">Insert record</a>
                     </li>
                     <li>
-                    <a href="billing">Cashier (Stripe)</a>
+                    <a href="billing">Fetching records</a>
                     </li>
                     <li>
-                    <a href="cashier-paddle">Cashier (Paddle)</a>
+                    <a href="cashier-paddle">Counting records</a>
                     </li>
                     <li>
-                    <a href="dusk">Dusk</a>
+                    <a href="dusk">Counting with criteria</a>
                     </li>
                     <li>
                     <a href="envoy">Envoy</a>
