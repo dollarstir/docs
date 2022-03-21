@@ -610,18 +610,32 @@ toLightMode();
                     <h2>Session Manager</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">login</a>
+                    <a href="starter-kits#laravel-breeze">user session </a>
                     </li>
-                    <li>
-                    <a href="billing">registration</a>
-                    </li>
+                   
                     
                     
                     </ul>
                     </li>
+
                     <li>
-                    <a href="../../api/9.x/index">API Documentation</a>
+                    <h2>Plugins</h2>
+                    <ul>
+                    <li>
+                    <a href="starter-kits#laravel-breeze">Mobile Money </a>
                     </li>
+
+                    <li>
+                    <a href="starter-kits#laravel-breeze">UelloSend sms </a>
+                    </li>
+                   
+                    <li>
+                    <a href="starter-kits#laravel-breeze">Mnotify sms </a>
+                    </li>
+                    
+                    </ul>
+                    </li>
+                    
                 </ul>
 
             </div>
