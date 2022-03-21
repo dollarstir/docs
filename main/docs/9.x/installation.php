@@ -549,26 +549,18 @@ toLightMode();
                     </ul>
                     </li>
                     <li>
-                    <h2>Testing</h2>
+                    <h2>Routes</h2>
                     <ul>
                     <li>
-                    <a href="testing">Getting Started</a>
+                    <a href="testing">Basic route</a>
                     </li>
                     <li>
-                    <a href="http-tests">HTTP Tests</a>
+                    <a href="http-tests">Route with parameters</a>
                     </li>
                     <li>
-                    <a href="console-tests">Console Tests</a>
+                    <a href="console-tests">Get request</a>
                     </li>
-                    <li>
-                    <a href="dusk">Browser Tests</a>
-                    </li>
-                    <li>
-                    <a href="database-testing">Database</a>
-                    </li>
-                    <li>
-                    <a href="mocking">Mocking</a>
-                    </li>
+                    
                     </ul>
                     </li>
                     <li>
