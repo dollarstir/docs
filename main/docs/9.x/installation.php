@@ -483,13 +483,13 @@ toLightMode();
                     <h2>Compulsory Widgets</h2>
                     <ul>
                     <li>
-                    <a href="artisan">Meta </a>
+                    <a href="artisan">Meta title</a>
                     </li>
                     <li>
-                    <a href="broadcasting">Broadcasting</a>
+                    <a href="broadcasting">Meta description</a>
                     </li>
                     <li>
-                    <a href="cache">Cache</a>
+                    <a href="cache">Meta </a>
                     </li>
                     <li>
                     <a href="collections">Collections</a>
