@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php head('installation');?>
+    <?php head('installation'); ?>
 
     <script>
 
@@ -133,21 +133,19 @@ toLightMode();
                     <a href="installation">Installation</a>
                     </li>
                     <li>
-                    <a href="configuration">Configuration</a>
+                    <a href="configuration">Setting Up</a>
                     </li>
                     <li>
                     <a href="structure">Directory Structure</a>
                     </li>
-                    <li>
-                    <a href="starter-kits">Starter Kits</a>
-                    </li>
+                   
                     <li>
                     <a href="deployment">Deployment</a>
                     </li>
                     </ul>
                     </li>
                     <li>
-                    <h2>Architecture Concepts</h2>
+                    <h2>UI Elements(Widgets)</h2>
                     <ul>
                     <li>
                     <a href="lifecycle">Request Lifecycle</a>
@@ -1356,7 +1354,7 @@ toLightMode();
         </div>
     </div>
 
-<?php  footer();?>
+<?php  footer(); ?>
 
 <div class="fixed inset-0 z-50 text-gray-400 overflow-y-auto" id="tgsearch"  style="display:none;">
     <div x-transition.opacity class="fixed inset-0 bg-dark-900 bg-opacity-80"></div>
@@ -1400,7 +1398,7 @@ toLightMode();
 
 
 
-<?php 
+<?php
     js();
     echo Yolk::uicore('jsj');
     echo Yolk::uicore('ps');
