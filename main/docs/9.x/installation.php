@@ -148,21 +148,19 @@ toLightMode();
                     <h2>UI Elements(Widgets)</h2>
                     <ul>
                     <li>
-                    <a href="lifecycle">Request Lifecycle</a>
+                    <a href="lifecycle">Basic Widgets</a>
                     </li>
                     <li>
-                    <a href="container">Service Container</a>
+                    <a href="container">Special Widgets</a>
                     </li>
                     <li>
-                    <a href="providers">Service Providers</a>
+                    <a href="providers">Layout Widgets</a>
                     </li>
-                    <li>
-                    <a href="facades">Facades</a>
-                    </li>
+                   
                     </ul>
                     </li>
                     <li>
-                    <h2>The Basics</h2>
+                    <h2>Advance Widgets</h2>
                     <ul>
                     <li>
                     <a href="routing">Routing</a>
@@ -425,53 +423,49 @@ toLightMode();
                     <a href="installation">Installation</a>
                     </li>
                     <li>
-                    <a href="configuration">Configuration</a>
+                    <a href="configuration">Setting Up</a>
                     </li>
                     <li>
                     <a href="structure">Directory Structure</a>
                     </li>
+                   
                     <li>
-                    <a href="starter-kits">Starter Kits</a>
-                    </li>
-                    <li>
-                    <a href="deployment">Deployment</a>
+                    <a href="deployment">Creating first App</a>
                     </li>
                     </ul>
                     </li>
                     <li>
-                    <h2>Architecture Concepts</h2>
+                    <h2>UI Elements(Widgets)</h2>
                     <ul>
                     <li>
-                    <a href="lifecycle">Request Lifecycle</a>
+                    <a href="lifecycle">Basic Widgets</a>
                     </li>
                     <li>
-                    <a href="container">Service Container</a>
+                    <a href="container">Special Widgets</a>
                     </li>
                     <li>
-                    <a href="providers">Service Providers</a>
+                    <a href="providers">Layout Widgets</a>
                     </li>
-                    <li>
-                    <a href="facades">Facades</a>
-                    </li>
+                   
                     </ul>
                     </li>
                     <li>
-                    <h2>The Basics</h2>
+                    <h2>Advanced Widgets</h2>
                     <ul>
                     <li>
-                    <a href="routing">Routing</a>
+                    <a href="accordion">Accordion</a>
                     </li>
                     <li>
-                    <a href="middleware">Middleware</a>
+                    <a href="alerts">Alerts</a>
                     </li>
                     <li>
-                    <a href="csrf">CSRF Protection</a>
+                    <a href="badge">Badge</a>
                     </li>
                     <li>
-                    <a href="controllers">Controllers</a>
+                    <a href="buttons">Buttons</a>
                     </li>
                     <li>
-                    <a href="requests">Requests</a>
+                    <a href="card">Card</a>
                     </li>
                     <li>
                     <a href="responses">Responses</a>
