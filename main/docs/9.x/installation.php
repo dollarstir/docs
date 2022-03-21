@@ -607,7 +607,7 @@ toLightMode();
 
 
                     <li>
-                    <h2></h2>
+                    <h2>Session Manager</h2>
                     <ul>
                     <li>
                     <a href="starter-kits#laravel-breeze">login</a>
