@@ -2,9 +2,9 @@
 
 class meta
 {
-    public static function description($description = '')
+    public static function title($title = '')
     {
-        return '<meta name="description" content="'.$description.'">';
+        return '<meta name="title" content="'.$title.'">';
     }
 
     public static function description($description = '')
