@@ -579,13 +579,13 @@ toLightMode();
                     <a href="dusk">Counting with criteria</a>
                     </li>
                     <li>
-                    <a href="envoy">Envoy</a>
+                    <a href="envoy">Deleting records</a>
                     </li>
                     <li>
-                    <a href="fortify">Fortify</a>
+                    <a href="fortify">Searching for records</a>
                     </li>
                     <li>
-                    <a href="homestead">Homestead</a>
+                    <a href="homestead">Updating records</a>
                     </li>
                     <li>
                     <a href="horizon">Horizon</a>
