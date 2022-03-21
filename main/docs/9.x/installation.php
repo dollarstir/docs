@@ -489,119 +489,63 @@ toLightMode();
                     <a href="broadcasting">Meta description</a>
                     </li>
                     <li>
-                    <a href="cache">Meta </a>
+                    <a href="cache">Meta keywords</a>
                     </li>
                     <li>
-                    <a href="collections">Collections</a>
+                    <a href="collections">Meta aurthor</a>
                     </li>
                     <li>
-                    <a href="mix">Compiling Assets</a>
+                    <a href="mix">Meta charset</a>
                     </li>
                     <li>
-                    <a href="contracts">Contracts</a>
+                    <a href="contracts">Meta viewport</a>
                     </li>
                     <li>
-                    <a href="events">Events</a>
+                    <a href="events">Meta browser compatibility</a>
                     </li>
-                    <li>
-                    <a href="filesystem">File Storage</a>
-                    </li>
-                    <li>
-                    <a href="helpers">Helpers</a>
-                    </li>
-                    <li>
-                    <a href="http-client">HTTP Client</a>
-                    </li>
-                    <li>
-                    <a href="localization">Localization</a>
-                    </li>
-                    <li>
-                    <a href="mail">Mail</a>
-                    </li>
-                    <li>
-                    <a href="notifications">Notifications</a>
-                    </li>
-                    <li>
-                    <a href="packages">Package Development</a>
-                    </li>
-                    <li>
-                    <a href="queues">Queues</a>
-                    </li>
-                    <li>
-                    <a href="rate-limiting">Rate Limiting</a>
-                    </li>
-                    <li>
-                    <a href="scheduling">Task Scheduling</a>
-                    </li>
+                   
                     </ul>
                     </li>
                     <li>
-                    <h2>Security</h2>
+                    <h2>Styling</h2>
                     <ul>
                     <li>
-                    <a href="authentication">Authentication</a>
+                    <a href="ncss">Normal CSS</a>
                     </li>
                     <li>
-                    <a href="authorization">Authorization</a>
+                    <a href="bcss">Bootstrap CSS</a>
                     </li>
                     <li>
-                    <a href="verification">Email Verification</a>
+                    <a href="twcss">Tailwind CSS</a>
                     </li>
                     <li>
-                    <a href="encryption">Encryption</a>
+                    <a href="yolkcss">Yolk CSS</a>
                     </li>
-                    <li>
-                    <a href="hashing">Hashing</a>
-                    </li>
-                    <li>
-                    <a href="passwords">Password Reset</a>
-                    </li>
+                    
                     </ul>
                     </li>
                     <li>
-                    <h2>Database</h2>
+                    <h2>Scripts</h2>
                     <ul>
                     <li>
-                    <a href="database">Getting Started</a>
+                    <a href="database">Adding Javascript</a>
                     </li>
                     <li>
-                    <a href="queries">Query Builder</a>
+                    <a href="queries">Importing Javascript</a>
                     </li>
-                    <li>
-                    <a href="pagination">Pagination</a>
-                    </li>
-                    <li>
-                    <a href="migrations">Migrations</a>
-                    </li>
-                    <li>
-                    <a href="seeding">Seeding</a>
-                    </li>
-                    <li>
-                    <a href="redis">Redis</a>
-                    </li>
+                    
                     </ul>
                     </li>
                     <li>
-                    <h2>Eloquent ORM</h2>
+                    <h2>Favicon</h2>
                     <ul>
                     <li>
-                    <a href="eloquent">Getting Started</a>
+                    <a href="eloquent">Adding Favicon</a>
                     </li>
                     <li>
-                    <a href="eloquent-relationships">Relationships</a>
+                    <a href="eloquent-relationships">Importing Favicon</a>
                     </li>
-                    <li>
-                    <a href="eloquent-collections">Collections</a>
-                    </li>
-                    <li>
-                    <a href="eloquent-mutators">Mutators / Casts</a>
-                    </li>
-                    <li>
-                    <a href="eloquent-resources">API Resources</a>
-                    </li>
-                    <li>
-                    <a href="eloquent-serialization">Serialization</a>
-                    </li>
+                    
                     </ul>
                     </li>
                     <li>
