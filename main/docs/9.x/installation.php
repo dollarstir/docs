@@ -587,36 +587,36 @@ toLightMode();
                     <li>
                     <a href="homestead">Updating records</a>
                     </li>
+                    
+                    </ul>
+                    </li>
+
                     <li>
-                    <a href="horizon">Horizon</a>
+                    <h2>Authentication Bot</h2>
+                    <ul>
+                    <li>
+                    <a href="starter-kits#laravel-breeze">login</a>
                     </li>
                     <li>
-                    <a href="https://jetstream.laravel.com">Jetstream</a>
+                    <a href="billing">registration</a>
+                    </li>
+                    
+                    
+                    </ul>
+                    </li>
+
+
+                    <li>
+                    <h2></h2>
+                    <ul>
+                    <li>
+                    <a href="starter-kits#laravel-breeze">login</a>
                     </li>
                     <li>
-                    <a href="octane">Octane</a>
+                    <a href="billing">registration</a>
                     </li>
-                    <li>
-                    <a href="passport">Passport</a>
-                    </li>
-                    <li>
-                    <a href="sail">Sail</a>
-                    </li>
-                    <li>
-                    <a href="sanctum">Sanctum</a>
-                    </li>
-                    <li>
-                    <a href="scout">Scout</a>
-                    </li>
-                    <li>
-                    <a href="socialite">Socialite</a>
-                    </li>
-                    <li>
-                    <a href="telescope">Telescope</a>
-                    </li>
-                    <li>
-                    <a href="valet">Valet</a>
-                    </li>
+                    
+                    
                     </ul>
                     </li>
                     <li>
