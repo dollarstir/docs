@@ -1,19 +1,17 @@
 <?php
 
-
-function head($id){
-    switch($id){
+function head($id)
+{
+    switch ($id) {
         case 'home':
-            $title = "Yolk Framework - State of the art framework";
-            
-            break;
-        case "installation":
-            $title = "Installation - Yolk Framework - State of the art framework ";
-            
-            break;
-        
-    }
+            $title = 'Yolk Framework - State of the art framework';
 
+            break;
+        case 'installation':
+            $title = 'Installation - Yolk Framework - State of the art framework ';
+
+            break;
+    }
 
     echo '<meta charset="utf-8">
     <title>'.$title.'</title>
@@ -24,7 +22,7 @@ function head($id){
     <meta name="title" content="Yolk Framework - State of the art framework">
     <meta name="keyword" content="PHP Yolk, Yolk, Framework, State of the art framework, UI,ui, Yolk Ui, Yolk UI">
     <meta name="description"
-        content="Yolk is a PHP framework that helps to easily build web apps. Comes with in-built database queries and has custom tags and structure ">
+        content="dd">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -68,7 +66,8 @@ function head($id){
     <link rel="stylesheet" href="main/css/aos.css">';
 }
 
-function footer(){
+function footer()
+{
     echo '<web-particles id="tsparticles1" options=\'{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#ffffff"},"links":{"color":"#ffffff","distance":150,"enable":true,"opacity":0.4,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":2,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.5},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}\'></web-particles>
     <footer class="relative pt-12 ">
         <div class="max-w-screen-2xl mx-auto w-full px-5">
@@ -106,10 +105,10 @@ function footer(){
                                 <!-- <img id="footer__discord_dark" class="hidden w-6 h-6"
                                     src="main/img/social/facebook.dark.min.svg" alt="facebook" width="21" height="24"
                                     loading="lazy"> -->
-                                    '.Image::brandsvg("facebook","20px","20px","hidden w-6 h-6","footer__discord_dark").'
+                                    '.Image::brandsvg('facebook', '20px', '20px', 'hidden w-6 h-6', 'footer__discord_dark').'
                                 <!-- <img id="footer__discord" class="inline-block w-6 h-6" src="main/img/social/facebook.min.svg"
                                     alt="facebook" width="21" height="24" loading="lazy"> -->
-                                    '.Image::brandsvg("facebook","20px","20px","inline-block w-6 h-6","footer__discord").'
+                                    '.Image::brandsvg('facebook', '20px', '20px', 'inline-block w-6 h-6', 'footer__discord').'
                             </a>
                         </li>
                         <li>
@@ -224,7 +223,7 @@ function footer(){
             <div class="mt-10 border-t pt-6 pb-16 border-gray-700 text-center" style="background-color: rgb(228, 222, 222);">
                 <p class="text-xs text-gray-900 ">
                     
-                     Copyright &copy; '.date("Y").'  PHP Yolk framework LLC.
+                     Copyright &copy; '.date('Y').'  PHP Yolk framework LLC.
                 </p>
                
             </div>
@@ -232,7 +231,8 @@ function footer(){
     </footer>';
 }
 
-function js(){
+function js()
+{
     echo '<script src="main/js/app-id=100f797fd909ecd1c2f2.js"></script>
     <script src="main/js/particle.js"></script>
     <script src="main/js/tsparticles.min.js"></script>
