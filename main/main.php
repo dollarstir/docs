@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php head('home');?>
+    <?php head('home'); ?>
 
     <script>
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -72,6 +72,7 @@
                         <!-- <li><a href="components">Components</a></li> -->
                         <li><a href="plugins">Plugins</a></li>
                         <li><a href="plugins">Community</a></li>
+                        <li><a href="plugins">Store</a></li>
                         
                         <li><a href="https://laravel-news.com">Donate</a></li>
                         <!-- <li><a href="https://partners.laravel.com">Partners</a></li> -->
@@ -99,8 +100,8 @@
                                 <line y1="11" x2="28" y2="11" stroke="currentColor" stroke-width="2" />
                                 
                             </svg> -->
-                            <?php echo image::solidsvg('grip','50px !important','50px !important','w-6','','x-show="!navIsOpen" viewBox="0 0 28 12" fill="none"'); ?>
-                            <?php echo image::solidsvg('x','40px','40px','absolute inset-0 mt-2.5 ml-2.5 w-5','','x-show="navIsOpen" x-cloak viewBox="0 0 19 19" fill="none"'); ?>
+                            <?php echo image::solidsvg('grip', '50px !important', '50px !important', 'w-6', '', 'x-show="!navIsOpen" viewBox="0 0 28 12" fill="none"'); ?>
+                            <?php echo image::solidsvg('x', '40px', '40px', 'absolute inset-0 mt-2.5 ml-2.5 w-5', '', 'x-show="navIsOpen" x-cloak viewBox="0 0 19 19" fill="none"'); ?>
                             
                             <!-- <svg x-show="navIsOpen" x-cloak class="absolute inset-0 mt-2.5 ml-2.5 w-5"
                                 viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,9 +215,9 @@
                 </div>
                 <div>
                    
-                    <h3 class="mt-5 text-xl font-bold">Plugins</h3>
+                    <h3 class="mt-5 text-xl font-bold">Store</h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-                            Yolk has made it possible for anyone to create plugins which can be paid or free. This plugin can be a template made with Yolk Ui, E-cormerce website made with yolk framework,encryption system. 
+                            Yolk has made it possible for anyone to create packages which can be paid or free. This packages can be a template made with Yolk Ui, E-cormerce website made with yolk framework,encryption system. 
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
@@ -634,7 +635,7 @@
     
 
    
-    <?php footer();?>
+    <?php footer(); ?>
 
     <div x-data="searchComponent()" @toggle-search-modal.window="open = !open" @keydown.window.escape="close"
         @keydown.window="handleKeydown" @keydown.escape.prevent.stop="close" x-show="open" x-cloak
