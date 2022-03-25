@@ -1072,23 +1072,22 @@ toLightMode();
 <a href="installation#intro">Introduction</a>
 </li>
 <li>
-<a href="installation#your-first-laravel-project"></a>
+    <a href="installation#requirements"></a>
+</li>
+<li>
+<a href="installation#your-first-laravel-project">Installing yolk</a>
 <ul>
 <li>
-<a href="installation#getting-started-on-macos">Getting Started On macOS</a>
+<a href="installation#getting-started-on-macos">On macOS</a>
 </li>
 <li>
-<a href="installation#getting-started-on-windows">Getting Started On Windows</a>
+<a href="installation#getting-started-on-windows">On Windows</a>
 </li>
 <li>
-<a href="installation#getting-started-on-linux">Getting Started On Linux</a>
+<a href="installation#getting-started-on-linux">On Linux</a>
 </li>
-<li>
-<a href="installation#choosing-your-sail-services">Choosing Your Sail Services</a>
-</li>
-<li>
-<a href="installation#installation-via-composer">Installation Via Composer</a>
-</li>
+
+
 </ul>
 </li>
 <li>
@@ -1102,17 +1101,7 @@ toLightMode();
 </li>
 </ul>
 </li>
-<li>
-<a href="installation#next-steps">Next Steps</a>
-<ul>
-<li>
-<a href="installation#laravel-the-fullstack-framework">Laravel The Full Stack Framework</a>
-</li>
-<li>
-<a href="installation#laravel-the-api-backend">Laravel The API Backend</a>
-</li>
-</ul>
-</li>
+
 </ul>
 <p><a name="intro"></a></p>
 <h2>Introduction</h2>
@@ -1127,17 +1116,15 @@ toLightMode();
     <em>If you have any questions, please feel free to contact us at <br><a href="mailto:support@phpyolk.com">support@phpyolk.com</a></em>
 </p>
 
-<p><a name="why-laravel"></a></p>
-<h3>Why Laravel?</h3>
-<p>There are a variety of tools and frameworks available to you when building a web application. However, we believe Laravel is the best choice for building modern, full-stack web applications.</p>
-<h4>A Progressive Framework</h4>
-<p>We like to call Laravel a &quot;progressive&quot; framework. By that, we mean that Laravel grows with you. If you're just taking your first steps into web development, Laravel's vast library of documentation, guides, and <a href="https://laracasts.com">video tutorials</a> will help you learn the ropes without becoming overwhelmed.</p>
-<p>If you're a senior developer, Laravel gives you robust tools for <a href="container">dependency injection</a>, <a href="testing">unit testing</a>, <a href="queues">queues</a>, <a href="broadcasting">real-time events</a>, and more. Laravel is fine-tuned for building professional web applications and ready to handle enterprise work loads.</p>
-<h4>A Scalable Framework</h4>
-<p>Laravel is incredibly scalable. Thanks to the scaling-friendly nature of PHP and Laravel's built-in support for fast, distributed cache systems like Redis, horizontal scaling with Laravel is a breeze. In fact, Laravel applications have been easily scaled to handle hundreds of millions of requests per month.</p>
-<p>Need extreme scaling? Platforms like <a href="https://vapor.laravel.com">Laravel Vapor</a> allow you to run your Laravel application at nearly limitless scale on AWS's latest serverless technology.</p>
-<h4>A Community Framework</h4>
-<p>Laravel combines the best packages in the PHP ecosystem to offer the most robust and developer friendly framework available. In addition, thousands of talented developers from around the world have <a href="https://github.com/laravel/framework">contributed to the framework</a>. Who knows, maybe you'll even become a Laravel contributor.</p>
+<p><a name="requirement"></a></p>
+<h3>System Requirements</h3>
+<p>
+    <ul>
+        <li>PHP 7.2+</li>
+        <li></li>
+    </ul>
+</p>
+
 <p><a name="your-first-laravel-project"></a></p>
 <h2>Your First Laravel Project</h2>
 <p>We want it to be as easy as possible to get started with Laravel. There are a variety of options for developing and running a Laravel project on your own computer. While you may wish to explore these options at a later time, Laravel provides <a href="sail">Sail</a>, a built-in solution for running your Laravel project using <a href="https://www.docker.com">Docker</a>.</p>
