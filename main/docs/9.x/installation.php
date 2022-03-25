@@ -1136,16 +1136,11 @@ toLightMode();
 
 <p><a name="getting-started-on-macos"></a></p>
 <h3>Installing On macOS</h3>
-<p>For feather explanation watch the tutorial on <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> is already installed, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://laravel.build/example-app</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
-<p>Of course, you can change &quot;example-app&quot; in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be created within the directory you execute the command from.</p>
-<p>After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">./vendor/bin/sail </span><span style="color: #BFC7D5;">up</span></div></code></pre>
-<p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
-<p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
-<blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
-</blockquote>
+<p>
+    For feather explanation watch the tutorial on how to install Yolk on Mac <a href="https://youtube.com">Watch video tutorial</a> . If Xampp Server is already installed then you open Finder and locate <strong>Application->Xampp->htdocs folder </strong>
+
+</p>
+
 <p><a name="getting-started-on-windows"></a></p>
 <h3>Getting Started On Windows</h3>
 <p>Before we create a new Laravel application on your Windows machine, make sure to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>. Next, you should ensure that Windows Subsystem for Linux 2 (WSL2) is installed and enabled. WSL allows you to run Linux binary executables natively on Windows 10. Information on how to install and enable WSL2 can be found within Microsoft's <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">developer environment documentation</a>.</p>
