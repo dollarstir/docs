@@ -1072,10 +1072,10 @@ toLightMode();
 <a href="installation#intro">Introduction</a>
 </li>
 <li>
-    <a href="installation#requirements"></a>
+    <a href="installation#requirements">System requirements</a>
 </li>
 <li>
-<a href="installation#your-first-laravel-project">Installing yolk</a>
+<a href="installation#installing">Installing yolk</a>
 <ul>
 <li>
 <a href="installation#getting-started-on-macos">On macOS</a>
@@ -1116,23 +1116,24 @@ toLightMode();
     <em>If you have any questions, please feel free to contact us at <br><a href="mailto:support@phpyolk.com">support@phpyolk.com</a></em>
 </p>
 
-<p><a name="requirement"></a></p>
+<p><a name="requirements"></a></p>
 <h3>System Requirements</h3>
 <p>
     <ul>
         <li>PHP 7.2+</li>
-        <li></li>
+        <li>Xampp or Wamp</li>
+        <li>Mysql</li>
+       
     </ul>
+    NB: Yolk works on MacOS, Windows and Linux.
 </p>
 
-<p><a name="your-first-laravel-project"></a></p>
-<h2>Your First Laravel Project</h2>
-<p>We want it to be as easy as possible to get started with Laravel. There are a variety of options for developing and running a Laravel project on your own computer. While you may wish to explore these options at a later time, Laravel provides <a href="sail">Sail</a>, a built-in solution for running your Laravel project using <a href="https://www.docker.com">Docker</a>.</p>
-<p>Docker is a tool for running applications and services in small, light-weight &quot;containers&quot; which do not interfere with your local computer's installed software or configuration. This means you don't have to worry about configuring or setting up complicated development tools such as web servers and databases on your personal computer. To get started, you only need to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>.</p>
-<p>Laravel Sail is a light-weight command-line interface for interacting with Laravel's default Docker configuration. Sail provides a great starting point for building a Laravel application using PHP, MySQL, and Redis without requiring prior Docker experience.</p>
-<blockquote>
-<p>{tip} Already a Docker expert? Don't worry! Everything about Sail can be customized using the <code>docker-compose.yml</code> file included with Laravel.</p>
-</blockquote>
+<p><a name="installing"></a></p>
+<h2>Installation Guide</h2>
+<p>
+    To make it very easy to use yolk we are taking time too dip deeper for you to understand.
+</p>
+
 <p><a name="getting-started-on-macos"></a></p>
 <h3>Getting Started On macOS</h3>
 <p>If you're developing on a Mac and <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a> is already installed, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
