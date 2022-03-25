@@ -74,7 +74,7 @@
                         <li><a href="plugins">Community</a></li>
                         <li><a href="plugins">Store</a></li>
                         
-                        <li><a href="https://laravel-news.com">Donate</a></li>
+                        <li><a href="">Donate</a></li>
                         <!-- <li><a href="https://partners.laravel.com">Partners</a></li> -->
                     </ul>
                     <div class="flex-1 flex items-center justify-end">
@@ -217,7 +217,7 @@
                    
                     <h3 class="mt-5 text-xl font-bold">Store</h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-                            Yolk has made it possible for anyone to create packages which can be paid or free. This packages can be a template made with Yolk Ui, E-cormerce website made with yolk framework,encryption system. 
+                            Yolk has made it possible for anyone to create packages which can be paid or free. This packages can be a template made with Yolk Ui, E-cormerce website made with yolk framework,encryption system. <br>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span
@@ -237,7 +237,7 @@
                     </svg> -->
                     <h3 class="mt-5 text-xl font-bold">Integrations</h3>
                     <p class="mt-4 text-gray-700 text-sm leading-relaxed">
-                        Yolk comes with Mobile money apis which can helps accept payment on websites, Bulk sms and Bulk Email system . We partnered with <a class="underline" href="http://paystack.com" target="blank">Paystack</a>, <a class="underline" href="http://uvitech.com" target="blank">Uvitech</a>, <a class="underline" href="http://mnotify.com" target="blank">Mnotify</a>, <a class="underline" href="http://flutterwave.com" target="blank">Flutterwave</a> etc.
+                        Yolk comes with Mobile money apis which can helps accept payment on websites, Bulk sms and Bulk Email system . We partnered with <a class="underline" href="http://paystack.com" target="blank">Paystack</a>, <a class="underline" href="http://uvitech.com" target="blank">Uvitech</a>, <a class="underline" href="http://mnotify.com" target="blank">Mnotify</a>, <a class="underline" href="http://flutterwave.com" target="blank">Flutterwave</a> etc.<br>
                         <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6"
                             href="docs/9.x/http-tests.html">
                             <span

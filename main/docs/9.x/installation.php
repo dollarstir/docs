@@ -1069,15 +1069,10 @@ toLightMode();
     <h1>Installation</h1>
 <ul>
 <li>
-<a href="installation#meet-laravel">Meet Laravel</a>
-<ul>
-<li>
-<a href="installation#why-laravel">Why Laravel?</a>
-</li>
-</ul>
+<a href="installation#intro">Introduction</a>
 </li>
 <li>
-<a href="installation#your-first-laravel-project">Your First Laravel Project</a>
+<a href="installation#your-first-laravel-project"></a>
 <ul>
 <li>
 <a href="installation#getting-started-on-macos">Getting Started On macOS</a>
@@ -1119,11 +1114,19 @@ toLightMode();
 </ul>
 </li>
 </ul>
-<p><a name="meet-laravel"></a></p>
-<h2>Meet Laravel</h2>
-<p>Laravel is a web application framework with expressive, elegant syntax. A web framework provides a structure and starting point for creating your application, allowing you to focus on creating something amazing while we sweat the details.</p>
-<p>Laravel strives to provide an amazing developer experience while providing powerful features such as thorough dependency injection, an expressive database abstraction layer, queues and scheduled jobs, unit and integration testing, and more.</p>
-<p>Whether you are new to PHP or web frameworks or have years of experience, Laravel is a framework that can grow with you. We'll help you take your first steps as a web developer or give you a boost as you take your expertise to the next level. We can't wait to see what you build.</p>
+<p><a name="intro"></a></p>
+<h2>Introduction</h2>
+<p>Welcome to the Yolk PHP documentation!<br>
+    This documentation is intended to help you get started with the PHP Yolk  framework. <br><strong>Note : Yolk framework has three main Categories</strong>
+    <ul>
+        <li>Yolk UI (which deals with the frontend). Yolk UI has completely different structure on like html . The ui consist of widgets which comes wit yolk</li>
+        <li>    Yolk Backend consist of the <strong>Backend bot </strong>(Handles almost all database queries.), and other functionalities which would be covered later.</li>
+        <li>Routing. We provide you with easy routing which boost your website  seo</li>
+    </ul>
+
+    <em>If you have any questions, please feel free to contact us at <br><a href="mailto:support@phpyolk.com">support@phpyolk.com</a></em>
+</p>
+
 <p><a name="why-laravel"></a></p>
 <h3>Why Laravel?</h3>
 <p>There are a variety of tools and frameworks available to you when building a web application. However, we believe Laravel is the best choice for building modern, full-stack web applications.</p>
