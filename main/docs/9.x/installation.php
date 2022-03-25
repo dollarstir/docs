@@ -1137,7 +1137,7 @@ toLightMode();
 <p><a name="getting-started-on-macos"></a></p>
 <h3>Installing On macOS</h3>
 <p>
-    For feather explanation watch the tutorial on how to install Yolk on Mac <a href="https://youtube.com">Watch video tutorial</a> . If Xampp Server is already installed then you open Finder and locate <strong>Application->Xampp->htdocs folder </strong>
+    For feather explanation watch the tutorial on how to install Yolk on Mac <a href="https://youtube.com">Watch video tutorial</a> . If Xampp Server is already installed then you open Finder and locate <strong>Application->Xampp->htdocs folder </strong>. Create 
 
 </p>
 
