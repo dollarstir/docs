@@ -355,7 +355,7 @@ toLightMode();
                     <h2>Packages</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">Breeze</a>
+                    <a href="starter-kits#Yolk-breeze">Breeze</a>
                     </li>
                     <li>
                     <a href="billing">Cashier (Stripe)</a>
@@ -379,7 +379,7 @@ toLightMode();
                     <a href="horizon">Horizon</a>
                     </li>
                     <li>
-                    <a href="https://jetstream.laravel.com">Jetstream</a>
+                    <a href="https://jetstream.Yolk.com">Jetstream</a>
                     </li>
                     <li>
                     <a href="octane">Octane</a>
@@ -567,7 +567,7 @@ toLightMode();
                     <h2>Database Bot</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">Insert record</a>
+                    <a href="starter-kits#Yolk-breeze">Insert record</a>
                     </li>
                     <li>
                     <a href="billing">Fetching records</a>
@@ -595,7 +595,7 @@ toLightMode();
                     <h2>Authentication Bot</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">login</a>
+                    <a href="starter-kits#Yolk-breeze">login</a>
                     </li>
                     <li>
                     <a href="billing">registration</a>
@@ -610,7 +610,7 @@ toLightMode();
                     <h2>Session Manager</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">user session </a>
+                    <a href="starter-kits#Yolk-breeze">user session </a>
                     </li>
                    
                     
@@ -622,15 +622,15 @@ toLightMode();
                     <h2>Plugins</h2>
                     <ul>
                     <li>
-                    <a href="starter-kits#laravel-breeze">Mobile Money </a>
+                    <a href="starter-kits#Yolk-breeze">Mobile Money </a>
                     </li>
 
                     <li>
-                    <a href="starter-kits#laravel-breeze">UelloSend sms </a>
+                    <a href="starter-kits#Yolk-breeze">UelloSend sms </a>
                     </li>
                    
                     <li>
-                    <a href="starter-kits#laravel-breeze">Mnotify sms </a>
+                    <a href="starter-kits#Yolk-breeze">Mnotify sms </a>
                     </li>
                     
                     </ul>
@@ -946,7 +946,7 @@ toLightMode();
 <h2>Packages</h2>
 <ul>
 <li>
-<a href="starter-kits#laravel-breeze">Breeze</a>
+<a href="starter-kits#Yolk-breeze">Breeze</a>
 </li>
 <li>
 <a href="billing">Cashier (Stripe)</a>
@@ -970,7 +970,7 @@ toLightMode();
 <a href="horizon">Horizon</a>
 </li>
 <li>
-<a href="https://jetstream.laravel.com">Jetstream</a>
+<a href="https://jetstream.Yolk.com">Jetstream</a>
 </li>
 <li>
 <a href="octane">Octane</a>
@@ -1036,7 +1036,7 @@ toLightMode();
                                 <div x-data class="relative w-full bg-white transition-all duration-500 focus-within:border-gray-600 dark:bg-gray-800">
                                     <select
                                         id="version-switcher"
-                                        aria-label="Laravel version"
+                                        aria-label="Yolk version"
                                         class="appearance-none flex-1 w-full px-0 py-1 placeholder-gray-900 tracking-wide bg-white focus:outline-none dark:bg-dark-700 dark:text-gray-400 dark:placeholder-gray-500"
                                         @change="window.location = $event.target.value"
                                     >
@@ -1143,51 +1143,51 @@ toLightMode();
 
 <p><a name="getting-started-on-windows"></a></p>
 <h3>Getting Started On Windows</h3>
-<p>Before we create a new Laravel application on your Windows machine, make sure to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>. Next, you should ensure that Windows Subsystem for Linux 2 (WSL2) is installed and enabled. WSL allows you to run Linux binary executables natively on Windows 10. Information on how to install and enable WSL2 can be found within Microsoft's <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">developer environment documentation</a>.</p>
+<p>Before we create a new Yolk application on your Windows machine, make sure to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>. Next, you should ensure that Windows Subsystem for Linux 2 (WSL2) is installed and enabled. WSL allows you to run Linux binary executables natively on Windows 10. Information on how to install and enable WSL2 can be found within Microsoft's <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">developer environment documentation</a>.</p>
 <blockquote>
 <p>{tip} After installing and enabling WSL2, you should ensure that Docker Desktop is <a href="https://docs.docker.com/docker-for-windows/wsl/">configured to use the WSL2 backend</a>.</p>
 </blockquote>
-<p>Next, you are ready to create your first Laravel project. Launch <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab">Windows Terminal</a> and begin a new terminal session for your WSL2 Linux operating system. Next, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">https://laravel.build/example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
-<p>Of course, you can change &quot;example-app&quot; in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be created within the directory you execute the command from.</p>
-<p>After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:</p>
+<p>Next, you are ready to create your first Yolk project. Launch <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab">Windows Terminal</a> and begin a new terminal session for your WSL2 Linux operating system. Next, you can use a simple terminal command to create a new Yolk project. For example, to create a new Yolk application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">https://Yolk.build/example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
+<p>Of course, you can change &quot;example-app&quot; in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Yolk application's directory will be created within the directory you execute the command from.</p>
+<p>After the project has been created, you can navigate to the application directory and start Yolk Sail. Yolk Sail provides a simple command-line interface for interacting with Yolk's default Docker configuration:</p>
 <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">./vendor/bin/sail </span><span style="color: #BFC7D5;">up</span></div></code></pre>
 <p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
 <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
 <blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
+<p>{tip} To continue learning more about Yolk Sail, review its <a href="sail">complete documentation</a>.</p>
 </blockquote>
 <h4>Developing Within WSL2</h4>
-<p>Of course, you will need to be able to modify the Laravel application files that were created within your WSL2 installation. To accomplish this, we recommend using Microsoft's <a href="https://code.visualstudio.com">Visual Studio Code</a> editor and their first-party extension for <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development</a>.</p>
-<p>Once these tools are installed, you may open any Laravel project by executing the <code>code .</code> command from your application's root directory using Windows Terminal.</p>
+<p>Of course, you will need to be able to modify the Yolk application files that were created within your WSL2 installation. To accomplish this, we recommend using Microsoft's <a href="https://code.visualstudio.com">Visual Studio Code</a> editor and their first-party extension for <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">Remote Development</a>.</p>
+<p>Once these tools are installed, you may open any Yolk project by executing the <code>code .</code> command from your application's root directory using Windows Terminal.</p>
 <p><a name="getting-started-on-linux"></a></p>
 <h3>Getting Started On Linux</h3>
-<p>If you're developing on Linux and <a href="https://docs.docker.com/compose/install/">Docker Compose</a> is already installed, you can use a simple terminal command to create a new Laravel project. For example, to create a new Laravel application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">https://laravel.build/example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
-<p>Of course, you can change &quot;example-app&quot; in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Laravel application's directory will be created within the directory you execute the command from.</p>
-<p>After the project has been created, you can navigate to the application directory and start Laravel Sail. Laravel Sail provides a simple command-line interface for interacting with Laravel's default Docker configuration:</p>
+<p>If you're developing on Linux and <a href="https://docs.docker.com/compose/install/">Docker Compose</a> is already installed, you can use a simple terminal command to create a new Yolk project. For example, to create a new Yolk application in a directory named &quot;example-app&quot;, you may run the following command in your terminal:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">https://Yolk.build/example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
+<p>Of course, you can change &quot;example-app&quot; in this URL to anything you like - just make sure the application name only contains alpha-numeric characters, dashes, and underscores. The Yolk application's directory will be created within the directory you execute the command from.</p>
+<p>After the project has been created, you can navigate to the application directory and start Yolk Sail. Yolk Sail provides a simple command-line interface for interacting with Yolk's default Docker configuration:</p>
 <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">./vendor/bin/sail </span><span style="color: #BFC7D5;">up</span></div></code></pre>
 <p>The first time you run the Sail <code>up</code> command, Sail's application containers will be built on your machine. This could take several minutes. <strong>Don't worry, subsequent attempts to start Sail will be much faster.</strong></p>
 <p>Once the application's Docker containers have been started, you can access the application in your web browser at: <a href="http://localhost">http://localhost</a>.</p>
 <blockquote>
-<p>{tip} To continue learning more about Laravel Sail, review its <a href="sail">complete documentation</a>.</p>
+<p>{tip} To continue learning more about Yolk Sail, review its <a href="sail">complete documentation</a>.</p>
 </blockquote>
 <p><a name="choosing-your-sail-services"></a></p>
 <h3>Choosing Your Sail Services</h3>
-<p>When creating a new Laravel application via Sail, you may use the <code>with</code> query string variable to choose which services should be configured in your new application's <code>docker-compose.yml</code> file. Available services include <code>mysql</code>, <code>pgsql</code>, <code>mariadb</code>, <code>redis</code>, <code>memcached</code>, <code>meilisearch</code>, <code>minio</code>, <code>selenium</code>, and <code>mailhog</code>:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://laravel.build/example-app?with=mysql,redis</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
+<p>When creating a new Yolk application via Sail, you may use the <code>with</code> query string variable to choose which services should be configured in your new application's <code>docker-compose.yml</code> file. Available services include <code>mysql</code>, <code>pgsql</code>, <code>mariadb</code>, <code>redis</code>, <code>memcached</code>, <code>meilisearch</code>, <code>minio</code>, <code>selenium</code>, and <code>mailhog</code>:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://Yolk.build/example-app?with=mysql,redis</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
 <p>If you do not specify which services you would like configured, a default stack of <code>mysql</code>, <code>redis</code>, <code>meilisearch</code>, <code>mailhog</code>, and <code>selenium</code> will be configured.</p>
 <p>You may instruct Sail to install a default <a href="sail#using-devcontainers">Devcontainer</a> by adding the <code>devcontainer</code> parameter to the URL:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://laravel.build/example-app?with=mysql,redis&amp;devcontainer</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">curl </span><span style="color: #82AAFF;">-s</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">https://Yolk.build/example-app?with=mysql,redis&amp;devcontainer</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre>
 <p><a name="installation-via-composer"></a></p>
 <h3>Installation Via Composer</h3>
-<p>If your computer already has PHP and Composer installed, you may create a new Laravel project by using Composer directly. After the application has been created, you may start Laravel's local development server using the Artisan CLI's <code>serve</code> command:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">composer </span><span style="color: #BFC7D5;">create-project</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">laravel/laravel</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">serve</span></div></code></pre>
-<p><a name="the-laravel-installer"></a></p>
-<h4>The Laravel Installer</h4>
-<p>Or, you may install the Laravel Installer as a global Composer dependency:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">composer </span><span style="color: #BFC7D5;">global</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">require</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">laravel/installer</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">serve</span></div></code></pre>
-<p>Make sure to place Composer's system-wide vendor bin directory in your <code>$PATH</code> so the <code>laravel</code> executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:</p>
+<p>If your computer already has PHP and Composer installed, you may create a new Yolk project by using Composer directly. After the application has been created, you may start Yolk's local development server using the Artisan CLI's <code>serve</code> command:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">composer </span><span style="color: #BFC7D5;">create-project</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">Yolk/Yolk</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">serve</span></div></code></pre>
+<p><a name="the-Yolk-installer"></a></p>
+<h4>The Yolk Installer</h4>
+<p>Or, you may install the Yolk Installer as a global Composer dependency:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">composer </span><span style="color: #BFC7D5;">global</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">require</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">Yolk/installer</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #89DDFF;">cd</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span></div><div class='line'>&nbsp;</div><div class='line'><span style="color: #BFC7D5;">php </span><span style="color: #BFC7D5;">artisan</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">serve</span></div></code></pre>
+<p>Make sure to place Composer's system-wide vendor bin directory in your <code>$PATH</code> so the <code>Yolk</code> executable can be located by your system. This directory exists in different locations based on your operating system; however, some common locations include:</p>
 <div class="content-list" markdown="1">
 <ul>
 <li>macOS: <code>$HOME/.composer/vendor/bin</code>
@@ -1198,33 +1198,33 @@ toLightMode();
 </li>
 </ul>
 </div>
-<p>For convenience, the Laravel installer can also create a Git repository for your new project. To indicate that you want a Git repository to be created, pass the <code>--git</code> flag when creating a new project:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--git</span></div></code></pre>
-<p>This command will initialize a new Git repository for your project and automatically commit the base Laravel skeleton. The <code>git</code> flag assumes you have properly installed and configured Git. You can also use the <code>--branch</code> flag to set the initial branch name:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--git</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--branch=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">main</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
+<p>For convenience, the Yolk installer can also create a Git repository for your new project. To indicate that you want a Git repository to be created, pass the <code>--git</code> flag when creating a new project:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--git</span></div></code></pre>
+<p>This command will initialize a new Git repository for your project and automatically commit the base Yolk skeleton. The <code>git</code> flag assumes you have properly installed and configured Git. You can also use the <code>--branch</code> flag to set the initial branch name:</p>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--git</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--branch=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">main</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
 <p>Instead of using the <code>--git</code> flag, you may also use the <code>--github</code> flag to create a Git repository and also create a corresponding private repository on GitHub:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github</span></div></code></pre>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github</span></div></code></pre>
 <p>The created repository will then be available at <code>https://github.com/&lt;your-account&gt;/example-app</code>. The <code>github</code> flag assumes you have properly installed the <a href="https://cli.github.com">GitHub CLI</a> and are authenticated with GitHub. Additionally, you should have <code>git</code> installed and properly configured. If needed, you can pass additional flags that are supported by the GitHub CLI:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">--public</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">--public</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
 <p>You may use the <code>--organization</code> flag to create the repository under a specific GitHub organization:</p>
-<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">laravel </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">--public</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--organization=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">laravel</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
+<pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;">Yolk </span><span style="color: #BFC7D5;">new</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">example-app</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--github=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">--public</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #BFC7D5;"> </span><span style="color: #82AAFF;">--organization=</span><span style="color: #D9F5DD;">&quot;</span><span style="color: #C3E88D;">Yolk</span><span style="color: #D9F5DD;">&quot;</span></div></code></pre>
 <p><a name="initial-configuration"></a></p>
 <h2>Initial Configuration</h2>
-<p>All of the configuration files for the Laravel framework are stored in the <code>config</code> directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.</p>
-<p>Laravel needs almost no additional configuration out of the box. You are free to get started developing! However, you may wish to review the <code>config/app.php</code> file and its documentation. It contains several options such as <code>timezone</code> and <code>locale</code> that you may wish to change according to your application.</p>
+<p>All of the configuration files for the Yolk framework are stored in the <code>config</code> directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.</p>
+<p>Yolk needs almost no additional configuration out of the box. You are free to get started developing! However, you may wish to review the <code>config/app.php</code> file and its documentation. It contains several options such as <code>timezone</code> and <code>locale</code> that you may wish to change according to your application.</p>
 <p><a name="environment-based-configuration"></a></p>
 <h3>Environment Based Configuration</h3>
-<p>Since many of Laravel's configuration option values may vary depending on whether your application is running on your local computer or on a production web server, many important configuration values are defined using the <code>.env</code> file that exists at the root of your application.</p>
+<p>Since many of Yolk's configuration option values may vary depending on whether your application is running on your local computer or on a production web server, many important configuration values are defined using the <code>.env</code> file that exists at the root of your application.</p>
 <p>Your <code>.env</code> file should not be committed to your application's source control, since each developer / server using your application could require a different environment configuration. Furthermore, this would be a security risk in the event an intruder gains access to your source control repository, since any sensitive credentials would get exposed.</p>
 <blockquote>
 <p>{tip} For more information about the <code>.env</code> file and environment based configuration, check out the full <a href="configuration#environment-configuration">configuration documentation</a>.</p>
 </blockquote>
 <p><a name="directory-configuration"></a></p>
 <h3>Directory Configuration</h3>
-<p>Laravel should always be served out of the root of the &quot;web directory&quot; configured for your web server. You should not attempt to serve a Laravel application out of a subdirectory of the &quot;web directory&quot;. Attempting to do so could expose sensitive files that exist within your application.</p>
+<p>Yolk should always be served out of the root of the &quot;web directory&quot; configured for your web server. You should not attempt to serve a Yolk application out of a subdirectory of the &quot;web directory&quot;. Attempting to do so could expose sensitive files that exist within your application.</p>
 <p><a name="next-steps"></a></p>
 <h2>Next Steps</h2>
-<p>Now that you have created your Laravel project, you may be wondering what to learn next. First, we strongly recommend becoming familiar with how Laravel works by reading the following documentation:</p>
+<p>Now that you have created your Yolk project, you may be wondering what to learn next. First, we strongly recommend becoming familiar with how Yolk works by reading the following documentation:</p>
 <div class="content-list" markdown="1">
 <ul>
 <li>
@@ -1244,21 +1244,21 @@ toLightMode();
 </li>
 </ul>
 </div>
-<p>How you want to use Laravel will also dictate the next steps on your journey. There are a variety of ways to use Laravel, and we'll explore two primary use cases for the framework below.</p>
-<p><a name="laravel-the-fullstack-framework"></a></p>
-<h3>Laravel The Full Stack Framework</h3>
-<p>Laravel may serve as a full stack framework. By &quot;full stack&quot; framework we mean that you are going to use Laravel to route requests to your application and render your frontend via <a href="blade">Blade templates</a> or using a single-page application hybrid technology like <a href="https://inertiajs.com">Inertia.js</a>. This is the most common way to use the Laravel framework.</p>
-<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing">routing</a>, <a href="views">views</a>, or the <a href="eloquent">Eloquent ORM</a>. In addition, you might be interested in learning about community packages like <a href="https://laravel-livewire.com">Livewire</a> and <a href="https://inertiajs.com">Inertia.js</a>. These packages allow you to use Laravel as a full-stack framework while enjoying many of the UI benefits provided by single-page JavaScript applications.</p>
-<p>If you are using Laravel as a full stack framework, we also strongly encourage you to learn how to compile your application's CSS and JavaScript using <a href="mix">Laravel Mix</a>.</p>
+<p>How you want to use Yolk will also dictate the next steps on your journey. There are a variety of ways to use Yolk, and we'll explore two primary use cases for the framework below.</p>
+<p><a name="Yolk-the-fullstack-framework"></a></p>
+<h3>Yolk The Full Stack Framework</h3>
+<p>Yolk may serve as a full stack framework. By &quot;full stack&quot; framework we mean that you are going to use Yolk to route requests to your application and render your frontend via <a href="blade">Blade templates</a> or using a single-page application hybrid technology like <a href="https://inertiajs.com">Inertia.js</a>. This is the most common way to use the Yolk framework.</p>
+<p>If this is how you plan to use Yolk, you may want to check out our documentation on <a href="routing">routing</a>, <a href="views">views</a>, or the <a href="eloquent">Eloquent ORM</a>. In addition, you might be interested in learning about community packages like <a href="https://Yolk-livewire.com">Livewire</a> and <a href="https://inertiajs.com">Inertia.js</a>. These packages allow you to use Yolk as a full-stack framework while enjoying many of the UI benefits provided by single-page JavaScript applications.</p>
+<p>If you are using Yolk as a full stack framework, we also strongly encourage you to learn how to compile your application's CSS and JavaScript using <a href="mix">Yolk Mix</a>.</p>
 <blockquote>
 <p>{tip} If you want to get a head start building your application, check out one of our official <a href="starter-kits">application starter kits</a>.</p>
 </blockquote>
-<p><a name="laravel-the-api-backend"></a></p>
-<h3>Laravel The API Backend</h3>
-<p>Laravel may also serve as an API backend to a JavaScript single-page application or mobile application. For example, you might use Laravel as an API backend for your <a href="https://nextjs.org">Next.js</a> application. In this context, you may use Laravel to provide <a href="sanctum">authentication</a> and data storage / retrieval for your application, while also taking advantage of Laravel's powerful services such as queues, emails, notifications, and more.</p>
-<p>If this is how you plan to use Laravel, you may want to check out our documentation on <a href="routing">routing</a>, <a href="sanctum">Laravel Sanctum</a>, and the <a href="eloquent">Eloquent ORM</a>.</p>
+<p><a name="Yolk-the-api-backend"></a></p>
+<h3>Yolk The API Backend</h3>
+<p>Yolk may also serve as an API backend to a JavaScript single-page application or mobile application. For example, you might use Yolk as an API backend for your <a href="https://nextjs.org">Next.js</a> application. In this context, you may use Yolk to provide <a href="sanctum">authentication</a> and data storage / retrieval for your application, while also taking advantage of Yolk's powerful services such as queues, emails, notifications, and more.</p>
+<p>If this is how you plan to use Yolk, you may want to check out our documentation on <a href="routing">routing</a>, <a href="sanctum">Yolk Sanctum</a>, and the <a href="eloquent">Eloquent ORM</a>.</p>
 <blockquote>
-<p>{tip} Need a head start scaffolding your Laravel backend and Next.js frontend? Laravel Breeze offers an <a href="starter-kits#breeze-and-next">API stack</a> as well as a <a href="https://github.com/laravel/breeze-next">Next.js frontend implementation</a> so you can get started in minutes.</p>
+<p>{tip} Need a head start scaffolding your Yolk backend and Next.js frontend? Yolk Breeze offers an <a href="starter-kits#breeze-and-next">API stack</a> as well as a <a href="https://github.com/Yolk/breeze-next">Next.js frontend implementation</a> so you can get started in minutes.</p>
 </blockquote>
 
                                 
