@@ -42,5 +42,12 @@ $router = new Router([
             return Viewer::view('inituser.php', $context);
         }
     ),
+
+    new Route(
+        '/download/{appname}',
+        function ($context) {
+            return Viewer::view('main/Archive.zip', $context);
+        }
+    ),
 ]);
 $router->launch();
