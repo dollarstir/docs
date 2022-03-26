@@ -10,7 +10,7 @@ class Mail extends PHPMailer
 {
 //    ader/autoloader.php';
 
-    public function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer',$to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
+    public function sendmail($domain, $subject, $message, $from_name = 'Yolk Mailer', $to, $reply_to = 'info@phpyork.com', $reply_to_name = 'Yolk Mailer')
     {
         // PHPMailer\PHPMailer\PHPMailer;
         // PHPMailer\PHPMailer\SMTP;
@@ -34,7 +34,11 @@ class Mail extends PHPMailer
             $mail->isHTML(true);
             $mail->Body = $message;
 
-            echo $mail->send();
+            // echo $mail->send();
+            $rp = $mail->send();
+            if ($rp == 1) {
+                echo 'success';
+            }
             // var_dump($mail->send());
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
