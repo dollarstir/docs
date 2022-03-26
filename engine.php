@@ -37,7 +37,7 @@ $router = new Router([
     ),
 
     new Route(
-        '/newuser',
+        '/newuser/{email}',
         function ($context) {
             return Viewer::view('inituser.php', $context);
         }
