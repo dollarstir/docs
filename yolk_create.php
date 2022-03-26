@@ -3,7 +3,7 @@
 $app_name = $context['appname'];
 
 echo '
-    curl https://phpyolk.com/clidownload --output social.zip &&
-    unzip social.zip -d '.$app_name.' &&
-    rm -f social.zip
+    curl https://phpyolk.com/download/'.$app_name.' --output '.$app_name.'.zip &&
+    unzip '.$app_name.'.zip -d '.$app_name.' &&
+    rm -f '.$app_name.'.zip
 ';
