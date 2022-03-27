@@ -474,14 +474,14 @@
                             </li>
 
                             <li>
-                                <a href="https://facebook.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://facebook.com/dolarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">Facebook</span>
                                     <?php echo Image::brandsvg('facebook'); ?>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://linkedin.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://www.linkedin.com/in/frederick-ennin-47965112a/" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">Linkedin</span>
                                     <?php echo Image::brandsvg('linkedin'); ?>
                                 </a>
@@ -489,13 +489,13 @@
 
                             <li>
                                 <a href="https://slack.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
-                                    <span class="sr-only">Linkedin</span>
+                                    <span class="sr-only">Slack</span>
                                     <?php echo Image::brandsvg('slack'); ?>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="https://youtube.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://youtube.com/DollarsoftCorporation" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">Youtube</span>
                                     <?php echo Image::brandsvg('youtube'); ?>
                                 </a>
@@ -518,7 +518,7 @@
                         </div>
                         <ul class="flex space-x-5">
                             <li>
-                                <a href="https://github.com/dollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://github.com/joshdedevelopa" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">GitHub</span>
                                     <?php echo Image::brandsvg('github'); ?>
                                 </a>
@@ -577,7 +577,7 @@
                         </div>
                         <ul class="flex space-x-5">
                             <li>
-                                <a href="https://github.com/dollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                <a href="https://github.com/aframson" target="_blank" class="text-gray-400 hover:text-gray-500">
                                     <span class="sr-only">GitHub</span>
                                     <?php echo Image::brandsvg('github'); ?>
                                 </a>
@@ -620,6 +620,66 @@
                         
                         <div class="text-lg leading-6 font-medium space-y-1 text-center">
                             <h3 class="text-red-600">Richard Obiri</h3>
+                            <p class="text-gray-600"> <em>Contributor</em></p>
+                            <p class="text-gray-600">Accra, Ghana</p>
+                        </div>
+
+                        
+                    </div>
+                </li>
+
+
+
+                <li>
+                    <div class="space-y-4">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <img class="object-cover shadow-lg rounded-lg" loading="lazy" style="height:350px;" src="yolkassets/img/stev.jpg" alt="Stephen Dapaah">
+                        </div>
+                        <ul class="flex space-x-5">
+                            <li>
+                                <a href="https://github.com/stephen911" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">GitHub</span>
+                                    <?php echo Image::brandsvg('github'); ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/iamdollarstir" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Twitter</span>
+                                    <?php echo Image::brandsvg('twitter'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://facebook.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Facebook</span>
+                                    <?php echo Image::brandsvg('facebook'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://linkedin.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('linkedin'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://slack.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Linkedin</span>
+                                    <?php echo Image::brandsvg('slack'); ?>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://youtube.com/" target="_blank" class="text-gray-400 hover:text-gray-500">
+                                    <span class="sr-only">Youtube</span>
+                                    <?php echo Image::brandsvg('youtube'); ?>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="text-lg leading-6 font-medium space-y-1 text-center">
+                            <h3 class="text-red-600">Stephen Dapaah</h3>
                             <p class="text-gray-600"> <em>Contributor</em></p>
                             <p class="text-gray-600">Accra, Ghana</p>
                         </div>
