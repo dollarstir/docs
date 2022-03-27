@@ -1137,7 +1137,11 @@ toLightMode();
 <p><a name="getting-started-on-macos"></a></p>
 <h3>Installing On macOS</h3>
 <p>
-    For feather explanation watch the tutorial on how to install Yolk on Mac <a href="https://youtube.com">Watch video tutorial</a> . If Xampp Server is already installed then you open Finder and locate <strong>Application->Xampp->htdocs folder </strong>. Create 
+    For feather explanation watch the tutorial on how to install Yolk on Mac <a href="https://youtube.com">Watch video tutorial</a> . If Xampp Server is already installed then you open Finder and locate <strong>Application->Xampp->htdocs folder </strong>. Create  new project by typing below commands <br>
+
+    <pre><code data-theme="olaolu-palenight" data-lang="shell" class='torchlight' style='background-color: #292D3E; --theme-selection-background: #7580B850;'><!-- Syntax highlighted by torchlight.dev --><div class='line'><span style="color: #BFC7D5;"></span><span style="color: #82AAFF;">curl</span><span style="color: #BFC7D5;"> </span><span style="color: #BFC7D5;">https://phpyolk.com/newapp/projectname</span><span style="color: #BFC7D5;"> </span><span style="color: #89DDFF;">|</span><span style="color: #BFC7D5;"> bash</span></div></code></pre><br>
+     NB:<strong>(projectname) can be any name of your choice</strong>
+
 
 </p>
 
