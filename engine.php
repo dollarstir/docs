@@ -23,6 +23,13 @@ $router = new Router([
     ),
 
     new Route(
+        '/download',
+        function ($context) {
+            return Viewer::view('main/docs/9.x/installation.php', $context);
+        }
+    ),
+
+    new Route(
         '/newapp/{appname}',
         function ($context) {
             return Viewer::view('yolk_create.php', $context);
