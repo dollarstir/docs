@@ -67,8 +67,8 @@
                         </a>
                     </div>
                     <ul class="relative hidden lg:flex lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
-                        <li><a href="download">Documentation</a></li>
-                        <li><a href="installation">Download</a></li>
+                        <li><a href="installation">Documentation</a></li>
+                        <li><a href="download">Download</a></li>
                         <!-- <li><a href="components">Components</a></li> -->
                         <li><a href="plugins">Plugins</a></li>
                         <li><a href="plugins">Community</a></li>
