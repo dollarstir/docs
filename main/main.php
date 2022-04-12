@@ -121,11 +121,11 @@
                     class="fixed inset-0 w-full pt-[4.2rem] z-10 pointer-events-none">
                     <div class="relative h-full w-full py-8 px-5 bg-white pointer-events-auto overflow-y-auto">
                         <ul>
-                            <li><a class="block w-full py-2" href="https://forge.laravel.com">Documentation</a></li>
-                            <li><a class="block w-full py-2" href="https://vapor.laravel.com">Download</a></li>
-                            <li><a class="block w-full py-3" href="https://laravel-news.com">Plugins</a></li>
-                            <li><a class="block w-full py-3" href="https://partners.laravel.com">Community</a></li>
-                            <li><a class="block w-full py-3" href="https://partners.laravel.com">Donate</a></li>
+                            <li><a class="block w-full py-2" href="installation">Documentation</a></li>
+                            <li><a class="block w-full py-2" href="download">Download</a></li>
+                            <li><a class="block w-full py-3" href="store">Store</a></li>
+                            <li><a class="block w-full py-3" href="">Community</a></li>
+                            <li><a class="block w-full py-3" href="">Donate</a></li>
                             
                         </ul>
                     </div>
